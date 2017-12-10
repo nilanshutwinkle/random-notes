@@ -29,4 +29,6 @@
 * *Variadic functions*, e.g., `def apply[A](as: A*): List[A] = ???`. (34)
 * *Data sharing*: don't copy immutable data structures; we reuse them. (35)
 * For immutable linked lists, operating on head is cheap; operating on tail is expensive. (37)
-* Use multiple argument lists to help Scala with type inference. (37-8)
+* Use multiple argument lists to help Scala with type inference. (37-38)
+* Reducing duplication buy pulling subexpressions into function arguments. (38)
+* Implementing `foldLeft` (40-41), `flatten` (41), `map` (42), `filter` (42), `flatMap` (42), `zipWith` (42).
