@@ -1,21 +1,32 @@
 # Functional Programming in Scala
 
 ## Chapter 1
-* side effects limits testability, comparability (6)
-* pure core, thin layer on outside for effects (8)
-* **referential transparency** (RT): if all occurrence of expressions can be replaced with values. (9)
-* **pure function**: when function is RT (9)
-* **substitution model**: mode of reasoning based on RT (11)
-* local reasoning enabled when no state (12)
+* Side effects limits testability, comparability. (6)
+* Pure core, thin layer on outside for effects. (8)
+* **Referential transparency** (RT): if all occurrence of expressions can be replaced with values. (9)
+* **Pure function**: when function is RT. (9)
+* **Substitution model**: mode of reasoning based on RT. (11)
+* Local reasoning enabled when no state. (12)
 
 ## Chapter 2
-* **tail call elimination** and `@annotation.tailrec` (20-21)
-* monomorphic vs polymorphic (aka, "generic") functions (22-23)
-* elided = omitted (25)
-* function literals actually `Function0`, `Function1`, etc with `apply` method defined (25)
-* implementations of polymorphic functions are often significantly constrained (25)
-* **partial application**: when fn only has some (but not all) of its arguments supplied
-* **currying**: convert fn of two arguments into partially applied fn of one argument (27)
-* **function composition**: feeds output of one function as input into another (27)
-* functional programming in the large has much the same flavor as programming in the small (28)
+* **Tail call elimination** and `@annotation.tailrec` (20-21)
+* Monomorphic vs polymorphic (aka, "generic") functions (22-23)
+* Elided = omitted (25)
+* Function literals actually `Function0`, `Function1`, etc with `apply` method defined (25)
+* Implementations of polymorphic functions are often significantly constrained (25)
+* **Partial application**: when fn only has some (but not all) of its arguments supplied
+* **Currying**: convert fn of two arguments into partially applied fn of one argument (27)
+* **Function composition**: feeds output of one function as input into another (27)
+* Functional programming in the large has much the same flavor as programming in the small (28)
 
+## Chapter 3
+* Functional data structures are immutable. (29)
+* `sealed trait` requires that all Implementations are defined in the file. (30)
+* Covariant type parameter (e.g., `List[+A]`). For all types `X` that are subtypes of `Y`, `List[X]` is subtype of `List[Y]`; otherwise, invariant. (31-32)
+* `Nothing` is a subtype of all types. (32)
+* Companion objects are a Scala idiom. (32, 33)
+* Pattern matching matches against structural equivalence. (34)
+* *Variadic functions*, e.g., `def apply[A](as: A*): List[A] = ???`. (34)
+* *Data sharing*: don't copy immutable data structures; we reuse them. (35)
+* For immutable linked lists, operating on head is cheap; operating on tail is expensive. (37)
+* Use multiple argument lists to help Scala with type inference. (37-8)
