@@ -43,8 +43,11 @@
 * RT doesn't depend on context, but non-RT expressions are context-dependent and depend on globally reasoning. Exceptions introduce context dependence. (49)
 * Can represent failures with ordinary values, and use higher-order functions to abstract common patterns of error handling. (48)
 * Unchecked exceptions are not type safe, and checked exceptions are problematic for higher-order functions. (50)
-* **Partial functions** aren't defined for some inputs. (E.g., mean wouldn't be defined for an empty list.)
-* **Total functions** define exactly one value for each value of input type.
+* **Partial functions** aren't defined for some inputs; e.g., mean wouldn't be defined for an empty list. (51)
+* **Total functions** define exactly one value for each value of input type. (52)
+* Should try to use higher-order functions before resorting to pattern matching. (54)
+* `Option` doesn't infect our codebase; can use non-Option methods with `lift`. (56)
+* Using `map2` to apply two `Option` values to `(A,B) => C`. (58)
 
 ```
 sealed trait Option[+A]
@@ -60,3 +63,8 @@ def getOrElse[B >: A](default: => B): B
 ```
 * `B` must be a supertype of `A`.
 * `default` is a **lazy parameter** won't be evaluated unless needed.
+
+```
+def lift[A,B](f: A => B): Option[A] => Option[B] = _ map f
+```
+* Easy to `lift` non-Option methods to Option methods
