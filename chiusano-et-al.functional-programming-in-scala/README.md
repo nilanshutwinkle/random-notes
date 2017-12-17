@@ -36,3 +36,27 @@
 * **Algebraic data type** (ADT): data type defined by one or more data constructors; the data type is the *union* of its constructors, and each constructor is the *product* of its arguments. (44)
 * Tuples are ADT with a special syntax. (45)
 * FP less concerned about encapsulation (e.g., hiding internal representation for ADTs) since there is no delicate state to protect (46)
+
+## Chapter 4
+
+* Throwing exceptions is a side effect, and breaks RT since where it is thrown (inside or outside try blocks) impacts result of expression. (48, 49)
+* RT doesn't depend on context, but non-RT expressions are context-dependent and depend on globally reasoning. Exceptions introduce context dependence. (49)
+* Can represent failures with ordinary values, and use higher-order functions to abstract common patterns of error handling. (48)
+* Unchecked exceptions are not type safe, and checked exceptions are problematic for higher-order functions. (50)
+* **Partial functions** aren't defined for some inputs. (E.g., mean wouldn't be defined for an empty list.)
+* **Total functions** define exactly one value for each value of input type.
+
+```
+sealed trait Option[+A]
+case class Some[+A](get: A) extends Option[A]
+case object None extends Option[Nothing]
+```
+* `Option[+A]` and `Some[+A]` are covariant.
+* `None` is singleton (`case object`).
+* Because `Nothing` is subtype of everything and `Option` is covariant, `None` is subtype of every possible `Option[A]`.
+
+```
+def getOrElse[B >: A](default: => B): B
+```
+* `B` must be a supertype of `A`.
+* `default` is a **lazy parameter** won't be evaluated unless needed.
