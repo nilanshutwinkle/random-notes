@@ -48,6 +48,10 @@
 * Should try to use higher-order functions before resorting to pattern matching. (54)
 * `Option` doesn't infect our codebase; can use non-Option methods with `lift`. (56)
 * Using `map2` to apply two `Option` values to `(A,B) => C`. (58)
+* **for-comprehensions**. (59-60)
+* `Either` is disjoint union of two types. (61)
+* When using `Either` for error handling, by convention the right constructor is reserved for success. (61)
+* Standard library `Either` does not define right-biased flatMap. (61)
 
 ```
 sealed trait Option[+A]
@@ -68,3 +72,15 @@ def getOrElse[B >: A](default: => B): B
 def lift[A,B](f: A => B): Option[A] => Option[B] = _ map f
 ```
 * Easy to `lift` non-Option methods to Option methods
+
+```
+sealed trait Either[+E, +A]
+case class Left[+E](value: E) extends Either[E, Nothing]
+case class Right[+A](value: A) extends Either[Nothing, A]
+
+object Either {
+  def Try[A](a: => A): Either[Exception, A] =
+    try Right(a)
+    catch { case e: Exception => Left(e) }
+}
+```
