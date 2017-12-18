@@ -52,6 +52,7 @@
 * `Either` is disjoint union of two types. (61)
 * When using `Either` for error handling, by convention the right constructor is reserved for success. (61)
 * Standard library `Either` does not define right-biased flatMap. (61)
+* Beyond error handling, the idea of representing effects as values is something that will be covered repeatedly in this book. (63)
 
 ```
 sealed trait Option[+A]
