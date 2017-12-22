@@ -85,3 +85,17 @@ object Either {
     catch { case e: Exception => Left(e) }
 }
 ```
+
+## Chapter 5
+
+* Couple of the goals of **non-strictness** (e.g., **laziness**) is to avoid temporary structures and perform computations in a single pass. (65)
+* A function is non-strict if it can choose to not evaluate one or more of its arguments. (65)
+* **Thunk**: the unevaluated form of an expression that can be evaluated to get the result. (66)
+* Non-strict functions accept parameters **by name**: `def foo[A](f: => A): A = f`. (67-68)
+* Caching values with `lazy` keyword: `lazy val j = i`. (67)
+* **Streams** are lazy lists. (68)
+* **Smart constructors** are data type constructors that ensures invariants (e.g., memoizing) or different signature. By convention, lowercase. (69)
+* **Separation of concerns** is a theme in functional programming. Laziness involves separating the description of computations from actually running them. (70)
+* Huge benefit of lazy methods: can terminate early. (71)
+* An implementation is **incremental** if they don't fully generate their answers until someone looks at them. I.e., they are lazy. (72)
+* Streams are often called **first-class loops** because higher-order methods are invoked in an interleaved manner without calculating intermediate streams, just like can be accomplished with a for loop. This reduces their memory footprint and can avoid unnecessary work. (73)
