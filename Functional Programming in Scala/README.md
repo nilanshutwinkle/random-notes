@@ -100,4 +100,4 @@ object Either {
 * An implementation is **incremental** if they don't fully generate their answers until someone looks at them. I.e., they are lazy. (72)
 * Streams are often called **first-class loops** because higher-order methods are invoked in an interleaved manner without calculating intermediate streams, just like can be accomplished with a for loop. This reduces their memory footprint and can avoid unnecessary work. (73)
 * **Infinite streams**. E.g., `val ones: Stream[Int] = Stream.cons(1, ones)`. (73)
-* **Corecursive functions** produce data (e.g., `unfold`), whereas recursive functions consume them (e.g., `fold`). (75)
+* **Corecursive functions** (aka, "guarded recursion") produce data (e.g., `unfold`), whereas recursive functions consume them (e.g., `fold`). (75)
