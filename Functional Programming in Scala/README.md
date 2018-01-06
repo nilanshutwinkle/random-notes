@@ -101,3 +101,14 @@ object Either {
 * Streams are often called **first-class loops** because higher-order methods are invoked in an interleaved manner without calculating intermediate streams, just like can be accomplished with a for loop. This reduces their memory footprint and can avoid unnecessary work. (73)
 * **Infinite streams**. E.g., `val ones: Stream[Int] = Stream.cons(1, ones)`. (73)
 * **Corecursive functions** (aka, "guarded recursion") produce data (e.g., `unfold`), whereas recursive functions consume them (e.g., `fold`). (75)
+
+## Chapter 6
+
+* Chapter about writing purely functional programs that manipulate state. (78)
+* Achieve referential transparency by making state updates explicit; not as a side effect, but returning state with generated values. (80)
+* **Linear congruential generator**: random number generator implementation. (81)
+* **State transitions** (or **state actions**), e.g., `RNG => (A, RNG)`. (84)
+* State actions can be combined using **combinators**. (84)
+* `type Rand[+A] = RNG => (A, RNG)`. (84)
+* Goal: use `Rand` with combinators to abstract away the `RNG`. (84)
+* Useful combinators: `map` (84), `map2` (85), `sequence` (86), `flatMap` (87).
