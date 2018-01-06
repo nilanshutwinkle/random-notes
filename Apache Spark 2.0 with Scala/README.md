@@ -46,3 +46,20 @@ $ ln -s /usr/local/Cellar/apache-spark/2.2.1 apache-spark
 * Run `RatingsCounter` to view histogram
 
 ## Section 2: Scala Crash Course
+
+### Lecture 4
+* Spark is written in Scala; if use Scala, get latest features first
+
+### Lecture 5
+```scala
+f"Foo $foo%3f"
+f"Bar $bar%05d"
+val pattern = """.* ([\d]+).""".r
+val pattern(answer) = someStr
+```
+
+### Lecture 8
+```scala
+"foo" -> "bar" // tuple
+list1 ++ list2 // concat lists
+```
