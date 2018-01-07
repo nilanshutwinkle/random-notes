@@ -112,3 +112,6 @@ object Either {
 * `type Rand[+A] = RNG => (A, RNG)`. (84)
 * Goal: use `Rand` with combinators to abstract away the `RNG`. (84)
 * Useful combinators: `map` (84), `map2` (85), `sequence` (86), `flatMap` (87).
+* The `State` type and case class. (88)
+* **Imperative programming**: program is sequence of statements where each statement modifies program state. Functional programming has excellent support for writing imperative programs; e.g., for comprehensions. (88-89)
+* Created *Machine*, a finite state machine that dispenses candy. (90-91)
