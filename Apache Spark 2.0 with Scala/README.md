@@ -51,6 +51,7 @@ $ ln -s /usr/local/Cellar/apache-spark/2.2.1 apache-spark
 * Spark is written in Scala; if use Scala, get latest features first
 
 ### Lecture 5
+
 ```scala
 f"Foo $foo%3f"
 f"Bar $bar%05d"
@@ -59,7 +60,80 @@ val pattern(answer) = someStr
 ```
 
 ### Lecture 8
+
 ```scala
 "foo" -> "bar" // tuple
 list1 ++ list2 // concat lists
 ```
+
+## Section 3: Spark Basics
+
+### Lecture 9
+* Spark is general, fast engine for lage-scale data processing
+* Architecture: driver program, cluster manager, executor
+* DAG engine to optimize workflows
+* One main concept: the Resilient Distributed Dataset (RDD)
+* Spark components:
+  - Spark Core
+  - Spark Streaming
+  - Spark SQL
+  - MLLib
+  - GraphX
+
+### Lecture 10
+* RDDs can be **transformed** (e.g., `map`, `flatMap`, `filter`, `distinct`, `sample`, etc) and have **actions** (e.g., `collect`, `count`, `countByValue`, `take`, `top`, `reduce`, etc)
+* Nothing happens until call action (lazy evaluation)
+
+## Lecture 11
+
+```scala
+val sc = new SparkContext("local[*]", "RatingsCounter")
+val lines = sc.textFile("...")
+...
+val results = ratings.countByValue()
+```
+
+## Lecture 12
+
+* Execution plan created from RDD
+* `countByValue` can result in **shuffle operation** on cluster, which can be expensive (want to minimize)
+* **Stages** run in parallel. Stages are broken into **tasks**, which may be distributed across servers.
+* Sample execution plan:
+  - Stage 1: `textFile`, `map`
+  - Stage 2: `countByValue`
+
+## Lecture 13
+
+* **Key/value RDDs** are RDDS with key/value tuples. E.g., average # of friends by age.
+* Useful for key/value RDDs: `reduceByKey`, `groupByKey`, `sortByKey`, `keys`, `values`
+* Can do SQL-like joins on two key/value RDDs: `join`, `rightOuterJoin`, `leftOuterJoin`, `cogroup`, `subtractByKey`
+
+## Lecture 14
+
+* `FriendsByAge.scala` example
+* Using `reduce` action to get results
+
+## Lecture 16
+
+* `MinTemperatures.scala`, `MaxTemperatures.scala` examples
+
+## Lecture 17
+
+* `WordCount.scala` example
+
+## Lecture 18
+
+* `WordCountBetter.scala` example
+
+## Lecture 19
+
+* Instead of `countByValue`, going to use map/reduce (e.g., `map` + `reduceByKey`) so that execution is distributed
+* `WordCountBetterSorted.scala` example
+
+## Lecture 20
+
+* Exercise: sum up amount spent per customer (`custom-orders.csv`)
+
+## Lecture 21
+
+* Exercise: sort by amount spent per customer
