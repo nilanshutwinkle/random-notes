@@ -123,3 +123,114 @@
 * Use **bastion host**: single host accessible to outside world, other host accessible from it
 * Launch EC2 instances into IAM Roles to avoid copying credentials everwhere
 * Create & use "sshers" group to control access
+
+## 301: EC2 instance types, key pairs, user-data
+
+* Instance types are the "hardware footprint"
+* Public/private key pairs control first-time access to new instance
+* **Security Groups**: semi-stateful firewalls around instances
+* **user-data**: store config/scripts per instance
+  - Useful for bootstrapping
+* EC2 min 1hr charge, so avoid repeat restarting
+* `ssh -i foo.pem`
+* EC2 Security Groups
+  - Control ports, source, TCP or UDP
+  - **CIDR blocks**. E.g.,
+    - `122.43.0.0/16` (64k addresses)
+    - `122.43.65.0/24` (255 addresses)
+    - `122.43.65.8/32` (1 address)
+    - `0.0.0/0` (allows all addresses)
+* CloudFormation's **cfn-init** for initializing on first boot (e.g., install packages, set hostname)
+
+## 302: EC2 Disk instances
+
+* Ephemeral ("instance") store vs EBS
+* **Hypervisor** makes slices of hardware resources available to VMs
+* **Ephemeral store**:
+  - Cannot be shared
+  - Fast (local to EC2)
+  - Lifetime tied to instance
+  - Sequential I/O best
+* EBS:
+  - Remote rack, but still fast
+  - Lifetime independent
+  - Best for random I/O
+  - Snapshots
+  - Good for boot volume
+  - Can only be attached to one EC2 instance at a time
+
+## 303: Spinning up your first EC2 server & SSHing in
+
+* Amazon Linux AMI
+* Linux t1.micro (free)
+* `chmod 400 foo.pem`
+* Best practice: `sudo yum update`
+* `curl http://<ip>/latest/meta-data/`
+* EBS volume will be ~$0.10/month
+* When take down, don't forget to down down EBS dist!
+
+## 304: EC2 Gotchas
+
+* Don't change default group (no access)
+* Use elastic IPs, not public/private DNS
+* Use "Terminate on Delete"
+* Use "Termination Protection" for production machines
+* Tag resources so can manage
+* Don't copy credentials into instances or AMIs; leverage IAM "EC2 Roles" or user-data
+* Use CloudFormation templates
+* Don't use EC2 when there's a service available
+* Don't oversize your machine; drive it like you stole it
+* Don't manually provision if you will scale beyond 5-10 servers. Use Chef, Puppet, or at least CloudFormation
+
+## 305: Templatizing Servers w/ AMIs
+
+* **Instance types** are hardware footprnts; hypervisor offers resources (disk, cpu, ram, network) to VMs
+* **Amazon Machine Image** (**AMIs**) are software footprint (OS, packages, user software)
+* Amazon AMIs (trusted) vs Community AMIs (untrusted)
+* Marketplace pre-packaged appliances
+* MyAMIs
+  - Options: base, partially configured, fully configured
+  - Stored in S3
+
+## 306: EBS Snapshots, Attaching, Detaching
+
+* Find AZ for EC2 (e.g., us-east-2c)
+* Go to "Elastic Block Storage" > "Volumes"
+* "Provision IOPs" means more throughput (we'll use "Standard")
+* AWS should provide commands for formatting, mounting
+* To remove EBS from EC2 instance, it's better to unmount from terminal than to use AWS Console:
+  ```bash
+  $ sudo umount /mnt/newdisk
+  $ sudo umount /dev/sdf
+  ```
+  Then, select volume in AWS Console and "Detach Volume"
+* To create AMI:
+  1. Go to "Running Instances"
+  2. Select instance, right-client and select "Create Image (EBS AMI)"
+  3. Fill out form
+  4. Go to "Images" > "AMIs" (just book volume)
+  * Cleanup:
+    1. "Images" > "AMIs" > select and "Deregister"
+    2. "EBS" > "Snapshots" > select and "Delete"
+    3. "EBS" > "Volumes" > select and delete
+    4. "Network & Security" > "Security Groups" > select and "Delete Security Group"
+
+## 307: Pricing Model for EC2
+
+* On Demand: most expensive, no up-front fee
+* Reserved: up-front fee, lower hourly
+* Spot: cheapest, bust can be taken away
+* Amazon applies on-demand automatically
+* Can sell reservations on marketplace
+* Spot use cases:
+  - Batch jobs
+  - Offline processing
+  - Big data analytics
+  - Test/dev
+* Spot best practices:
+  - Break work into smallest pieces possible
+  - Return useful results ASAP
+  - Minimize data in & out
+* Tip: Can use reserved for base traffic, then use spot and on-demand for peak
+
+## 308: Making an AMI
