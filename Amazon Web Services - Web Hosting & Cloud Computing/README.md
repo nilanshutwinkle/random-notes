@@ -128,12 +128,11 @@
 
 * Instance types are the "hardware footprint"
 * Public/private key pairs control first-time access to new instance
-* **Security Groups**: semi-stateful firewalls around instances
 * **user-data**: store config/scripts per instance
   - Useful for bootstrapping
 * EC2 min 1hr charge, so avoid repeat restarting
 * `ssh -i foo.pem`
-* EC2 Security Groups
+* **EC2 Security Groups**: semi-stateful firewalls around instances
   - Control ports, source, TCP or UDP
   - **CIDR blocks**. E.g.,
     - `122.43.0.0/16` (64k addresses)
@@ -261,3 +260,42 @@
   - Delete ELB
   - Terminate EC2 instances
   - Delete security group
+
+## 501: AutoScaling & CloudWatch
+
+* CloudWatch alarms can fire AutoScaling policies and/or SNS notifications
+* **"Triangle Services"**: AutoScaling, ELB, CloudWatch. Play nice together.
+* Setup autoscaling:
+  1. Create ELB
+  2. Create EC2 instances in 2+ AZs
+  3. Create AutoScaling group (including EC2 instances across AZs)
+  4. Create AutoScaling policies pair (one up, one down)
+  5. Create CloudWatch alarms to fire policies
+* Policies, e.g.,
+  - UP: add 2 instances
+  - DOWN: remove 2 instances
+* CloudWatch alarms, e.g.,
+  - UP: ELB latency > 500ms
+  - DOWN: ELB latency < 100ms
+* There are no RAM alarms
+* AutoScaling requires 3 pieces:
+  1. Launch config (AMI, instance type)
+  2. AutoScaling Group (AZs, max/min servers)
+  3. AutoScaling Policy (the "buttons" for actors to push)
+* Types of AutoScaling Policy
+  - Fixed oversize
+  - Demand-based
+  - Schedule-based
+* Cooldown (in seconds) is minimum time before honoring AutoScaling policy reqs
+  - Can set independent values on UP & DOWN policies
+  - In general, want fast scale up & slow scale down
+* CloudWatch has:
+  - Namespaces
+  - Metrics (CPU util, disk reads, etc)
+  - Statistics (avg, min, max, etc)
+  - Units (%, ms, etc)
+  - Periods
+  - Alarms
+* Must install CloudWatch agent in EC2 for metrics (its an EC2 launch checkbox)
+* AutoScaling has no Web GUI (use CLI)
+* CloudWatch can do billing alarms 
