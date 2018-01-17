@@ -234,3 +234,30 @@
 * Tip: Can use reserved for base traffic, then use spot and on-demand for peak
 
 ## 308: Making an AMI
+
+## 401: ELB intro
+
+* Allows elasticity through horizontal scale
+* Software load balancers to decouple web and app
+* Can terminate SSL, SSL encrypt to back-end, and supports `X-Forwarded-For` (client IP forwarding)
+* Deep integration w/ AutoScaling & CloudWatch (the "triangle services")
+  - Can add more servers as needed
+  - Can detach & remove unhealthy servers
+
+## 402: ELB lab
+
+* Create EC2 instance w/ setup pasted in user data:
+  - `yum -y install httpd`
+  - `service httpd start`
+  - Create `var/www/html/index.html`
+* Create new Security Group w/ ports 80, 22 open
+* Create another EC2 instance
+  - Different availability zone
+  - Slightly different index.html
+* Go to "Networking & Security" > "Load Balancers" > "Create Load Balancer"
+  - Drop healthy threshold down to 2
+* Note: outside AWS, tends to stick; inside, bounces more-or-less evenly. So test from EC2 instance.
+* Cleaning up:
+  - Delete ELB
+  - Terminate EC2 instances
+  - Delete security group
