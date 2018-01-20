@@ -346,3 +346,19 @@
     - Get, Put, Update, BatchWrite, Query (on range), and Scan (slow)
   - No table size limit, but 64K row limit size
 * Tip: pull "hot tables" out of RDS into DynamoDB
+
+## 801: Provisioning an RDS
+
+* RDS provides:
+  - HA (tools provided)
+  - DR (backups and snapshots)
+  - Scaling (options provided)
+  - Patch mgmt
+* Just SQL access; no SSH
+* Native master/slave HA
+  - Slave is "hot standby" in another AZ
+  - Slave incurs extra costs
+  - Slave writes are synchronous (must write to slave first)
+* Read Replica support
+  - MySQL-only
+  - requires app-specific logic 
