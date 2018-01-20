@@ -361,4 +361,80 @@
   - Slave writes are synchronous (must write to slave first)
 * Read Replica support
   - MySQL-only
-  - requires app-specific logic 
+  - requires app-specific logic
+
+## 901: Intro to S3
+
+* Buckets are globally-unique namespaces (like domains)
+  - User must provision buckets in specific region
+* Objects consist of key & value
+  - Key is name of object (incl bucket)
+  - Value is bytes of object
+* Easy to DNS CNAME a "vanity" URL to bucket
+  - **CNAMES** specify that domain name is alias for another domain
+  - **A record** maps name to one or more IP addresses
+* Types of access control
+  - IAM policies
+  - Bucket policies
+  - ACLs
+  - Query string authentication
+* Objects have metadata; e.g., Content-Type header
+* Glacier S3 is like standard S3, 1/10th cost, but queued (not real-time) retrieval
+  - Great for backups
+
+## 902: Advanced Features of S3
+
+* Simple, static website hosting
+  - "Index" & "Error" document support
+* Object expiration
+* Encryption
+  - Encrypted at rest
+  - Encrypted in transit
+* Versioning
+  - Each version is a complete copy
+  - Cannot be turned off
+* Logging
+  - Access logs @ bucket level
+* Direct from bucket upload
+* Multipart file upload
+  - Limited to SDK
+  - Client "chunks" file into pieces
+  - Client "closes" file
+  - Each must be < 5GB
+  - Total 5TB file limit
+* BitTorrent support
+  - Max 5GB file size
+
+## 903: S3 hands on
+
+* Note: can replace `s3.amazonaws.com/my-bucket/a.png` w/ `my-bucket.s3.amazonaws.com/a.png`
+* Covered:
+  - Creating buckets
+  - Uploading through web
+  - Making files readable by everyone
+  - Encrypting * setting less replications
+* Glacier is a separate service, though hosted via S3
+
+## 904: s3cmd
+
+* Many S3 tools
+  - AWS console
+  - Wide # 3rd party guis (CloudBerry)
+  - Official s3 tool (it's okay...)
+  - s3cmd (one of the best)
+* To become root: `$ sudo su -`
+* `$ tar -xvzf foo.tar.gz`
+* Install from source using: `$ python setup.py install`
+* `$ s3cmd --configure` saves to `/root/.s3cfg`
+* s3cmd commands:
+  - `mb` to make bucket
+  - `rb` to remove bucket
+  - `ls`
+  - `put`
+  - `sync`
+  - `get`
+  - `del` (alias for `rm`)
+  - `cp`
+  - `mv`
+  - manage website, meta data, access, security, etc
+* Don't create access keys for root account; create access keys for IAM users!
