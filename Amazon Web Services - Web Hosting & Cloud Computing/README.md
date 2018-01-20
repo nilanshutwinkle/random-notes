@@ -298,4 +298,21 @@
   - Alarms
 * Must install CloudWatch agent in EC2 for metrics (its an EC2 launch checkbox)
 * AutoScaling has no Web GUI (use CLI)
-* CloudWatch can do billing alarms 
+* CloudWatch can do billing alarms
+
+## 601: Setting up CloudFormation
+
+* Specify infrastructure as code (can version control)
+* Enforce "one way to deploy"
+* Like light versions of Chef, Puppet, or CFEngine
+* 200-300 templates available to fast track development & exploration w/ AWS
+* CloudFormer: creates template from running stack
+* 7 sections:
+  1. Version
+  2. Description
+  3. Parameters: fields you fill out when creating instances
+  4. Mappings: specify abbreviated terms for things like instance types, AMI lists
+  5. Resources: which resources to create. E.g., "S3Bucket", "S3User"
+  6. Properties (resource specifics)
+  7. Outputs: specify any outputs that scripts would use; e.g., website URL from ELB's "DNSName"
+* At the time of video, instructor recommends use CF for creating stacks, but not for updating (as rules for what is bounced are complicated)
