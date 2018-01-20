@@ -316,3 +316,33 @@
   6. Properties (resource specifics)
   7. Outputs: specify any outputs that scripts would use; e.g., website URL from ELB's "DNSName"
 * At the time of video, instructor recommends use CF for creating stacks, but not for updating (as rules for what is bounced are complicated)
+
+## 701: Available Storage Types - S3, RDS, DynamoDB
+
+* S3:
+  - Extremely durable, "eleven 9s"
+  - Objects natively web-accessible (can host static websites)
+  - Higher latency
+  - Basically: read, write, delete, list
+* RDS:
+  - HA baked in (multi-AZ master/slave)
+  - DR baked in w/ automated backups & snapshots
+  - Upper limit on vertical scale
+  - 3TB DB size limit
+  - Only accessed via SQL
+* DynamoDB:
+  - Great for "Three Vs":
+    1. variety
+    2. velocity (SSD-backed, very fast)
+    3. volume
+  - Column family key-value store
+  - Strongly consistent
+  - HA baked in
+  - Extremely cost effective
+  - Two lookup key types
+    1. Hash key (unique ID)
+    2. Hash & ranged key (typically date)
+  - Very limited querying
+    - Get, Put, Update, BatchWrite, Query (on range), and Scan (slow)
+  - No table size limit, but 64K row limit size
+* Tip: pull "hot tables" out of RDS into DynamoDB
