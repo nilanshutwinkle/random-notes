@@ -1,3 +1,3 @@
 # notes
 
-A place to dump my random notes.
+A place for random notes.
