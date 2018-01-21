@@ -460,7 +460,7 @@
 * No querying; just key-based retrieval
 * Per hour node charge & bandwidth charges (free w/i AZ)
 
-# 1201: Intro to VPC
+## 1201: Intro to VPC
 
 * "AWS Classic" is the wild west  
   - No way to cordon off entire stack of resources
@@ -478,7 +478,7 @@
   - Burst internal capacity into AWS
   - Compliance w/ strict regulations (e.g., HIPPA)
 
-# 1202: Advanced VPC
+## 1202: Advanced VPC
 
 * E.g., web, db, computing resources
   - Web + db stacks across muliple AZs, compute resources across AZs
@@ -487,3 +487,24 @@
   - Specify IP-based rules for IG & VPG to control access
 * Can lock outbound traffic from (say) web servers to single IP addr for updating packages
   - Furthermore, can disable & only re-enable programmatically once a week for updates
+
+## 1301: Intro to SNS
+
+* Send notices to internal assets
+  - from/to application/users
+* Useful for monitoring alerts, logging
+* To setup:
+  - Create topic (think mailbox)
+  - Add subscribers
+  - Subscribers must confirm
+  - Send msgs to topic
+* Console & API support
+* HTTP/S, email, email-json, SMS, SQS
+  - All but SQS incur costs
+
+## 1302: SNS use cases & best practices
+
+* Good RDS integration (send critical db events to dba)
+* Used by CloudWatch for policies & alerts
+* Tip: use 2nd SQS so workers can pull
+  - Allows offline apps to later catch up
