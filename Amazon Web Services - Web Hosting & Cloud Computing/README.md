@@ -459,3 +459,31 @@
 * Frequently used for user sessions
 * No querying; just key-based retrieval
 * Per hour node charge & bandwidth charges (free w/i AZ)
+
+# 1201: Intro to VPC
+
+* "AWS Classic" is the wild west  
+  - No way to cordon off entire stack of resources
+  - No control of networking
+* VPC and VPC subnets
+* Don't need security groups between machines in VPC
+* Access to internet from VPC via gateway
+* VPCs provide logical isolaiton of resources
+* VPC subnets are like AZs
+  - AutoScaling groups can span subnets
+  - Minimum size is /28 (14 IP addr)
+* Network Address Translation (NAT) allows machines to hide on private network and still access internet
+* Only select resources can be launched in VPC (ELB, EC2, RDS, ElastiCache)
+* Use cases
+  - Burst internal capacity into AWS
+  - Compliance w/ strict regulations (e.g., HIPPA)
+
+# 1202: Advanced VPC
+
+* E.g., web, db, computing resources
+  - Web + db stacks across muliple AZs, compute resources across AZs
+  - Horizontals w/i AutoScaling Groups (ASG) have same subnets
+  - Attach internet gateway and virtual private gateway for corporate data center access
+  - Specify IP-based rules for IG & VPG to control access
+* Can lock outbound traffic from (say) web servers to single IP addr for updating packages
+  - Furthermore, can disable & only re-enable programmatically once a week for updates
