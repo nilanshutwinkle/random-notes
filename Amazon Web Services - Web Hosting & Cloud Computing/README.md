@@ -508,3 +508,21 @@
 * Used by CloudWatch for policies & alerts
 * Tip: use 2nd SQS so workers can pull
   - Allows offline apps to later catch up
+
+## Intro SES
+
+* Simple Email Service
+* Note SNS sends email, too, but:
+  - Opt-in (confirm)
+  - Plain text
+  - No personalization
+* CAN-SPAM compliance is up to you
+  - AWS provides some tools (e.g., blocking spammy email)
+  - SES doesn't provide "unsub" functionality (main thrust of CAN-SPAM)
+* Best practices:
+  - CAN-SPAM compliance
+  - Use SPF, Sender ID, and DKIM
+  - Proactively score email content
+  - Monitor reputation
+  - Send to high quality lists (validated, double opted in, scrubbed)
+  - See Amazons best practices PDF
