@@ -438,3 +438,15 @@
   - `mv`
   - manage website, meta data, access, security, etc
 * Don't create access keys for root account; create access keys for IAM users!
+
+## 1001: Intro CloudFront
+
+* Download vs streaming distributions
+  - Streaming uses RTMP (or RTMPE for encrypted)
+* Pull access: cached upon request @ specified edge location
+* On demand or scheduled expiry
+* Must create "distribution"
+  - Select HTTP or streaming
+  - Specify "origin" - any web-accessible server (private, EC2, S3)
+* Easy to CNAME to vanity URL
+* Charged per pull and invalidation
