@@ -561,3 +561,38 @@
 * E.g., machine-to-machine processing
   - Various processes tied by msg bus, polling for msgs & sending msg when complete
 * E.g., reviewing profile pics using Mechanical Turk
+
+## 1601: Intro to IAM
+
+* Grant users access
+  - Verbs, not nouns
+  - S3 has noun-level controls, though
+  - Can be permanent or short-term (expire)
+* Enable EC2 roles
+* Hierarchical, granular, secure by default
+* Use case: end user uploads to particular S3 bucket
+  1. Create IAM user w/ access only to particular bucket
+  2. Launch app w/ EC2 into Role
+  3. Sign "upload form" w/ IAM user credentials
+  4. Lock down form in application
+* Groups contain multiple users, & users can belong to many groups
+* Master account is special (root-like)
+* Resource-based and user-based permissions
+* IAM users have account-specific Console login pages
+* Enabling EC2 Roles:
+  1. Create IAM Role
+  2. Include Role as parameter at instance launch
+  3. From instance, sign requests to services w/ role access key
+  * Avoids need need to copy credentials to EC2
+  * Enables automated rotation of access keys
+* Best practice: create "root" IAM user & never use "master" account again
+
+## 1602: IAM advanced topics
+
+* Groups can have permissions (including deny)
+* Instructor likes starting w/ resource-based permissions & layering user-based permissions on top
+* Supports federated users (e.g., LDAP)
+
+## 1602: IAM hands on
+
+* We'll create DBA group and user
