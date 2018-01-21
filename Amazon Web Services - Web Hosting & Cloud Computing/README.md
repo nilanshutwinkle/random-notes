@@ -593,6 +593,36 @@
 * Instructor likes starting w/ resource-based permissions & layering user-based permissions on top
 * Supports federated users (e.g., LDAP)
 
-## 1602: IAM hands on
+## 1603: IAM hands on
 
 * We'll create DBA group and user
+
+## 1701: Intro to Route 53
+
+* Distributed DNS for AWS
+* Route 53 failover
+  - Set health checks
+  - Specify by IP or domain
+  - When health check fails on primary, redirects to secondary
+  - Useful for mission critical, but expensive
+
+## 1801: Application Overview
+
+## 1802-1804: Download & Modify CloudFormation Template
+
+## 1805: Build Stack w/ CloudFormation
+
+* Using modified `Drupal_Multi_AZ.template`
+* Estimated costs:
+  - EC2: ~~$113~~ $87
+  - RDS: ~~$113~~ $82
+  - Total: ~~$226~~ $169
+
+## 1806: Review Stack in GUI
+
+## 1807: Simulating Load
+
+* Siege (load testing software)
+* Demos autoscaling under load
+
+## 1901: AWS Wrap Up
