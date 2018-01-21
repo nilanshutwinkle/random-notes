@@ -450,3 +450,12 @@
   - Specify "origin" - any web-accessible server (private, EC2, S3)
 * Easy to CNAME to vanity URL
 * Charged per pull and invalidation
+
+# 1101: Provisioning ElastiCache Instance
+
+* In-memory caching mechanism
+  - ElastiCache is a memcache cluster
+  - Only available in single AZ
+* Frequently used for user sessions
+* No querying; just key-based retrieval
+* Per hour node charge & bandwidth charges (free w/i AZ)
