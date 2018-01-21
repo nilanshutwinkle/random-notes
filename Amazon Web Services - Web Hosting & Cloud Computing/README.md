@@ -509,7 +509,7 @@
 * Tip: use 2nd SQS so workers can pull
   - Allows offline apps to later catch up
 
-## Intro SES
+## 1401: Intro SES
 
 * Simple Email Service
 * Note SNS sends email, too, but:
@@ -526,3 +526,38 @@
   - Monitor reputation
   - Send to high quality lists (validated, double opted in, scrubbed)
   - See Amazons best practices PDF
+
+## 1501: Overview of Queues
+
+* Promotes loose coupling & scaling by tier
+* Service Oriented Architecture (SOA) uses a service bus
+* Queuing theory is mathematically complicated
+* SQS doesn't have dead letter queues, txs, rollbacks
+
+## 1502: Intro to SQS
+
+* First AWS service
+* Commonly used w/ SNS as 2nd storage bucket for transitory msgs
+* Durability, resiliency, HA baked in
+* Quirks
+  - Eventually consistent
+  - Order not guaranteed
+  - At least once delivered (workers need to be idempotent)
+* No dead letter queue, and msgs could sit in queue forever
+* Setup:
+  1. Create queue
+  2. Create workers
+  3. Make workers poll queue
+  4. Workers must delete msg from queue
+* API & console support
+* Simple Workflow Service (SWS) is e2e workflow system
+  - Guarantees exactly one delivery
+
+## 1503: SQS use cases
+
+* E.g., order processing
+  - Using service bus: place order, validate credit card, verify inventory, etc
+  - Upstream services put messages on queue
+* E.g., machine-to-machine processing
+  - Various processes tied by msg bus, polling for msgs & sending msg when complete
+* E.g., reviewing profile pics using Mechanical Turk
