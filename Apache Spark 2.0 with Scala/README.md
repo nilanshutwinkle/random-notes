@@ -84,7 +84,7 @@ list1 ++ list2 // concat lists
 * RDDs can be **transformed** (e.g., `map`, `flatMap`, `filter`, `distinct`, `sample`, etc) and have **actions** (e.g., `collect`, `count`, `countByValue`, `take`, `top`, `reduce`, etc)
 * Nothing happens until call action (lazy evaluation)
 
-## Lecture 11
+### Lecture 11
 
 ```scala
 val sc = new SparkContext("local[*]", "RatingsCounter")
@@ -93,7 +93,7 @@ val lines = sc.textFile("...")
 val results = ratings.countByValue()
 ```
 
-## Lecture 12
+### Lecture 12
 
 * Execution plan created from RDD
 * `countByValue` can result in **shuffle operation** on cluster, which can be expensive (want to minimize)
@@ -102,38 +102,102 @@ val results = ratings.countByValue()
   - Stage 1: `textFile`, `map`
   - Stage 2: `countByValue`
 
-## Lecture 13
+### Lecture 13
 
 * **Key/value RDDs** are RDDS with key/value tuples. E.g., average # of friends by age.
 * Useful for key/value RDDs: `reduceByKey`, `groupByKey`, `sortByKey`, `keys`, `values`
 * Can do SQL-like joins on two key/value RDDs: `join`, `rightOuterJoin`, `leftOuterJoin`, `cogroup`, `subtractByKey`
 
-## Lecture 14
+### Lecture 14
 
 * `FriendsByAge.scala` example
 * Using `reduce` action to get results
 
-## Lecture 16
+### Lecture 16
 
 * `MinTemperatures.scala`, `MaxTemperatures.scala` examples
 
-## Lecture 17
+### Lecture 17
 
 * `WordCount.scala` example
 
-## Lecture 18
+### Lecture 18
 
 * `WordCountBetter.scala` example
 
-## Lecture 19
+### Lecture 19
 
 * Instead of `countByValue`, going to use map/reduce (e.g., `map` + `reduceByKey`) so that execution is distributed
 * `WordCountBetterSorted.scala` example
 
-## Lecture 20
+### Lecture 20
 
 * Exercise: sum up amount spent per customer (`custom-orders.csv`)
 
-## Lecture 21
+### Lecture 21
 
 * Exercise: sort by amount spent per customer
+
+## Section 4: Advanced Examples of Spark Programs
+
+### Lecture 23
+
+* `PopularMovies.scala` (find movie w/ most ratings)
+
+### Lecture 24
+
+* **Broadcast variables**: sharing values across cluster using `broadcast()` and `value()`, e.g.,
+  ```scala
+  val nameDict = sc.broadcast(loadMoviesNames)
+  ...
+  nameDict.value(x._2)
+  ```
+* `PopularMoviesNicer.scala`
+
+### Lecture 25
+
+* `MostPopularSuperhero.scala`
+
+### Lecture 26
+
+* Introduce breadth-first search BFS
+
+### Lecture 27
+* **Accumulators** are variables for aggregating info across clusters:
+  ```scala
+  val emptyLines = sc.accumulator(0, "Empty")
+  ...
+  forEach { line =>
+    if (line.isEmpty) emptyLines += 1
+  }
+  ```
+* Going to impl BFS using map/reduce
+
+### Lecture 28
+
+* `DegreesOfSeparation.scala`
+
+### Lecture 29
+
+* **Item-based collaborative filtering**: movies that are similar to each other based on similar ratings
+* `cache()` (memory) and `persist()` (disk) when need to access RDD more than once
+
+### Lecture 30
+
+* `MoviesSimilarities.scala`
+* **Self join**:
+  ```scala
+  val ratings = ??? // (userId, rating)
+  val combos = ratings.join(ratings)
+  ```
+* **Cosine similarity** measurement
+* Running Spark on command-line:
+  ```bash
+  $ spark-submit --class com.foo.Bar Bar.jar <param1> ...
+  ```
+
+### Lecture 31
+* Ideas for extensions:
+  - Discard bad ratings
+  - Try different similarity metrics (Pearson R, conditional probability)
+  - Ise genres from `u.items`
