@@ -57,6 +57,7 @@ CREATE INDEX program_department_code ON programs (department_code);
 
 See:
 * [Constraints](https://www.postgresql.org/docs/9.2/static/ddl-constraints.html): (postgresql.org) `CHECK`, `CONSTRAINT`, `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `REFERENCES`, `FOREIGN KEY`, `ON DELETE`
+* [Data Types](https://www.postgresql.org/docs/9.5/static/datatype.html): (postgresql.org)
 
 ### Rows
 
