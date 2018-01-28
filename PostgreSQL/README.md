@@ -4,13 +4,6 @@
 $ psql -h <host> -p <port> -U <username> <database>
 ```
 
-## Help
-
-| Command       | Description   | Example |
-| ------------- |:-------------:| -------:|
-| `\h` | Help with SQL command | `\h CREATE DATABASE` |
-| `\?` | Help with Postgres command | N/A |
-
 ## Basic
 
 ### Databases
@@ -92,10 +85,12 @@ DELETE FROM departments
       WHERE code = 'PHYS';
 ```
 
-## Theory
-* Based on branch of set theory called relational algebra
-* Relations = tables
-* Tuples = rows
+### Help
+
+| Command       | Description   | Example |
+| ------------- |:-------------:| -------:|
+| `\h` | Help with SQL command | `\h CREATE DATABASE` |
+| `\?` | Help with Postgres command | N/A |
 
 ## Advanced
 
@@ -117,3 +112,8 @@ Links:
 | Command       | Description   | Example |
 | ------------- |:-------------:| -------:|
 | `SHOW rds.extensions` | View installed contributed packages | N/A |
+
+## Theory
+* Based on branch of set theory called relational algebra
+* Relations = tables
+* Tuples = rows
