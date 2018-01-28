@@ -61,7 +61,7 @@ See:
 ### Rows
 
 ```sql
--- Insert rows
+-- Create
 INSERT INTO departments(code, name)
      VALUES ('MATH','Mathematics'),
             ('CSC', 'Computer Science'),
@@ -71,7 +71,7 @@ INSERT INTO programs(code, name, department_code)
      VALUES ('ML', 'Machine Learning', 'CSC'),
             ('WEB', 'Web Application Development', 'CSC');
 
--- Select rows
+-- Read
 SELECT * FROM departments;
 
 SELECT p.name as program_name,
@@ -80,12 +80,12 @@ SELECT p.name as program_name,
   JOIN departments as d
     ON p.department_code = d.code;
 
--- Updates
+-- Update
 UPDATE departments
    SET name = 'Physics'
  WHERE code = 'PHYS';
 
--- Delete rows
+-- Delete
 DELETE FROM departments
       WHERE code = 'PHYS';
 ```
@@ -120,7 +120,7 @@ EXPLAIN SELECT p.name as program_name,
 -- Show query plan and run
 EXPLAIN ANALYZE
          SELECT p.name as program_name,
-               d.name as department_name
+                d.name as department_name
            FROM programs as p
            JOIN departments as d
              ON p.department_code = d.code
