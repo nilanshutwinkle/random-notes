@@ -130,8 +130,31 @@ EXPLAIN ANALYZE
 ### Partitioning
 Splitting large table into smaller tables.
 
-Links:
+See:
 * [Partitioning](https://www.postgresql.org/docs/9.1/static/ddl-partitioning.html): (postgresql.org)
+
+### Transactions
+
+```sql
+-- Start a tx, do somethings, and commit
+BEGIN;
+...
+COMMIT;
+
+-- Start a tx, do somethings, then cancel
+BEGIN;
+... -- oops
+ROLLBACK;
+
+-- Use savepoints within a tx
+BEGIN;
+...
+SAVEPOINT savepoint_1;
+... -- oops
+ROLLBACK TO savepoint_1;
+...
+COMMIT;
+```
 
 ### Misc
 
