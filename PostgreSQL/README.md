@@ -14,6 +14,15 @@ $ psql -h <host> -p <port> -U <username> <database>
 ## Basic
 
 ```sql
+-- Show databases
+\l
+
+-- Create database
+CREATE DATABASE universities;
+
+-- Connect to database
+\c universities;
+
 -- Show tables
 \dt   -- basic
 \d+   -- includes size, comments
@@ -21,15 +30,22 @@ $ psql -h <host> -p <port> -U <username> <database>
 -- Create tables
 CREATE TABLE departments (
   code varchar(10) PRIMARY KEY,
-  name text UNIQUE NOT NULL
+  name text UNIQUE NOT NULL,
+  CONSTRAINT nonempty_values CHECK (code <> '' AND name <> '')
 );
 
 CREATE TABLE programs (
-  code varchar(10) CHECK (code <> ''),
-  department_code varchar(10) REFERENCES departments (code),
+  code varchar(10),
   name text NOT NULL,
-  PRIMARY KEY (code, department_code)
+  department_code varchar(10),
+  PRIMARY KEY (code, department_code),
+  FOREIGN KEY (department_code) REFERENCES departments ON DELETE RESTRICT,
+  CONSTRAINT nonempty_values CHECK (code <> '' AND name <> '')
 );
+
+-- Add index to avoid table scan when deleting departments
+
+CREATE INDEX program_department_code ON programs (department_code);
 
 -- Describe table
 \d+ foo
@@ -58,6 +74,12 @@ UPDATE departments
 DELETE FROM departments
       WHERE code = 'PHYS';
 ```
+Notes:
+* You always connect to a database; `\c` creates a new connection
+  - You can omit database from `psql` command if it is same name as user
+
+See:
+* [Constraints](https://www.postgresql.org/docs/9.2/static/ddl-constraints.html): (postgresql.org) `CHECK`, `CONSTRAINT`, `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `REFERENCES`, `FOREIGN KEY`, `ON DELETE`
 
 ## Theory
 * Based on branch of set theory called relational algebra
@@ -74,3 +96,6 @@ COMMENT ON TABLE departments IS 'Academic departments';
 | Command       | Description   | Example |
 | ------------- |:-------------:| -------:|
 | `SHOW rds.extensions` | View installed contributed packages | N/A |
+
+Links:
+* [Partitioning](https://www.postgresql.org/docs/9.1/static/ddl-partitioning.html): (postgresql.org) splitting large table into smaller tables
