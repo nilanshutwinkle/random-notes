@@ -51,7 +51,8 @@ CREATE TABLE programs (
 CREATE INDEX program_department_code ON programs (department_code);
 
 -- Describe table
-\d+ foo
+\d departments  -- basic
+\d+ departments -- includes storage, stats, comments
 ```
 
 See:
