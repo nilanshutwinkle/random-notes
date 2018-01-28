@@ -138,7 +138,7 @@
     - `122.43.0.0/16` (64k addresses)
     - `122.43.65.0/24` (255 addresses)
     - `122.43.65.8/32` (1 address)
-    - `0.0.0/0` (allows all addresses)
+    - `0.0.0.0/0` (allows all addresses)
 * CloudFormation's **cfn-init** for initializing on first boot (e.g., install packages, set hostname)
 
 ## 302: EC2 Disk instances
