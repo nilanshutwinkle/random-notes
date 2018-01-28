@@ -67,14 +67,18 @@ INSERT INTO departments(code, name)
             ('CSC', 'Computer Science'),
             ('PHYS', 'Chemistry');
 
+INSERT INTO programs(code, name, department_code)
+     VALUES ('ML', 'Machine Learning', 'CSC'),
+            ('WEB', 'Web Application Development', 'CSC');
+
 -- Select rows
 SELECT * FROM departments;
 
 SELECT p.name as program_name,
        d.name as department_name
-  FROM program as p
-  JOIN department as d
-    ON p.code = d.department_code;
+  FROM programs as p
+  JOIN departments as d
+    ON p.department_code = d.code;
 
 -- Updates
 UPDATE departments
@@ -100,6 +104,27 @@ DELETE FROM departments
 ```sql
 -- Add comment (description in \d+)
 COMMENT ON TABLE departments IS 'Academic departments';
+```
+
+### Execution Plans
+
+```sql
+-- Show query plan
+EXPLAIN SELECT p.name as program_name,
+               d.name as department_name
+          FROM programs as p
+          JOIN departments as d
+            ON p.department_code = d.code
+         WHERE p.code = 'CSC';
+
+-- Show query plan and run
+EXPLAIN ANALYZE
+         SELECT p.name as program_name,
+               d.name as department_name
+           FROM programs as p
+           JOIN departments as d
+             ON p.department_code = d.code
+          WHERE p.code = 'CSC';
 ```
 
 ### Partitioning
