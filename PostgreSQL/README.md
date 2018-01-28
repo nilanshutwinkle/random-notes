@@ -13,6 +13,8 @@ $ psql -h <host> -p <port> -U <username> <database>
 
 ## Basic
 
+### Databases
+
 ```sql
 -- Show databases
 \l
@@ -22,7 +24,15 @@ CREATE DATABASE universities;
 
 -- Connect to database
 \c universities;
+```
 
+Notes:
+* You always connect to a database; `\c` creates a new connection
+  - You can omit database from `psql` command if it is same name as user
+
+### Tables
+
+```sql
 -- Show tables
 \dt   -- basic
 \d+   -- includes size, comments
@@ -49,7 +59,14 @@ CREATE INDEX program_department_code ON programs (department_code);
 
 -- Describe table
 \d+ foo
+```
 
+See:
+* [Constraints](https://www.postgresql.org/docs/9.2/static/ddl-constraints.html): (postgresql.org) `CHECK`, `CONSTRAINT`, `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `REFERENCES`, `FOREIGN KEY`, `ON DELETE`
+
+### Rows
+
+```sql
 -- Insert rows
 INSERT INTO departments(code, name)
      VALUES ('MATH','Mathematics'),
@@ -74,12 +91,6 @@ UPDATE departments
 DELETE FROM departments
       WHERE code = 'PHYS';
 ```
-Notes:
-* You always connect to a database; `\c` creates a new connection
-  - You can omit database from `psql` command if it is same name as user
-
-See:
-* [Constraints](https://www.postgresql.org/docs/9.2/static/ddl-constraints.html): (postgresql.org) `CHECK`, `CONSTRAINT`, `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `REFERENCES`, `FOREIGN KEY`, `ON DELETE`
 
 ## Theory
 * Based on branch of set theory called relational algebra
@@ -88,14 +99,21 @@ See:
 
 ## Advanced
 
+### Comment
+
 ```sql
 -- Add comment (description in \d+)
 COMMENT ON TABLE departments IS 'Academic departments';
 ```
 
+### Partitioning
+Splitting large table into smaller tables.
+
+Links:
+* [Partitioning](https://www.postgresql.org/docs/9.1/static/ddl-partitioning.html): (postgresql.org)
+
+### Misc
+
 | Command       | Description   | Example |
 | ------------- |:-------------:| -------:|
 | `SHOW rds.extensions` | View installed contributed packages | N/A |
-
-Links:
-* [Partitioning](https://www.postgresql.org/docs/9.1/static/ddl-partitioning.html): (postgresql.org) splitting large table into smaller tables
