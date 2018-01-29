@@ -1,8 +1,10 @@
 # PostgreSQL
 
 ```sh
-$ psql -h <host> -p <port> -U <username> <database>
+$ psql -h <host> -p <port> -U <username> <database> -W
 ```
+
+Note: trailing `-W` proactively prompts for password, saving round trip.
 
 ## Basic
 
@@ -92,8 +94,29 @@ INSERT INTO programs(code, name, department_code)
             ('WEB', 'Web Application Development', 'CSC')
   RETURNING code;
 
+INSERT INTO programs(code, name, department_code)
+  VALUES ('QP', 'Quantum Physics', (
+    SELECT code
+      FROM departments
+     WHERE name = 'Physics'
+  )
+);
+
 -- Read
 SELECT * FROM departments;
+
+SELECT count(name)
+  FROM departments
+ WHERE name LIKE '%Science%';
+
+  SELECT department_code, count(*)
+    FROM programs
+GROUP BY department_code
+  HAVING count(*) >= 2;
+
+-- Following two are equivalent:
+SELECT DISTINCT department_code FROM programs;
+SELECT department_code FROM programs GROUP BY department_code;
 
 -- Read with join.
 -- Options: INNER (default), LEFT, RIGHT, OUTER (union).
@@ -177,6 +200,35 @@ SAVEPOINT savepoint_1;
 ROLLBACK TO savepoint_1;
 ...
 COMMIT;
+```
+
+By default, every SQL command is implicitly wrapped in a transaction.
+
+Follows ACID:
+* **Atomic**: all or nothing.
+* **Consistent**: doesn't transition data to inconsistent state in terms of constraints, cascades, triggers.
+* **Isolated**: cannot read data from other uncommitted transactions.
+* **Durable**: once committed, data is safe.
+
+### Window functions
+
+Return all matches, with each row including results of any aggregate functions.
+
+```sql
+SELECT d.name, p.name, count(*)
+  OVER (
+    PARTITION BY p.department_code
+  )
+  FROM programs as p
+  JOIN departments as d
+    ON d.code = p.department_code;
+
+    name         |            name             | count
+-----------------+-----------------------------+-------
+Computer Science | Machine Learning            |     2
+Computer Science | Web Application Development |     2
+Physics          | Quantum Physics             |     1
+(3 rows)
 ```
 
 ### Misc
