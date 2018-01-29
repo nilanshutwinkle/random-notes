@@ -46,9 +46,11 @@ CREATE TABLE programs (
   CONSTRAINT nonempty_values CHECK (code <> '' AND name <> '')
 );
 
--- Add index to avoid table scan when deleting departments
-
-CREATE INDEX program_department_code ON programs (department_code);
+-- Create with auto-incrementing id
+CREATE TABLE foo (
+  id SERIAL PRIMARY KEY,
+  ...
+);
 
 -- Describe table
 \d departments  -- basic
@@ -58,6 +60,23 @@ CREATE INDEX program_department_code ON programs (department_code);
 See:
 * [Constraints](https://www.postgresql.org/docs/9.2/static/ddl-constraints.html): (postgresql.org) `CHECK`, `CONSTRAINT`, `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `REFERENCES`, `FOREIGN KEY`, `ON DELETE`
 * [Data Types](https://www.postgresql.org/docs/9.5/static/datatype.html): (postgresql.org)
+
+### Indices
+
+```sql
+-- Add btree index (good for range queries) to avoid table scan when deleting departments
+CREATE INDEX program_department_code
+          ON programs (department_code);
+
+-- same as ...
+CREATE INDEX program_department_code
+          ON programs USING btree(department_code);
+
+-- Also `USING hash(department_code)`, which is good for exact match
+
+-- List all indices
+\di
+```
 
 ### Rows
 
@@ -70,11 +89,14 @@ INSERT INTO departments(code, name)
 
 INSERT INTO programs(code, name, department_code)
      VALUES ('ML', 'Machine Learning', 'CSC'),
-            ('WEB', 'Web Application Development', 'CSC');
+            ('WEB', 'Web Application Development', 'CSC')
+  RETURNING code;
 
 -- Read
 SELECT * FROM departments;
 
+-- Read with join.
+-- Options: INNER (default), LEFT, RIGHT, OUTER (union).
 SELECT p.name as program_name,
        d.name as department_name
   FROM programs as p
