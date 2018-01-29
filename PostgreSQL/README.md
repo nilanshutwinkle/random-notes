@@ -178,7 +178,7 @@ EXPLAIN ANALYZE
 #### Table-level locks
 
 | Access Level | Description | Acquired By |
-|:------:|:---------:| -----------:|
+| ------------ | ----------- | ----------- |
 | ACCESS SHARE | Read lock | `SELECT` |
 | ROW SHARE | Block row from update for remainder of transaction | `SELECT FOR UPDATE`, `SELECT FOR SHARE` |
 | ROW EXCLUSIVE | Lock for modifying data | `UPDATE`, `DELETE`, `INSERT` |
