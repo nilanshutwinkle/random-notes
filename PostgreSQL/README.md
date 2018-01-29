@@ -293,6 +293,46 @@ Follows ACID:
 * **Isolated**: cannot read data from other uncommitted transactions.
 * **Durable**: once committed, data is safe.
 
+### Triggers
+Automatically fire when some event happens. Can be triggered before or afters inserts or updates.
+
+Adapted from Seven Databases in Seven Weeks (Redmond and Wilson) chapter 2:
+
+```sql
+CREATE TABLE programs_change_history (
+  old_code varchar(10),
+  new_code varchar(10),
+  old_name text,
+  new_name text,
+  old_department_code varchar(10),
+  new_department_code varchar(10),
+  logged_at timestamp DEFAULT current_timestamp
+);
+
+CREATE OR REPLACE FUNCTION log_programs_change() RETURNS trigger AS $$
+DECLARE
+BEGIN
+  INSERT INTO programs_change_history (old_code, new_code, old_name, new_name, old_department_code, new_department_code)
+       VALUES (OLD.code, NEW.code, OLD.name, NEW.name, OLD.department_code, NEW.department_code);
+  RAISE NOTICE 'Someone just changed program #%', OLD.code;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER log_programs_change_trigger
+ AFTER UPDATE ON programs
+ FOR EACH ROW EXECUTE PROCEDURE log_programs_change();
+```
+
+```sql
+UPDATE programs
+   SET name = 'Buddhism'
+ WHERE code = 'BUD' AND department_code = 'REL';
+
+NOTICE:  Someone just changed program #BUD
+UPDATE 1
+```
+
 ### Window functions
 
 Return all matches, with each row including results of any aggregate functions.
