@@ -214,6 +214,54 @@ Implemented via table inheritance, table constraints, and a trigger.
 See:
 * [Partitioning](https://www.postgresql.org/docs/9.1/static/ddl-partitioning.html): (postgresql.org)
 
+### Stored Procedures
+
+```sql
+CREATE OR REPLACE FUNCTION add_program( program_code varchar(10), program_name text, department_code varchar(10), department_name text )
+RETURNS boolean AS $$
+DECLARE
+  did_insert boolean := false;
+  -- matches department_code parameter once tuple found or created
+  found_department_code varchar(10);
+BEGIN
+  SELECT code
+    INTO found_department_code
+    FROM departments
+   WHERE code = department_code
+   LIMIT 1;
+
+  IF found_department_code IS NULL THEN
+    INSERT INTO departments (code, name)
+    VALUES (department_code, department_name)
+    RETURNING code INTO found_department_code;
+
+    did_insert := true;
+  END IF;
+
+  RAISE NOTICE 'Department code %', found_department_code;
+
+  INSERT INTO programs (code, name, department_code)
+       VALUES (program_code, program_name, department_code);
+
+  RETURN did_insert;
+END;
+$$ LANGUAGE plpgsql;
+```
+
+To use:
+
+```sql
+SELECT add_program('BUD', 'Buddhist Studies', 'REL', 'Religious Studies');
+```
+
+Note that you can store procedure in a file and import:
+
+```sql
+\i /Users/me/postgres/add_program.sql
+```
+
+Above uses PL/pgSQL, and there's built-in support for Tcl, Perl, Python. There are third-party extensions for other languages.
+
 ### Transactions
 
 ```sql
