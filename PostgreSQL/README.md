@@ -173,8 +173,43 @@ EXPLAIN ANALYZE
           WHERE p.code = 'CSC';
 ```
 
+### Locks
+
+#### Table-level locks
+
+| Access Level | Description | Acquired By |
+|:------:| |:---------:| -----------:|
+| ACCESS SHARE | Read lock | `SELECT` |
+| ROW SHARE | Block row from update for remainder of transaction | `SELECT FOR UPDATE`, `SELECT FOR SHARE` |
+| ROW EXCLUSIVE | Lock for modifying data | `UPDATE`, `DELETE`, `INSERT` |
+| SHARE UPDATE EXCLUSIVE | Protect against concurrent schema changes, vacuums | `VACUUM`, `ANALYZE`, misc |
+| SHARE | Protect against concurrent data changes | `CREATE INDEX` |
+| SHARE ROW EXCLUSIVE | Like SHARE, but only one session can concurrently hold | Manually only |
+| EXCLUSIVE | Allows reads with ACCESS SHARE lock | Manually only |
+| ACCESS EXCLUSIVE | No other concurrent access permitted | `ALTER TABLE`, `DROP TABLE`, `TRUNCATE`, `REINDEX`, `CLUSTER`, and `VACUUM FULL` |
+
+Note that queries will acquire appropriate locks, though can explicitly acquire locks with `LOCK` command:
+
+```sql
+LOCK TABLE departments IN SHARE MODE;
+```
+
+Locks normally held for duration of transaction, though released if a rollback to savepoint.
+
+#### Row-level locks
+
+Row-level locks are either exclusive or shared, are acquired automatically on update/delete, and only block writers to the same row.
+
+Can be manually acquired via `SELECT FOR UPDATE` or `SELECT FOR SHARE`.
+
+#### Deadlocks
+
+Postgres automatically detects and aborts one of the transactions. Best way to prevent is to acquire locks in same order, with the greatest needed restriction acquired upfront.
+
 ### Partitioning
-Splitting large table into smaller tables.
+Splitting large table into smaller tables. This can improve query performance, avoids vacuum overhead when deleting partitions, and enables moving older partitions to cheaper storage.
+
+Implemented via table inheritance, table constraints, and a trigger.
 
 See:
 * [Partitioning](https://www.postgresql.org/docs/9.1/static/ddl-partitioning.html): (postgresql.org)
