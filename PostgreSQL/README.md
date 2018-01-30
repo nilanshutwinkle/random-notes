@@ -6,9 +6,36 @@ $ psql -h <host> -p <port> -U <username> <database> -W
 
 Note: trailing `-W` proactively prompts for password, saving round trip.
 
-## Basic
+## Contents
 
-### Databases
+* [Basic](#basic)
+  - [Databases](#databases)
+  - [Tables](#tables)
+  - [Indexes](#indexes)
+  - [Rows](#rows)
+  - [Help](#help)
+* [Advanced](#advanced)
+  - [Comment](#comment)
+  - [Execution Plans](#execution-plan)
+  - [Locks](#locks)
+    - [Table-level locks](#table-locks)
+    - [Row-level locks](#row-locks)
+    - [Deadlocks](#deadlocks)
+  - [Partitioning](#partitioning)
+  - [Rules and Views](#rules-views)
+    - [Views](#views)
+    - [Rules](#rules)
+  - [Stored Procedures](#stored-procedures)
+  - [Text Searching](#text-searching)
+  - [Transactions](#transactions)
+  - [Triggers](#triggers)
+  - [Window Functions](#window-functions)
+  - [Misc](#misc)
+* [Theory](#theory)
+
+## Basic <a name="basic"></a>
+
+### Databases <a name="databases"></a>
 
 ```sql
 -- Show databases
@@ -25,7 +52,7 @@ Notes:
 * You always connect to a database; `\c` creates a new connection
   - You can omit database from `psql` command if it is same name as user
 
-### Tables
+### Tables <a name="tables"></a>
 
 ```sql
 -- Show tables
@@ -63,7 +90,7 @@ See:
 * [Constraints](https://www.postgresql.org/docs/9.2/static/ddl-constraints.html): (postgresql.org) `CHECK`, `CONSTRAINT`, `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `REFERENCES`, `FOREIGN KEY`, `ON DELETE`
 * [Data Types](https://www.postgresql.org/docs/9.5/static/datatype.html): (postgresql.org)
 
-### Indices
+### Indexes <a name="indexes"></a>
 
 ```sql
 -- Add btree index (good for range queries) to avoid table scan when deleting departments
@@ -80,7 +107,7 @@ CREATE INDEX program_department_code
 \di
 ```
 
-### Rows
+### Rows <a name="rows"></a>
 
 ```sql
 -- Create
@@ -136,23 +163,23 @@ DELETE FROM departments
       WHERE code = 'PHYS';
 ```
 
-### Help
+### Help <a name="help"></a>
 
 | Command       | Description   | Example |
 | ------------- |:-------------:| -------:|
 | `\h` | Help with SQL command | `\h CREATE DATABASE` |
 | `\?` | Help with Postgres command | N/A |
 
-## Advanced
+## Advanced <a name="advanced"></a>
 
-### Comment
+### Comment <a name="comment"></a>
 
 ```sql
 -- Add comment (description in \d+)
 COMMENT ON TABLE departments IS 'Academic departments';
 ```
 
-### Execution Plans
+### Execution Plans <a name="execution-plan"></a>
 
 ```sql
 -- Show query plan
@@ -173,9 +200,9 @@ EXPLAIN ANALYZE
           WHERE p.code = 'CSC';
 ```
 
-### Locks
+### Locks <a name="locks"></a>
 
-#### Table-level locks
+#### Table-level locks <a name="table-locks"></a>
 
 | Access Level | Description | Acquired By |
 | ------------ | ----------- | ----------- |
@@ -196,17 +223,17 @@ LOCK TABLE departments IN SHARE MODE;
 
 Locks normally held for duration of transaction, though released if a rollback to savepoint.
 
-#### Row-level locks
+#### Row-level locks <a name="row-locks"></a>
 
 Row-level locks are either exclusive or shared, are acquired automatically on update/delete, and only block writers to the same row.
 
 Can be manually acquired via `SELECT FOR UPDATE` or `SELECT FOR SHARE`.
 
-#### Deadlocks
+#### Deadlocks <a name="deadlocks"></a>
 
 Postgres automatically detects and aborts one of the transactions. Best way to prevent is to acquire locks in same order, with the greatest needed restriction acquired upfront.
 
-### Partitioning
+### Partitioning <a name="partitioning"></a>
 Splitting large table into smaller tables. This can improve query performance, avoids vacuum overhead when deleting partitions, and enables moving older partitions to cheaper storage.
 
 Implemented via table inheritance, table constraints, and a trigger.
@@ -214,11 +241,11 @@ Implemented via table inheritance, table constraints, and a trigger.
 See:
 * [Partitioning](https://www.postgresql.org/docs/9.1/static/ddl-partitioning.html): (postgresql.org)
 
-### Rules and Views
+### Rules and Views <a name="rules-views"></a>
 
 When Postgres server receives SQL string, it parses it into AST, and then modifies the tree based on rules. This modified query is sent to the planner for optimization, and then is executed.
 
-#### Views
+#### Views <a name="views"></a>
 
 Note that **views** are a type of rule.
 
@@ -240,7 +267,7 @@ SELECT * FROM religious_programs;
 
 Note cannot update a view directly, but can create a rule to do this instead.
 
-#### Rules
+#### Rules <a name="rules"></a>
 
 ```sql
 CREATE RULE update_religious_programs AS ON
@@ -267,7 +294,7 @@ SELECT * FROM religious_programs;
  BDS  | Buddhist Studies
 ```
 
-### Stored Procedures
+### Stored Procedures <a name="stored-procedures"></a>
 
 ```sql
 CREATE OR REPLACE FUNCTION add_program( program_code varchar(10), program_name text, department_code varchar(10), department_name text )
@@ -315,7 +342,7 @@ Note that you can store procedure in a file and import:
 
 Above uses PL/pgSQL, and there's built-in support for Tcl, Perl, Python. There are third-party extensions for other languages.
 
-### Text Searching
+### Text Searching <a name="text-searching"></a>
 
 Note: can combine multiple text searching methods.
 
@@ -333,7 +360,7 @@ Note: can combine multiple text searching methods.
   ```
 * `tsvector` and `tsquery` split strings into tokens, effectively searching against a dictionary of individual words (**lexemes**), ignoring stop words ('a', 'the', etc)
 
-### Transactions
+### Transactions <a name="transactions"></a>
 
 ```sql
 -- Start a tx, do somethings, and commit
@@ -364,7 +391,7 @@ Follows ACID:
 * **Isolated**: cannot read data from other uncommitted transactions.
 * **Durable**: once committed, data is safe.
 
-### Triggers
+### Triggers <a name="triggers"></a>
 Automatically fire when some event happens. Can be triggered before or after inserts or updates.
 
 Adapted from Seven Databases in Seven Weeks (Redmond and Wilson) chapter 2:
@@ -404,7 +431,7 @@ NOTICE:  Someone just changed program #BUD
 UPDATE 1
 ```
 
-### Window functions
+### Window Functions <a name="window-functions"></a>
 
 Return all matches, with each row including results of any aggregate functions.
 
@@ -425,13 +452,13 @@ Physics          | Quantum Physics             |     1
 (3 rows)
 ```
 
-### Misc
+### Misc <a name="misc"></a>
 
 | Command       | Description   | Example |
 | ------------- |:-------------:| -------:|
 | `SHOW rds.extensions` | View installed contributed packages | N/A |
 
-## Theory
+## Theory <a name="theory"></a>
 * Based on branch of set theory called relational algebra
 * Relations = tables
 * Tuples = rows
