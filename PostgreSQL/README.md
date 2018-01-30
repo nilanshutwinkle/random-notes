@@ -214,6 +214,59 @@ Implemented via table inheritance, table constraints, and a trigger.
 See:
 * [Partitioning](https://www.postgresql.org/docs/9.1/static/ddl-partitioning.html): (postgresql.org)
 
+### Rules and Views
+
+When Postgres server receives SQL string, it parses it into AST, and then modifies the tree based on rules. This modified query is sent to the planner for optimization, and then is executed.
+
+#### Views
+
+Note that **views** are a type of rule.
+
+```sql
+CREATE OR REPLACE VIEW religious_programs AS
+  SELECT code, name
+    FROM programs
+   WHERE department_code = 'REL';
+```
+
+```sql
+SELECT * FROM religious_programs;
+
+ code |   name
+------+----------
+ BUD  | Buddhism
+(1 row)
+```
+
+Note cannot update a view directly, but can create a rule to do this instead.
+
+#### Rules
+
+```sql
+CREATE RULE update_religious_programs AS ON
+  UPDATE TO religious_programs DO INSTEAD
+  UPDATE programs
+     SET code = NEW.code,
+         name = NEW.name
+   WHERE code = OLD.code;
+```
+
+```sql
+UPDATE religious_programs
+   SET code = 'BDS',
+       name = 'Buddhist Studies'
+ WHERE code = 'BUD';
+
+NOTICE:  Someone just changed program #BUD
+UPDATE 1
+
+SELECT * FROM religious_programs;
+
+ code |       name
+------+------------------
+ BDS  | Buddhist Studies
+```
+
 ### Stored Procedures
 
 ```sql
@@ -294,7 +347,7 @@ Follows ACID:
 * **Durable**: once committed, data is safe.
 
 ### Triggers
-Automatically fire when some event happens. Can be triggered before or afters inserts or updates.
+Automatically fire when some event happens. Can be triggered before or after inserts or updates.
 
 Adapted from Seven Databases in Seven Weeks (Redmond and Wilson) chapter 2:
 
