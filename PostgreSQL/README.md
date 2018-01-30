@@ -218,6 +218,24 @@ See:
 
 When Postgres server receives SQL string, it parses it into AST, and then modifies the tree based on rules. This modified query is sent to the planner for optimization, and then is executed.
 
+### Text Searching
+
+Note: can combine multiple text searching methods.
+
+* `LIKE`, `ILIKE`
+* Regex, e.g., `SELECT COUNT(*) FROM departments WHERE name !~* '^.*Science';`
+* `fuzzystrmatch` module
+  - `levenstein`
+  - `metaphone`: match based on word sounds
+* `pg_trgm` module: trigrams using `gist`-based index
+  ```sql
+  CREATE INDEX departments_name_trigram ON departments
+         USING gist (name gist_trgm_ops);
+  SELECT * FROM departments
+   WHERE name % 'Computre Sicence';
+  ```
+* `tsvector` and `tsquery` split strings into tokens, effectively searching against a dictionary of individual words (**lexemes**), ignoring stop words ('a', 'the', etc)
+
 #### Views
 
 Note that **views** are a type of rule.
