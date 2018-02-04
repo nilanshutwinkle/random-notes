@@ -1,6 +1,6 @@
 # Functional Programming in Scala
 
-## Chapter 1
+## Chapter 1: What is functional programming?
 * Side effects limits testability, comparability. (6)
 * Pure core, thin layer on outside for effects. (8)
 * **Referential transparency** (RT): if all occurrence of expressions can be replaced with values. (9)
@@ -8,7 +8,7 @@
 * **Substitution model**: mode of reasoning based on RT. (11)
 * Local reasoning enabled when no state. (12)
 
-## Chapter 2
+## Chapter 2: Getting started with functional programming in Scala
 * **Tail call elimination** and `@annotation.tailrec` (20-21)
 * Monomorphic vs polymorphic (aka, "generic") functions (22-23)
 * Elided = omitted (25)
@@ -19,7 +19,7 @@
 * **Function composition**: feeds output of one function as input into another (27)
 * Functional programming in the large has much the same flavor as programming in the small (28)
 
-## Chapter 3
+## Chapter 3: Functional data structures
 * Functional data structures are immutable. (29)
 * `sealed trait` requires that all Implementations are defined in the file. (30)
 * Covariant type parameter (e.g., `List[+A]`). For all types `X` that are subtypes of `Y`, `List[X]` is subtype of `List[Y]`; otherwise, invariant. (31-32)
@@ -37,7 +37,7 @@
 * Tuples are ADT with a special syntax. (45)
 * FP less concerned about encapsulation (e.g., hiding internal representation for ADTs) since there is no delicate state to protect (46)
 
-## Chapter 4
+## Chapter 4: Handling errors without exceptions
 
 * Throwing exceptions is a side effect, and breaks RT since where it is thrown (inside or outside try blocks) impacts result of expression. (48, 49)
 * RT doesn't depend on context, but non-RT expressions are context-dependent and depend on globally reasoning. Exceptions introduce context dependence. (49)
@@ -86,7 +86,7 @@ object Either {
 }
 ```
 
-## Chapter 5
+## Chapter 5: Strictness and laziness
 
 * Couple of the goals of **non-strictness** (e.g., **laziness**) is to avoid temporary structures and perform computations in a single pass. (65)
 * A function is non-strict if it can choose to not evaluate one or more of its arguments. (65)
@@ -102,7 +102,7 @@ object Either {
 * **Infinite streams**. E.g., `val ones: Stream[Int] = Stream.cons(1, ones)`. (73)
 * **Corecursive functions** (aka, "guarded recursion") produce data (e.g., `unfold`), whereas recursive functions consume them (e.g., `fold`). (75)
 
-## Chapter 6
+## Chapter 6: Purely functional state
 
 * Chapter about writing purely functional programs that manipulate state. (78)
 * Achieve referential transparency by making state updates explicit; not as a side effect, but returning state with generated values. (80)
@@ -115,3 +115,29 @@ object Either {
 * The `State` type and case class. (88)
 * **Imperative programming**: program is sequence of statements where each statement modifies program state. Functional programming has excellent support for writing imperative programs; e.g., for comprehensions. (88-89)
 * Created *Machine*, a finite state machine that dispenses candy. (90-91)
+
+## Chapter 7: Purely functional parallelism
+
+* Theme: separating description of computation from running it. (95)
+* **Algebraic reasoning**, and an API can be described by an algebra that obeys certain laws. (96)
+* Goal: design a functional library for parallel computations without any side effects. (96)
+* Design ideal API, and work backwards towards the implementation. (97)
+* Separation of logical threads and OS threads. (98-99)
+* Defining `unit` and blocking `get` is not referentially transparent, and hence it has side effects. We'll need to combine asynchronous computations prior to waiting for them to finish. (100)
+* Combining parallel computations: (100)
+  ```scala
+  def sum(ints: IndexedSeq[Int]): Par[Int] =
+    if (ints.size <= 1)
+      Par.unit(ints.headOption getOrElse 0)
+    else {
+      val (l, r) = ints.splitAt(ints.length / 2)
+      Par.map2(sum(l), sum(r)) { _ + _ }
+    }
+  ```
+* Exercise 7.1:
+  ```scala
+  object Par {
+    def map2[A,B,C](a1: => A, a2: => B)(fn: (A, B) => C): Par[C]
+  }
+  ```
+* xxx
