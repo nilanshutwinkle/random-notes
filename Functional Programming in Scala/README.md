@@ -140,4 +140,14 @@ object Either {
     def map2[A,B,C](a1: => A, a2: => B)(fn: (A, B) => C): Par[C]
   }
   ```
-* xxx
+* Not desirable to always run computation in separate thread (e.g., `Par.unit(1)`), so make forking explicit: (102)
+  ```scala
+  Par.map2(Par.fork(sum(l)), Par.fork(sum(r))) { _ + _ }
+  ```
+* Derived combinators (e.g., `lazyUnit`) are composed of primitive combinators (e.g., `lazy`, `unit`)
+* If `Par` is a function that takes an `ExecutorService`, `run` becomes trivial: (105)
+  ```scala
+  type Par[A] = ExecutorService => Future[A]
+  def run[A](s: ExecutorService)(a: Par[A]): Future[A] = a(s)
+  ```
+* 
