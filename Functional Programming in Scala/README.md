@@ -150,4 +150,26 @@ object Either {
   type Par[A] = ExecutorService => Future[A]
   def run[A](s: ExecutorService)(a: Par[A]): Future[A] = a(s)
   ```
-* 
+* Exercise 7.3:
+  ```scala
+  private case class MappedFuture[A,B,C](af: Future[A], bf: Future[B], fn: (A,B) => C) extends Future[C] {
+    def isDone = af.isDone && bf.isDone
+    def get(timeout: Long, units: TimeUnits) = {
+      val start = System.currentTimeMillis
+      val a = af.get(timeout, units)
+      val rem = TimeUnits.MILLISECONDS.convert(timeout, units) - (System.currentTimeMillis - start)
+      fn(a, bf.get(rem, TimeUnits.MILLISECONDS))
+    }
+    // Two futures makes canceling tricky...
+    def isCancelled = ???
+    def cancel(evenIfRunning: Boolean): Boolean = ???
+  }
+
+  def map2[A,B,C](a1: => A, a2: => B)(fn: (A, B) => C): Par[C] =
+    (es: ExecutorService) => MappedFuture(a(es), b(es), fn)
+  ```
+* Exercise 7.4:
+  ```scala
+  def asyncF[A,B](f: A => B): A => Par[B] = a => Par.unit(f(a))
+  ```
+* xxx
