@@ -160,9 +160,12 @@ object Either {
       val rem = TimeUnits.MILLISECONDS.convert(timeout, units) - (System.currentTimeMillis - start)
       fn(a, bf.get(rem, TimeUnits.MILLISECONDS))
     }
-    // Two futures makes canceling tricky...
-    def isCancelled = ???
-    def cancel(evenIfRunning: Boolean): Boolean = ???
+    def isCancelled = a.isCancelled || b.isCancelled
+    def cancel(evenIfRunning: Boolean) = {
+      a.cancel(evenIfRunning)
+      b.cancel(evenIfRunning)
+      isCancelled
+    }
   }
 
   def map2[A,B,C](a1: => A, a2: => B)(fn: (A, B) => C): Par[C] =
@@ -171,5 +174,19 @@ object Either {
 * Exercise 7.4:
   ```scala
   def asyncF[A,B](f: A => B): A => Par[B] = a => Par.unit(f(a))
+  ```
+* Implementing `map` in terms of `map2`: (108)
+  ```scala
+  def map[A,B](pa: Par[A])(f: A => B): Par[B] =
+    map2(pa, unit(())) { (a,_) => f(a) }
+  ```
+* Exercise 7.5:
+  ```scala
+  def sequence[A](ps: List[Par[A]]): Par[List[A]] = {
+    val emptyPar = Par.unit { List[Par[A]]() }
+    ps.foldLeft(emptyPar) { (b, a) =>
+      Par.map2(b, a) { _ :+ _ }
+    }
+  }
   ```
 * xxx
