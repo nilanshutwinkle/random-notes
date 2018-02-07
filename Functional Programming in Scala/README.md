@@ -207,3 +207,4 @@ object Either {
   }
   ```
 * *Actor* is a concurrent process that only occupies a thread when it receives a message. (117)
+* When you need new functionality, try to find the most general form. E.g., `choose` -> `chooseN` -> `chooser` -> `flatMap` -> `join`. This is a skill that develops over time. (121-122)
