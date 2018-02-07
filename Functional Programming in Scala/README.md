@@ -189,4 +189,21 @@ object Either {
     }
   }
   ```
-* xxx
+* Exercise 7.6:
+  ```scala
+  def parFilter[A](as: List[A])(f: A => Boolean): Par[List[A]] = ???
+  ```
+  - `map(asyncF)` -> `zip` -> `sequence` -> `map` -> `filter` (yuck)
+* **Free theorem**: when derive a theorem based on another theorem due to paramicity of function. (112)
+* Non-observable side effects as an implementation detail of purely functional API. (116)
+* `AtomicReference`, `CountDownLatch`: (116)
+  ```scala
+  def run[A](es: ExecutorService)(p: Par[A]): A = {
+    val ref = new AtomicReference[A]
+    val latch = new CountDownLatch(1)
+    p(es) { a => ref.set(a); latch.countDown }
+    latch.await
+    ref.get
+  }
+  ```
+* *Actor* is a concurrent process that only occupies a thread when it receives a message. (117)
