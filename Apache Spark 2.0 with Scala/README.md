@@ -201,3 +201,15 @@ val results = ratings.countByValue()
   - Discard bad ratings
   - Try different similarity metrics (Pearson R, conditional probability)
   - Ise genres from `u.items`
+
+## Section 5: Running Spark on a Cluster
+
+## Section 6: SparkSQL, DataFrames, and DataSets
+
+## Section 7: Machine Learning with MLLib
+
+## Section 8: Intro to Spark Streaming
+
+## Section 9: Intro to GraphX
+
+## Section 10: Where to Go From Here
