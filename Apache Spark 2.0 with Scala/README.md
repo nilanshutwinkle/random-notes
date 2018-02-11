@@ -305,9 +305,19 @@ val results = ratings.countByValue()
 
 ### Lecture 40
 
+* :pencil2: Run: `SparkSQL.scala`
+* In order to call `.toDS`:
+  ```scala
+  import spark.implicits._
+  ```
+
 ### Lecture 41
 
+* :pencil2: Run: `DataFrames.scala`
+
 ### Lecture 42
+
+* :pencil2: Run: `PopularMoviesDataSets.scala`
 
 ## Section 7: Machine Learning with MLLib
 
