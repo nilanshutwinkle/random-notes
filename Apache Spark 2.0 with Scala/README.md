@@ -274,7 +274,7 @@ val results = ratings.countByValue()
 * Want at least as many partitions as executors being used
 * Joins, groups (e.g., `groupByKey`), reduces all benefit from partitioning
 
-## Lecture 37
+### Lecture 37
 
 * Any hard-coded `SparkConf` settings override command-line args, which override Spark's configuration
 * EMR clusters (and likely other clusters) will have correct configuration by default
@@ -282,17 +282,59 @@ val results = ratings.countByValue()
 * Prep data in advance in an accessible place, e.g., s3, HDFS
 * Don't forget to terminate your cluster when you are done!
 
-## Lecture 38
+### Lecture 38
 
 * Spark UI available at `http://127.0.0.1:4040`
   - Includes job details, event timeline, DAG visualization
 
 ## Section 6: SparkSQL, DataFrames, and DataSets
 
+### Lecture 39
+
+* `DataFrame` contains rows, supports SQL queries, and has a schema
+  - Can read/write to JSON, Hive, parquet
+  - Communicates with JDBC, ODBC, Tableau
+* `DataFrame` is a `DataSet[Row]`
+  - `DataSet` has type parameter
+  - `DataFrame` schema inferred at runtime, but `DataSet` can be inferred at compile time
+* RDDs converted to DataSets with `.toDS()`
+* Trend in Spark is less RDDs, more DataSets
+  - DataSets can be serialized better
+  - Optimal execution plans can be determined at compile time
+* SparkSQL requires a `SparkSession` object instead of `SparkContext`
+
+### Lecture 40
+
+### Lecture 41
+
+### Lecture 42
+
 ## Section 7: Machine Learning with MLLib
+
+### Lecture 43
+
+### Lecture 44
+
+### Lecture 45
+
+### Lecture 46
 
 ## Section 8: Intro to Spark Streaming
 
+### Lecture 47
+
+### Lecture 48
+
+### Lecture 49
+
 ## Section 9: Intro to GraphX
 
+### Lecture 50
+
+### Lecture 51
+
 ## Section 10: Where to Go From Here
+
+### Lecture 52
+
+### Lecture 53
