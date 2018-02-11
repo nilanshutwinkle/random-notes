@@ -204,6 +204,47 @@ val results = ratings.countByValue()
 
 ## Section 5: Running Spark on a Cluster
 
+### Lecture 32
+* To run with `spark-submit`:
+  1. Make sure no paths to local filesystem; use HDFS, S3, etc
+  2. Package as JAR
+  3. `spark-submit --class <main-class> <path-to-jar>`
+    -  `--jars <paths-to-dependencies>`
+    -  `--files <files-to-distribute>`
+* `spark-submit` can integrate with cluster manager
+
+### Lecture 33
+* sbt directory structure:
+  - `/src/main/scala`
+  - `/project`
+* `/project/assembly.sbt`:
+  ```scala
+  addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.3")
+  ```
+* `/build.sbt`:
+  ```scala
+  name := "PopularMovies"
+  version := "1.0"
+  organization := "com.bryanesmith"
+  scalaVersion := "2.10.6" // this is old; use newer
+  libraryDependencies ++= Seq(
+    "org.apache.spark" %% "spark-core" % "1.6.1" % "provided" // don't bundle dependencies
+  )
+  ```
+* `sbt assembly`
+* `MoviesSimilarities1M.scala`
+* Loading from S3:
+  ```scala
+  val data = sc.textFile("s3n://sundog-spark/ml-1m/ratings.dat")
+  ```
+* To use EMR cluster's configuration:
+  ```scala
+  val conf = new SparkConf()
+  conf.setAppName("MovieSimilarities1M")
+  val sc = new SparkContext(conf)
+  ```
+* **Activity**: package up `MovieSimilarities1M.scala` using sbt, and execute using `spark-submit`
+
 ## Section 6: SparkSQL, DataFrames, and DataSets
 
 ## Section 7: Machine Learning with MLLib
