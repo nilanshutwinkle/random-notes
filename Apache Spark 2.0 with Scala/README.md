@@ -219,7 +219,7 @@ val results = ratings.countByValue()
   - `/project`
 * `/project/assembly.sbt`:
   ```scala
-  addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.3")
+  addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.6")
   ```
 * `/build.sbt`:
   ```scala
@@ -243,6 +243,9 @@ val results = ratings.countByValue()
   conf.setAppName("MovieSimilarities1M")
   val sc = new SparkContext(conf)
   ```
+* Fetch [MovieLens 1M Dataset](https://grouplens.org/datasets/movielens/1m/)
+  - We'll download `movies.dat` with JAR (we'll put both on S3)
+  - We'll also put `ratings.dat` on S3, and the driver script will download it
 * :pencil2: Package up `MovieSimilarities1M.scala` using sbt, and execute using `spark-submit`
 
 ### Lecture 34
