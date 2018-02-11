@@ -245,6 +245,22 @@ val results = ratings.countByValue()
   ```
 * :pencil2: Package up `MovieSimilarities1M.scala` using sbt, and execute using `spark-submit`
 
+### Lecture 34
+
+* Distributed Spark: *Spark Driver*, *Cluster Manager*, *Cluster Worker* (*Executors*)
+* **Amazon Elastic MapReduce** (EMR): spins up cluster with Spark, Hadoop, YARN pre-installed
+
+### Lecture 35
+
+* :pencil2: Run `MovieSimilarities1M.jar` on AWS EMR
+* Put JAR and data on S3 for easy access
+* Run on EMR:
+  ```sh
+  $ aws s3 cp s3://my-bucket/MovieSimilarities1M.jar ./
+  $ aws s3 cp s3://my-bucket/m1-1m/movies.dat ./
+  $ spark-submit MovieSimilarities1M.jar 260    # Star Wars
+  ```
+
 ## Section 6: SparkSQL, DataFrames, and DataSets
 
 ## Section 7: Machine Learning with MLLib
