@@ -264,6 +264,29 @@ val results = ratings.countByValue()
   $ spark-submit MovieSimilarities1M.jar 260    # Star Wars
   ```
 
+### Lecture 36
+
+* Note this:
+  ```scala
+  val moviePairs = uniqueJoinedRatings.map(makePairs).partitionBy(new HashPartitioner(100))
+  ```
+* `partitionBy` on RDD gives you control over how Spark partitions your data
+* Want at least as many partitions as executors being used
+* Joins, groups (e.g., `groupByKey`), reduces all benefit from partitioning
+
+## Lecture 37
+
+* Any hard-coded `SparkConf` settings override command-line args, which override Spark's configuration
+* EMR clusters (and likely other clusters) will have correct configuration by default
+  - E.g., EMR also specifies `--master yarn` by default
+* Prep data in advance in an accessible place, e.g., s3, HDFS
+* Don't forget to terminate your cluster when you are done!
+
+## Lecture 38
+
+* Spark UI available at `http://127.0.0.1:4040`
+  - Includes job details, event timeline, DAG visualization
+
 ## Section 6: SparkSQL, DataFrames, and DataSets
 
 ## Section 7: Machine Learning with MLLib
