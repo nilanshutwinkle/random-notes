@@ -243,7 +243,7 @@ val results = ratings.countByValue()
   conf.setAppName("MovieSimilarities1M")
   val sc = new SparkContext(conf)
   ```
-* :star: **Activity**: package up `MovieSimilarities1M.scala` using sbt, and execute using `spark-submit`
+* :pencil2: Package up `MovieSimilarities1M.scala` using sbt, and execute using `spark-submit`
 
 ## Section 6: SparkSQL, DataFrames, and DataSets
 
