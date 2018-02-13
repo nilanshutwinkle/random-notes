@@ -360,6 +360,8 @@ val results = ratings.countByValue()
 
 * When using linear regression, must manually feature scale
 * Uses gradient descent
+* `LabeledPoint` is a label (`Double`) and features (`Vector`)
+  - `LabelPoint.parse(String)` parses a comma-separated string
 * :pencil2: Run: `LinearRegression`, modify to undo feature scaling, and calculate the **mean squared error** `1/n * Σ(x - x̂)^2`
 
 ### Lecture 46
