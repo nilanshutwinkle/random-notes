@@ -323,11 +323,53 @@ val results = ratings.countByValue()
 
 ### Lecture 43
 
+* MLLib supports:
+  - Feature extraction
+  - Basic statistics (correlation, Chi-square)
+  - Linear regression
+  - Logic regression
+  - SVM
+  - Naive Bayes classifier
+  - Decision trees
+  - K-Means clustering
+  - Principal component analysis
+  - Recommendations (Alternative Least Squares)
+* Special data types:
+  - Vector (dense or sparse)
+  - LabeledPoint
+  - Rating
+* Fairly easy:
+  ```scala
+  val data = sc.textFile("../ml-100k/u.data")
+  val ratings = data.map {  x => x.split('\t') }
+    .map { x => Rating(x(0).toInt, x(1).toInt, x(2).toDouble) }
+    .cache()
+
+  val rank = 8
+  val numIterations = 20
+  val model = ALS.train(ratings, rank, numIterations)
+  val recommendations = model.recommendProducts(userID, 10)
+  ```
+
 ### Lecture 44
+
+* :pencil2: Run: `MovieRecommendationsALS.scala`
+* Unfortunately, the results aren't very good.
 
 ### Lecture 45
 
+* When using linear regression, must manually feature scale
+* Uses gradient descent
+* :pencil2: Run: `LinearRegression`, modify to undo feature scaling, and calculate the **mean squared error** `1/n * Σ(x - x̂)^2`
+
 ### Lecture 46
+
+* `spark.mllib` is for `RDD`s; `spark.ml` is for `DataFrame`s
+* To split data 50-50 for training and testing:
+  ```scala
+  val trainTest = df.randomSplit(Array(0.5, 0.5))
+  ```
+* :pencil2: Run: `LinearRegressionDataFrame`
 
 ## Section 8: Intro to Spark Streaming
 
