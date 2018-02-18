@@ -84,6 +84,11 @@ Conor Doherty, Steven Camina, Gary Orenstein, Kevin White
 * Using **upserts** (`INSERT ... ON DUPLICATE KEY UPDATE ...`) to store real-time aggregate statistics (75)
 * **Feature scaling** frequently involves subtracting feature-wise mean and dividing by feature-wise standard deviation; can improve performance, and prevents features from disproportionately influencing model (75)
   - This can be hardcoded in the database as a view (76)
-* "Online" in ML sense refers to class of algorithms that can be updated iteratively as data becomes available (76) 
+* "Online" in ML sense refers to class of algorithms that can be updated iteratively as data becomes available (76)
 
-## 10: From Machine Learning to Arti cial Intelligence
+## 10: From Machine Learning to Artificial Intelligence
+
+* Data science emerged from statistics as data became cheaper, and computing power grew and declined in cost (79-80)
+* Machine learning steps ahead of statistics in its ability to generate iterative tests; e.g., random forests, which prevents overfitting (80)
+* Machine learning also deals better with complex trends and non-normal distributions (81-82)
+* Challenge for ML and AI: resource management for algorithms that are not closed-loop (83)
