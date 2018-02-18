@@ -8,6 +8,12 @@
 
 ## 2: Processing Transactions and Analytics in a Single Database
 
+* Memory optimized datastore allow concurrent, transactional read-write access; in-memory is necessary, as disk-backed cannot deliver necessary I/O (8)
+* Our hybrid data system must allow us to compare real-time data (high-throughput operational transactions) to aggregations of historical data (fast analytical queries) (8)
+* **Compiled query execution plans**: executing query directly in memory avoids code generation and hence improves query performance (8-9)
+* **Multiversion Concurrency Control** (MVCC) avoids locks on reads and writes (9)
+* Durability and high availability essential (11-12)
+
 ## 3: Dawn of the Real-Time Dashboard
 
 ## 4: Redeploying Batch Models in Real Time
