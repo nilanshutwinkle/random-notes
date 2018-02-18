@@ -2,6 +2,7 @@
 
 ## 1: Building Real-Time Data Pipelines
 
+* **Operational applications** (automatic decision making) vs **interactive applications** (computer-aided decision making) (1)
 * Domain-specific languages like R generally not suitable for low-latency production envs (1)
 * Starts w/ high-through messaging system (e.g., Kafka), then the transformation tier (incl enrichment, filtering, aggregation; e.g., Spark streaming), the persistent datastore (2-4)
 * Traditionally, OLTP (real-time data) and OLAP (historical data) are siloed, and moving data between them requires ETL. This siloing prevents real-time application. (5-6)
@@ -15,6 +16,8 @@
 * Durability and high availability essential (11-12)
 
 ## 3: Dawn of the Real-Time Dashboard
+
+* E.g., Tableau (18), Zoomdata (19), Looker
 
 ## 4: Redeploying Batch Models in Real Time
 
