@@ -1,4 +1,10 @@
 # The Path to Predictive Analytics and Machine Learning
+Conor Doherty, Steven Camina, Gary Orenstein, Kevin White
+
+## Notes
+
+* Available as a [free download](http://www.oreilly.com/data/free/the-path-to-predictive-analytics-and-machine-learning.csp)
+* Written exclusively by employees of MemSQL, a distributed, in-memory database
 
 ## 1: Building Real-Time Data Pipelines
 
@@ -60,6 +66,10 @@
 * **Principal Component Analysis** (PCA) is a dimensionality reduction technique that maps data to lower dimensional space while preserving as much variance as possible while removing features contributing little variance (48)
 
 ## 8: Predictive Analytics in Use
+
+* Industrial Internet of Things (IIoT) for improving operational efficiency (51)
+* PowerStream simulates the tracking of ~20k wind turbines world wide, receiving between 1-2M inserts/second, costing $19k on AWS; the goal is to predict wind turbine health (52)
+* **SQL pushdown**: pushing down execution of query into database (e.g., using MemSQL RDD) can achieve of speeds of a few seconds for operations that may otherwise take half an hour (59)
 
 ## 9: Techniques for Predictive Analytics in Production
 
