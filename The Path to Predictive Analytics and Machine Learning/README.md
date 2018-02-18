@@ -39,11 +39,17 @@
 * **Regularization** is a family of techniques that avoid overfitting by associating a cost with complexity (34)
 * Two sources of error: **bias** (flawed assumptions in model) and **variance** (noise in the dataset) (34)
   - bias-variance tradeoff
-* **Unsupervisied learning** involves unlabeled training data; the goal is to discern patterns in data that are not known beforehand (35-36)
-* **Semi-supervised learner**: e.g., using unsupervisied algorithm to classify customers in order to build a supervised classification model (36)
+* **Unsupervised learning** involves unlabeled training data; the goal is to discern patterns in data that are not known beforehand (35-36)
+* **Semi-supervised learner**: e.g., using unsupervised algorithm to classify customers in order to build a supervised classification model (36)
 * **Cluster Analysis** detect patterns in grouping of data; e.g., centroid-based techniques like k-means analysis (37)
 
 ## 6: Real-Time Machine Learning Applications
+
+* Most data analysis tools are interactive, and they are useful for development, but their latency is too high for production use; requires real-time (low-latency) scoring (38-40)
+* If real-world factors change frequently enough, production system may be bound by **training latency** rather than **scoring latency** (40)
+* Fast training requires in-memory storage, access to real-time and historic data, convergence of systems (40-41)
+* Real-time anomaly detection one of most promising real-time unsupervised learning applications; e.g., internet security (42)
+* Real-time clustering; e.g., discovering related content (43)
 
 ## 7: Preparing Data Pipelines for Predictive Analytics and Machine Learning
 
