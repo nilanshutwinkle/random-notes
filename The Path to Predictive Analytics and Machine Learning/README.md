@@ -17,9 +17,14 @@
 
 ## 3: Dawn of the Real-Time Dashboard
 
-* E.g., Tableau (18), Zoomdata (19), Looker
+* E.g., Tableau (18), Zoomdata (19), Looker (19-20)
 
 ## 4: Redeploying Batch Models in Real Time
+
+* **Lambda architecture** handles high volumes of data by combining batch processing and stream processing (24-25) 
+  - *batch layer* (e.g., Hadoop) stores events and produces *batch views*
+  - *speed layer* (e.g., Storm, Spark) deals with recent data only
+  - *serving layer* responds to queries and merges results from batch and speed layers
 
 ## 5: Applied Introduction to Machine Learning
 
