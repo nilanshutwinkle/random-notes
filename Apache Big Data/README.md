@@ -42,6 +42,13 @@ Hadoop provides massive scale out and fault tolerance capabilities for data stor
 * Built on top of Hadoop
 * Predefined connectors for CSV/TSV, Parquet, ORC, and some other formats
 
+### Kafka
+
+Distributed streaming platform, including pub/sub and fault-tolerant storage.
+
+* Used for building streaming data pipelines, or data processing applications.
+* APIs: Provider, Consumer, Streams, Connectors
+
 ### ORC
 
 [ORC](https://orc.apache.org/) is a small columnar data format.
