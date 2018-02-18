@@ -173,7 +173,7 @@ object Either {
   ```
 * Exercise 7.4:
   ```scala
-  def asyncF[A,B](f: A => B): A => Par[B] = a => Par.unit(f(a))
+  def asyncF[A,B](f: A => B): A => Par[B] = a => Park.fork { Par.unit(f(a)) }
   ```
 * Implementing `map` in terms of `map2`: (108)
   ```scala

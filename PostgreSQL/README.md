@@ -153,6 +153,13 @@ SELECT p.name as program_name,
   JOIN departments as d
     ON p.department_code = d.code;
 
+-- Similar to above, but using subquery
+SELECT name
+  FROM programs
+ WHERE department_code IN (
+   SELECT code FROM program
+ );
+
 -- Update
 UPDATE departments
    SET name = 'Physics'
