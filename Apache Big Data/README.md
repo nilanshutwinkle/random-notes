@@ -68,7 +68,13 @@ Hadoop provides massive scale out and fault tolerance capabilities for data stor
 * A job is associated with a chain of RDD dependencies organized into a logical plan, known as a DAG
 * DAG is materialized and executed when SparkContext is asked to run job.
   - Invoke `toDebugString` RDDs to view execution plan (with indentation indicating shuffle boundary)
-*
+
+### Storm
+
+Distributed stream processing framework.
+
+* DAGs where "spouts" (information sources) and "bolts" (transformations) are the vertices and streams are the edges.
+* Written predominantly in Clojure.
 
 ### Tez
 
