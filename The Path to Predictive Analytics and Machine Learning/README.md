@@ -73,4 +73,17 @@ Conor Doherty, Steven Camina, Gary Orenstein, Kevin White
 
 ## 9: Techniques for Predictive Analytics in Production
 
+* Querying schemaless data (e.g., json) above tens of thousands will add query latency; can use computed columns to extract values at time of insert (and optionally index): (73)
+  ```SQL
+  CREATE TABLE events (
+    event JSON NOT NULL,
+    user_id AS event::$user_id PERSISTED INT,
+    price AS event::$purchase_price PERSISTED FLOAT );
+  ```
+* Can segment data by event type for query performance reasons, especially when certain types of events (e.g., purchase) far less frequent than others (e.g., views); can create views to join the tables (74)
+* Using **upserts** (`INSERT ... ON DUPLICATE KEY UPDATE ...`) to store real-time aggregate statistics (75)
+* **Feature scaling** frequently involves subtracting feature-wise mean and dividing by feature-wise standard deviation; can improve performance, and prevents features from disproportionately influencing model (75)
+  - This can be hardcoded in the database as a view (76)
+* "Online" in ML sense refers to class of algorithms that can be updated iteratively as data becomes available (76) 
+
 ## 10: From Machine Learning to Arti cial Intelligence
