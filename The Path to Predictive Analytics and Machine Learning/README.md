@@ -21,12 +21,27 @@
 
 ## 4: Redeploying Batch Models in Real Time
 
-* **Lambda architecture** handles high volumes of data by combining batch processing and stream processing (24-25) 
+* **Lambda architecture** handles high volumes of data by combining batch processing and stream processing (24-25)
   - *batch layer* (e.g., Hadoop) stores events and produces *batch views*
   - *speed layer* (e.g., Storm, Spark) deals with recent data only
   - *serving layer* responds to queries and merges results from batch and speed layers
 
 ## 5: Applied Introduction to Machine Learning
+
+* Choosing proper ML technique requires evaluating series of tradeoffs, e.g., training and scoring latency, bias and variance, sometimes accuracy versus complexity (29)
+* **Supervised learning** involves training data that includes **features** (observations) and **labels** (outcomes) (30)
+* **Regression models** are supervised learning that output values in a continuous space, where as **classification models** are in a discrete space (31)
+* **Overfitting** approaches zero error and fails to account for variance in natural data; **underfitting** occurs when too much bias in model (31)
+* Linear, polynomial, logistic regression (31-32)
+* Choice of error function has big impact on result (33)
+* **Least squares** is most common error function; involves minimization of sum of squares (33)
+* Variants such as weighted least squares, which gives more emphasis to some data (34)
+* **Regularization** is a family of techniques that avoid overfitting by associating a cost with complexity (34)
+* Two sources of error: **bias** (flawed assumptions in model) and **variance** (noise in the dataset) (34)
+  - bias-variance tradeoff
+* **Unsupervisied learning** involves unlabeled training data; the goal is to discern patterns in data that are not known beforehand (35-36)
+* **Semi-supervised learner**: e.g., using unsupervisied algorithm to classify customers in order to build a supervised classification model (36)
+* **Cluster Analysis** detect patterns in grouping of data; e.g., centroid-based techniques like k-means analysis (37)
 
 ## 6: Real-Time Machine Learning Applications
 
