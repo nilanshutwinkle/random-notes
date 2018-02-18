@@ -53,6 +53,12 @@
 
 ## 7: Preparing Data Pipelines for Predictive Analytics and Machine Learning
 
+* Separate stream processing, transactions, and analytics were motivated by disk-based, single-machine systems (46)
+* Key to designing real-time predictive analytics systems in to minimize data movement (47)
+* Often, a scoring model can be implemented in pure SQL; moving computations to database reduces data movement (48)
+* **Dimensionality reduction**, **feature selection** (48)
+* **Principal Component Analysis** (PCA) is a dimensionality reduction technique that maps data to lower dimensional space while preserving as much variance as possible while removing features contributing little variance (48)
+
 ## 8: Predictive Analytics in Use
 
 ## 9: Techniques for Predictive Analytics in Production
