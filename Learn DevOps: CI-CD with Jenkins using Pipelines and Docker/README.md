@@ -81,8 +81,8 @@ ssh-keygen
 4. In Jenkins, under project settings > Source Code Management, select Git
     a. Set "Repository URL"
     b. Next to Credentials, press "Add" button next to
-        i. From "Kind" dropdown, select "SSH Username with private key"
-        ii. For "Username", specify the account username into which you'll SSH
-        iii. For "Private Key", select "From the Jenkins master ~/.ssh"
-        iv. Click add
+        a. From "Kind" dropdown, select "SSH Username with private key"
+        b. For "Username", specify the account username into which you'll SSH
+        c. For "Private Key", select "From the Jenkins master ~/.ssh"
+        d. Click add
     c. For "Credentials", select the credentials you just added from the dropdown
