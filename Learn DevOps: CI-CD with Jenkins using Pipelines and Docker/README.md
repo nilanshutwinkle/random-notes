@@ -2,6 +2,9 @@
 
 Notes from the [Udemy course](https://www.udemy.com/learn-devops-ci-cd-with-jenkins-using-pipelines-and-docker), along with supplemental related information.
 
+## Notes
+* I'm using OS X, and have adjusted many commands to work better with my OS
+
 ## Docker
 * **Container** is a running instance of an **image**
 * **Docker engine** has the ability to run containers
@@ -31,9 +34,10 @@ $ docker rmi nginx                      # remove image
 ```bash
 sudo mkdir /Users/jenkins               # OS X see below
 sudo chown -R $(whoami) /Users/jenkins  # docker container will run as current user
+docker pull jenkins/jenkins:lts         # latest long-term support image
 ```
 * Running Jenkins on `http://localhost:9000`:
 ```bash
-docker run -p 9000:8080 -p 50000:50000 -v /Users/jenkins:/var/jenkins_home -d --name jenkins --restart always jenkins
+docker run -p 9000:8080 -p 50000:50000 -v /Users/jenkins:/var/jenkins_home -d --name jenkins --restart always jenkins/jenkins:lts
 ```
 * In OS X, mountable directories are whitelisted; you will get errors if you choose something that is not supported, e.g., `/var/jenkins`. See: Preferences > File Sharing
