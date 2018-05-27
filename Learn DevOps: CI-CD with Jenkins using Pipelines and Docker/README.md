@@ -15,6 +15,7 @@ Notes from the [Udemy course](https://www.udemy.com/learn-devops-ci-cd-with-jenk
 * Cannot change parameters of existing container, even if stopped
 * Don't put data in container; map data into containers with **volumes**
 * Useful commands:
+
 | Command        | Desc           |
 | :------------- |:-------------|
 | `docker images` | list images |
@@ -34,6 +35,7 @@ docker run --name nginx-bescom  -v /Users/bryan/Developer/bryanesmith.com/www/pu
 ```
 
 * Useful `run` parameters:
+
 | Argument       | Desc           |
 | :------------- | :------------- |
 | `--add-host <hostname>:<ip>` | Adds entry to `/etc/hosts` |
