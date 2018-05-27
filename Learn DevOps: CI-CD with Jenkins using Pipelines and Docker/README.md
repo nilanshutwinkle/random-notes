@@ -78,11 +78,11 @@ ssh-keygen
 ```
 3. Add the SSH public key to GitHub or the server hosting the Git repo over SSH.
     - If using your own server, SSH in and add public certificate to `~/.ssh/authorized_keys`
-4. In Jenkins, under project settings > Source Code Management, select Git
-    a. Set "Repository URL"
-    b. Next to Credentials, press "Add" button next to
-        a. From "Kind" dropdown, select "SSH Username with private key"
-        b. For "Username", specify the account username into which you'll SSH
-        c. For "Private Key", select "From the Jenkins master ~/.ssh"
-        d. Click add
-    c. For "Credentials", select the credentials you just added from the dropdown
+4. In Jenkins, under project settings > Source Code Management, select "Git":
+    1. Set "Repository URL"
+    2. Next to Credentials, press "Add" button next to
+        1. From "Kind" dropdown, select "SSH Username with private key"
+        2. For "Username", specify the account username into which you'll SSH
+        3. For "Private Key", select "From the Jenkins master ~/.ssh"
+        4. Click add
+    3. For "Credentials", select the credentials you just added from the dropdown
