@@ -15,18 +15,33 @@ Notes from the [Udemy course](https://www.udemy.com/learn-devops-ci-cd-with-jenk
 * Cannot change parameters of existing container, even if stopped
 * Don't put data in container; map data into containers with **volumes**
 * Useful commands:
+| Command        | Desc           |
+| :------------- |:-------------|
+| `docker images` | list images |
+| `docker pull nginx:1.14.0-alpine` | fetch image |
+| `docker run ...` | |
+| `docker logs <container-name>` | troubleshoot any issues with container |
+| `docker exec -ti <container-name> /bin/sh` | open shell to container |
+| `docker ps` | show running contains |
+| `docker ps -a ` | show all containers, including stopped |
+| `docker stop <container-name>` | stop container |
+| `docker rm <container-name>` | remove container |
+| `docker rmi <image-name>` | remove image |
+
+* Sample `run` commands:
 ```bash
-docker images                         # list images
-docker pull nginx:1.14.0-alpine       # fetch image
-docker run --name nginx-bescom  -v /Users/bryan/Developer/bryanesmith.com/www/public_html:/usr/share/nginx/html:ro -p 8080:80 -d nginx  # -d runs in background
-docker logs nginx-bescom              # troubleshoot any issues with container
-docker exec -ti nginx-bescom /bin/sh  # open shell to container
-docker ps                             # show running contains
-docker ps -a                          # show all containers, including stopped
-docker stop nginx-bescom              # stop container
-docker rm nginx-bescom                # remove container
-docker rmi nginx                      # remove image
+docker run --name nginx-bescom  -v /Users/bryan/Developer/bryanesmith.com/www/public_html:/usr/share/nginx/html:ro -p 8080:80 -d nginx
 ```
+
+* Useful `run` parameters:
+| Argument       | Desc           |
+| :------------- | :------------- |
+| `--add-host <hostname>:<ip>` | Adds entry to `/etc/hosts` |
+| `-d` | Runs in background |
+| `--restart always` | Will restart container on reboot |
+| `--name foo` | Specify a friendly name for the container |
+| `-p <host-port>:<container-port>` | Maps host port to a container port |
+| `-v <host-path>:<container-path>` | Mounts host directory in container |
 
 ## Run Jenkins in a Docker container
 * Installing Jenkins via [instructor's script](https://raw.githubusercontent.com/wardviaene/jenkins-course/master/scripts/install_jenkins.sh)
