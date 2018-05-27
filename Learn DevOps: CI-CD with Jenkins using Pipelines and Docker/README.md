@@ -34,6 +34,6 @@ sudo chown -R $(whoami) /Users/jenkins  # docker container will run as current u
 ```
 * Running Jenkins on `http://localhost:9000`:
 ```bash
-docker run -p 9000:8080 -p 50000:50000 -v /Users/jenkins:/var/jenkins_home -d --name jenkins jenkins
+docker run -p 9000:8080 -p 50000:50000 -v /Users/jenkins:/var/jenkins_home -d --name jenkins --restart always jenkins
 ```
 * In OS X, mountable directories are whitelisted; you will get errors if you choose something that is not supported, e.g., `/var/jenkins`. See: Preferences > File Sharing
