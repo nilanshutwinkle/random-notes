@@ -65,6 +65,9 @@ docker run -p 9000:8080 -p 50000:50000 -v /Users/jenkins:/var/jenkins_home -d --
 3. Setup Git over SSH (see Misc section below)
 4. Under build, add a build shell step
 
+## Pipelines
+* **Declarative Pipelines** (pipelines > stages > stage > steps) vs **Scripted Pipelines** (node > stage)
+
 ## Misc
 
 ### Setup Git over SSH
