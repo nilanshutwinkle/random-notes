@@ -55,6 +55,10 @@ The Korean class is on the 3rd floor.
 **학교 식당 음식이 어때요?**
 How's the food at the school cafeteria?
 
+# Possession
+
+**이번 주의 뉴스** This week's news
+
 # Topic
 
 You can change the topic with 은/는.
@@ -72,3 +76,9 @@ Do you or do you not have a girlfriend? (alternative questions)
 **한국어 수업 반친구가 몇명 있어요?** How many classmates do you have in the Korean class?
 
 **한국어 교실이 몇충에 있어요?** What floor is the Korean classroom on?
+
+**이거 누구 책에요?** Whose book is this?
+
+**내 거예요** It's mine.
+
+**햄버거는 얼마예요?** How much is the hamburger?
