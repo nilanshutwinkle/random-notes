@@ -2,8 +2,10 @@
 
 You can add suffix ~(으)세요 when showing respect, either in the first person or when two people are respecting someone in the third person.
 
-**선생님, 사전 있으세요?**
+(있다 for possession) **선생님, 사전 있으세요?**
 Teacher, do you have a dictionary?
+
+(있다 for existence) **이 선생님 학교에 계세요.** Mrs. Lee is at school.
 
 **이 선생님 재 한국어 선생님이세요.**
 Mrs. Lee is my Korean teacher.
