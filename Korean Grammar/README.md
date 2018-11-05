@@ -82,3 +82,7 @@ Do you or do you not have a girlfriend? (alternative questions)
 **내 거예요** It's mine.
 
 **햄버거는 얼마예요?** How much is the hamburger?
+
+**왜 한국어를 공부아세요?** What do you study Korean?
+
+**점심 어디서 먹어요?** Where do you eat lunch?
