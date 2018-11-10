@@ -33,7 +33,9 @@ What is this thing?
 # In order to
 
 > ... (으)러 ...
+
 **친구 만나러 버스를 타요.**
+I'm riding the bus to meet a friend.
 
 # Location
 
