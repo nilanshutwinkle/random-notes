@@ -40,7 +40,17 @@ Where is the Korean class?
 > ...은/는 ...에 있어요.
 
 **한국어 수업은 3충에 있어요.**
-The Korean class is on the 3rd floor.
+The Korean class is on the 3rd floor. (static location)
+
+> ...에 ...
+
+**집에 가요.**
+I'm going home. (goal)
+
+> ...에서 ...
+
+**커피셥에서 공부해요.**
+I'm studying at the coffee shop. (dynamic location)
 
 > ...에는 ...이/가 있어요.**
 
@@ -61,12 +71,17 @@ How's the food at the school cafeteria?
 
 # Topic
 
-You can change the topic with 은/는.
+You can change the topic with 은/는, or with 그런데.
 
 > ...은요?
 
 **서점은요?**
 What about the book store?
+
+> 그런데, ...
+
+**그런데, 리사가 어디 있어요?**
+By the way, where is Lisa?
 
 # Questions
 
