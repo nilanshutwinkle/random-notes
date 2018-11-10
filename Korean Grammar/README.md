@@ -30,6 +30,11 @@ No, I'm not a Chinese person.
 **이게 뭐예요?**
 What is this thing?
 
+# In order to
+
+> ... (으)러 ...
+**친구 만나러 버스를 타요.**
+
 # Location
 
 > ...이/가 어디 있어요?
