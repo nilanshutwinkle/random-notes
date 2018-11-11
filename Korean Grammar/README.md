@@ -76,6 +76,15 @@ I'm studying at the coffee shop. (dynamic location)
 **3충에는 한국어 수업이 있어요.**
 The Korean class is on the 3rd floor.
 
+# Negative
+
+> 아니요, ... 안/못 ...
+
+**아니요, 월요일하고 수요일에 안 달려요.**
+No, I don't run on Mondays and Wednesdays.
+
+**아니요, 월요일하고 수요일에 못 해요.**
+No, I can't do it on Mondays and Wednesdays.
 
 # Opinions
 
