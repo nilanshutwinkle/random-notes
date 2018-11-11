@@ -127,9 +127,6 @@ By the way, where is Lisa?
 
 # Questions
 
-**여자친구가 있어요, 없어요?**
-Do you or do you not have a girlfriend? (alternative questions)
-
 **한국어 수업 반친구가 몇명 있어요?** How many classmates do you have in the Korean class?
 
 **한국어 교실이 몇충에 있어요?** What floor is the Korean classroom on?
@@ -141,3 +138,18 @@ Do you or do you not have a girlfriend? (alternative questions)
 **왜 한국어를 공부아세요?** What do you study Korean?
 
 **점심 어디서 먹어요?** Where do you eat lunch?
+
+> ..., ...?
+
+**여자친구가 있어요, 없어요?**
+Do you or do you not have a girlfriend? (alternative questions)
+
+> ... 무슨 ...?
+
+**이거 무슨 음식이에요?**
+What kind of food is this?
+
+> ... 어느 ...?
+
+**어느 치킨 식당에 만아요?**
+Which chicken restaurant are we meeting at?
