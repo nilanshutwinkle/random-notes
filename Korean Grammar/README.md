@@ -1,3 +1,15 @@
+# By means of
+
+> ...(으)로 가다/오다.
+
+**파티에 지하철로 가요.**
+I'm going to the party by subway. (-ㄹ batchim doesn't use 으로.)
+
+> ...(으)로 ...
+
+**연필로 쓰세요. 볼펜으로 쓰세요.**
+Please write by pencil. Please write by pen.
+
 # Honorific
 
 You can add suffix ~(으)세요 when showing respect, either in the first person or when two people are respecting someone in the third person.
