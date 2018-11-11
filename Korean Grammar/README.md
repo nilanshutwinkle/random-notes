@@ -165,6 +165,16 @@ What about the book store?
 **그런데, 리사가 어디 있어요?**
 By the way, where is Lisa?
 
+# Towards
+
+> ...(으)로 ...
+
+**고기서 오른쪽으로 도세요.**
+From there, turn right.
+
+**왼쪽으로 쭉 가세요.**
+Go straight to the left.
+
 # Questions
 
 **한국어 수업 반친구가 몇명 있어요?** How many classmates do you have in the Korean class?
