@@ -22,6 +22,24 @@ I studied Korean and then met my friends.
 **집이 넓고 지하철 역에서 가까워요.**
 My home is spacious and close to the subway station.
 
+# Deferential
+
+> ...습니다/ㅂ니다.
+
+**이 선생님 여행을 합니다.**
+Professor Lee is traveling.
+
+**이 선생님 여행을  했습니다.**
+Professor Lee traveled.
+
+> ...습니까/ㅂ니까?
+
+**이 선생님 여행을 합니까?**
+Is Professor Lee traveling?
+
+**이 선생님 여행을  했습니까?**
+Did Professor Lee travel?
+
 # Honorific
 
 You can add suffix ~(으)세요 when showing respect, either in the first person or when two people are respecting someone in the third person.
