@@ -1,11 +1,11 @@
 # By means of
 
-> ...(으)로 가다/오다.
+> ...(으)로 가다/오다. (to come or go by)
 
 **파티에 지하철로 가요.**
 I'm going to the party by subway. (-ㄹ batchim doesn't use 으로.)
 
-> ...(으)로 ...
+> ...(으)로 ... (using)
 
 **연필로 쓰세요. 볼펜으로 쓰세요.**
 Please write by pencil. Please write by pen.
@@ -56,20 +56,20 @@ I'm riding the bus to meet a friend.
 **한국어 수업가 어디 있어요?**
 Where is the Korean class?
 
-> ...은/는 ...에 있어요.
+> ...은/는 ...에 있어요. (static location)
 
 **한국어 수업은 3충에 있어요.**
-The Korean class is on the 3rd floor. (static location)
+The Korean class is on the 3rd floor.
 
-> ...에 ...
+> ...에 ... (goal)
 
 **집에 가요.**
-I'm going home. (goal)
+I'm going home.
 
-> ...에서 ...
+> ...에서 ... (dynamic location)
 
 **커피셥에서 공부해요.**
-I'm studying at the coffee shop. (dynamic location)
+I'm studying at the coffee shop.
 
 > ...에는 ...이/가 있어요.**
 
@@ -139,17 +139,17 @@ By the way, where is Lisa?
 
 **점심 어디서 먹어요?** Where do you eat lunch?
 
-> ..., ...?
+> ..., ...? (alternative questions)
 
 **여자친구가 있어요, 없어요?**
-Do you or do you not have a girlfriend? (alternative questions)
+Do you or do you not have a girlfriend?
 
-> ... 무슨 ...?
+> ... 무슨 ...? (what kind of)
 
 **이거 무슨 음식이에요?**
 What kind of food is this?
 
-> ... 어느 ...?
+> ... 어느 ...? (which)
 
 **어느 치킨 식당에 만아요?**
 Which chicken restaurant are we meeting at?
