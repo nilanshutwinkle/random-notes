@@ -84,6 +84,13 @@ The Korean class is on the 3rd floor.
 **학교 식당 음식이 어때요?**
 How's the food at the school cafeteria?
 
+# Past
+
+> ...었/았/ㅆ어요.
+
+**어제 저녁에 치킨을 먹었어요.**
+I had Korean fried chicken last night.
+
 # Possession
 
 **이번 주의 뉴스** This week's news
