@@ -10,6 +10,18 @@ I'm going to the party by subway. (-ㄹ batchim doesn't use 으로.)
 **연필로 쓰세요. 볼펜으로 쓰세요.**
 Please write by pencil. Please write by pen.
 
+# Clausal connective
+
+> ...고 ... (and then)
+
+**한국어 연습하고 친구를 만아요.**
+I studied Korean and then met my friends.
+
+> ...고 ... (and)
+
+**집이 넓고 지하철 역에서 가까워요.**
+My home is spacious and close to the subway station.
+
 # Honorific
 
 You can add suffix ~(으)세요 when showing respect, either in the first person or when two people are respecting someone in the third person.
