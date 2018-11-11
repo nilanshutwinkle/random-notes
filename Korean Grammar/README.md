@@ -104,6 +104,13 @@ I had Korean fried chicken last night.
 
 **이번 주의 뉴스** This week's news
 
+# Probability
+
+> ...(으)ㄹ 거예요.
+
+**이번 주말에 가족와 같이 시간을 보낼 거예요.**
+I'll probably spend time with my family this weekend.
+
 # Topic
 
 You can change the topic with 은/는, or with 그런데.
