@@ -123,6 +123,16 @@ I had Korean fried chicken last night.
 **이번 주말에 가족와 같이 시간을 보낼 거예요.**
 I'll probably spend time with my family this weekend.
 
+# Seeking agreement
+
+> ...지요?
+
+**이 라면 정말 맛있지요?**
+This ramen is really delicious, isn't it?
+
+**이 선생님, 이번 주 시험 없지요?**
+Professor Lee, we don't have a test this week, do we?
+
 # Topic
 
 You can change the topic with 은/는, or with 그런데.
