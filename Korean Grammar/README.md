@@ -151,6 +151,29 @@ This ramen is really delicious, isn't it?
 **이 선생님, 이번 주 시험 없지요?**
 Professor Lee, we don't have a test this week, do we?
 
+# To and from
+
+> ...한테 ...한테서 ...
+
+**마이클한테 친구한테서 선물을 받았어요.**
+Michael received a gift from his friend.
+
+> ...께 ...한테서 ... (honorific)
+
+**부모님께 저한테 선물을 받았세요.**
+My parents received a gift from me.
+
+> ...에서 ...
+
+**집에서 왔어요.**
+I came from my home.
+
+> ...에 ...
+
+**사무실에 가요.**
+I'm going to the office.
+
+
 # Topic
 
 You can change the topic with 은/는, or with 그런데.
