@@ -158,10 +158,16 @@ Professor Lee, we don't have a test this week, do we?
 **마이클한테 친구한테서 선물을 받았어요.**
 Michael received a gift from his friend.
 
+**친구한케 이메일 자주 보내세요?**
+Do you email your friend often?
+
 > ...께 ...한테서 ... (honorific)
 
 **부모님께 저한테 선물을 받았세요.**
 My parents received a gift from me.
+
+**누구한테서 전화 왔어요?**
+Who was the call from?
 
 > ...에서 ...
 
