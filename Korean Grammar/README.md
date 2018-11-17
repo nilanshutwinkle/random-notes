@@ -218,6 +218,8 @@ Go straight to the left.
 
 **점심 어디서 먹어요?** Where do you eat lunch?
 
+**한국에 며칠에 가요?** What date are you going to Korea?
+
 > ..., ...? (alternative questions)
 
 **여자친구가 있어요, 없어요?**
