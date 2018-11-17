@@ -116,6 +116,13 @@ No, I don't run on Mondays and Wednesdays.
 **아니요, 월요일하고 수요일에 못 해요.**
 No, I can't do it on Mondays and Wednesdays.
 
+# Noun-modifying form
+
+> ...(으)ㄴ noun ...
+
+**좋은 커피숍이 저기 큰 건물 안에 있어요.**
+The nice coffee shop is in that big building.
+
 # Opinions
 
 > ...이/가 어때요?
@@ -174,12 +181,12 @@ My parents received a gift from me.
 **누구한테서 전화 왔어요?**
 Who was the call from?
 
-> ...에서 ...
+> ...에서 ... (from)
 
 **집에서 왔어요.**
 I came from my home.
 
-> ...에 ...
+> ...에 ... (to)
 
 **사무실에 가요.**
 I'm going to the office.
