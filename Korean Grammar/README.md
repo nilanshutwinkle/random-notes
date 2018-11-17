@@ -153,17 +153,22 @@ Professor Lee, we don't have a test this week, do we?
 
 # To and from
 
-> ...한테 ...한테서 ...
+> ...한테 ... (to)
 
-**마이클한테 친구한테서 선물을 받았어요.**
-Michael received a gift from his friend.
+**친구가 마이클한테 선물을 줬어요.**
+Michael's friend gave Michael a gift.
 
 **친구한케 이메일 자주 보내세요?**
 Do you email your friend often?
 
-> ...께 ...한테서 ... (honorific)
+> ...께 ... (to, honorific)
 
-**부모님께 저한테 선물을 받았세요.**
+**저이 부모님께 선물을 드렸어요.**
+I gave my parents a gift.
+
+> ...한테서 ... (from)
+
+**부모님이 저한테서 선물을 받으셨어요.**
 My parents received a gift from me.
 
 **누구한테서 전화 왔어요?**
