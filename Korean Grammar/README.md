@@ -58,7 +58,7 @@ Professor Lee traveled.
 
 Honorific is used to show respect to the subject, either in the first person or when two people are respecting someone in the third person.
 
-> ...(으)시...
+> ...(으)시... (present tense)
 
 **선생님, 사전 있으세요?**
 Teacher, do you have a dictionary?
@@ -70,6 +70,11 @@ Mrs. Lee is at school.
 
 **이 선생님 재 한국어 선생님이세요.**
 Mrs. Lee is my Korean teacher.
+
+> ...셨... (past-tense)
+
+**이 선생님 학교에 계셨어요.**
+Mrs. Lee was at school.
 
 > ...께서 ... (honorific subject marker)
 
