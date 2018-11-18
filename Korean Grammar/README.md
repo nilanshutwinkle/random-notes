@@ -55,6 +55,11 @@ Mrs. Lee is at school.
 **이 선생님 재 한국어 선생님이세요.**
 Mrs. Lee is my Korean teacher.
 
+> ...께서 ... (honorific subject marker)
+
+**선생님께서 아주 좋아하셨어요.**
+Teacher was very happy.
+
 # Identity
 
 > ...은/는 ...이에여/예요.
