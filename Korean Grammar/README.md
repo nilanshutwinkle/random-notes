@@ -14,8 +14,8 @@ Please write by pencil. Please write by pen.
 
 > ...고 ... (and then)
 
-**한국어 연습하고 친구를 만아요.**
-I studied Korean and then met my friends.
+**한국어 연습하고 친구를 만았어요.**
+I studied Korean and then met my friends. (Note tense is only expressed in the second clause.)
 
 > ...고 ... (and)
 
@@ -26,6 +26,9 @@ My home is spacious and close to the subway station.
 
 **한국어를 많이 공부하지만 잘 못해요.**
 I study Korean a lot but I can't speak it well.
+
+**생일 파티에 못 갔니만 카드를 샀어요.**
+I couldn't go to the birthday party but I bought a card. (Note tense is expressed in both clauses.)
 
 # Deferential
 
