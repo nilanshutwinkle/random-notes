@@ -22,6 +22,11 @@ I studied Korean and then met my friends.
 **집이 넓고 지하철 역에서 가까워요.**
 My home is spacious and close to the subway station.
 
+> ...지만 ... (but)
+
+**한국어를 많이 공부하지만 잘 못해요.**
+I study Korean a lot but I can't speak it well.
+
 # Deferential
 
 Deferential is used to show respect to the listener.
