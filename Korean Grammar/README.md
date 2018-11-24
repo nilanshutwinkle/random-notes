@@ -135,6 +135,16 @@ What is this thing?
 **친구 만나러 버스를 타요.**
 I'm riding the bus to meet a friend.
 
+# Indirect
+
+> ...(으)ㄴ데요/는데요.
+
+This is less assertive than "...아/어요", and is more polite. It also implies "Can I do anything to help". 
+
+**지금 없는데요.**
+He's not home right now.
+
+
 # Location
 
 > ...이/가 어디 있어요?
