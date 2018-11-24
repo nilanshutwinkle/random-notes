@@ -30,10 +30,15 @@ I study Korean a lot but I can't speak it well.
 **생일 파티에 못 갔니만 카드를 샀어요.**
 I couldn't go to the birthday party but I bought a card. (Note tense is expressed in both clauses.)
 
-> ...(으)ㄴ데/는데 ... (background info)
+> ...(으)ㄴ데 ... (background info&mdash;adjectives and 이다)
 
 **아파트가 넓은데 너무 비싸요.**
 The apartment is spacious but too expensive.
+
+**새일은 인데 집에 있을 거예요.**
+It's my birthday but I'm going to stay home.
+
+> ...는데 ... (background info&mdash;verbs and 있다, 없다)
 
 **시간이 없는데 빨리 해요.**
 You are running out of time, so be fast.
