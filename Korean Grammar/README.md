@@ -30,6 +30,17 @@ I study Korean a lot but I can't speak it well.
 **생일 파티에 못 갔니만 카드를 샀어요.**
 I couldn't go to the birthday party but I bought a card. (Note tense is expressed in both clauses.)
 
+> ...(으)ㄴ데/는데 ... (background info)
+
+**아파트가 넓은데 너무 비싸요.**
+The apartment is spacious but too expensive.
+
+**시간이 없는데 빨리 해요.**
+You are running out of time, so be fast.
+
+**비가 오는에 수포에 가야 돼요.**
+It's raining but I have to go to the store.
+
 # Deferential
 
 Deferential is used to show respect to the listener.
