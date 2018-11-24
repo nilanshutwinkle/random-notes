@@ -41,6 +41,12 @@ You are running out of time, so be fast.
 **비가 오는에 수포에 가야 돼요.**
 It's raining but I have to go to the store.
 
+| 는데 | (으)ㄴ데 |
+| --- | ------ |
+| verbs (e.g., 가는데) | adjectives (e.g., 좋은데) |
+| past tense (e.g., 갔는데) | 이다 (e.g., 인데) |
+| 있다, 없다 (e.g., 있는데)| |
+
 # Deferential
 
 Deferential is used to show respect to the listener.
