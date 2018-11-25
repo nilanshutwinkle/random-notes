@@ -205,6 +205,12 @@ The nice coffee shop is in that big building.
 **회사 안 가는 날은 뭐하세요?**
 What do you do on days you don't work?
 
+**재 아내인 살이가 잘 요리해요.**
+Sally, who's my wife, cooks well.
+
+**학생 아닌 사람은 기숙사에서 못 살아요.**
+Anyone who is not a student cannot live at the dormitory.
+
 # Opinions
 
 > ...이/가 어때요?
