@@ -60,6 +60,9 @@ I'm late, so sorry.
 **한국 음식을 무척 좋아해서 한국어를 배워요.**
 I really like Korean food, so I'm learning Korean.
 
+**왜 한국어를 배워요? 한국에서 살구 싶어서요.**
+Why do I learn Korean? Because I want to live in Korea.
+
 # Deferential
 
 Deferential is used to show respect to the listener.
@@ -192,10 +195,15 @@ No, I can't do it on Mondays and Wednesdays.
 
 # Noun-modifying form
 
-> ...(으)ㄴ noun ...
+> ...(으)ㄴ noun ... (adjectives)
 
 **좋은 커피숍이 저기 큰 건물 안에 있어요.**
 The nice coffee shop is in that big building.
+
+> ...(는)noun ... (verbs)
+
+**회사 안 가는 날은 뭐하세요?**
+What do you do on days you don't work?
 
 # Opinions
 
