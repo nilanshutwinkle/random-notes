@@ -211,6 +211,13 @@ Sally, who's my wife, cooks well.
 **학생 아닌 사람은 기숙사에서 못 살아요.**
 Anyone who is not a student cannot live at the dormitory.
 
+| Verb | ~는 form | notes |
+| ---- | ------- | ----- |
+| 가다 | 가는 | regular |
+| 살다 | 사는 | stem-final /ㄹ/ is omitted |
+| 이다 | 인 | irregular |
+| 아니다 | 아닌 | irregular |
+
 # Opinions
 
 > ...이/가 어때요?
