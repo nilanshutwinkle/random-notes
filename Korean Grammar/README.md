@@ -52,6 +52,14 @@ It's raining but I have to go to the store.
 | past tense (e.g., 갔는데) | 이다 (e.g., 인데) |
 | 있다, 없다 (e.g., 있는데)| |
 
+> ...어서/아서 ... (so)
+
+**늦어서 미안해요.**
+I'm late, so sorry.
+
+**한국 음식을 무척 좋아해서 한국어를 배워요.**
+I really like Korean food, so I'm learning Korean.
+
 # Deferential
 
 Deferential is used to show respect to the listener.
@@ -139,7 +147,7 @@ I'm riding the bus to meet a friend.
 
 > ...(으)ㄴ데요/는데요.
 
-This is less assertive than "...아/어요", and is more polite. It also implies "Can I do anything to help". 
+This is less assertive than "...아/어요", and is more polite. It also implies "Can I do anything to help".
 
 **지금 없는데요.**
 He's not home right now.
