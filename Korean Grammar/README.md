@@ -315,17 +315,20 @@ My parents received a gift from me.
 **누구한테서 전화 왔어요?**
 Who was the call from?
 
-> ...에서 ... (from place)
-
-**집에서 왔어요.**
-I came from my home.
-
 > ...에 ... (to place)
 
 **사무실에 가요.**
 I'm going to the office.
 
-> ...부터 ...까지 ... (from ... to, time)
+> ...에서 ...까지 ... (from... to... a place)
+
+**집에서 왔어요.**
+I came from my home.
+
+**집에서 사무실까지 몰라요.**
+It's far from my house to my office.
+
+> ...부터 ...까지 ... (from... to... in time)
 
 **아침 9시부터 저녁 6시까지 일해야 돼여.**
 I have to work from 9am to 6pm.
