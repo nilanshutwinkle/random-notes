@@ -95,6 +95,18 @@ Professor Lee is traveling.
 **이 선생님 여행을 하셨습니다.**
 Professor Lee traveled.
 
+# Emphasis
+
+> ...(이)나 ... (that many)
+
+**이번 주 3 시험이나 봤어요?**
+You took three tests this week?
+
+> ...밖에 ... (only)
+
+**이번 주 1 시험밖에 안 봤어요.**
+I only took 1 test this week.
+
 # Honorific
 
 Honorific is used to show respect to the subject, either in the first person or when two people are respecting someone in the third person.
@@ -155,6 +167,15 @@ This is less assertive than "...아/어요", and is more polite. It also implies
 **지금 없는데요.**
 He's not home right now.
 
+# Intentional
+
+> ...(으)ㄹ래요.
+
+**뭐 먹을래요?**
+What would you like to eat?
+
+**김치를 먹을래요.**
+I'd like to eat kimchi.
 
 # Location
 
