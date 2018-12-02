@@ -97,12 +97,12 @@ Professor Lee traveled.
 
 # Emphasis
 
-> ...(이)나 ... (that many)
+> ...(이)나 ... (emphasize a lot)
 
 **이번 주 3 시험이나 봤어요?**
 You took three tests this week?
 
-> ...밖에 ... (only)
+> ...밖에 ... (emphasize a little)
 
 **이번 주 1 시험밖에 안 봤어요.**
 I only took 1 test this week.
