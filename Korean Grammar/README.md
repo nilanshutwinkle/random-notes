@@ -325,7 +325,7 @@ I'm going to the office.
 **집에서 왔어요.**
 I came from my home.
 
-**집에서 사무실까지 몰라요.**
+**집에서 사무실까지 멀어요.**
 It's far from my house to my office.
 
 > ...부터 ...까지 ... (from... to... in time)
