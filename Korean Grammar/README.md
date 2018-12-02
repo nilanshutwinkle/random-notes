@@ -246,6 +246,14 @@ Anyone who is not a student cannot live at the dormitory.
 **학교 식당 음식이 어때요?**
 How's the food at the school cafeteria?
 
+>  ...(으)ㄹ까요?
+
+**영어로 말할까요?**
+Shall we speak in English?
+
+**음식이 맛있을까요?**
+Do you think the food will taste good?
+
 # Past
 
 > ...었/았/ㅆ어요.
