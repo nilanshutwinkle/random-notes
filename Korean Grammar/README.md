@@ -243,6 +243,16 @@ I had Korean fried chicken last night.
 **이번 주말에 가족와 같이 시간을 보낼 거예요.**
 I'll probably spend time with my family this weekend.
 
+# Progressive
+
+> ...고 있다.
+
+**저는 저녁을 먹고 있어요.**
+I'm eating dinner.
+
+**부모님은 저녁을 드시고 셰세요.**
+My parents are eating dinner.
+
 # Seeking agreement
 
 > ...지요?
