@@ -294,7 +294,7 @@ Professor Lee, we don't have a test this week, do we?
 
 # To and from
 
-> ...한테 ... (to)
+> ...한테 ... (to person)
 
 **친구가 마이클한테 선물을 줬어요.**
 Michael's friend gave Michael a gift.
@@ -302,12 +302,12 @@ Michael's friend gave Michael a gift.
 **친구한케 이메일 자주 보내세요?**
 Do you email your friend often?
 
-> ...께 ... (to, honorific)
+> ...께 ... (to person, honorific)
 
 **저이 부모님께 선물을 드렸어요.**
 I gave my parents a gift.
 
-> ...한테서 ... (from)
+> ...한테서 ... (from person)
 
 **부모님이 저한테서 선물을 받으셨어요.**
 My parents received a gift from me.
@@ -315,16 +315,20 @@ My parents received a gift from me.
 **누구한테서 전화 왔어요?**
 Who was the call from?
 
-> ...에서 ... (from)
+> ...에서 ... (from place)
 
 **집에서 왔어요.**
 I came from my home.
 
-> ...에 ... (to)
+> ...에 ... (to place)
 
 **사무실에 가요.**
 I'm going to the office.
 
+> ...부터 ...까지 ... (from ... to, time)
+
+**아침 9시부터 저녁 6시까지 일해야 돼여.**
+I have to work from 9am to 6pm.
 
 # Topic
 
