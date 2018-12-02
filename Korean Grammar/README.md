@@ -27,7 +27,7 @@ My home is spacious and close to the subway station.
 **한국어를 많이 공부하지만 잘 못해요.**
 I study Korean a lot but I can't speak it well.
 
-**생일 파티에 못 갔니만 카드를 샀어요.**
+**생일 파티에 못 갔지만 카드를 샀어요.**
 I couldn't go to the birthday party but I bought a card. (Note tense is expressed in both clauses.)
 
 > ...(으)ㄴ데 ... (background info&mdash;adjectives and 이다)
@@ -43,7 +43,7 @@ It's my birthday but I'm going to stay home.
 **시간이 없는데 빨리 해요.**
 You are running out of time, so be fast.
 
-**비가 오는에 수포에 가야 돼요.**
+**비가 오는데 수포에 가야 돼요.**
 It's raining but I have to go to the store.
 
 | 는데 | (으)ㄴ데 |
@@ -199,7 +199,7 @@ I'm going home.
 **커피셥에서 공부해요.**
 I'm studying at the coffee shop.
 
-> ...에는 ...이/가 있어요.**
+> ...에는 ...이/가 있어요.
 
 **3충에는 한국어 수업이 있어요.**
 The Korean class is on the 3rd floor.
@@ -218,7 +218,7 @@ No, I can't do it on Mondays and Wednesdays.
 
 > ...(으)ㄴ noun ... (adjectives)
 
-**좋은 커피숍이 저기 큰 건물 안에 있어요.**
+**좋은 커피숍이 저기 큰 건물 안에 있어요.**
 The nice coffee shop is in that big building.
 
 > ...(는)noun ... (verbs)
@@ -279,7 +279,7 @@ I'll probably spend time with my family this weekend.
 **저는 저녁을 먹고 있어요.**
 I'm eating dinner.
 
-**부모님은 저녁을 드시고 셰세요.**
+**부모님은 저녁을 드시고 계세요.**
 My parents are eating dinner.
 
 # Seeking agreement
@@ -304,7 +304,7 @@ Do you email your friend often?
 
 > ...께 ... (to person, honorific)
 
-**저이 부모님께 선물을 드렸어요.**
+**저의 부모님께 선물을 드렸어요.**
 I gave my parents a gift.
 
 > ...한테서 ... (from person)
@@ -330,7 +330,7 @@ It's far from my house to my office.
 
 > ...부터 ...까지 ... (from... to... in time)
 
-**아침 9시부터 저녁 6시까지 일해야 돼여.**
+**아침 9시부터 저녁 6시까지 일해야 돼요.**
 I have to work from 9am to 6pm.
 
 # Topic
@@ -363,11 +363,11 @@ Go straight to the left.
 
 **한국어 교실이 몇충에 있어요?** What floor is the Korean classroom on?
 
-**이거 누구 책에요?** Whose book is this? **내 거예요** It's mine.
+**이거 누구 책이에요?** Whose book is this? **내 거예요** It's mine.
 
 **햄버거는 얼마예요?** How much is the hamburger?
 
-**왜 한국어를 공부아세요?** What do you study Korean?
+**왜 한국어를 공부하세요?** What do you study Korean?
 
 **점심 어디서 먹어요?** Where do you eat lunch?
 
