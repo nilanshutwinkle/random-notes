@@ -63,6 +63,24 @@ I really like Korean food, so I'm learning Korean.
 **왜 한국어를 배워요? 한국에서 살구 싶어서요.**
 Why do I learn Korean? Because I want to live in Korea.
 
+> ...어서/아서 ... (sequential cause-and-effect)
+
+**집에 가서 쉬웠어요.**
+I went home, and then I rested.
+
+# Conjectural
+
+> ...겠 ...
+
+**오빠가 와요? 좋겠어요.**
+Your older brother is coming? You must be excited.
+
+**알겠어여?**
+Do you understand? (raises level of politeness)
+
+**모르겠어요.**
+I guess I don't understand. (raises level of politeness)
+
 # Deferential
 
 Deferential is used to show respect to the listener.
@@ -221,7 +239,17 @@ No, I can't do it on Mondays and Wednesdays.
 **좋은 커피숍이 저기 큰 건물 안에 있어요.**
 The nice coffee shop is in that big building.
 
-> ...(는)noun ... (verbs)
+> ...(으)ㄴ noun ... (past-tense verbs)
+
+**어제 마신 커피를 정말 삐싸요.**
+The coffee that I drank yesterday was really expensive.
+
+> ...(으)ㄹ noun ... (future-tense verbs)
+
+**다음 학이에 쓸 겨과서 여기예요.**
+This is the textbook I'll use next semester.
+
+> ...(는)noun ... (present-tense verbs)
 
 **회사 안 가는 날은 뭐하세요?**
 What do you do on days you don't work?
@@ -281,6 +309,16 @@ I'm eating dinner.
 
 **부모님은 저녁을 드시고 계세요.**
 My parents are eating dinner.
+
+# Reactions
+
+> ...네요 (just learned)
+
+**예쁘네요!**
+Oh, it's pretty!
+
+**다음 주에 부모님께 오시네여.**
+My parents are coming next week. (just learned)
 
 # Seeking agreement
 
