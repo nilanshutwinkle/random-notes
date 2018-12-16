@@ -1,6 +1,19 @@
+# Assurance
+
+> ...(으)ㄹ 게요 (volunteer)
+
+**전화 받을게요.**
+I'll get the phone.
+
+**이따가 다시 올게요.**
+I'll come back a little later.
+
+**저는 피자 먹을게요.**
+I'll have the pizza. (modest)
+
 # Benefactive expressions
 
-> ...어/아 주다
+> ...어/아 주다 (do something for someone else)
 
 **집에 와 주세요.**
 Please come to my house.
