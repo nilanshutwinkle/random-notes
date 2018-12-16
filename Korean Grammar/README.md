@@ -280,6 +280,21 @@ Anyone who is not a student cannot live at the dormitory.
 | 이다 | 인 | irregular |
 | 아니다 | 아닌 | irregular |
 
+# Obligation, necessity
+
+> ...어/아야 되다 (colloquial)
+
+**매일 공부해야 돼요.**
+I have to study everyday.
+
+**교수님하고 약속이 있어서 일찍 일어나야 돼요.**
+I have a meeting with my professor, so I have to wake up early.
+
+> ...어/아야 하다 (slightly formal)
+
+**매일 공부해야 해요.**
+I have to study everyday.
+
 # Opinions
 
 > ...이/가 어때요?
