@@ -1,3 +1,16 @@
+# Benefactive expressions
+
+> ...어/아 주다
+
+**집에 와 주세요.**
+Please come to my house.
+
+**부모님이 저한테 교과서들을 사 주셨어요.**
+My parents bought my textbooks for me.
+
+**전화 번호 가르쳐 주세요.**
+Please give me your phone number.
+
 # By means of
 
 > ...(으)로 가다/오다. (to come or go by)
