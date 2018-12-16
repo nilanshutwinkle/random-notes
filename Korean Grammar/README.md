@@ -11,6 +11,16 @@ I'll come back a little later.
 **저는 피자 먹을게요.**
 I'll have the pizza. (modest)
 
+# Because
+
+> noun 때문에 ... (because of)
+
+**숙제 때문에 파티에 못 가요.**
+I can't go to the party because of my homework.
+
+**감기 때문에 시홈 못 봤어요.**
+I couldn't take the test because I had a cold. 
+
 # Benefactive expressions
 
 > ...어/아 주다 (do something for someone else)
