@@ -19,7 +19,7 @@ I'll have the pizza. (modest)
 I can't go to the party because of my homework.
 
 **감기 때문에 시홈 못 봤어요.**
-I couldn't take the test because I had a cold. 
+I couldn't take the test because I had a cold.
 
 # Benefactive expressions
 
@@ -107,6 +107,8 @@ I went home, and then I rested.
 # Conjectural
 
 > ...겠 ...
+
+_Note: also see "Intentional"._
 
 **오빠가 와요? 좋겠어요.**
 Your older brother is coming? You must be excited.
@@ -223,13 +225,37 @@ He's not home right now.
 
 # Intentional
 
-> ...(으)ㄹ래요.
+> ...(으)ㄹ래요. (colloquial)
+
+_Note: Unlike 겠, this can be past tense._
 
 **뭐 먹을래요?**
 What would you like to eat?
 
 **김치를 먹을래요.**
 I'd like to eat kimchi.
+
+> ...겠 ...
+
+_Note: also see "Conjectural"._
+
+**뭐 드시겠어요?**
+What would you like to eat?
+
+**내일 다시 오겠어요.**
+I'll come back tomorrow.
+
+**누가 장을 보겠어요?**
+Who'll get the groceries?
+
+**제가 보겠어요.**
+I'll get them.
+
+**그만 가 보겠습니다.**
+See you later. (lit. I'll be leaving now)
+
+**잘 먹겠습니다.**
+Thank you for the food. (lit. I will eat well)
 
 # Location
 
