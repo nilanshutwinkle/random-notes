@@ -181,7 +181,7 @@ I only took 1 test this week.
 
 > ...(아/어) 보다.
 
-**까눌레를 먹어 봤어요?**
+**까눌레를 먹 봤어요?**
 Have you ever tried canelé?
 
 # Honorific
@@ -463,6 +463,11 @@ I came from my home.
 
 **집에서 사무실까지 멀어요.**
 It's far from my house to my office.
+
+> ...부터 ... 동안 ... (from ... for ... long)
+
+**대학교 때부터 6년 동안 달리기 했어요.**
+I ran for six years starting in college.
 
 > ...부터 ...까지 ... (from... to... in time)
 
