@@ -126,6 +126,11 @@ Do you understand? (raises level of politeness)
 **모르겠어요.**
 I guess I don't understand. (raises level of politeness)
 
+> ...고 듣다.
+
+**예쁘다고 들었어요.**
+I heard (she) is pretty.
+
 # Contradiction
 
 > ... 아니라 ...
