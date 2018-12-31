@@ -177,6 +177,13 @@ You took three tests this week?
 **이번 주 1 시험밖에 안 봤어요.**
 I only took 1 test this week.
 
+# Experience
+
+> ...(아/어) 보다.
+
+**까눌레를 먹어 봤어요?**
+Have you ever tried canelé?
+
 # Honorific
 
 Honorific is used to show respect to the subject, either in the first person or when two people are respecting someone in the third person.
