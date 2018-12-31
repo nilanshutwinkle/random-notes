@@ -104,6 +104,13 @@ Why do I learn Korean? Because I want to live in Korea.
 **집에 가서 쉬웠어요.**
 I went home, and then I rested.
 
+# Conditional
+
+> ...(으)면 ...
+
+**운동을 하면 건강에 좋대요.**
+If you exercise, then you'll be healthy.
+
 # Conjectural
 
 > ...겠 ...
@@ -124,7 +131,7 @@ I guess I don't understand. (raises level of politeness)
 > ... 아니라 ...
 
 **달리기가 아니라 수양할래요.**
-I want to swim, not run. 
+I want to swim, not run.
 
 # Deferential
 
