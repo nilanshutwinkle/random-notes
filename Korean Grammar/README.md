@@ -46,13 +46,6 @@ I'm going to the party by subway. (-ㄹ batchim doesn't use 으로.)
 **연필로 쓰세요. 볼펜으로 쓰세요.**
 Please write by pencil. Please write by pen.
 
-# Contradiction
-
-> ... 아니라 ...
-
-**달리기가 아니라 수양할래요.**
-I want to swim, not run. 
-
 # Clausal connective
 
 > ...고 ... (and then)
@@ -125,6 +118,13 @@ Do you understand? (raises level of politeness)
 
 **모르겠어요.**
 I guess I don't understand. (raises level of politeness)
+
+# Contradiction
+
+> ... 아니라 ...
+
+**달리기가 아니라 수양할래요.**
+I want to swim, not run. 
 
 # Deferential
 
