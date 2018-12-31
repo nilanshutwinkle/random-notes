@@ -395,6 +395,9 @@ Do you think the food will taste good?
 
 > ...(ㄴ/는) 것 같아요
 
+**좀 그런 것 같아요.**
+It does seem that way.
+
 **코메디 이야기는 항상 들어 있는 것 같아요.**
 There always seems to be comedy aspect.
 
