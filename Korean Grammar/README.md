@@ -138,6 +138,11 @@ I heard (she) is pretty.
 **달리기가 아니라 수양할래요.**
 I want to swim, not run.
 
+> ... 별로 안 ...
+
+**저는 별로 안 좋아해요.**
+I don't really like it.
+
 # Deferential
 
 Deferential is used to show respect to the listener.
