@@ -474,6 +474,13 @@ I ran for six years starting in college.
 **아침 9시부터 저녁 6시까지 일해야 돼요.**
 I have to work from 9am to 6pm.
 
+# Together
+
+> ...랑 같이 ...
+
+**아기랑 고양이랑 같이 자라요.**
+The baby and the cat are growing up together.
+
 # Topic
 
 You can change the topic with 은/는, or with 그런데.
