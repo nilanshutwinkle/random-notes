@@ -406,12 +406,14 @@ I don't think so.
 
 # Past
 
-> ...었/았/ㅆ어요.
+> ...(었/았/ㅆ)어요.
 
 **어제 저녁에 치킨을 먹었어요.**
 I had Korean fried chicken last night.
 
 # Possession
+
+> ...의 ...
 
 **이번 주의 뉴스** This week's news
 
