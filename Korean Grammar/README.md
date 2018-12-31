@@ -417,6 +417,13 @@ I had Korean fried chicken last night.
 
 **이번 주의 뉴스** This week's news
 
+# Preference
+
+> ...보다 ... (더)
+
+**차보다 커피를 더 좋아해요?**
+You like coffee more than tea?
+
 # Probability
 
 > ...(으)ㄹ 거예요.
