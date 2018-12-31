@@ -189,6 +189,9 @@ I only took 1 test this week.
 **까눌레를 먹 봤어요?**
 Have you ever tried canelé?
 
+**나중에 꼭 한번 만들어 보세요.**
+I'll definitely try to make it later.
+
 # Honorific
 
 Honorific is used to show respect to the subject, either in the first person or when two people are respecting someone in the third person.
