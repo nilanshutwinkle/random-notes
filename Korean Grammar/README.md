@@ -393,6 +393,14 @@ Shall we speak in English?
 **음식이 맛있을까요?**
 Do you think the food will taste good?
 
+> ...(ㄴ/는) 것 같아요
+
+**코메디 이야기는 항상 들어 있는 것 같아요.**
+There always seems to be comedy aspect.
+
+**안 그런 것 같아요.**
+I don't think so.
+
 # Past
 
 > ...었/았/ㅆ어요.
