@@ -506,10 +506,13 @@ The baby and the cat are growing up together.
 
 You can change the topic with 은/는, or with 그런데.
 
-> ...은요?
+> ...(은/는)요?
 
 **서점은요?**
 What about the book store?
+
+**마크 씨는요?**
+What about you, Mark?
 
 > 그런데, ...
 
