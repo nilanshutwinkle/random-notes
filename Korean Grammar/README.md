@@ -359,6 +359,9 @@ Sally, who's my wife, cooks well.
 **학생 아닌 사람은 기숙사에서 못 살아요.**
 Anyone who is not a student cannot live at the dormitory.
 
+**저는 혼자 있는 거 좋아해요.**
+I like living alone.
+
 | Verb | ~는 form | notes |
 | ---- | ------- | ----- |
 | 가다 | 가는 | regular |
