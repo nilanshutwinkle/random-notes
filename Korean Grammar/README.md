@@ -362,6 +362,9 @@ Anyone who is not a student cannot live at the dormitory.
 **저는 혼자 있는 거 좋아해요.**
 I like living alone.
 
+**요즘 혼술이 유행인 거 알아요?**
+Did you know that drinking alone is fashionable now?
+
 | Verb | ~는 form | notes |
 | ---- | ------- | ----- |
 | 가다 | 가는 | regular |
