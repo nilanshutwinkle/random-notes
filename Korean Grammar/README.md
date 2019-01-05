@@ -359,10 +359,10 @@ Sally, who's my wife, cooks well.
 **학생 아닌 사람은 기숙사에서 못 살아요.**
 Anyone who is not a student cannot live at the dormitory.
 
-**저는 혼자 있는 거 좋아해요.** (TTMIK)
+**저는 혼자 있는 거 좋아해요.** (source: TTMIK)
 I like living alone.
 
-**요즘 혼술이 유행인 거 알아요? 혼술은 혼자 술 마시는 것을 말해요.** (TTMIK)
+**요즘 혼술이 유행인 거 알아요? 혼술은 혼자 술 마시는 것을 말해요.** (source: TTMIK)
 Did you know that drinking alone is fashionable now? Drinking alone is called "혼술".
 
 | Verb | ~는 form | notes |
