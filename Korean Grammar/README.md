@@ -472,7 +472,10 @@ My parents are coming next week. (just learned)
 > ...고요.
 
 **혼술은 혼자 술 마시는 것을 말해요. 혼밥은 혼자 밥 먹는 거고요.** (source: TTMIK)
-Drinking alone is called "혼술". And eating alone is "혼밥".
+Drinking alone is called "혼술". And eating alone is "혼밥". (거고요 is contraction of "거 이고요")
+
+**카페에 혼자 가도 다른 사람들이 많고, 운동을 하러 가도 운동하는 곳에 사람들이 많고요.** (source: TTMIK)
+Even if you go to a cafe alone, there are lots of people; and if you go exercise, there also are lots of people there.
 
 # Seeking agreement
 
