@@ -460,6 +460,13 @@ Oh, it's pretty!
 **다음 주에 부모님께 오시네여.**
 My parents are coming next week. (just learned)
 
+# Related ideas
+
+> ...고요.
+
+**혼술은 혼자 술 마시는 것을 말해요. 혼밥은 혼자 밥 먹는 거고요.** (source: TTMIK)
+Drinking alone is called "혼술". And eating alone is "혼밥".
+
 # Seeking agreement
 
 > ...지요?
