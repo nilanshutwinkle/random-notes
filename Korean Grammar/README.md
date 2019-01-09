@@ -144,21 +144,6 @@ I guess I don't understand. (raises level of politeness)
 **예쁘다고 들었어요.**
 I heard (she) is pretty.
 
-# Contradiction
-
-> ... 아니라 ...
-
-**달리기가 아니라 수양할래요.**
-I want to swim, not run.
-
-> ... 별로 안 ...
-
-**저는 별로 안 좋아해요.**
-I don't really like it.
-
-**... 별로예요.**
-I don't like ...
-
 # Deferential
 
 Deferential is used to show respect to the listener.
@@ -336,13 +321,26 @@ The Korean class is on the 3rd floor.
 
 # Negative
 
-> 아니요, ... 안/못 ...
+> 아니요, ... 안/못 ... (won't or can't)
 
 **아니요, 월요일하고 수요일에 안 달려요.**
 No, I don't run on Mondays and Wednesdays.
 
 **아니요, 월요일하고 수요일에 못 해요.**
 No, I can't do it on Mondays and Wednesdays.
+
+> ... 아니라 ... (Not this, that)
+
+**달리기가 아니라 수양할래요.**
+I want to swim, not run.
+
+> ... 별로 안 ... (not really)
+
+**저는 별로 안 좋아해요.**
+I don't really like it.
+
+**... 별로예요.**
+I don't like ...
 
 # Noun-modifying form
 
