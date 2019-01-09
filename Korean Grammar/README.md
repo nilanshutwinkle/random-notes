@@ -493,9 +493,6 @@ This ramen is really delicious, isn't it?
 **이 선생님, 이번 주 시험 없지요?**
 Professor Lee, we don't have a test this week, do we?
 
-**그런데 지금은 좋아졌어요?** (source: TTMIK)
-But not it's gotten better, right?
-
 # To and from
 
 > ...한테 ... (to person)
