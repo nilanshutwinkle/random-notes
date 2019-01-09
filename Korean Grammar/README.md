@@ -436,6 +436,9 @@ There always seems to be comedy aspect.
 **안 그런 것 같아요.**
 I don't think so.
 
+**해리 포터 같은 거요?** (source: TTMIK)
+Like Harry Potter?
+
 # Past
 
 > ...(었/았/ㅆ)어요.
