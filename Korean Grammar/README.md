@@ -41,6 +41,9 @@ My parents bought my textbooks for me.
 **전화번호 가르쳐 주세요.**
 Please give me your phone number.
 
+**인스타그램 아이디 좀 알려 주세요.** (source: TTMIK)
+Please tell me your Instagram ID?
+
 # By means of
 
 > ...(으)로 가다/오다. (to come or go by)
