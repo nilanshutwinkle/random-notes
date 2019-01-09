@@ -121,6 +121,9 @@ I went home, and then I rested.
 **운동을 하면 건강에 좋대요.**
 If you exercise, then you'll be healthy.
 
+**SNS 하면 어떤 점이 좋아요?** (source: TTMIK)
+Regarding social media, what things do you like?
+
 # Conjectural
 
 > ...겠 ...
