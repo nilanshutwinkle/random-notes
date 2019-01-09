@@ -329,7 +329,7 @@ No, I don't run on Mondays and Wednesdays.
 **아니요, 월요일하고 수요일에 못 해요.**
 No, I can't do it on Mondays and Wednesdays.
 
-> ... 아니라 ... (Not this, that)
+> ... 아니라 ... (not this, that)
 
 **달리기가 아니라 수양할래요.**
 I want to swim, not run.
@@ -341,6 +341,18 @@ I don't really like it.
 
 **... 별로예요.**
 I don't like ...
+
+> ...지 않다. (to not do, to not be)
+
+**달리지 않아요.**
+I'm not running.
+
+**예쁘지 않아요.**
+Not pretty.
+
+**진짜요? 그럼 헷갈리지 않아요?** (source: TTMIK)
+Really? Don't you get confused that way?
+
 
 # Noun-modifying form
 
