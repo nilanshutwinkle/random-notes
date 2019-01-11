@@ -361,6 +361,10 @@ Not pretty.
 **진짜요? 그럼 헷갈리지 않아요?** (source: TTMIK)
 Really? Don't you get confused that way?
 
+> ...이/가 아니라서 ... (because not; 아니다 + 어서/아서)
+
+**학생이 아니라서 기숙사에서 살 수 없어요.**
+Because I'm not a student, I'm not allowed to live at the dormitory.
 
 # Noun-modifying form
 
