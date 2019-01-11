@@ -114,6 +114,14 @@ Why do I learn Korean? Because I want to live in Korea.
 **집에 가서 쉬웠어요.**
 I went home, and then I rested.
 
+> ...(이)가서 (because; 이다 + 어서/아서)
+
+**첫 학기라서 좀 바빴어요.** (source: Integrated Korean Beginning 2)
+Because it's my first semester, I was a little busy.
+
+**30분 후부터 길이 막히는 시간이라서 오래 걸릴 거예요.** (source: Integrated Korean Beginning 2)
+Because it'll be rush hour in 30 minutes, it'll take a while.
+
 # Conditional
 
 > ...(으)면 ...
