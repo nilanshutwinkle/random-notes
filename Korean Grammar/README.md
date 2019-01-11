@@ -361,6 +361,14 @@ Not pretty.
 **진짜요? 그럼 헷갈리지 않아요?** (source: TTMIK)
 Really? Don't you get confused that way?
 
+> ...지 못하다. (can't do)
+
+**바빠서 주말 전에는 가지 못할 거예요.** (source: Integrated Korean Beginning 2)
+Since I'm busy, I won't be able to go before the weekend.
+
+**그동안 연락 드리지 못애서 정말 죄송합니다.** (source: Integrated Korean Beginning 2)
+Sorry that I haven't contacted you for some time.
+
 > ...이/가 아니라서 ... (because not; 아니다 + 어서/아서)
 
 **학생이 아니라서 기숙사에서 살 수 없어요.**
