@@ -5,6 +5,13 @@
 **자취를 하면 집에서도 혼자 마실 수 있는데 술집에 가요?** (source: TTMIK)
 Since they live at home, they're able to drink at their house; but they go to the bar?
 
+# About
+
+> ...에 대해서 ... (about)
+
+**이번에 새로운 영화에 대해서 기대를 많이 했어요.** (source: TTMIK)
+So I'm very excited about this new movie.
+
 # Assurance
 
 > ...(으)ㄹ 게요 (volunteer)
