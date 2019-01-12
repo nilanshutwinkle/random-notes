@@ -132,6 +132,9 @@ If you exercise, then you'll be healthy.
 **SNS 하면 어떤 점이 좋아요?** (source: TTMIK)
 Regarding social media, what things do you like?
 
+**여행 가면 뭐 해요?** (source: TTMIK)
+What do you do when you travel?
+
 # Conjectural
 
 > ...겠 ...
