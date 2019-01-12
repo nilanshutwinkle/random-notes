@@ -63,6 +63,9 @@ Please write by pencil. Please write by pen.
 **한국어 연습하고 친구를 만았어요.**
 I studied Korean and then met my friends. (Note tense is only expressed in the second clause.)
 
+**마지막으로, 물이나 육수를 붓고 더 끓이면 완성이에요.** (source: TTMIK)
+Finally, pour in water or broth and boil some more, and then it's done.
+
 > ...고 ... (and)
 
 **집이 넓고 지하철 역에서 가까워요.**
