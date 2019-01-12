@@ -374,6 +374,9 @@ Not pretty.
 **진짜요? 그럼 헷갈리지 않아요?** (source: TTMIK)
 Really? Don't you get confused that way?
 
+**저는 원래 좀비 영화를 좋아하지 않아요.** (source: TTMIK)
+I usually don't like zombie movies.
+
 > ...지 못하다. (can't do)
 
 **바빠서 주말 전에는 가지 못할 거예요.** (source: Integrated Korean Beginning 2)
