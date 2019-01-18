@@ -456,6 +456,9 @@ The nice coffee shop is in that big building.
 **어제 마신 커피를 정말 삐싸요.**
 The coffee that I drank yesterday was really expensive.
 
+**보내 주신 크리스마스 선물과 편지는 잘 받았습니다.** (source: Integrated Korean Beginning 2)
+I'm grateful for the Christmas gift and letter you sent.
+
 > ...(으)ㄹ noun ... (future-tense verbs)
 
 **다음 학이에 쓸 겨과서 여기예요.**
