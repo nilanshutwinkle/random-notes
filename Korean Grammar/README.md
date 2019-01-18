@@ -79,6 +79,9 @@ Please tell me your Instagram ID?
 **공항까지 가주세요.** (source: Integrated Korean Beginning 2)
 Please take me to the airport.
 
+**따뜻한 겨울 옷을 보내 주셔서 정말 구맙습니다.** (source: Integrated Korean Beginning 2)
+Thank you very much for sending me the warm winter clothes.
+
 # By means of
 
 > ...(으)로 가다/오다. (to come or go by)
