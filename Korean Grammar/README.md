@@ -319,6 +319,9 @@ See you later. (lit. I'll be leaving now)
 **잘 먹겠습니다.**
 Thank you for the food. (lit. I will eat well)
 
+**택시지 많이 나왔겠네요.** (source: Integrated Korean Beginning 2)
+The taxi fare must have come out to a lot.
+
 # Location
 
 > ...이/가 어디 있어요?
