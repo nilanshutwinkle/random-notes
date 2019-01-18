@@ -427,6 +427,15 @@ Sorry that I haven't contacted you for some time.
 **도서관에서 시끄럽게 얘기하지 마세요.** (source: Integrated Korean Beginning 2)
 No loud conversations at the library.
 
+**복잡한데 나오지 마세요.** (source: Integrated Korean Beginning 2)
+It's too crowded, so please don't come out.
+
+**수업 시간에 졸지 마세요.** (source: Integrated Korean Beginning 2)
+Don't doze off during class.
+
+**수업 시간에 얘기하지 말고 선생님 말씀을 잘 들으세요.** (source: Integrated Korean Beginning 2)
+Please don't talk during class, but listen to the teacher.
+
 > ...이/가 아니라서 ... (because not; 아니다 + 어서/아서)
 
 **학생이 아니라서 기숙사에서 살 수 없어요.**
