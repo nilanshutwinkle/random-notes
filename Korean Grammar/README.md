@@ -33,7 +33,7 @@ The exam turned out to be too difficult.
 
 # Assurance
 
-> ...(으)ㄹ 게요 (volunteer)
+> ...(으)ㄹ게요 (volunteer)
 
 **전화 받을게요.**
 I'll get the phone.
@@ -46,6 +46,9 @@ I'll have the pizza. (modest)
 
 **싸게 드릴게여. 5,000원만 주세요.** (source: Integrated Korean Beginning 2)
 I'll give it to you cheap. Only 5,000 won.
+
+**제가 공항에 마중 나갈게요.** (source: Integrated Korean Beginning 2)
+I'll greet you at the airport.
 
 # Because
 
