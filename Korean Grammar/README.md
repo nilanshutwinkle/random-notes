@@ -41,6 +41,9 @@ I'll come back a little later.
 **저는 피자 먹을게요.**
 I'll have the pizza. (modest)
 
+**싸게 드릴게여. 5,000원만 주세요.** (source: Integrated Korean Beginning 2)
+I'll give it to you cheap. Only 5,000 won.
+
 # Because
 
 > noun 때문에 ... (because of)
