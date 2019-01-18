@@ -12,6 +12,22 @@ Since they live at home, they're able to drink at their house; but they go to th
 **이번에 새로운 영화에 대해서 기대를 많이 했어요.** (source: TTMIK)
 So I'm very excited about this new movie.
 
+# Adverbial-modifying form
+
+> ...게 ... (adverbial form)
+
+**늦게 도착했어요.**
+I arrived late.
+
+**크게 말해 주세요.** (source: Integrated Korean Beginning 2)
+Please speak more loudly.
+
+**저녁을 아주 맛있게 먹었어요.** (source: Integrated Korean Beginning 2)
+I really enjoyed dinner. (idiomatic)
+
+**크리스마스를 즐겁게 보내세요.** (source: Integrated Korean Beginning 2)
+Have a merry Christmas.
+
 # Assurance
 
 > ...(으)ㄹ 게요 (volunteer)
