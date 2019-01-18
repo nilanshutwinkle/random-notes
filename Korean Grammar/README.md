@@ -279,6 +279,12 @@ This is less assertive than "...아/어요", and is more polite. It also implies
 **지금 없는데요.**
 He's not home right now.
 
+**몇 시 비행기인데요?** (source: Integrated Korean Beginning 2)
+What time is (his/her/your) arrival?
+
+**공항까니 뭐 타고 오셨는데요?** (source: Integrated Korean Beginning 2)
+How did you come to the airport?
+
 # Intentional
 
 > ...(으)ㄹ래요. (colloquial)
