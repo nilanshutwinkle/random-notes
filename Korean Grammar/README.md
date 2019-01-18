@@ -413,6 +413,11 @@ Since I'm busy, I won't be able to go before the weekend.
 **그동안 연락 드리지 못애서 정말 죄송합니다.** (source: Integrated Korean Beginning 2)
 Sorry that I haven't contacted you for some time.
 
+> ...지 마세요. (negative commands)
+
+**도서관에서 시끄럽게 얘기하지 마세요.** (source: Integrated Korean Beginning 2)
+No loud conversations at the library.
+
 > ...이/가 아니라서 ... (because not; 아니다 + 어서/아서)
 
 **학생이 아니라서 기숙사에서 살 수 없어요.**
