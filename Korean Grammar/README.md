@@ -28,6 +28,9 @@ I really enjoyed dinner. (idiomatic)
 **크리스마스를 즐겁게 보내세요.** (source: Integrated Korean Beginning 2)
 Have a merry Christmas.
 
+**시험이 너무 어렵게 나왔어요.** (source: Integrated Korean Beginning 2)
+The exam turned out to be too difficult.
+
 # Assurance
 
 > ...(으)ㄹ 게요 (volunteer)
