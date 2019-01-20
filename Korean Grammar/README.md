@@ -173,7 +173,9 @@ Because it'll be rush hour in 30 minutes, it'll take a while.
 
 # Conditional
 
-> ~(으)면 ...
+> (만약) ~(으)면 ... (in case, if)
+
+You can optionally add **만약** to the beginning of the sentence to make it clear that it's a conditional sentence.
 
 **운동을 하면 건강에 좋대요.**
 If you exercise, then you'll be healthy.
@@ -183,6 +185,15 @@ Regarding social media, what things do you like?
 
 **여행 가면 뭐 해요?** (source: TTMIK)
 What do you do when you travel?
+
+**만약 내일 밤에 비가 오면 집에 있을 거예요.** (source: TTMIK)
+If it rains tomorrow night, I'll stay home.
+
+**안 먹을 거면 나 줘.**
+Give it to me if you aren't going to eat it.
+
+**이거 다 먹으면 배가 아플 거예요.** (source: TTMIK)
+If you eat all of that, you'll get a stomach ache.
 
 # Conjectural
 
