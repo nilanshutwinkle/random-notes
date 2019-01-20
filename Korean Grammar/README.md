@@ -196,6 +196,21 @@ I guess I don't understand. (raises level of politeness)
 **예쁘다고 들었어요.**
 I heard (she) is pretty.
 
+# Conjunction
+
+> ...하고 ... (and, with)
+
+**남자친구하고 데이트할 거예요.** (source: TTMIK)
+I'm going to go on a date with my boyfriend.
+
+> ... (이)강 ... (and, with; colloquial)
+
+**빵이랑 우유** (source: TTMIK)
+Bread and milk
+
+**매운 거랑 단 거 좋아해요.** (source: TTMIK)
+I live spicy and sweet things.
+
 # Deferential
 
 Deferential is used to show respect to the listener.
