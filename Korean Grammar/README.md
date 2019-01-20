@@ -501,6 +501,15 @@ For all noun-modifying forms, "...ㄴ/ㄹ/는 것" is the most general way to co
 **운동을 가끔 하는 것은 정말 중요해요.**
 It's really important to exercise often.
 
+**매운 것 잘 먹어요?** (source: TTMIK)
+Do you like to eat spicy things?
+
+**제 취미는 영화 보는 거예요.** (source: TTMIK)
+My hobby is to watch movies.
+
+**요즘 공부하는 거는 뭐예요?** (source: TTMIK)
+What are you studying these days?
+
 > ...기 ... (convert verbs to nouns)
 
 **먹기도 해오.** (source: TTMIK)
