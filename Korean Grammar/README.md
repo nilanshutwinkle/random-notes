@@ -2,8 +2,16 @@
 
 > ...(ㄹ) 수 있다/없다. (to be able/unable)
 
+*Note*: **못** is used more colloquially than **... (ㄹ) 수 없다**.
+
+**조금 한국어를 할 수 있지만 잘 못 해요.**
+I can sleep a little Korean, but I'm not good.
+
 **자취를 하면 집에서도 혼자 마실 수 있는데 술집에 가요?** (source: TTMIK)
 Since they live at home, they're able to drink at their house; but they go to the bar?
+
+> 어쩻 밤 잘 수 없어요.
+I couldn't sleep well last night.
 
 # About
 
