@@ -256,6 +256,13 @@ Professor Lee is traveling.
 **이 선생님 여행을 하셨습니다.**
 Professor Lee traveled.
 
+# Desire
+
+> ~고 싶다. (to want)
+
+**한국어를 더 잘 하고 싶어요.**
+I want to get better at Korean.
+
 # Emphasis
 
 > ~(이)나 ... (emphasize a lot)
