@@ -496,6 +496,8 @@ For all noun-modifying forms, "...ㄴ/ㄹ/는 것" is the most general way to co
 * **사는 것**:  what you buy
 * **살 것**: what you will buy
 
+**는 거** is a more colloquial version of **는 것**.
+
 **운동을 가끔 하는 것은 정말 중요해요.**
 It's really important to exercise often.
 
