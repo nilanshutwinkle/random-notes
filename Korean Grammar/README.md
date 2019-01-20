@@ -621,8 +621,21 @@ I had Korean fried chicken last night.
 
 > ...보다 ... (더)
 
+**커피를 차보다 더 좋아해요?** (or)
 **차보다 커피를 더 좋아해요?**
 You like coffee more than tea?
+
+**수박은 사과보다 더 커요.** (source: TTMIK)
+A watermelon is bigger than an apple.
+
+**이거보다 더 좋아요.** (source: TTMIK)
+I like it more than this thing.
+
+**오늘은 어제보다 더워요.** (source: TTMIK)
+Today is warmer than yesterday.
+
+**저는 책을 읽는 것보다 사는 것을 더 좋아해요.** (source: TTMIK)
+I like buying books more than reading them.
 
 # Probability
 
