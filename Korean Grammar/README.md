@@ -488,6 +488,17 @@ Did you know that drinking alone is fashionable now? Drinking alone is called "�
 | 이다 | 인 | irregular |
 | 아니다 | 아닌 | irregular |
 
+> ...ㄴ/ㄹ/는 것 ... (adjectives and nouns)
+
+For all noun-modifying forms, "...ㄴ/ㄹ/는 것" is the most general way to convert an adjective or verb into a noun. E.g., the following examples are from TTMIK:
+
+* **산 것**: what you bought
+* **사는 것**:  what you buy
+* **살 것**: what you will buy
+
+**운동을 가끔 하는 것은 정말 중요해요.**
+It's really important to exercise often.
+
 > ...기 ... (convert verbs to nouns)
 
 **먹기도 해오.** (source: TTMIK)
