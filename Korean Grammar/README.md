@@ -490,6 +490,9 @@ Did you know that drinking alone is fashionable now? Drinking alone is called "�
 
 > ...기 ... (convert verbs to nouns)
 
+**먹기도 해오.** (source: TTMIK)
+I'm also eating.
+
 **이 감독은 이 영화를 만들기 전에는 항상 애니메이션을 만들었어요.** (source: TTMIK)
 Before making this movie, this director always made animations.
 
