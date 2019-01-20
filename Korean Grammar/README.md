@@ -410,13 +410,32 @@ No, I can't do it on Mondays and Wednesdays.
 **달리기가 아니라 수양할래요.**
 I want to swim, not run.
 
-> ... 별로 안 ... (not really)
+> ... 별로 ... (not really)
+
+*Verb must be negative.*
+
+**... 별로예요.**
+I don't like ...
 
 **저는 별로 안 좋아해요.**
 I don't really like it.
 
-**... 별로예요.**
-I don't like ...
+**별로 안 나빠요.** (source: TTMIK)
+It's not too bad.
+
+> ... 전혀 ... (not at all)
+
+*Verb must be negative.*
+
+**전혀 안 바빠요.** (source: TTMIK)
+I'm not busy at all.
+
+> ... 하나도 ... (not at all; colloquial)
+
+*Verb must be negative.*
+
+**저는 돈이 하나도 없어요.** (source: LearnWithOliver)
+I don't have any money.
 
 > ...지 않다. (to not do, to not be)
 
