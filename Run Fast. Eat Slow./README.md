@@ -51,7 +51,7 @@ Shalane Flanagan & Elyse Kopecky
 * Pesto potato salad
 * Recovery quinoa salad
 
-# Chapter 7: Soups
+## Chapter 7: Soups
 * Broccoli chèvre soup
 * Flu-fighter chicken & rice stew
 * Long run mineral broth
@@ -59,7 +59,7 @@ Shalane Flanagan & Elyse Kopecky
 * Garden gazpacho
 * Carrot-ginger soup
 
-# Chapter 8: Nourishing Mains
+## Chapter 8: Nourishing Mains
 * Burst cherry tomato linguine w/ shrimp
 * Shalane's breakfast-meets-dinner bowl
 * Bacon-wrapped stuffed chicken
@@ -90,4 +90,4 @@ Shalane Flanagan & Elyse Kopecky
 * (Vegan) Cocoa-coconut macaroons
 * (Vegan) Fig jam cookies
 
-# Chapter 11: Wholesome Treats
+## Chapter 11: Wholesome Treats
