@@ -11,3 +11,7 @@ Korean,English
 These can be imported into [Anki](https://apps.ankiweb.net/).
 
 These are not intended to be comprehensive for the resources suggested by the file names; these are only the words I'm interested in studying.
+
+# Status
+* Completed *Integrated Korean Beginning 2* chapters 10-15
+* Completed *Easy Korean Reading* (TTMIK) stories 1-6
