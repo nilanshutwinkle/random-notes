@@ -826,3 +826,21 @@ What kind of food is this?
 
 **어느 치킨 식당에 만아요?**
 Which chicken restaurant are we meeting at?
+
+# Misc
+
+> ~(으)면서 (while ~ing)
+
+**운전하면서 전화하지 마세요.** (source: Integrated Korean Beginning 2)
+Don't use your phone while driving.
+
+**저는 보통 아침을 먹으면서 신문을 읽어요.** (source: Integrated Korean Beginning 2)
+I usually read the paper while eating breakfast.
+
+> ~고 나서 (after)
+
+**수업 끝니고 나서 뭐 할 거예요?** (source: Integrated Korean Beginning 2)
+What are you going to do after class is over?
+
+**졸업하고 나서 뭐 하고 싶어요?** (source: Integrated Korean Beginning 2)
+What do you want to do after graduating?
