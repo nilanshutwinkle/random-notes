@@ -1,8 +1,9 @@
 # Able or permitted
 
-> ~(ㄹ) 수 있다/없다. (to be able/unable)
+> ~(ㄹ) 수 있다. (to be able)
 
-*Note*: **못** is used more colloquially than **~ (ㄹ) 수 없다**.
+**지금 운전해 줄 수 있어요?** (source: Integrated Korean Beginning 2)
+Could you give me a ride now?
 
 **조금 한국어를 할 수 있지만 잘 못 해요.**
 I can sleep a little Korean, but I'm not good.
@@ -10,7 +11,14 @@ I can sleep a little Korean, but I'm not good.
 **자취를 하면 집에서도 혼자 마실 수 있는데 술집에 가요?** (source: TTMIK)
 Since they live at home, they're able to drink at their house; but they go to the bar?
 
-> 어쩻 밤 잘 수 없어요.
+> ~(ㄹ) 수 없다. (to be unable)
+
+*Note*: **못** is used more colloquially than **~ (ㄹ) 수 없다**.
+
+**바빠서 만날 수 없어요.** (source: Integrated Korean Beginning 2)
+I'm too busy to meet.
+
+**어쩻 밤 잘 수 없어요.**
 I couldn't sleep well last night.
 
 # About
@@ -147,7 +155,7 @@ It's raining but I have to go to the store.
 | past tense (e.g., 갔는데) | 이다 (e.g., 인데) |
 | 있다, 없다 (e.g., 있는데)| |
 
-> ~어서/아서 ... (so)
+> ~(어/아)서 ... (so)
 
 **늦어서 미안해요.**
 I'm late, so sorry.
@@ -158,10 +166,13 @@ I really like Korean food, so I'm learning Korean.
 **왜 한국어를 배워요? 한국에서 살구 싶어서요.**
 Why do I learn Korean? Because I want to live in Korea.
 
-> ~어서/아서 ... (sequential cause-and-effect)
+> ~(어/아)서 ... (sequential cause-and-effect)
 
 **집에 가서 쉬웠어요.**
 I went home, and then I rested.
+
+**이쪽으로 와서 보세요.** (source: Integrated Korean Beginning 2)
+Please come this way and take a look.
 
 > ~(이)라서 (because; 이다 + 어서/아서)
 
@@ -170,6 +181,9 @@ Because it's my first semester, I was a little busy.
 
 **30분 후부터 길이 막히는 시간이라서 오래 걸릴 거예요.** (source: Integrated Korean Beginning 2)
 Because it'll be rush hour in 30 minutes, it'll take a while.
+
+**지금 세일이라서 세 켤레에 만 원에 드릴 수 있어요.** (source: Integrated Korean Beginning 2)
+Because we're currently having a sale, I can give you three pair for 10,000 won.
 
 # Conditional
 
