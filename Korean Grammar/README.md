@@ -863,6 +863,14 @@ What are you going to do after class is over?
 **졸업하고 나서 뭐 하고 싶어요?** (source: Integrated Korean Beginning 2)
 What do you want to do after graduating?
 
+> 때 (when)
+
+**중학교 때 무슨 과목이 제일 재미있었어요?** (source: Integrated Korean Beginning 2)
+What was you favorite subject when you were in middle school?
+
+**열살 때까지 서울에서 살았어요.** (source: Integrated Korean Beginning 2)
+I've lived in Seoul since I was eleven years old.
+
 > ~(으)ㄹ 때 (when)
 
 **공부 할 때 음악을 들으세요?** (source: Integrated Korean Beginning 2)
