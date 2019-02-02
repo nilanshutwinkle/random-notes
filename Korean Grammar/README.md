@@ -886,3 +886,8 @@ I traveled to Jeju island when I was young.
 
 **태권도 할 줄 아세요?** (source: Integrated Korean Beginning 2)
 Do you know Taekwando?
+
+> ~(으)ㄹ 줄 모르다 (to not know how to do)
+
+**할 줄 모라요.**
+I don't know how to do that.
