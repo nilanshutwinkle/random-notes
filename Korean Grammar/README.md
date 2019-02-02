@@ -862,3 +862,14 @@ What are you going to do after class is over?
 
 **졸업하고 나서 뭐 하고 싶어요?** (source: Integrated Korean Beginning 2)
 What do you want to do after graduating?
+
+> ~(으)ㄹ 때 (when)
+
+**공부 할 때 음악을 들으세요?** (source: Integrated Korean Beginning 2)
+When you study, do you listen to music?
+
+**심심할 때 뭐 해요?** (source: Integrated Korean Beginning 2)
+What do you do when you are bored?
+
+**어렸을 때 제주도에 가 봤어요.** (source: Integrated Korean Beginning 2)
+I traveled to Jeju island when I was young.
