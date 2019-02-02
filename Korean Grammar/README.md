@@ -881,3 +881,8 @@ What do you do when you are bored?
 
 **어렸을 때 제주도에 가 봤어요.** (source: Integrated Korean Beginning 2)
 I traveled to Jeju island when I was young.
+
+> ~(으)ㄹ 줄 알다 (to know how to do)
+
+**태권도 할 줄 아세요?** (source: Integrated Korean Beginning 2)
+Do you know Taekwando?
