@@ -680,6 +680,14 @@ I like buying books more than reading them.
 
 > A(가/이) B보다 덜 ... (A less than B)
 
+> ... 중에서 ... (between)
+
+**순두부찌개와 된장찌개 중에서 어즈 것을 더 좋아하세요?** (source: Integrated Korean Beginning 2)
+Between soondubu jjigae and dwaenjang jjigae, which do you like more?
+
+**한국어와 영어 중에서 어느 것이 더 어려워요?** (source: Integrated Korean Beginning 2)
+Between Korean and English, which is more difficult?
+
 # Probability
 
 > ~(으)ㄹ 거예요.
