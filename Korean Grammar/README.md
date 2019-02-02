@@ -868,6 +868,8 @@ What do you want to do after graduating?
 **중학교 때 무슨 과목이 제일 재미있었어요?** (source: Integrated Korean Beginning 2)
 What was you favorite subject when you were in middle school?
 
+> 대까지 (since)
+
 **열살 때까지 서울에서 살았어요.** (source: Integrated Korean Beginning 2)
 I've lived in Seoul since I was eleven years old.
 
