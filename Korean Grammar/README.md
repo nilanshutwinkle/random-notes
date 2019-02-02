@@ -11,6 +11,9 @@ I can sleep a little Korean, but I'm not good.
 **자취를 하면 집에서도 혼자 마실 수 있는데 술집에 가요?** (source: TTMIK)
 Since they live at home, they're able to drink at their house; but they go to the bar?
 
+**피자가 제일 잘 만들 수 있는 음식이에요.**
+Pizza is best type of food that I can make.
+
 > ~(ㄹ) 수 없다. (to be unable)
 
 *Note*: **못** is used more colloquially than **~ (ㄹ) 수 없다**.
