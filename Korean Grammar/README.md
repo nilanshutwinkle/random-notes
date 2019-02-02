@@ -28,6 +28,9 @@ I couldn't sleep well last night.
 **이번에 새로운 영화에 대해서 기대를 많이 했어요.** (source: TTMIK)
 So I'm very excited about this new movie.
 
+**한국어에 대해서 질문들 만나요.**
+I have many questions about Korean.
+
 # Adverbial-modifying form
 
 > ~게 ... (adverbial form)
