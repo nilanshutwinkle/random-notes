@@ -25,10 +25,10 @@
 * **Back up**: after taking greedy move, current value of earlier exploratory state is updated to be closer to value of this later state (9)
 * **Temporal-difference learning**: (9)
 
-  ![Equation for back up](https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cbg_white%20V%28S_%7Bt%7D%29%20%5Cleftarrow%20V%28S_%7Bt%7D%29%20&plus;%20%5Calpha%20%5BV%28S_%7Bt&plus;1%7D%29%20-%20V%28S_%7Bt%7D%29%5D)
+  ![Equation for back up](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbg_white%20V%28S_%7Bt%7D%29%20%5Cleftarrow%20V%28S_%7Bt%7D%29%20&plus;%20%5Calpha%20%5BV%28S_%7Bt&plus;1%7D%29%20-%20V%28S_%7Bt%7D%29%5D)
 
 * Where:
-  - ![alpha](https://latex.codecogs.com/gif.latex?%5Cbg_white%20%5Calpha) is small positive fraction called **step-size parameter**
-  - ![S_t](https://latex.codecogs.com/gif.latex?%5Cbg_white%20S_%7Bt%7D) is state prior to greedy move
-  - ![S_t+1](https://latex.codecogs.com/gif.latex?%5Cbg_white%20S_%7Bt&plus;1%7D) is state after greedy move
-  - ![V(S_t)](https://latex.codecogs.com/gif.latex?%5Cbg_white%20V%28S_%7Bt&plus;1%7D%29) is value function applied to particular state
+  - ![alpha](https://latex.codecogs.com/svg.latex?%5Cbg_white%20%5Calpha) is small positive fraction called **step-size parameter**
+  - ![S_t](https://latex.codecogs.com/svg.latex?%5Cbg_white%20S_%7Bt%7D) is state prior to greedy move
+  - ![S_t+1](https://latex.codecogs.com/svg.latex?%5Cbg_white%20S_%7Bt&plus;1%7D) is state after greedy move
+  - ![V(S_t)](https://latex.codecogs.com/svg.latex?%5Cbg_white%20V%28S_%7Bt&plus;1%7D%29) is value function applied to particular state
