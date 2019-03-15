@@ -38,13 +38,13 @@
 * **Back up**: after taking greedy move, current value of earlier exploratory state is updated to be closer to value of this later state (9)
 * **Temporal-difference learning** involve updating estimates based on difference between estimates at two successive states: (9)
 
-  ![Equation for back up](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbg_white%20V%28S_%7Bt%7D%29%20%5Cleftarrow%20V%28S_%7Bt%7D%29%20&plus;%20%5Calpha%20%5BV%28S_%7Bt&plus;1%7D%29%20-%20V%28S_%7Bt%7D%29%5D)
+  ![Equation for back up](chap1/1.svg)
 
   Where:
-  - ![alpha](https://latex.codecogs.com/svg.latex?%5Cbg_white%20%5Calpha) is small positive fraction called **step-size parameter**
-  - ![S_t](https://latex.codecogs.com/svg.latex?%5Cbg_white%20S_%7Bt%7D) is state prior to greedy move
-  - ![S_t+1](https://latex.codecogs.com/svg.latex?%5Cbg_white%20S_%7Bt&plus;1%7D) is state after greedy move
-  - ![V(S_t)](https://latex.codecogs.com/svg.latex?%5Cbg_white%20V%28S_%7Bt&plus;1%7D%29) is value function applied to particular state
+  - ![alpha](chap1/2.svg) is small positive fraction called **step-size parameter**
+  - ![S_t](chap1/3.svg) is state prior to greedy move
+  - ![S_t+1](chap1/4.svg) is state after greedy move
+  - ![V(S_t)](chap1/5.svg) is value function applied to particular state
 
 ## 1.6 Summary
 
