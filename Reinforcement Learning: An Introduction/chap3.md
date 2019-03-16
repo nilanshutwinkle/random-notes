@@ -116,8 +116,18 @@
 
 * In reinforcement learning, one typically has to settle for approximate solutions. (66)
 
-
 ## 3.7 Optimality and Approximation
 
+* **Tabular methods** can be used tasks with small, finite state sets, it is possible to form approximations using arrays or tables with one entry per state or state-action pair. (67)
+* When approximating optimal behavior, there may be many states that the agent faces with such low probability that selecting suboptimal actions for them has little impact on the amount of reward the agent receives. (67)
 
 ## 3.8 Summary
+
+* A policy is a stochastic rule by which the agent selects actions as a function of states. (68)
+
+## Bibliographical and Historical Remarks
+
+* In the literature, instead of episodic vs continuing tasks, commonly distinguish between three types of tasks: (70)
+    1. **finite-horizon tasks**: interaction terminates within fixed number of time steps
+    1. **indefinite-horizon tasks**: interaction can last arbitrarily long but must eventually terminate
+    1. **infinite-horizon tasks**: interaction doesn't terminate
