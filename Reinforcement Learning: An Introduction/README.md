@@ -10,3 +10,5 @@ Richard Sutton and Andrew Barto. (2018) The [full book](http://www.incompleteide
 
 * [Chapter 2: Multi-armed Bandits](chap2.md)
 * [Chapter 3: Finite Markov Decision Processes](chap3.md)
+* [Chapter 4: Dynamic Programming](chap4.md)
+* [Chapter 5: Monte Carlo Methods](chap5.md)
