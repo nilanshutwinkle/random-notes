@@ -12,20 +12,20 @@
 
 Value | Definition | Description
 ----- | ---------- | -----------
-![A_t](https://latex.codecogs.com/svg.latex?%5Cbg_white%20A_%7Bt%7D) | - | action at time step *t*
-![R_t](https://latex.codecogs.com/svg.latex?%5Cbg_white%20R_%7Bt%7D) | - | Reward based on action at time step *t*
-![q_*(a)](https://latex.codecogs.com/svg.latex?%5Cbg_white%20q_%7B*%7D%28a%29) | ![Expected value of R_t given A_t = a](https://latex.codecogs.com/svg.latex?%5Cbg_white%20E%5BR_%7Bt%7D%20%7C%20A_%7Bt%7D%3Da%5D) | Value of arbitrary action *a*
-![Q_t(a)](https://latex.codecogs.com/svg.latex?%5Cbg_white%20Q_%7Bt%7D%28a%29) | - | Estimated value of action *a* at time step *t*
+![A_t](chap2/1.svg) | - | action at time step *t*
+![R_t](chap2/2.svg) | - | Reward based on action at time step *t*
+![q_*(a)](chap2/3.svg) | ![Expected value of R_t given A_t = a](chap2/4.svg) | Value of arbitrary action *a*
+![Q_t(a)](chap2/5.svg) | - | Estimated value of action *a* at time step *t*
 
 ## 2.2 Action-value Methods
 
 * **action-value methods** are methods for estimating the values of actions for purposes of making action selection decisions (27)
 * **sample-average method** (27):
 
-  ![Definition of sample-average method](https://latex.codecogs.com/svg.latex?%5Cbg_white%20Q_%7Bt%7D%28a%29%20%5Cdoteq%20%5Cfrac%7B%20%5Csum_%7Bi%3D1%7D%5E%7Bt-1%7D%20R_%7Bi%7D%20%5Ccdot%201_%7BA_%7Bi%7D%3Da%7D%20%7D%7B%20%5Csum_%7Bi%3D1%7D%5E%7Bt-1%7D%201_%7BA_%7Bi%7D%3Da%7D%20%7D)
+  ![Definition of sample-average method](chap2/6.svg)
 
-  Where ![1_predicate](https://latex.codecogs.com/svg.latex?%5Cbg_white%201_%7BA_%7Bi%7D%3Da%7D) denotes value of 1 when predicate is true
-* Simplest action selection rule is the greedy action selection (27): ![Argmax of estimated value](https://latex.codecogs.com/svg.latex?%5Cbg_white%20A_%7Bt%7D%20%5Cdoteq%5Cunderset%7Ba%7D%7Bargmax%7D%20Q_%7Bt%7D%28a%29)
+  Where ![1_predicate](chap2/7.svg) denotes value of 1 when predicate is true
+* Simplest action selection rule is the greedy action selection (27): ![Argmax of estimated value](chap2/8.svg)
 * Alternative is to be greedy most of time, but with small probability &epsilon; select randomly among all actions with equal probability, known as **&epsilon;-greedy methods** (28)
 
 ## 2.3 The 10-armed Testbed
@@ -37,15 +37,15 @@ Value | Definition | Description
 
 * Non-incremental formula for estimating value requires unbounded memory and additional computation (31):
 
-  ![Non-incremental formula for sample average method](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbg_white%20Q_%7Bn%7D%20%5Cdoteq%20%5Cfrac%7B%20R_%7B1%7D%20&plus;%20R_%7B2%7D%20&plus;%20...%20&plus;%20R_%7Bn-1%7D%20%7D%7B%20n%20-%201%20%7D)
+  ![Non-incremental formula for sample average method](chap2/9.svg)
 
 * **Incremental formula** use constant memory and per-time-step computation (30-1):
 
-  ![Incremental formula for sample average method](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbg_white%20Q_%7Bn&plus;1%7D%20%3D%20Q_%7Bn%7D%20&plus;%20%5Cfrac%7B%201%20%7D%7B%20n%20%7D%20%5BR_%7Bn%7D%20-%20Q_%7Bn%7D%5D)
+  ![Incremental formula for sample average method](chap2/10.svg)
 
 * This general form of an **update rule** will occur many times in this book (31):
 
-  ![General form of update rule](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbg_white%20NewEstimate%20%5Cleftarrow%20OldEstimate%20&plus;%20StepSize%20%5B%20Target%20-%20OldEstimate%20%5D)
+  ![General form of update rule](chap2/11.svg)
 
   Where `[Target - OldEstimate]` is the **error** of the estimate
 
@@ -54,9 +54,9 @@ Value | Definition | Description
 * In cases of nonstationarity, makes sense to give more weight to recent awards (32)
 * Using a constant step-size parameter effectively gives more weight to recent awards (32):
 
-  ![Constant step-size formula](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbg_white%20Q_%7Bn&plus;1%7D%20%5Cdoteq%20Q_%7Bn%7D%20&plus;%20%5Calpha%20%5B%20R_%7Bn%7D%20-%20Q_%7Bn%7D%20%5D)
+  ![Constant step-size formula](chap2/12.svg)
 
-  Where ![alpha is between 0 and 1](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbg_white%20%5Calpha%20%5Cin%20%280%2C1%5D). The weight decays exponentially on `1 - alpha`. (See p. 32 for derivation.)
+  Where ![alpha is between 0 and 1](chap2/13.svg). The weight decays exponentially on `1 - alpha`. (See p. 32 for derivation.)
 
 ## 2.6 Optimistic Initial Values
 
@@ -68,16 +68,16 @@ Value | Definition | Description
 
 * The **upper confidence bound** (**UCB**) action selection helps with exploration by measuring uncertainty (35-6):
 
-  ![UCB formula](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbg_white%20A_%7Bt%7D%20%5Cdoteq%20%5Cunderset%7Ba%7D%7Bargmax%7D%20%5Cleft%20%5B%20Q_%7Bt%7D%28a%29%20&plus;%20c%20%5Csqrt%7B%20%5Cfrac%7B%20%5Cln%20t%20%7D%7B%20N_%7Bt%7D%28a%29%20%7D%20%7D%20%5Cright%20%5D)
+  ![UCB formula](chap2/14.svg)
 
-  Where ![square root portion of equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbg_white%20%5Csqrt%7B%20%5Cfrac%7B%20%5Cln%20t%20%7D%7B%20N_%7Bt%7D%28a%29%20%7D%20%7D) is a measure of uncertainty.
+  Where ![square root portion of equation](chap2/15.svg) is a measure of uncertainty.
 
 ## 2.8 Gradient Bandit Algorithms
 
 Value | Definition | Description
 ----- | ---------- | -----------
-![H_t(a)](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbg_white%20H_%7Bt%7D%28a%29) | - | Numerical preference for action _a_
-![pi_t(a)](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbg_white%20%5Cpi%20_%7Bt%7D%28a%29) | ![soft-max formula of preferences for actions](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbg_white%20Pr%20%5Cleft%20%5C%7B%20A_%7Bt%7D%20%3D%20a%20%5Cright%20%5C%7D%20%5Cdoteq%20%5Cfrac%7B%20e%5E%7BH_%7Bt%7D%28a%29%7D%20%7D%7B%20%5Csum_%7Bb%3D1%7D%5E%7Bk%7D%20e%5E%7BH_%7Bt%7D%28b%29%7D%20%7D) | Probability of taking action _a_ at time _t_
+![H_t(a)](chap2/16.svg) | - | Numerical preference for action _a_
+![pi_t(a)](chap2/17.svg) | ![soft-max formula of preferences for actions](chap2/18.svg) | Probability of taking action _a_ at time _t_
 
 * Gradient bandit algorithms estimate action preferences, not action values (42)
 * **Soft-max distribution** (i.e., Gibbs or Boltmaxx distribution) converts values to a distribution of probabilities (37)
