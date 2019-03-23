@@ -61,9 +61,9 @@ for grammar in ordered_grammars:
     if (z):
         clean_grammar = z.groups()[0]
         defition = z.groups()[1]
-        print("* [{}](#{}): {}".format(clean_grammar, hash(grammar), defition))
+        print("* **[{}](#{})**: {}".format(clean_grammar, hash(grammar), defition))
     else:
-        print("* [{}](#{})".format(grammar, hash(grammar)))
+        print("* **[{}](#{})**".format(grammar, hash(grammar)))
 
 # Print out contents
 for grammar in ordered_grammars:
