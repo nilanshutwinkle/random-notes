@@ -62,7 +62,8 @@ for grammar in ordered_grammars:
 # Print out contents
 for grammar in ordered_grammars:
     print()
-    print('## {} <a name="{}"></a>'.format(grammar, hash(grammar)))
+    print('<a name="{}"></a>'.format(hash(grammar)))
+    print('## {}'.format(grammar))
     for line in grammars[grammar]:
         if line.startswith("**"):
             print()
