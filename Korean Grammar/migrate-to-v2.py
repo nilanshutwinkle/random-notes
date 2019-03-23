@@ -53,16 +53,17 @@ print()
 print("## Contents")
 
 ordered_grammars = list(grammars.keys())
-ENG_REGEX = '\((.*?)\)'
+ENG_REGEX = '(.*) \((.*?)\)'
 grammar_english_part = re.compile(ENG_REGEX)
 
 for grammar in ordered_grammars:
-    if (re.match(ENG_REGEX, grammar)):
-        clean_grammar = grammar_english_part.sub('', grammar)
-        print("* [{}](#{})".format(clean_grammar, hash(grammar)))
+    z = re.match(ENG_REGEX, grammar)
+    if (z):
+        clean_grammar = z.groups()[0]
+        defition = z.groups()[1]
+        print("* [{}](#{}): {}".format(clean_grammar, hash(grammar), defition))
     else:
-        print(clean_grammar)
-
+        print("* [{}](#{})".format(grammar, hash(grammar)))
 
 # Print out contents
 for grammar in ordered_grammars:
