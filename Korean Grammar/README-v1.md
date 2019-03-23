@@ -1,106 +1,6 @@
-# Korean grammar
+# Able or permitted
 
-## Contents
-* [~ 수 있다. ](#2939501667088228005)
-* [~ 수 없다. ](#-8669433871169594210)
-* [~에 대해서 ... ](#5022971141747431568)
-* [~게 ... ](#1750359589625985382)
-* [~ㄹ게요 ](#-6790417328681782379)
-* [noun 때문에 ... ](#6457809895332459847)
-* [~어/아 주다 ](#106604547447637264)
-* [~로 가다/오다. ](#5126948134159292871)
-* [~로 ... ](#-4224684039851570533)
-* [~고 ... ](#-1607810783548005523)
-* [~고 ... ](#-571252583200208883)
-* [~지만 ... ](#1862062014669806172)
-* [~ㄴ데 ... ](#-376249296933101996)
-* [~는데 ... ](#-7607925807053789918)
-* [~서 ... ](#-5241562969761064725)
-* [~서 ... ](#5398094572855281988)
-* [~라서 ](#-2455495306551473980)
-* [ ~면 ... ](#1721311002102645906)
-* [~겠~ ](#-9005190208761678834)
-* [~고 듣다.](#7271590663509742673)
-* [~하고 ... ](#6362496169293986664)
-* [~랑 ... ](#3677152895091656645)
-* [~랑 같이 ... ](#7821152154482751447)
-* [~습니다/ㅂ니다. ](#-7927056566026121090)
-* [~습니까/ㅂ니까? ](#-8757241230851517422)
-* [~었/았습니다. ](#-4181160755004396856)
-* [~십니다. ](#8405313990398306002)
-* [~셨습니아. ](#677589798596364794)
-* [~고 싶다. ](#-7615130075167115822)
-* [~나 ... ](#5283222842067464839)
-* [~밖에 ... ](#5408710676967141421)
-* [~ 보다.](#7597342560109115521)
-* [~시~ ](#3681985208584838346)
-* [~셨~ ](#5219280407294080287)
-* [~께서 ... ](#7985505925071128000)
-* [~은/는 ~이에여/예요.](#-2770810567830842754)
-* [아니요, ~이/가 아니에요.](#5219659480646759579)
-* [... 뭐예요?](#-8620617472424161203)
-* [~러 ...](#383576550599655928)
-* [~ㄴ데요/는데요.](#1383884207770286338)
-* [~ㄹ래요. ](#9103135629061945800)
-* [~겠~ ](#6108404258684589506)
-* [~이/가 어디 있어요?](#3988021380164563680)
-* [~은/는 ~에 있어요. ](#3445251486819230801)
-* [~에 ... ](#-3656527774888886251)
-* [~에서 ... ](#4209019985845674765)
-* [~에는 ~이/가 있어요.](#-3151085809418440334)
-* [아니요, ... 안/못 ... ](#-7731727931071856475)
-* [... 아니라 ... ](#-1517791185089324995)
-* [... 별로 ... ](#-806639094504265795)
-* [... 전혀 ... ](#-5128078261553003758)
-* [... 하나도 ... ](#-8579004731365725719)
-* [~지 않다. ](#-3141830454546098869)
-* [~지 못하다. ](#7603844373473156540)
-* [~지 마세요. ](#-567000601097742299)
-* [~이/가 아니라서 ... ](#4403396454033441731)
-* [~ㄴ noun ... ](#-7235468000881110469)
-* [~ㄴ noun ... ](#1933699688872189457)
-* [~ㄹ noun ... ](#-3118640838534082820)
-* [~noun ... ](#-8530152259998218576)
-* [~ㄴ/ㄹ/는 것 ... ](#-2383993044163571528)
-* [~기 ... ](#-5311014471125036259)
-* [~어/아야 되다 ](#3910133140936788382)
-* [~어/아야 하다 ](#3886474129173573331)
-* [~이/가 어때요?](#9174656566087344066)
-* [~ㄹ까요?](#-8763180221942447148)
-* [~ 것 같아요](#-6958313816112414274)
-* [~어요.](#6538434050433143944)
-* [~의 ...](#5077923064792890214)
-* [A B보다 ... ](#5283455045427649485)
-* [A B보다 더 ... ](#352543946428454765)
-* [A B보다 덜 ... ](#595884551504995927)
-* [... 중에서 ... ](#8986214496071049622)
-* [~ㄹ 거예요.](#-1765496306315060800)
-* [~고 있다.](#-946952201834642629)
-* [~네요 ](#-1984299683202453974)
-* [~고요.](#5609253767183962645)
-* [~지요?](#1061466782802341589)
-* [~한테 ... ](#3641371899251198660)
-* [~께 ... ](#-8206135865802514027)
-* [~한테서 ... ](#-7019166316360516958)
-* [~에 ... ](#-3670256904288411873)
-* [~에서 ~까지 ... ](#-7024136172276355176)
-* [~부터 ... 동안 ... ](#-2540844910444645833)
-* [~부터 ~까지 ... ](#-5214507956731981719)
-* [~요?](#-2825560685501898557)
-* [그런데, ...](#1862473634353608016)
-* [~로 ...](#-6192259386285349131)
-* [..., ...? ](#8604004826538990290)
-* [... 무슨 ...? ](#6355629062511439399)
-* [... 어느 ...? ](#1548909421932620114)
-* [~면서 ](#-965670941091927113)
-* [~고 나서 ](#-2874459458232935603)
-* [때 ](#7899994382858552628)
-* [대까지 ](#2560887489462562331)
-* [~ㄹ 때 ](#-5430652634744612231)
-* [~ㄹ 줄 알다 ](#-9099367390496189399)
-* [~ㄹ 줄 모르다 ](#5728847778651929671)
-
-## ~(ㄹ) 수 있다. (to be able) <a name="2939501667088228005"></a>
+> ~(ㄹ) 수 있다. (to be able)
 
 **지금 운전해 줄 수 있어요?** (source: Integrated Korean Beginning 2)
 Could you give me a ride now?
@@ -114,7 +14,8 @@ Since they live at home, they're able to drink at their house; but they go to th
 **피자가 제일 잘 만들 수 있는 음식이에요.**
 Pizza is best type of food that I can make.
 
-## ~(ㄹ) 수 없다. (to be unable) <a name="-8669433871169594210"></a>
+> ~(ㄹ) 수 없다. (to be unable)
+
 *Note*: **못** is used more colloquially than **~ (ㄹ) 수 없다**.
 
 **바빠서 만날 수 없어요.** (source: Integrated Korean Beginning 2)
@@ -123,7 +24,9 @@ I'm too busy to meet.
 **어쩻 밤 잘 수 없어요.**
 I couldn't sleep well last night.
 
-## ~에 대해서 ... (about) <a name="5022971141747431568"></a>
+# About
+
+> ~에 대해서 ... (about)
 
 **이번에 새로운 영화에 대해서 기대를 많이 했어요.** (source: TTMIK)
 So I'm very excited about this new movie.
@@ -131,7 +34,9 @@ So I'm very excited about this new movie.
 **한국어에 대해서 질문들 만나요.**
 I have many questions about Korean.
 
-## ~게 ... (adverbial form) <a name="1750359589625985382"></a>
+# Adverbial-modifying form
+
+> ~게 ... (adverbial form)
 
 **늦게 도착했어요.**
 I arrived late.
@@ -148,7 +53,9 @@ Have a merry Christmas.
 **시험이 너무 어렵게 나왔어요.** (source: Integrated Korean Beginning 2)
 The exam turned out to be too difficult.
 
-## ~(으)ㄹ게요 (volunteer) <a name="-6790417328681782379"></a>
+# Assurance
+
+> ~(으)ㄹ게요 (volunteer)
 
 **전화 받을게요.**
 I'll get the phone.
@@ -165,7 +72,9 @@ I'll give it to you cheap. Only 5,000 won.
 **제가 공항에 마중 나갈게요.** (source: Integrated Korean Beginning 2)
 I'll greet you at the airport.
 
-## noun 때문에 ... (because of) <a name="6457809895332459847"></a>
+# Because
+
+> noun 때문에 ... (because of)
 
 **숙제 때문에 파티에 못 가요.**
 I can't go to the party because of my homework.
@@ -173,7 +82,9 @@ I can't go to the party because of my homework.
 **감기 때문에 시홈 못 봤어요.**
 I couldn't take the test because I had a cold.
 
-## ~어/아 주다 (do something for someone else) <a name="106604547447637264"></a>
+# Benefactive expressions
+
+> ~어/아 주다 (do something for someone else)
 
 **집에 와 주세요.**
 Please come to my house.
@@ -193,17 +104,21 @@ Please take me to the airport.
 **따뜻한 겨울 옷을 보내 주셔서 정말 구맙습니다.** (source: Integrated Korean Beginning 2)
 Thank you very much for sending me the warm winter clothes.
 
-## ~(으)로 가다/오다. (to come or go by) <a name="5126948134159292871"></a>
+# By means of
+
+> ~(으)로 가다/오다. (to come or go by)
 
 **파티에 지하철로 가요.**
 I'm going to the party by subway. (-ㄹ batchim doesn't use 으로.)
 
-## ~(으)로 ... (using) <a name="-4224684039851570533"></a>
+> ~(으)로 ... (using)
 
 **연필로 쓰세요. 볼펜으로 쓰세요.**
 Please write by pencil. Please write by pen.
 
-## ~고 ... (and then) <a name="-1607810783548005523"></a>
+# Clausal connective
+
+> ~고 ... (and then)
 
 **한국어 연습하고 친구를 만았어요.**
 I studied Korean and then met my friends. (Note tense is only expressed in the second clause.)
@@ -211,12 +126,12 @@ I studied Korean and then met my friends. (Note tense is only expressed in the s
 **마지막으로, 물이나 육수를 붓고 더 끓이면 완성이에요.** (source: TTMIK)
 Finally, pour in water or broth and boil some more, and then it's done.
 
-## ~고 ... (and) <a name="-571252583200208883"></a>
+> ~고 ... (and)
 
 **집이 넓고 지하철 역에서 가까워요.**
 My home is spacious and close to the subway station.
 
-## ~지만 ... (but) <a name="1862062014669806172"></a>
+> ~지만 ... (but)
 
 **한국어를 많이 공부하지만 잘 못해요.**
 I study Korean a lot but I can't speak it well.
@@ -224,7 +139,7 @@ I study Korean a lot but I can't speak it well.
 **생일 파티에 못 갔지만 카드를 샀어요.**
 I couldn't go to the birthday party but I bought a card. (Note tense is expressed in both clauses.)
 
-## ~(으)ㄴ데 ... (background info&mdash;adjectives and 이다) <a name="-376249296933101996"></a>
+> ~(으)ㄴ데 ... (background info&mdash;adjectives and 이다)
 
 **아파트가 넓은데 너무 비싸요.**
 The apartment is spacious but too expensive.
@@ -232,20 +147,21 @@ The apartment is spacious but too expensive.
 **새일은 인데 집에 있을 거예요.**
 It's my birthday but I'm going to stay home.
 
-## ~는데 ... (background info&mdash;verbs and 있다, 없다) <a name="-7607925807053789918"></a>
+> ~는데 ... (background info&mdash;verbs and 있다, 없다)
 
 **시간이 없는데 빨리 해요.**
 You are running out of time, so be fast.
 
 **비가 오는데 수포에 가야 돼요.**
 It's raining but I have to go to the store.
+
 | 는데 | (으)ㄴ데 |
 | --- | ------ |
 | verbs (e.g., 가는데) | adjectives (e.g., 좋은데) |
 | past tense (e.g., 갔는데) | 이다 (e.g., 인데) |
 | 있다, 없다 (e.g., 있는데)| |
 
-## ~(어/아)서 ... (so) <a name="-5241562969761064725"></a>
+> ~(어/아)서 ... (so)
 
 **늦어서 미안해요.**
 I'm late, so sorry.
@@ -256,7 +172,7 @@ I really like Korean food, so I'm learning Korean.
 **왜 한국어를 배워요? 한국에서 살구 싶어서요.**
 Why do I learn Korean? Because I want to live in Korea.
 
-## ~(어/아)서 ... (sequential cause-and-effect) <a name="5398094572855281988"></a>
+> ~(어/아)서 ... (sequential cause-and-effect)
 
 **집에 가서 쉬웠어요.**
 I went home, and then I rested.
@@ -264,7 +180,7 @@ I went home, and then I rested.
 **이쪽으로 와서 보세요.** (source: Integrated Korean Beginning 2)
 Please come this way and take a look.
 
-## ~(이)라서 (because; 이다 + 어서/아서) <a name="-2455495306551473980"></a>
+> ~(이)라서 (because; 이다 + 어서/아서)
 
 **첫 학기라서 좀 바빴어요.** (source: Integrated Korean Beginning 2)
 Because it's my first semester, I was a little busy.
@@ -275,7 +191,10 @@ Because it'll be rush hour in 30 minutes, it'll take a while.
 **지금 세일이라서 세 켤레에 만 원에 드릴 수 있어요.** (source: Integrated Korean Beginning 2)
 Because we're currently having a sale, I can give you three pair for 10,000 won.
 
-## (만약) ~(으)면 ... (in case, if) <a name="1721311002102645906"></a>
+# Conditional
+
+> (만약) ~(으)면 ... (in case, if)
+
 You can optionally add **만약** to the beginning of the sentence to make it clear that it's a conditional sentence.
 
 **운동을 하면 건강에 좋대요.**
@@ -296,7 +215,10 @@ Give it to me if you aren't going to eat it.
 **이거 다 먹으면 배가 아플 거예요.** (source: TTMIK)
 If you eat all of that, you'll get a stomach ache.
 
-## ~겠~ (conjecture, politeness) <a name="-9005190208761678834"></a>
+# Conjectural
+
+> ~겠~ (conjecture, politeness)
+
 _Note: also see "Intentional"._
 
 **오빠가 와요? 좋겠어요.**
@@ -308,17 +230,19 @@ Do you understand? (raises level of politeness)
 **모르겠어요.**
 I guess I don't understand. (raises level of politeness)
 
-## ~고 듣다. <a name="7271590663509742673"></a>
+> ~고 듣다.
 
 **예쁘다고 들었어요.**
 I heard (she) is pretty.
 
-## ~하고 ... (and, with) <a name="6362496169293986664"></a>
+# Conjunction
+
+> ~하고 ... (and, with)
 
 **남자친구하고 데이트할 거예요.** (source: TTMIK)
 I'm going to go on a date with my boyfriend.
 
-## ~(이)랑 ... (and, with; colloquial) <a name="3677152895091656645"></a>
+> ~(이)랑 ... (and, with; colloquial)
 
 **빵이랑 우유** (source: TTMIK)
 Bread and milk
@@ -326,23 +250,26 @@ Bread and milk
 **매운 거랑 단 거 좋아해요.** (source: TTMIK)
 I live spicy and sweet things.
 
-## ~(이)랑 같이 ... (together) <a name="7821152154482751447"></a>
+> ~(이)랑 같이 ... (together)
 
 **아기랑 고양이랑 같이 자라요.**
 The baby and the cat are growing up together.
+
+# Deferential
+
 Deferential is used to show respect to the listener.
 
-## ~습니다/ㅂ니다. (deferential statement) <a name="-7927056566026121090"></a>
+> ~습니다/ㅂ니다. (deferential statement)
 
 **이 선생님 여행을 합니다.**
 Professor Lee is traveling.
 
-## ~습니까/ㅂ니까? (deferential question) <a name="-8757241230851517422"></a>
+> ~습니까/ㅂ니까? (deferential question)
 
 **이 선생님 여행을 합니까?**
 Is Professor Lee traveling?
 
-## ~었/았습니다. (deferential past-tense) <a name="-4181160755004396856"></a>
+> ~었/았습니다. (deferential past-tense)
 
 **이 선생님 여행을  했습니다.**
 Professor Lee traveled.
@@ -350,42 +277,52 @@ Professor Lee traveled.
 **이 선생님 여행을  했습니까?**
 Did Professor Lee travel?
 
-## ~(으)십니다. (deferential honorific) <a name="8405313990398306002"></a>
+> ~(으)십니다. (deferential honorific)
 
 **이 선생님 여행을 하십니다.**
 Professor Lee is traveling.
 
-## ~(으)셨습니아. (deferential honorific past-tense) <a name="677589798596364794"></a>
+> ~(으)셨습니아. (deferential honorific past-tense)
 
 **이 선생님 여행을 하셨습니다.**
 Professor Lee traveled.
 
-## ~고 싶다. (to want) <a name="-7615130075167115822"></a>
+# Desire
+
+> ~고 싶다. (to want)
 
 **한국어를 더 잘 하고 싶어요.**
 I want to get better at Korean.
 
-## ~(이)나 ... (emphasize a lot) <a name="5283222842067464839"></a>
+# Emphasis
+
+> ~(이)나 ... (emphasize a lot)
 
 **이번 주 3 시험이나 봤어요?**
 You took three tests this week?
 
-## ~밖에 ... (emphasize a little) <a name="5408710676967141421"></a>
+> ~밖에 ... (emphasize a little)
+
 *Must be negative verb.*
 
 **이번 주 1 시험밖에 안 봤어요.**
 I only took 1 test this week.
 
-## ~(아/어) 보다. <a name="7597342560109115521"></a>
+# Experience
+
+> ~(아/어) 보다.
 
 **까눌레를 먹 봤어요?**
 Have you ever tried canelé?
 
 **나중에 꼭 한번 만들어 보세요.**
 I'll definitely try to make it later.
+
+# Honorific
+
 Honorific is used to show respect to the subject, either in the first person or when two people are respecting someone in the third person.
 
-## ~(으)시~ (present tense) <a name="3681985208584838346"></a>
+> ~(으)시~ (present tense)
 
 **선생님, 사전 있으세요?**
 Teacher, do you have a dictionary?
@@ -398,37 +335,44 @@ Mrs. Lee is at school.
 **이 선생님 재 한국어 선생님이세요.**
 Mrs. Lee is my Korean teacher.
 
-## ~셨~ (past-tense) <a name="5219280407294080287"></a>
+> ~셨~ (past-tense)
 
 **이 선생님 학교에 계셨어요.**
 Mrs. Lee was at school.
 
-## ~께서 ... (honorific subject marker) <a name="7985505925071128000"></a>
+> ~께서 ... (honorific subject marker)
 
 **선생님께서 아주 좋아하셨어요.**
 Teacher was very happy.
 
-## ~은/는 ~이에여/예요. <a name="-2770810567830842754"></a>
+# Identity
+
+> ~은/는 ~이에여/예요.
 
 **저는 미국 사람이에요.**
 I'm an American.
 
-## 아니요, ~이/가 아니에요. <a name="5219659480646759579"></a>
+> 아니요, ~이/가 아니에요.
 
 **아니요, 중국 사람이 아니에요.**
 No, I'm not a Chinese person.
 
-## ... 뭐예요? <a name="-8620617472424161203"></a>
+> ... 뭐예요?
 
 **이게 뭐예요?**
 What is this thing?
 
-## ~(으)러 ... <a name="383576550599655928"></a>
+# In order to
+
+> ~(으)러 ...
 
 **친구 만나러 버스를 타요.**
 I'm riding the bus to meet a friend.
 
-## ~(으)ㄴ데요/는데요. <a name="1383884207770286338"></a>
+# Indirect
+
+> ~(으)ㄴ데요/는데요.
+
 This is less assertive than "~아/어요", and is more polite. It also implies "Can I do anything to help".
 
 **지금 없는데요.**
@@ -440,7 +384,10 @@ What time is (his/her/your) arrival?
 **공항까니 뭐 타고 오셨는데요?** (source: Integrated Korean Beginning 2)
 How did you come to the airport?
 
-## ~(으)ㄹ래요. (colloquial) <a name="9103135629061945800"></a>
+# Intentional
+
+> ~(으)ㄹ래요. (colloquial)
+
 _Note: Unlike 겠, this can be past tense._
 
 **뭐 먹을래요?**
@@ -449,7 +396,8 @@ What would you like to eat?
 **김치를 먹을래요.**
 I'd like to eat kimchi.
 
-## ~겠~ (intention) <a name="6108404258684589506"></a>
+> ~겠~ (intention)
+
 _Note: also see "Conjectural"._
 
 **뭐 드시겠어요?**
@@ -473,32 +421,36 @@ Thank you for the food. (lit. I will eat well)
 **택시지 많이 나왔겠네요.** (source: Integrated Korean Beginning 2)
 The taxi fare must have come out to a lot.
 
-## ~이/가 어디 있어요? <a name="3988021380164563680"></a>
+# Location
+
+> ~이/가 어디 있어요?
 
 **한국어 수업가 어디 있어요?**
 Where is the Korean class?
 
-## ~은/는 ~에 있어요. (static location) <a name="3445251486819230801"></a>
+> ~은/는 ~에 있어요. (static location)
 
 **한국어 수업은 3충에 있어요.**
 The Korean class is on the 3rd floor.
 
-## ~에 ... (goal) <a name="-3656527774888886251"></a>
+> ~에 ... (goal)
 
 **집에 가요.**
 I'm going home.
 
-## ~에서 ... (dynamic location) <a name="4209019985845674765"></a>
+> ~에서 ... (dynamic location)
 
 **커피셥에서 공부해요.**
 I'm studying at the coffee shop.
 
-## ~에는 ~이/가 있어요. <a name="-3151085809418440334"></a>
+> ~에는 ~이/가 있어요.
 
 **3충에는 한국어 수업이 있어요.**
 The Korean class is on the 3rd floor.
 
-## 아니요, ... 안/못 ... (won't or can't) <a name="-7731727931071856475"></a>
+# Negative
+
+> 아니요, ... 안/못 ... (won't or can't)
 
 **아니요, 월요일하고 수요일에 안 달려요.**
 No, I don't run on Mondays and Wednesdays.
@@ -506,12 +458,13 @@ No, I don't run on Mondays and Wednesdays.
 **아니요, 월요일하고 수요일에 못 해요.**
 No, I can't do it on Mondays and Wednesdays.
 
-## ... 아니라 ... (not this, that) <a name="-1517791185089324995"></a>
+> ... 아니라 ... (not this, that)
 
 **달리기가 아니라 수양할래요.**
 I want to swim, not run.
 
-## ... 별로 ... (not really) <a name="-806639094504265795"></a>
+> ... 별로 ... (not really)
+
 *Verb must be negative.*
 
 **... 별로예요.**
@@ -523,19 +476,21 @@ I don't really like it.
 **별로 안 나빠요.** (source: TTMIK)
 It's not too bad.
 
-## ... 전혀 ... (not at all) <a name="-5128078261553003758"></a>
+> ... 전혀 ... (not at all)
+
 *Verb must be negative.*
 
 **전혀 안 바빠요.** (source: TTMIK)
 I'm not busy at all.
 
-## ... 하나도 ... (not at all; colloquial) <a name="-8579004731365725719"></a>
+> ... 하나도 ... (not at all; colloquial)
+
 *Verb must be negative.*
 
 **저는 돈이 하나도 없어요.** (source: LearnWithOliver)
 I don't have any money.
 
-## ~지 않다. (to not do, to not be) <a name="-3141830454546098869"></a>
+> ~지 않다. (to not do, to not be)
 
 **달리지 않아요.**
 I'm not running.
@@ -549,7 +504,7 @@ Really? Don't you get confused that way?
 **저는 원래 좀비 영화를 좋아하지 않아요.** (source: TTMIK)
 I usually don't like zombie movies.
 
-## ~지 못하다. (can't do) <a name="7603844373473156540"></a>
+> ~지 못하다. (can't do)
 
 **바빠서 주말 전에는 가지 못할 거예요.** (source: Integrated Korean Beginning 2)
 Since I'm busy, I won't be able to go before the weekend.
@@ -557,7 +512,7 @@ Since I'm busy, I won't be able to go before the weekend.
 **그동안 연락 드리지 못애서 정말 죄송합니다.** (source: Integrated Korean Beginning 2)
 Sorry that I haven't contacted you for some time.
 
-## ~지 마세요. (negative commands) <a name="-567000601097742299"></a>
+> ~지 마세요. (negative commands)
 
 **도서관에서 시끄럽게 얘기하지 마세요.** (source: Integrated Korean Beginning 2)
 No loud conversations at the library.
@@ -571,17 +526,19 @@ Don't doze off during class.
 **수업 시간에 얘기하지 말고 선생님 말씀을 잘 들으세요.** (source: Integrated Korean Beginning 2)
 Please don't talk during class, but listen to the teacher.
 
-## ~이/가 아니라서 ... (because not; 아니다 + 어서/아서) <a name="4403396454033441731"></a>
+> ~이/가 아니라서 ... (because not; 아니다 + 어서/아서)
 
 **학생이 아니라서 기숙사에서 살 수 없어요.**
 Because I'm not a student, I'm not allowed to live at the dormitory.
 
-## ~(으)ㄴ noun ... (adjectives) <a name="-7235468000881110469"></a>
+# Noun-modifying form
+
+> ~(으)ㄴ noun ... (adjectives)
 
 **좋은 커피숍이 저기 큰 건물 안에 있어요.**
 The nice coffee shop is in that big building.
 
-## ~(으)ㄴ noun ... (past-tense verbs) <a name="1933699688872189457"></a>
+> ~(으)ㄴ noun ... (past-tense verbs)
 
 **어제 마신 커피를 정말 삐싸요.**
 The coffee that I drank yesterday was really expensive.
@@ -589,12 +546,12 @@ The coffee that I drank yesterday was really expensive.
 **보내 주신 크리스마스 선물과 편지는 잘 받았습니다.** (source: Integrated Korean Beginning 2)
 I'm grateful for the Christmas gift and letter you sent.
 
-## ~(으)ㄹ noun ... (future-tense verbs) <a name="-3118640838534082820"></a>
+> ~(으)ㄹ noun ... (future-tense verbs)
 
 **다음 학이에 쓸 겨과서 여기예요.**
 This is the textbook I'll use next semester.
 
-## ~(는)noun ... (present-tense verbs) <a name="-8530152259998218576"></a>
+> ~(는)noun ... (present-tense verbs)
 
 **회사 안 가는 날은 뭐하세요?**
 What do you do on days you don't work?
@@ -610,6 +567,7 @@ I like living alone.
 
 **요즘 혼술이 유행인 거 알아요? 혼술은 혼자 술 마시는 것을 말해요.** (source: TTMIK)
 Did you know that drinking alone is fashionable now? Drinking alone is called "혼술".
+
 | Verb | ~는 form | notes |
 | ---- | ------- | ----- |
 | 가다 | 가는 | regular |
@@ -617,8 +575,10 @@ Did you know that drinking alone is fashionable now? Drinking alone is called "�
 | 이다 | 인 | irregular |
 | 아니다 | 아닌 | irregular |
 
-## ~ㄴ/ㄹ/는 것 ... (adjectives and nouns) <a name="-2383993044163571528"></a>
+> ~ㄴ/ㄹ/는 것 ... (adjectives and nouns)
+
 For all noun-modifying forms, "~ㄴ/ㄹ/는 것" is the most general way to convert an adjective or verb into a noun. E.g., the following examples are from TTMIK:
+
 * **산 것**: what you bought
 * **사는 것**:  what you buy
 * **살 것**: what you will buy
@@ -637,7 +597,7 @@ My hobby is to watch movies.
 **요즘 공부하는 거는 뭐예요?** (source: TTMIK)
 What are you studying these days?
 
-## ~기 ... (convert verbs to nouns) <a name="-5311014471125036259"></a>
+> ~기 ... (convert verbs to nouns)
 
 **먹기도 해오.** (source: TTMIK)
 I'm also eating.
@@ -645,7 +605,9 @@ I'm also eating.
 **이 감독은 이 영화를 만들기 전에는 항상 애니메이션을 만들었어요.** (source: TTMIK)
 Before making this movie, this director always made animations.
 
-## ~어/아야 되다 (colloquial) <a name="3910133140936788382"></a>
+# Obligation, necessity
+
+> ~어/아야 되다 (colloquial)
 
 **매일 공부해야 돼요.**
 I have to study everyday.
@@ -653,17 +615,19 @@ I have to study everyday.
 **교수님하고 약속이 있어서 일찍 일어나야 돼요.**
 I have a meeting with my professor, so I have to wake up early.
 
-## ~어/아야 하다 (slightly formal) <a name="3886474129173573331"></a>
+> ~어/아야 하다 (slightly formal)
 
 **매일 공부해야 해요.**
 I have to study everyday.
 
-## ~이/가 어때요? <a name="9174656566087344066"></a>
+# Opinions
+
+> ~이/가 어때요?
 
 **학교 식당 음식이 어때요?**
 How's the food at the school cafeteria?
 
-## ~(으)ㄹ까요? <a name="-8763180221942447148"></a>
+>  ~(으)ㄹ까요?
 
 **영어로 말할까요?**
 Shall we speak in English?
@@ -671,7 +635,7 @@ Shall we speak in English?
 **음식이 맛있을까요?**
 Do you think the food will taste good?
 
-## ~(ㄴ/는) 것 같아요 <a name="-6958313816112414274"></a>
+> ~(ㄴ/는) 것 같아요
 
 **좀 그런 것 같아요.**
 It does seem that way.
@@ -685,24 +649,29 @@ I don't think so.
 **해리 포터 같은 거요?** (source: TTMIK)
 Like Harry Potter?
 
-## ~(었/았/ㅆ)어요. <a name="6538434050433143944"></a>
+# Past
+
+> ~(었/았/ㅆ)어요.
 
 **어제 저녁에 치킨을 먹었어요.**
 I had Korean fried chicken last night.
 
-## ~의 ... <a name="5077923064792890214"></a>
+# Possession
+
+> ~의 ...
 
 **이번 주의 뉴스** This week's news
 
-## A(가/이) B보다 ... (A more than B) <a name="5283455045427649485"></a>
+# Preference
+
+> A(가/이) B보다 ... (A more than B)
 
 **오늘은 어제보다 더워요.** (source: TTMIK)
 Today is warmer than yesterday.
 
-## A(가/이) B보다 더 ... (A more than B) <a name="352543946428454765"></a>
+> A(가/이) B보다 더 ... (A more than B)
 
 **커피를 차보다 더 좋아해요?** (or)
-
 **차보다 커피를 더 좋아해요?**
 You like coffee more than tea?
 
@@ -715,9 +684,9 @@ I like it more than this thing.
 **저는 책을 읽는 것보다 사는 것을 더 좋아해요.** (source: TTMIK)
 I like buying books more than reading them.
 
-## A(가/이) B보다 덜 ... (A less than B) <a name="595884551504995927"></a>
+> A(가/이) B보다 덜 ... (A less than B)
 
-## ... 중에서 ... (between) <a name="8986214496071049622"></a>
+> ... 중에서 ... (between)
 
 **순두부찌개와 된장찌개 중에서 어즈 것을 더 좋아하세요?** (source: Integrated Korean Beginning 2)
 Between soondubu jjigae and dwaenjang jjigae, which do you like more?
@@ -725,12 +694,16 @@ Between soondubu jjigae and dwaenjang jjigae, which do you like more?
 **한국어와 영어 중에서 어느 것이 더 어려워요?** (source: Integrated Korean Beginning 2)
 Between Korean and English, which is more difficult?
 
-## ~(으)ㄹ 거예요. <a name="-1765496306315060800"></a>
+# Probability
+
+> ~(으)ㄹ 거예요.
 
 **이번 주말에 가족와 같이 시간을 보낼 거예요.**
 I'll probably spend time with my family this weekend.
 
-## ~고 있다. <a name="-946952201834642629"></a>
+# Progressive
+
+> ~고 있다.
 
 **저는 저녁을 먹고 있어요.**
 I'm eating dinner.
@@ -738,7 +711,9 @@ I'm eating dinner.
 **부모님은 저녁을 드시고 계세요.**
 My parents are eating dinner.
 
-## ~네요 (just learned) <a name="-1984299683202453974"></a>
+# Reactions
+
+> ~네요 (just learned)
 
 **예쁘네요!**
 Oh, it's pretty!
@@ -746,7 +721,9 @@ Oh, it's pretty!
 **다음 주에 부모님께 오시네여.**
 My parents are coming next week. (just learned)
 
-## ~고요. <a name="5609253767183962645"></a>
+# Related ideas
+
+> ~고요.
 
 **혼술은 혼자 술 마시는 것을 말해요. 혼밥은 혼자 밥 먹는 거고요.** (source: TTMIK)
 Drinking alone is called "혼술". And eating alone is "혼밥". (거고요 is contraction of "거 이고요")
@@ -754,7 +731,9 @@ Drinking alone is called "혼술". And eating alone is "혼밥". (거고요 is c
 **카페에 혼자 가도 다른 사람들이 많고, 운동을 하러 가도 운동하는 곳에 사람들이 많고요.** (source: TTMIK)
 Even if you go to a cafe alone, there are lots of people; and if you go exercise, there also are lots of people there.
 
-## ~지요? <a name="1061466782802341589"></a>
+# Seeking agreement
+
+> ~지요?
 
 **이 라면 정말 맛있지요?**
 This ramen is really delicious, isn't it?
@@ -762,7 +741,9 @@ This ramen is really delicious, isn't it?
 **이 선생님, 이번 주 시험 없지요?**
 Professor Lee, we don't have a test this week, do we?
 
-## ~한테 ... (to person) <a name="3641371899251198660"></a>
+# To and from
+
+> ~한테 ... (to person)
 
 **친구가 마이클한테 선물을 줬어요.**
 Michael's friend gave Michael a gift.
@@ -770,12 +751,12 @@ Michael's friend gave Michael a gift.
 **친구한케 이메일 자주 보내세요?**
 Do you email your friend often?
 
-## ~께 ... (to person, honorific) <a name="-8206135865802514027"></a>
+> ~께 ... (to person, honorific)
 
 **저의 부모님께 선물을 드렸어요.**
 I gave my parents a gift.
 
-## ~한테서 ... (from person) <a name="-7019166316360516958"></a>
+> ~한테서 ... (from person)
 
 **부모님이 저한테서 선물을 받으셨어요.**
 My parents received a gift from me.
@@ -783,12 +764,12 @@ My parents received a gift from me.
 **누구한테서 전화 왔어요?**
 Who was the call from?
 
-## ~에 ... (to place) <a name="-3670256904288411873"></a>
+> ~에 ... (to place)
 
 **사무실에 가요.**
 I'm going to the office.
 
-## ~에서 ~까지 ... (from ... to ... a place) <a name="-7024136172276355176"></a>
+> ~에서 ~까지 ... (from ... to ... a place)
 
 **집에서 왔어요.**
 I came from my home.
@@ -796,18 +777,21 @@ I came from my home.
 **집에서 사무실까지 멀어요.**
 It's far from my house to my office.
 
-## ~부터 ... 동안 ... (from ... for ... long) <a name="-2540844910444645833"></a>
+> ~부터 ... 동안 ... (from ... for ... long)
 
 **대학교 때부터 6년 동안 달리기 했어요.**
 I ran for six years starting in college.
 
-## ~부터 ~까지 ... (from ... to ... in time) <a name="-5214507956731981719"></a>
+> ~부터 ~까지 ... (from ... to ... in time)
 
 **아침 9시부터 저녁 6시까지 일해야 돼요.**
 I have to work from 9am to 6pm.
+
+# Topic
+
 You can change the topic with 은/는, or with 그런데.
 
-## ~(은/는)요? <a name="-2825560685501898557"></a>
+> ~(은/는)요?
 
 **서점은요?**
 What about the book store?
@@ -815,18 +799,22 @@ What about the book store?
 **마크 씨는요?**
 What about you, Mark?
 
-## 그런데, ... <a name="1862473634353608016"></a>
+> 그런데, ...
 
 **그런데, 리사가 어디 있어요?**
 By the way, where is Lisa?
 
-## ~(으)로 ... <a name="-6192259386285349131"></a>
+# Towards
+
+> ~(으)로 ...
 
 **고기서 오른쪽으로 도세요.**
 From there, turn right.
 
 **왼쪽으로 쭉 가세요.**
 Go straight to the left.
+
+# Questions
 
 **한국어 수업 반친구가 몇명 있어요?** How many classmates do you have in the Korean class?
 
@@ -842,22 +830,24 @@ Go straight to the left.
 
 **한국에 며칠에 가요?** What date are you going to Korea?
 
-## ..., ...? (alternative questions) <a name="8604004826538990290"></a>
+> ..., ...? (alternative questions)
 
 **여자친구가 있어요, 없어요?**
 Do you or do you not have a girlfriend?
 
-## ... 무슨 ...? (what kind of) <a name="6355629062511439399"></a>
+> ... 무슨 ...? (what kind of)
 
 **이거 무슨 음식이에요?**
 What kind of food is this?
 
-## ... 어느 ...? (which) <a name="1548909421932620114"></a>
+> ... 어느 ...? (which)
 
 **어느 치킨 식당에 만아요?**
 Which chicken restaurant are we meeting at?
 
-## ~(으)면서 (while ~ing) <a name="-965670941091927113"></a>
+# Misc
+
+> ~(으)면서 (while ~ing)
 
 **운전하면서 전화하지 마세요.** (source: Integrated Korean Beginning 2)
 Don't use your phone while driving.
@@ -865,7 +855,7 @@ Don't use your phone while driving.
 **저는 보통 아침을 먹으면서 신문을 읽어요.** (source: Integrated Korean Beginning 2)
 I usually read the paper while eating breakfast.
 
-## ~고 나서 (after) <a name="-2874459458232935603"></a>
+> ~고 나서 (after)
 
 **수업 끝니고 나서 뭐 할 거예요?** (source: Integrated Korean Beginning 2)
 What are you going to do after class is over?
@@ -873,17 +863,17 @@ What are you going to do after class is over?
 **졸업하고 나서 뭐 하고 싶어요?** (source: Integrated Korean Beginning 2)
 What do you want to do after graduating?
 
-## 때 (when) <a name="7899994382858552628"></a>
+> 때 (when)
 
 **중학교 때 무슨 과목이 제일 재미있었어요?** (source: Integrated Korean Beginning 2)
 What was you favorite subject when you were in middle school?
 
-## 대까지 (since) <a name="2560887489462562331"></a>
+> 대까지 (since)
 
 **열살 때까지 서울에서 살았어요.** (source: Integrated Korean Beginning 2)
 I've lived in Seoul since I was eleven years old.
 
-## ~(으)ㄹ 때 (when) <a name="-5430652634744612231"></a>
+> ~(으)ㄹ 때 (when)
 
 **공부 할 때 음악을 들으세요?** (source: Integrated Korean Beginning 2)
 When you study, do you listen to music?
@@ -894,12 +884,12 @@ What do you do when you are bored?
 **어렸을 때 제주도에 가 봤어요.** (source: Integrated Korean Beginning 2)
 I traveled to Jeju island when I was young.
 
-## ~(으)ㄹ 줄 알다 (to know how to do) <a name="-9099367390496189399"></a>
+> ~(으)ㄹ 줄 알다 (to know how to do)
 
 **태권도 할 줄 아세요?** (source: Integrated Korean Beginning 2)
 Do you know Taekwando?
 
-## ~(으)ㄹ 줄 모르다 (to not know how to do) <a name="5728847778651929671"></a>
+> ~(으)ㄹ 줄 모르다 (to not know how to do)
 
 **할 줄 모라요.**
 I don't know how to do that.

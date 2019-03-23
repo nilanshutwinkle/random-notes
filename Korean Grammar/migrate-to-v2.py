@@ -38,7 +38,7 @@ with open(input) as i:
             pass
         # New grammar
         elif line.startswith(">"):
-            curr_grammar = line
+            curr_grammar = line[1:].lstrip()
             if curr_grammar in grammars:
                 error("Grammar already exists, please dedupe source file: {}".format(curr_grammar), 3)
             grammars[curr_grammar] = []
@@ -53,9 +53,17 @@ print()
 print("## Contents")
 
 grammar_english_part = re.compile('\(.*?\)')
+ordered_grammars = list(grammars.keys())
 
-for grammar in grammars:
+for grammar in ordered_grammars:
     clean_grammar = grammar_english_part.sub('', grammar)
     print("* [{}](#{})".format(clean_grammar, hash(grammar)))
 
 # Print out contents
+for grammar in ordered_grammars:
+    print()
+    print('## {} <a name="{}"></a>'.format(grammar, hash(grammar)))
+    for line in grammars[grammar]:
+        if line.startswith("**"):
+            print()
+        print(line)
