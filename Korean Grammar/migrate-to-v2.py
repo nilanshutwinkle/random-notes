@@ -52,7 +52,7 @@ print("# Korean grammar")
 print()
 print("## Contents")
 
-ordered_grammars = list(grammars.keys())
+ordered_grammars = sorted(grammars.keys())
 ENG_REGEX = '(.*) \((.*?)\)'
 grammar_english_part = re.compile(ENG_REGEX)
 
