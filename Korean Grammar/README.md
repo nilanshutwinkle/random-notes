@@ -217,7 +217,7 @@ If you eat all of that, you'll get a stomach ache.
 
 # Conjectural
 
-> ~겠~
+> ~겠~ (conjecture, politeness)
 
 _Note: also see "Intentional"._
 
@@ -396,7 +396,7 @@ What would you like to eat?
 **김치를 먹을래요.**
 I'd like to eat kimchi.
 
-> ~겠~
+> ~겠~ (intention)
 
 _Note: also see "Conjectural"._
 
