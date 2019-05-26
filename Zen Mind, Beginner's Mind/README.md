@@ -3,7 +3,7 @@
 Shunryu Suzuki
 
 Notes:
-* Anything without page numbers is related content, but is not part of the book
+* Anything without page numbers is related content that is not part of the book
 
 ## Preface
 
@@ -37,4 +37,27 @@ Notes:
 
 ## Part One: Right Practice
 
-### Posture
+### Nothing Special
+* enlightenment is nothing special (32-4)
+
+## Part Two: Right Attitude
+
+### No Trace
+* leave no trace of yourself (47-50)
+
+### Negative and Positive
+* seeking gain leads to experience of problems; recognize unfolding of big mind, no problems (80)
+
+### Nirvana, the Waterfall
+* big mind, death, oneness (81-4)
+
+## Part Three: Right Understanding
+
+### Traditional Zen Spirit
+* karmic life is ego-centric ideas. any gainful idea is repetition of karma (88)
+
+### Epilogue: Zen Mind
+* To have strong confidence in Big Mind right now is enlightenment (132)
+
+> We must have beginner's mind, free from possessing anything, a mind that knows everything is in flowing change. Nothing exists but momentarily in its present form and color. One thing flows into another and cannot be grasped.
+  -- Shunryu Suzuki, (133)
