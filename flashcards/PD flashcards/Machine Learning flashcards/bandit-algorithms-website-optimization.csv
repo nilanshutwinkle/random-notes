@@ -1,0 +1,6 @@
+"arm","In MAB terminology, this is an option (e.g., a particular experience)"
+"epsilon-greedy algorithm","Exploit with 1 - ε probability, explore with ε probability."
+"active learning","Algorithms that iteratively decide which labels they need"
+"online learning","Learning in real time (as opposed to batch learning)"
+"Monte Carlo simulation","Use of random repeat sampling for simulation"
+"Bernoulli arm","An arm that randomly draws a 1 or 0."
