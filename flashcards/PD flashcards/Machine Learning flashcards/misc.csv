@@ -8,3 +8,7 @@
 "Hawthorne effect","observer effect. Individuals modify aspect of response due to awareness of being observed."
 "bucket system","randomly assign users to buckets, then assign buckets to experiments"
 "carryover effects","same users impacted by prior experiment are used in followup experiment, impacting behavior unrelated to test conditions"
+"prior","probability expressing one's belief prior to taking evidence into account"
+"posterior","probability of unknown quantity, treated as random variable, conditional on evidence provided"
+"p13n","personalization"
+"stratified sampling","Randomly sampling from subpopulations independently. Avoids bias introduced by pure random sampling."
