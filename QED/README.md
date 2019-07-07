@@ -53,6 +53,25 @@ pp. 77 - 123
 
 * **Interference**: the wave nature of particles (e.g., photons) can reduce or increase rate of reaching detector when two holes, depending on spacing (79-80)
 * Behavior of particles going short distances is weird; not necessarily straight, and exhibiting interference (85)
+* :star: Three basic interactions account for all phenomena except gravitation and what goes on inside a nucleus: (85)
+  1. photons move
+  2. electrons move
+  3. photons emit/absorb photons
+* In one dimensional space, an **interval** (**I**): `I = (X_2 - X_1)^2 - (T_2 - T_1)^2` (88)
+* Light doesn't always travel at the speed of light; amplitudes for different speeds, which really on matter for small distances (89)
+* **Coupling**: amplitude of an electron to emit or absorb a photon
+* Photons and electrons can move backwards in time (97)
+* **Positron**: positively charged electron moving backwards in time (98)
+* Every particle has an amplitude to move backwards in time, and therefore has an **anti-particle** (98)
+* Photon is its own anti-particle (98)
+* **Scattering**: when an incoming photon is absorbed by an electron, and a new photon is emitted (101)
+* **Stimulated emission**: photons tend to move to same location as other photons, which is an outcome of quantum interference (112)
+* **Exclusion principle**: aversion of two electrons to occupy same space (112)
+* How lithium metal conducts electricity (113)
+* **Insulators**: elements that don't easily lose their electrons (120-2)
+* Polarization of photons and electrons (120-2)
+* Spin 0, spin 1/2, spin 1, spin 3/2, spin 2 polarizations (121-2)
+* **Field**: quantity that depends on position in time and space (123)
 
 ## Chap 4 - Loose Ends
 
