@@ -76,3 +76,23 @@ pp. 77 - 123
 ## Chap 4 - Loose Ends
 
 pp. 124 - 152
+
+* Exploding dynamite is the rearrangement of electrons, while exploding atomic bomb is rearrangement of protons and neutrons (132)
+* **Baryons**: particles made up of three quarks (e.g., protons, neutrons) (132)
+* **Mesons**: particles made up of a quark and an anti-quark (132)
+* **Gluons**: spin 1 particles that are exchanged by quarks, and hold particles like neutrons and protons together (134-5)
+  - Nuclear forces are much stronger forces than electrical forces
+* Quark's **flavor**: (134-5)
+  - **down** (**d-type**): charge -1/3
+  - **up** (**u-type**): charge +2/3
+  - Also, **strange** (**s-type**) and **charm** (**c-type**)
+* Quark's **color**: quark's polarization, expressed as R/G/B, which is changed when quark emits or absorbs a gluon (136)
+* Gluons have colors, too (e.g., red-antigreen), which govern how they interact with quarks and other gluons (136-7)
+* **Quantum chromodynamics**: study of strong interactions of quarks and gluons
+* **Beta decay**: radioactivity which involves a neutron changing into a proton (one d-type quark changes into u-type by emitting W particle) (139-40)
+* **W-intermediate boson**: spin-1 particle emitted during beta decay, made up of anti-neutrino coupled with electron (140)
+* **Weak interactions**: interactions with W particles, responsible for radioactive decay (142)
+* **Strong interactions**: interactions of quarks and gluons (143)
+* **Muon**: particle with same properties as electron, but it's about 200x heavier (143)
+* W has a lower amplitude to emit muon and mu-neutrino pair, as opposed electron and neutrino pair (145)
+* **Tau**: particle with same properties as electron, but it's about 3,600x heavier (146)
