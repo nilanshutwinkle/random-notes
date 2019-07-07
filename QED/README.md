@@ -34,7 +34,18 @@ pp. 3 - 35
 
 pp. 36 - 76
 
+* When particle reaching sensor, the parts of the reflective surface contributing most is central part where paths of particle take almost same time (45)
+  - The ends of mirror (where times vary greatly) contribute little to no probability of event
+* Can place reflective surface in places where all paths basically cancel out (46), but you can remove segments of the mirror that result in negative areas of particle's arrow, and light will reflect (47)
 * **Diffraction grating**: reflective surface with negative bias removed, reflecting white light into different colors (48)
+* Light traveling through water, bending because it travels slower through water than air (50-1)
+* Mirage on hot roads is a quantum effect of light from sky traveling more quickly in hot air near the ground (52)
+* Why light appears to travel straight (53-4)
+* As slits decrease in size, particles stop going straight (55)
+  - This is because the number of possible paths to each detector decreases, and hence the differences in time each path can take also decreases (meaning alternative paths to sensors don't interfere as much)
+  - This is a manifestation of the uncertainty principle, and is intuitively understandable using path integrals
+* Quantum explanation of how lens works (57-8)
+* Compound event probabilities are calculated by multiplying arrows (shrink and turn) (59-61)
 
 ## Chap 3 - Electrons and Their Interactions
 
