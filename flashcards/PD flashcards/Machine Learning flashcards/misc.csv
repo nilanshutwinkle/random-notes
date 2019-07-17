@@ -18,3 +18,5 @@
 "state-space models","Models that describe the probabilistic dependence b/w latent state variable and observed measurement (i.e., how given system state translates into measurements)"
 "structural time-series models","state-space models for time-series data"
 "autocorrelation","correlation b/w elements of a series and others from same series separated by given interval"
+"region of practical equivalence (ROPE)","range around null hypothesis that indicates equivalence"
+"highest density interval (HDI)","Area under probability curve equivalent to some percentage (e.g., 95%). Can fall within or outside defined ROPE."
