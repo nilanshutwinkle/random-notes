@@ -10,3 +10,5 @@
 "Protocol Buffer","Google's method for serializing structured data using IDL and code generation. Supports many languages."
 "Apache Avro","Hadoop RPC & data serialization framework"
 "Airflow","Apache's framework to programmatically author, schedule, and monitor workflows as a DAG of tasks."
+"Human-Optimized Config Object Notation (HOCON)","Human-friendly superset of JSON (e.g., comments)"
+"Lightbend Config","Configuration library for JVM languages supporting HOCON"
