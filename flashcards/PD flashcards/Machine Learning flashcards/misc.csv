@@ -20,3 +20,5 @@
 "autocorrelation","correlation b/w elements of a series and others from same series separated by given interval"
 "region of practical equivalence (ROPE)","range around null hypothesis that indicates equivalence"
 "highest density interval (HDI)","Area under probability curve equivalent to some percentage (e.g., 95%). Can fall within or outside defined ROPE."
+"matrix decomposition","Methods that reduce matrix to constituent parts to make it easier to calculate more complex matrix operations. AKA, matrix factorization."
+"Cholesky decomposition","Reduces symmetric matrix into lower-triangular matrix which, when multiplied by it's transpose, produces the original symmetric matrix. Useful for efficient numerical calculations, e.g., Monte Carlo simulations."
