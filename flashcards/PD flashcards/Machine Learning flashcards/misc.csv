@@ -22,3 +22,6 @@
 "highest density interval (HDI)","Area under probability curve equivalent to some percentage (e.g., 95%). Can fall within or outside defined ROPE."
 "matrix decomposition","Methods that reduce matrix to constituent parts to make it easier to calculate more complex matrix operations. AKA, matrix factorization."
 "Cholesky decomposition","Reduces symmetric matrix into lower-triangular matrix which, when multiplied by it's transpose, produces the original symmetric matrix. Useful for efficient numerical calculations, e.g., Monte Carlo simulations."
+"Posterior Predictive Checks (PPCs)","Simulating replicated data under fitted model and comparing these to observed data. Used to assess whether models give valid predictions of reality."
+"stratification","process of dividing members of population into homogenous subgroups before sampling"
+"poststratification","method for adjusting sampling weights, usually to account for underrepresented groups in population"
