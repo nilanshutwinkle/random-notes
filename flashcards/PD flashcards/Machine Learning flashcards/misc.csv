@@ -25,3 +25,7 @@
 "Posterior Predictive Checks (PPCs)","Simulating replicated data under fitted model and comparing these to observed data. Used to assess whether models give valid predictions of reality."
 "stratification","process of dividing members of population into homogenous subgroups before sampling"
 "poststratification","method for adjusting sampling weights, usually to account for underrepresented groups in population"
+"Markov Decision Processes (MDP)","Used to find stationary policy that decides which action to take for given state in stochastic environment, ignoring previous states."
+"Maximum likelihood estimation (MLE)","Determine parameters of model to maximize likelihood that the process described by the model produced the observed data."
+"exogenous factors","Factors happening outside a system."
+"endogenous factors","Factors happening within a system."
