@@ -30,3 +30,8 @@
 "VPC Internet Gateway","Allows instances within a VPC to communicate with the internet (and vice versa)"
 "Network Address Translation (NAT)","Remapping one IP address space to another."
 "NAT Gateways","Placed in public subnet in order to enable instances within private subnet to initiate connections to internet (but not vice versa)"
+"Pandas","Python library built on top of NumPy providing support to manipulate numerical tables and labeled arrays/time series"
+"Panda DataFrame","Pandas class for manipulating numerical tables"
+"Panda Series","Pandas class for manipulating labeled arrays and time series data"
+"NumPy","Python library for scientific computing, providing support for high-performance multi-dimension arrays manipulation"
+"NumPy ndarray","Numpy class for supporting for multi-dimension arrays"
