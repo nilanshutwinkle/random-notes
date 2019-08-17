@@ -29,3 +29,6 @@
 "Maximum likelihood estimation (MLE)","Determine parameters of model to maximize likelihood that the process described by the model produced the observed data."
 "exogenous factors","Factors happening outside a system."
 "endogenous factors","Factors happening within a system."
+"confidence interval","Frequentist approach. Interval constructed to estimate unknown fixed value."
+"credible interval","Bayesian approach. Capture uncertainty about true parameter by imposing prior distribution."
+"Thompson sampling","Sample parameters from posterior, and select arm with highest return (or select arms proportionate to the returns)"
