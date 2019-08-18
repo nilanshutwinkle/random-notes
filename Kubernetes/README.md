@@ -4,9 +4,11 @@
 
 * [Learn Kubernetes Basics](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
 
-## Basics
+## Concepts
 
 * **Kubernetes** automates the distribution and scheduling of application containers across a cluster in a more efficient way.
+
+### Clusters
 * A **Kubernetes cluster** consists of two types of resources:
   - The **Master** coordinates all activities in the cluster, including scheduling, maintaining state, scaling, and updating
   - **Nodes** are VMs or physical computers that act as the workers that run applications
@@ -15,24 +17,41 @@
 * The nodes communicate with the master using the Kubernetes API, which the master exposes
   - End users can also use the Kubernetes API directly to interact with the cluster
 
+### Deployment
+* Create a **Deployment** configuration in order to deploy containerized application
+  - Specify the container image for your application and the number of replicas
+* Once the application instances are created, a **Kubernetes Deployment Controller** continuously monitors those instances
+  - If the Node hosting an instance goes down or is deleted, the Deployment controller replaces the instance with an instance on another Node in the cluster
+* A **Pod** is a group of one or more containers, with shared storage/network, and a specification for how to run the containers
+  - By default they are visible from other pods and services within the same kubernetes cluster, but not outside that network
+* The API server will automatically create an endpoint for each pod, based on the pod name, that is also accessible through the proxy
+  - `http://${HOST}:${PORT}/api/v1/namespaces/default/pods/${POD_NAME}/proxy/`
+
 ## Commands
 
 ### kubectl commands
 
 ```
-kubectl version         # verify installed
-kubectl cluster-info    # list Master and KubeDNS
-kubectl get nodes       # list all Nodes in cluster
+kubectl version           # verify installed
+kubectl cluster-info      # list Master and KubeDNS
+kubectl proxy             # Proxy to forward commands into cluster's private network
+
+# USAGE: kubectl <action> <resource>
+kubectl get nodes         # list all Nodes in cluster
+kubectl get deployments   # list all Deployments
+
+# USAGE: kubectl run <name> --image=<image-path> --port=<port>    # Create Deployment
+kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080
 ```
 
 ### minikube commands
 
 ```
-minikube version        # verify installed
+minikube version          # verify installed
 minikube start
 ```
 
 ## Vocab
 
-* **kubectl**: Kubernetes CLI
+* **kubectl**: Kubernetes CLI. Uses the Kubernetes API to interact with the cluster.
 * **minikube**: local Kubernetes cluster intended for application development
