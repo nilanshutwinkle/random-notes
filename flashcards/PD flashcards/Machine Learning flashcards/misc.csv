@@ -32,3 +32,6 @@
 "confidence interval","Frequentist approach. Interval constructed to estimate unknown fixed value."
 "credible interval","Bayesian approach. Capture uncertainty about true parameter by imposing prior distribution."
 "Thompson sampling","Sample parameters from posterior, and select arm with highest return (or select arms proportionate to the returns)"
+"John Kruschke","Author of Doing Bayesian Data Analysis (the puppy dog book)"
+"Andrew Gelman","Author of Bayesian Data Analysis (the red book)"
+"Will Kurt","Author of Bayesian Statistics the Fun Way (the rubber duck book)"

@@ -1,3 +1,4 @@
+"Richard Sutton, Andrew Barto","Two authors of Reinforcement Learning: An Introduction"
 "Two most important distinguishing features of RL","trial-and-error search, delayed reward"
 "Four main subelements of RL system","policy, reward signal, value function, model of the environment"
 "policy","Mapping from perceived states of the environment to actions to be taken; may be stochastic"

@@ -40,3 +40,6 @@
 "Service mesh","Low-latency infrastructure layer designed to handle high volume of network-based interprocess communication via APIs"
 "Istio","Open platform for managing traffic flow across microservices as an abstraction layer over cluster management platforms like Kubernetes"
 "Kubernetes pod","Smallest deployable units of computing that can be created and managed in Kubernetes"
+"Martin Kleppmann", "Author of Designing Data-Intensive Applications"
+"Sam Newman","Author of Building Microservices"
+"Site Reliability Engineering","How Google Runs Production Systems"
