@@ -9,6 +9,7 @@
 * **Kubernetes** automates the distribution and scheduling of application containers across a cluster in a more efficient way.
 
 ### Clusters
+
 * A **Kubernetes cluster** consists of two types of resources:
   - The **Master** coordinates all activities in the cluster, including scheduling, maintaining state, scaling, and updating
   - **Nodes** are VMs or physical computers that act as the workers that run applications
@@ -18,12 +19,14 @@
   - End users can also use the Kubernetes API directly to interact with the cluster
 
 ### Deployment
+
 * Create a **Deployment** configuration in order to deploy containerized application
   - Specify the container image for your application and the number of replicas
 * Once the application instances are created, a **Kubernetes Deployment Controller** continuously monitors those instances
   - If the Node hosting an instance goes down or is deleted, the Deployment controller replaces the instance with an instance on another Node in the cluster
 
 ### Pods
+
 * A **Pod** is a group of one or more containers, with shared storage/network, and a specification for how to run the containers
   - A Pod always runs on a Node.
   - By default they are visible from other pods and services within the same kubernetes cluster, but not outside that network
@@ -32,6 +35,7 @@
 * When a Pod dies, the `ReplicaSet` will dynamically drive the cluster back to desired state via creation of new Pods
 
 ### Expose an App
+
 * A **Service** in Kubernetes is an abstraction which defines a logical set of Pods and a policy by which to access them
   - A Service routes traffic across a set of Pods, and enables a loose coupling between dependent Pods
   - A Service named `kubernetes` is created by default by minikube when it starts a cluster
@@ -47,6 +51,12 @@
   - Labels are key/value pairs attached to objects, and can be attached or modified at any time
   - Labels can be used for many purposes; e.g., designating environments (e.g., prod), tagging versions
 
+## Scaling an App
+
+* Scaling is accomplished by changing the number of replicas in a Deployment
+* Kubernetes also supports autoscaling of Pods
+* Services have an integrated load-balancer that will distribute network traffic to all Pods of an exposed Deployment
+* Once you have multiple instances of an Application running, you would be able to do Rolling updates without downtime
 
 ## Commands
 
@@ -144,6 +154,17 @@ kubectl get pods -l app=v1        # fetch Pods by label
 kubectl delete service -l run=kubernetes-bootcamp
 curl $(minikube ip):$NODE_PORT    # Should fail
 kubectl exec -ti $POD_NAME curl localhost:8080    # Should work
+```
+
+#### Scaling
+
+```shell
+kubectl scale deployments/kubernetes-bootcamp --replicas=4
+kubectl get deployments           # READY will eventually say 4/4
+kubectl get pods -o wide          # More info on the Pods
+kubectl describe services/kubernetes-bootcamp   # Find exposed IP and port
+export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')
+curl $(minikube ip):$NODE_PORT    # Each time this is executed, different host
 ```
 
 
