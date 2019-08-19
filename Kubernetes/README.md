@@ -51,12 +51,19 @@
   - Labels are key/value pairs attached to objects, and can be attached or modified at any time
   - Labels can be used for many purposes; e.g., designating environments (e.g., prod), tagging versions
 
-## Scaling an App
+### Scaling an App
 
 * Scaling is accomplished by changing the number of replicas in a Deployment
 * Kubernetes also supports autoscaling of Pods
 * Services have an integrated load-balancer that will distribute network traffic to all Pods of an exposed Deployment
 * Once you have multiple instances of an Application running, you would be able to do Rolling updates without downtime
+
+### Rolling Updates
+
+* Rolling updates allow Deployments' update to take place with zero downtime by incrementally updating Pods instances with new ones
+* By default, the maximum number of Pods that can be unavailable during the update and the maximum number of new Pods that can be created, is one
+  - Both options can be configured to either numbers or percentages (of Pods)
+* If a Deployment is exposed publicly, the Service will load-balance the traffic only to available Pods during the update
 
 ## Commands
 
@@ -167,6 +174,31 @@ export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(i
 curl $(minikube ip):$NODE_PORT    # Each time this is executed, different host
 ```
 
+#### Rolling Update
+
+```shell
+kubectl get deployments           # "kubernetes-bootcamp"
+kubectl get pods                  # 4 Pods
+kubectl describe pods             # Image is v1
+kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/kubernetes-bootcamp:v2
+kubectl get pods                  # Eventually 4 Terminating, 4 Running Pods
+
+# Says: deployment "kubernetes-bootcamp" successfully rolled out
+kubectl rollout status deployments/kubernetes-bootcamp  
+```
+
+#### Rollback
+
+```shell
+kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=gcr.io/google-samples/kubernetes-bootcamp:v10
+kubectl get deployments           # Something wrong. 3/4 ready, 3 available
+
+# ... Failed to pull image"gcr.io/google-samples/kubernetes-bootcamp:v10"
+# Error response from daemon: manifest for gcr.io/google-samples/kubernetes-bootcamp:v10 not found
+kubectl describe pods
+kubectl rollout undo deployments/kubernetes-bootcamp
+kubectl get deployments           # 4/4 ready eventually.
+```
 
 ## Vocab
 
