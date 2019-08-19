@@ -32,7 +32,7 @@
 
 ### kubectl commands
 
-```
+```shell
 kubectl version             # verify installed
 kubectl cluster-info        # list Master and KubeDNS
 kubectl proxy               # Proxy to forward commands into cluster's private network
@@ -62,7 +62,7 @@ kubectl exec -ti $POD_NAME bash   # Start shell
 
 ### minikube commands
 
-```
+```shell
 minikube version          # verify installed
 minikube start
 ```
