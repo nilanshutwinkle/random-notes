@@ -61,57 +61,91 @@ minikube ip
 ### kubectl commands
 
 ```shell
+# USAGE: kubectl <action> <resource>
+
 kubectl version             # verify installed
 kubectl cluster-info        # list Master and KubeDNS
 kubectl proxy               # Proxy to forward commands into cluster's private network
 
-# USAGE: kubectl <action> <resource>
+export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+```
 
+#### Listing resources
+
+```shell
 # USAGE: kubectl get        # list resources
 kubectl get nodes
 kubectl get deployments
 kubectl get pods
 kubectl get services
+```
 
-# USAGE: kubectl run <name> --image=<image-path> --port=<port>    # Create Deployment
+#### Create Deployment
+
+```shell
+# USAGE: kubectl run <name> --image=<image-path> --port=<port>
 kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080
+```
 
+#### Describe resources
+
+```shell
 # USAGE: kubectl describe   # show detailed information about a resource
 kubectl describe pods
 kubectl describe deployment
+kubectl describe services
+```
 
-export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+#### Logs
 
+```shell
 # USAGE: kubectl logs       # print the logs from a container in a pod
 kubectl logs $POD_NAME
+```
 
+#### Executing commands
+
+```shell
 # USAGE: kubectl exec       # execute a command on a container in a pod
 kubectl exec $POD_NAME env
 kubectl exec -ti $POD_NAME bash   # Start shell
 kubectl exec -ti $POD_NAME curl localhost:8080
+```
 
-# Create a Service
+#### Creating a Service
+
+```shell
 kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080
 kubectl describe services/kubernetes-bootcamp
 export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')
 curl $(minikube ip):$NODE_PORT    # Should work!
+```
 
-# Find Pods and Services using Deployment Label
+#### Using Deployment Labels
+
+```shell
 kubectl describe deployment       # Name is the Deployment Label
 kubectl get pods -l run=kubernetes-bootcamp
 kubectl get services -l run=kubernetes-bootcamp
+```
 
-# Label a Pod
+#### Label a Pod
+
+```shell
 export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
 kubectl label pod $POD_NAME app=v1
 kubectl describe pods $POD_NAME   # Labels section contains label
 kubectl get pods -l app=v1        # fetch Pods by label
+```
 
-# Delete a Service
+#### Delete a Service
+
+```shell
 kubectl delete service -l run=kubernetes-bootcamp
 curl $(minikube ip):$NODE_PORT    # Should fail
 kubectl exec -ti $POD_NAME curl localhost:8080    # Should work
 ```
+
 
 ## Vocab
 
