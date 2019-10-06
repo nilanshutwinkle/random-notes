@@ -21,11 +21,11 @@ jobs:
 * E.g., `circleci/ruby:2.4.2-jessie-node`
 * The **image tag** is `:<lang_ver>-<os_ver>-<image_variant>`
 * Two types of images:
-  - Language images: e.g., Ruby, OpenJDK, Closure, Rust, etc
-  - Service images: e.g., DynamoDB, PostgreSQL, Redis, etc
+  - **language images**: e.g., Ruby, OpenJDK, Closure, Rust, etc
+  - **service images**: e.g., DynamoDB, PostgreSQL, Redis, etc
 * Two types of image variants:
-  - Language image variants: e.g., `-node`, `-browsers`, etc
-  - Service image variants: only one, `-ram`
+  - **language image variants**: e.g., `-node`, `-browsers`, etc
+  - **service image variants**: only one, `-ram`
 * Comprehensive [list of image tags](https://circleci.com/docs/2.0/docker-image-tags.json) by image
 
 ## Workflows
