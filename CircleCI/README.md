@@ -163,7 +163,46 @@ jobs:
       run: aws-cli deploy $AWS_CLI_KEY_SECRET
 ```
 
+## Manual Approvals
+
+* E.g.,
+
+```yaml
+version: 2
+release-branch-workflow:
+  jobs:
+    - build
+    - request-testing:
+        type: approval
+        requires:
+          - build
+    - deploy-aws:
+        requires:
+          - request-testing
+```
+* For more information, see: [Holding a Workflow for a Manual Approval](https://circleci.com/docs/2.0/workflows/#holding-a-workflow-for-a-manual-approval)
+
 ## Orbs
+
+## Scheduled Workflows
+
+* E.g.,
+
+```yaml
+version: 2
+commit-workflow:
+  jobs:
+    - build
+scheduled-workflow:
+  triggers:
+    - schedule:
+        cron: "0 1 * * *"
+        filters:
+          branches:
+            only: try-schedule-workflow
+  jobs:
+    - build
+```
 
 ## Workspaces
 * Workflow-aware storage mechanism
