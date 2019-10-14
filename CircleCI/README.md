@@ -208,11 +208,17 @@ scheduled-workflow:
 * Workflow-aware storage mechanism
 * `persist_to_workspace`, `attach_workspaces`
 * Behind the scenes, tarbals the workspace upon persistence and stores on S3; and retrieves when attaching workspace
+* Documentation on workspaces is a little confusing. This [blog post](https://circleci.com/blog/circleci-hacks-reuse-yaml-in-your-circleci-config-with-yaml/) has a useful workspaces example.
 
 ## Version 2.1
 * `type: approval`
 
 ## Resources
+
+### General
 * [Welcome to CircleCI Documentation](https://circleci.com/docs/2.0/): version 2.0
 * [Webinar: Introduction to .circleci/config.yml](https://youtu.be/xOSHKNUIkjY): practical 42 minute overview
+
+### Topic specific
+* [Adding an SSH Key to CircleCI](https://circleci.com/docs/2.0/add-ssh-key/)
 * [Pre-Built CircleCI Docker Images](https://circleci.com/docs/2.0/circleci-images/#buildpack-deps)
