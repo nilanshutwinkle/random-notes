@@ -18,4 +18,4 @@
 "Markov Decision Processes (MDP)","Used to find stationary policy that decides which action to take for given state in stochastic environment, ignoring previous states."
 "exogenous factors","Factors happening outside a system."
 "endogenous factors","Factors happening within a system."
-"Thompson sampling","Sample parameters from posterior, and select arm with highest return (or select arms proportionate to the returns)"
+"slates","AKA, asset choreography. Combination of multiple assets, the interaction effects of which result in combinatorics of action space."
