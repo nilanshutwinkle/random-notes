@@ -32,6 +32,12 @@
     docker rmi <image-id>
     ```
 
+### General
+
+| Command                   | Desc          |
+| :------------------------ |:------------- |
+| `docker version`          | Version and related metadata for client and server |
+
 ### Containers
 
 | Command                   | Desc          |
