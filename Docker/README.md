@@ -42,7 +42,10 @@
 
 | Command                   | Desc          |
 | :------------------------ |:------------- |
-| `docker run docker/whalesay cowsay boo` | Fetches image and runs it. Image is stored locally. |
+| `docker run docker/whalesay cowsay boo` | Fetches image and runs it. Image is stored locally. (Defaults to `latest` tag.)|
+| `docker run redis:4.0`    | Run with a tag |
+| `docker run -it kodekloud/simple-prompt-docker` | `-i` for interactive mode (maps stdin), `-t` for psuedoterminal |
+| `docker inspect forlorn_foo` | Dumps container info in JSON format |
 | `docker ps`               | List running containers |
 | `docker ps -a`            | List all containers, including stopped |
 | `docker stop forlorn_foo` | Stop a running container |
@@ -71,7 +74,25 @@ Runs command `cat /etc/hosts` on docker container `01234`.
 ```sh
 $ docker run -d ubuntu sleep 10
 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+$ docker logs 01234    # view stdout
 $ docker attach 01234
 ```
 
 The detached (background) container process is now attached (foregrounded) in terminal.
+
+### Port mapping
+
+* If there's a web app running in a container on port 8080, two options for accessing the app:
+    - If you are on the Docker host, you can use the docker container's private IP. (E.g., `http://172.17.0.1:8080`)
+    - Map port 8080 in the container to an open port on the Docker host (e.g., 9000), and access using the docker host's IP (e.g., `http://192.168.1.1:9000`)
+
+```sh
+docker run -p 9000:8080 kloudkode/simple-webapp
+docker run -p 9001:8080 kloudkode/simple-webapp
+```
+
+### Volume mapping
+
+```sh
+docker run -v /opt/datadir:/var/lib/mysql mysql
+```
