@@ -96,3 +96,10 @@ docker run -p 9001:8080 kloudkode/simple-webapp
 ```sh
 docker run -v /opt/datadir:/var/lib/mysql mysql
 ```
+
+### Environment variables
+
+```sh
+docker run -e FOO=BAR some-image
+docker inspect 01234    # variables listed in /Config/Env
+```
