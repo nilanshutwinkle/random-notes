@@ -103,3 +103,38 @@ docker run -v /opt/datadir:/var/lib/mysql mysql
 docker run -e FOO=BAR some-image
 docker inspect 01234    # variables listed in /Config/Env
 ```
+
+### Creating an image
+
+1. Create a Dockerfile:
+    ```
+    FROM Ubuntu
+
+    RUN apt-get update
+    RUN apt-get install python
+
+    RUN pip install flask
+    RUN pip install flask-mysql
+
+    COPY . /opt/source-code
+
+    ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
+    ```
+2. Create local Docker image:
+    ```sh
+    docker build Dockerfile -t myuser/myapp
+    ```
+3. Make available on Dockerhub:
+    ```sh
+    docker push myuser/myapp
+    ```
+
+## Dockerfile
+
+* Instruction-Argument pairs (E.g., `FROM Ubuntu`)
+* Layered architecture: each instruction is a separate layer
+    - Each layer is cached
+    - To view all of the layers and their associated size:
+      ```
+      docker history myuser/myapp
+      ```
