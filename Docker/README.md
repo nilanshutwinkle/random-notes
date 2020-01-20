@@ -9,6 +9,29 @@
 
 ## Commands
 
+### Image/container lifecycle
+
+1. Fetch image
+     ```sh
+     docker pull ubuntu
+     ```
+2. Create container (run image)
+    ```sh
+    docker run -d ubuntu sleep 60
+    ```
+3. Either stop container, or it exits.
+    ```sh
+    docker stop <container-id>
+    ```
+4. Remove container
+    ```sh
+    docker rm <container-id>
+    ```
+5. Remove image
+    ```sh
+    docker rmi <image-id>
+    ```
+
 ### Containers
 
 | Command                   | Desc          |
@@ -17,13 +40,14 @@
 | `docker ps`               | List running containers |
 | `docker ps -a`            | List all containers, including stopped |
 | `docker stop forlorn_foo` | Stop a running container |
+| `docker rm forlorn_foo`   | Remove a container |
 
 ### Images
 
 | Command                   | Desc          |
 | :------------------------ |:------------- |
 | `docker images`           | Lists locally-stored images |
-| `docker rm brittle_bar`   | Removes locally-stored image |
+| `docker rmi brittle_bar`  | Removes locally-stored image |
 | `docker pull jenkins`     | Fetches an image without running it. |
 
 ### Running commands on running container
