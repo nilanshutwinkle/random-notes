@@ -45,6 +45,7 @@
 | `docker run docker/whalesay cowsay boo` | Fetches image and runs it. Image is stored locally. (Defaults to `latest` tag.)|
 | `docker run redis:4.0`    | Run with a tag |
 | `docker run -it kodekloud/simple-prompt-docker` | `-i` for interactive mode (maps stdin), `-t` for psuedoterminal |
+| `docker run --entrypoint sleep myapp 5` | Run while overriding the entry point. |
 | `docker inspect forlorn_foo` | Dumps container info in JSON format |
 | `docker ps`               | List running containers |
 | `docker ps -a`            | List all containers, including stopped |
@@ -108,7 +109,7 @@ docker inspect 01234    # variables listed in /Config/Env
 
 1. Create a Dockerfile:
     ```
-    FROM Ubuntu
+    FROM ubuntu
 
     RUN apt-get update
     RUN apt-get install python
@@ -122,7 +123,8 @@ docker inspect 01234    # variables listed in /Config/Env
     ```
 2. Create local Docker image:
     ```sh
-    docker build Dockerfile -t myuser/myapp
+    docker build -t myuser/myapp .
+    # or: docker build Dockerfile -t myuser/myapp
     ```
 3. Make available on Dockerhub:
     ```sh
@@ -132,9 +134,17 @@ docker inspect 01234    # variables listed in /Config/Env
 ## Dockerfile
 
 * Instruction-Argument pairs (E.g., `FROM Ubuntu`)
-* Layered architecture: each instruction is a separate layer
+* **Layered architecture**: each instruction is a separate layer
     - Each layer is cached
     - To view all of the layers and their associated size:
       ```
       docker history myuser/myapp
       ```
+
+### Instructions
+
+| Instruction      | Example          | Description      |
+| :--------------- | :--------------- | :--------------- |
+| `CMD`            | `CMD ["sleep", "5"]` | The default command or arguments. |
+| &nbsp;           | `CMD sleep 5`     | &nbsp; |
+| `ENTRYPOINT`     | `ENTRYPOINT["sleep"]` | Command. Takes arguments from run command. |
