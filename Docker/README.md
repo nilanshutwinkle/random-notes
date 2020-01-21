@@ -148,3 +148,27 @@ docker inspect 01234    # variables listed in /Config/Env
 | `CMD`            | `CMD ["sleep", "5"]` | The default command or arguments. |
 | &nbsp;           | `CMD sleep 5`     | &nbsp; |
 | `ENTRYPOINT`     | `ENTRYPOINT["sleep"]` | Command. Takes arguments from run command. |
+
+## Networking
+
+* Three types:
+    1. **bridge** (default): all containers share private network on host.
+        - Creates internal **bridge network**, usually with IP address like `172.17.#.#`.
+        - To share services on container with outside world, map ports with host.
+    2. **none**: isolated network.
+    3. **host**: uses the host network.
+        - No need to map ports.
+* Specify the network type:
+  ```
+  docker run ubuntu --network=none
+  ```
+* Can manually create bridge network:
+  ```
+  docker network create --driver bridge --subnet 182.18.0.0/16 custom-isolated-network
+  docker network ls
+  ```
+* Can inspect network details with `docker inspect <container-name>`
+* Docker has built-in DNS server (at `127.0.0.11`), so containers can resolve IPs when using container names:
+  ```
+  mysql.connect('mysql')
+  ```
