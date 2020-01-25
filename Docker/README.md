@@ -92,10 +92,27 @@ docker run -p 9000:8080 kloudkode/simple-webapp
 docker run -p 9001:8080 kloudkode/simple-webapp
 ```
 
-### Volume mapping
+### Storage
+
+#### Bind mounting
+
+Old style:
 
 ```sh
 docker run -v /opt/datadir:/var/lib/mysql mysql
+```
+
+Better:
+
+```sh
+docker run -v --mount type=bind,source=/opt/datadir,target=/var/lib/mysql mysql
+```
+
+#### Volume mounting
+
+```sh
+docker volume create foo  # Created at /var/lib/docker/volumes/foo
+docker run -v foo:/var/lib/mysql mysql
 ```
 
 ### Environment variables
@@ -172,3 +189,9 @@ docker inspect 01234    # variables listed in /Config/Env
   ```
   mysql.connect('mysql')
   ```
+
+## Storage
+
+* `/var/lib/docker`
+* Image layers are read-only, and shared.
+* Container layer is writable; if you change any files from the image layers, they are copied (copy-on-write)
