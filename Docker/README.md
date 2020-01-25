@@ -4,7 +4,6 @@
 * Virtual machines have hypervisor, and each VM contains its own OS; containers share underlying OS
 * Containers have less isolation than VMs
 * Often us VMs for provisioning hosts, and containers for provisioning apps
-* **dockerhub**: public Docker registry. [hub.docker.com](https://hub.docker.com/).
 * **Image** used to create 1+ **containers**.
 
 ## Commands
@@ -357,3 +356,23 @@ networks:
   front-end:
   back-end:
 ```
+
+## Docker registry
+
+* `image: nginx` is the same as `image: nginx/nginx` (user/image repository)
+* Registries:
+    - **dockerhub**: default public Docker registry. [hub.docker.com](https://hub.docker.com/).
+    - `gcr.io`: Google's repository. Popular for Kubernetes-related images.
+    - Private registries
+* `docker login`
+    - Login to default registry
+    - Enables you to push images
+* `docker login private-registry.io`
+    - Enables you to access private repositories
+* To create and use a local registry:
+    ```sh
+    docker run -d -p 5000:5000 --name registry registry:2
+    docker image tag my-image localhost:5000/my-image
+    docker push localhost:5000/my-image
+    docker pull localhost:5000/my-image
+    ```
