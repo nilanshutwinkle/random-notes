@@ -36,6 +36,7 @@
 | Command                   | Desc          |
 | :------------------------ |:------------- |
 | `docker version`          | Version and related metadata for client and server |
+| `docker -H=host:port ...` | Connect to remote Docker engine |
 
 ### Containers
 
@@ -376,3 +377,11 @@ networks:
     docker push localhost:5000/my-image
     docker pull localhost:5000/my-image
     ```
+
+## Namespaces
+
+* All processes on same host have process IDs on host; but also have processes in containers.
+  - A container only has access to its processes; but the host has access to all processes.
+  - This is achieved with **namespaces**
+* Docker uses **cgroups** ("control groups") to restrict amount of hardware resources allocated to each container
+  - E.g., `docker run --cpus=.5 --memory=100m ubuntu`
