@@ -195,3 +195,165 @@ docker inspect 01234    # variables listed in /Config/Env
 * `/var/lib/docker`
 * Image layers are read-only, and shared.
 * Container layer is writable; if you change any files from the image layers, they are copied (copy-on-write)
+
+## Linking
+
+Use of `--link` is deprecated:
+
+```sh
+$ docker run -d --name=redis redis
+# app using host "db" for postgres server
+# --link adds entry to /etc/hosts
+$ docker run -d --name=db --link db:db postgres:9.4
+# app using host "redis" for redis server
+$ docker run -d --name=vote -p 5000:80 --link redis:redis voting-app
+$ docker run -d --name=result -p 5001:80 result
+$ docker run -d --name=worker --link db:db --link redis:redis worker
+```
+
+## Docker compose
+
+* If running multiple services, `docker compose` is better
+  - Enables us to create single yml file
+* Instead of:
+  ```sh
+  $ docker run mmumshad/simple-webapp
+  $ docker run mongodb
+  $ docker run redis:alpine
+  $ docker run ansible
+  ```
+  Use:
+  ```yml
+  # docker-compose.yml
+  version: 3
+  services:
+    web:
+      image: "mmumshad/simple-webapp"
+    database:
+      image: "mongodb"
+    messaging:
+      image: "redis:alpine"
+    orchestration:
+      image: "ansible"
+  ```
+  And run:
+  ```sh
+  $ docker-compose up
+  ```
+### Version 1
+  ```yml
+  # docker-compose.yml
+  # docker-compose format version 1
+  redis:
+    image: redis
+  db:
+    image: postgres:9.4
+  vote:
+    build: ./vote     # directory with Dockerfile
+    ports:
+      - 5000:80
+    links:
+      - redis         # same as "redis:redis"
+  result:
+    build: ./result   # directory with Dockerfile
+    ports:
+      - 5001:80
+    links:
+      - db            # same as "db:db"
+  worker:
+    build: ./worker   # directory with Dockerfile
+    links:
+      - redis
+      - db
+  ```
+
+### Version 2
+Version 2 doesn't require links, as automatically creates bridge network:
+
+```yml
+# docker-compose.yml
+version: 2
+services:
+  redis:
+    image: redis
+  db:
+    image: postgres:9.4
+  vote:
+    build: ./vote     # directory with Dockerfile
+    ports:
+      - 5000:80
+    depends_on:
+      - redis
+  result:
+    build: ./result   # directory with Dockerfile
+    ports:
+      - 5001:80
+    depends_on:
+      - db
+  worker:
+    build: ./worker   # directory with Dockerfile
+    depends_on:
+      - redis
+      - db
+```
+
+### Version 3
+
+Version 3 supports docker swarm, and is similar to version 2:
+
+```yml
+# docker-compose.yml
+version: 3
+services:
+  redis:
+    image: redis
+  db:
+    image: postgres:9.4
+  vote:
+    build: ./vote     # directory with Dockerfile
+    ports:
+      - 5000:80
+  result:
+    build: ./result   # directory with Dockerfile
+    ports:
+      - 5001:80
+  worker:
+    build: ./worker   # directory with Dockerfile
+```
+
+### Networks
+
+```yml
+# docker-compose.yml
+version: 2
+services:
+  redis:
+    image: redis
+    networks:
+      - back-end
+  db:
+    image: postgres:9.4
+    networks:
+      - back-end
+  vote:
+    image: voting-app
+    ports:
+      - 5000:80
+    networks:
+      - back-end
+      - front-end
+  result:
+    image: result
+    ports:
+      - 5001:80
+    networks:
+      - back-end
+      - front-end
+  worker:
+    image: worker
+    networks:
+      - back-end
+networks:
+  front-end:
+  back-end:
+```
