@@ -148,6 +148,19 @@ docker inspect 01234    # variables listed in /Config/Env
     docker push myuser/myapp
     ```
 
+### Restarting
+
+```
+docker run --restart <option>
+```
+
+| Option | Description |
+| :----- | :---------- |
+| `no`   | Doesn't restart automatically (default) |
+| `on-failure	` | Restart automatically if non-zero exit code |
+| `always` | Always restart. (Though if manually stopped, only restarts if Docker daemon restarts or if manually restarts.) |
+| `unless-stopped` | Only restart if not manually stopped. |
+
 ## Dockerfile
 
 * Instruction-Argument pairs (E.g., `FROM Ubuntu`)
