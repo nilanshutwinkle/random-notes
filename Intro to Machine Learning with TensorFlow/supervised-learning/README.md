@@ -3,7 +3,7 @@
 ## Contents
 
 1. [Machine Learning Bird's Eye View](birds-eye-view/)
-1. Linear Regression
+1. [Linear Regression](linear-regression/)
 1. Perceptron Algorithm
 1. Decision Trees
 1. Naive Bayes
