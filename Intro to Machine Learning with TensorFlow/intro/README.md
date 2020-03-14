@@ -1,4 +1,4 @@
-# Welcome to Machine learning
+# Part 1: Introduction to Machine learning
 
 * Recommend log in to account at least twice a week
 * Use "Mentor Help" (bottom left corner of classroom)

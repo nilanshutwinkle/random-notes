@@ -14,6 +14,6 @@
 
 ## Courses
 1. [Introduction to Machine Learning](intro/)
-2. Supervised Learning
-3. Deep Learning
-4. Unsupervised Learning
+2. [Supervised Learning](supervised-learning/)
+3. [Deep Learning](deep-learning/)
+4. [Unsupervised Learning](unsupervised-learning/)
