@@ -1,13 +1,15 @@
 # Part 1: Introduction to Machine learning
 
+## Welcome
+
 * Recommend log in to account at least twice a week
 * Use "Mentor Help" (bottom left corner of classroom)
 
-# Get Help with Your Account
+## Get Help with Your Account
 * Report any harassment, discrimination, bullying, defamation, etc to `report@udacity.com`
 * If you have reviewed our [FAQ](https://udacity.zendesk.com/hc/en-us) and still have a question, you can submit a support ticket from our [Udacity Help Center](https://udacity.zendesk.com/hc/en-us).
 
-# Career Services
+## Career Services
 * Career Portal contains a suite of Career Services
 * You’ll be able to join the Udacity Talent Program once you graduate and share your profile with employers
 * Free to contact at `career-support@udacity.com`
@@ -17,5 +19,5 @@
   - Upload your resume to your Udacity Profile.
   - Toggle the share status of your profile to Public.
 
-# Setting Up Your Computer
+## Setting Up Your Computer
 * See conda, Jupyter, pip notes in [Python notes section](../Python/)
