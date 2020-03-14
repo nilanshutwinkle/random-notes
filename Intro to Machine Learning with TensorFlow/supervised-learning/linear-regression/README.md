@@ -51,6 +51,19 @@
         y = (w1 + p α (q - q')) x + (w2 + α (q - q'))
         ```
 
+* Example: given `y = 2x + 3`, point `(5, 15)`, and `α = 0.01`
+    1. Find `q'`:
+        ```
+        q' = 2 * 5 + 3
+           = 13
+        ```
+    2, Find new line `y`:
+        ```
+        y = (2 + 5 * 0.01 * (15 - 3))x + (13 + 0.01 * (15-3))
+          = (2 + 5 * 2 * 0.01)x + (13 + 2 * 0.01)
+          = 2.1x + 13.02
+        ```
+
 ## 2.8: Quiz - Absolute and Square Trick
 
 ## 2.9: Gradient Descent
