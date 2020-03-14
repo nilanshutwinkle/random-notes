@@ -1,26 +1,10 @@
 # Overview
 * Form of **literate programming**, proposed by Donald Knuth in 1984:
-  > Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.
+    > Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.
 * Grew out of IPython project, which is an interactive shell with features like code completion and syntax highlighting
 * Automatically rendered in GitHub; however, interactive features won't work, in which case you can use nbviewer
 * JSON file with a .ipynb file extension
 * **Jupyter** comes from the combination of **Ju**lia, **Py**thon, and **R**; Jupyter is language agnostic
-
-## Checkpoints
-* Created when manually saved
-* May choose to add to `.gitignore`:
-    ```
-    .ipynb_checkpoints
-    ```
-
-## Notebook Conda
-* Install:
-    ```sh
-    conda install nb_conda
-    ```
-* Features:
-    - Adds "Conda" tab for managing Conda environments and libraries
-    - Enables create notebooks using any of Conda environments
 
 # Architecture
 
@@ -125,7 +109,25 @@ Source: [Jupyter documentation](https://jupyter.readthedocs.io/en/latest/archite
 
 # Examples
 
-* [Python 3.6 example.ipynb](Python 3.6 example.ipynb)
+* [python-3.6-example.ipynb](python-3.6-example.ipynb)
+
+# Misc
+
+## Checkpoints
+* Created when manually saved
+* May choose to add to `.gitignore`:
+    ```
+    .ipynb_checkpoints
+    ```
+
+## Notebook Conda
+* Install:
+    ```sh
+    conda install nb_conda
+    ```
+* Features:
+    - Adds "Conda" tab for managing Conda environments and libraries
+    - Enables create notebooks using any of Conda environments
 
 # Resources
 * [nbviewer](https://nbviewer.jupyter.org/): for rendering web-accessible notebooks
