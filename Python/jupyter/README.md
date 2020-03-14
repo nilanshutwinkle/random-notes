@@ -8,34 +8,25 @@
 
 ## Checkpoints
 * Created when manually saved
-* May choose to add to `.gitignore`: `.ipynb_checkpoints`
+* May choose to add to `.gitignore`:
+    ```
+    .ipynb_checkpoints
+    ```
 
 ## Notebook Conda
-
-* Adds "Conda" tab for managing Conda environments and libraries
-* Enables create notebooks using any of Conda environments
+* Install:
+    ```sh
+    conda install nb_conda
+    ```
+* Features:
+    - Adds "Conda" tab for managing Conda environments and libraries
+    - Enables create notebooks using any of Conda environments
 
 # Architecture
 
 ![Jupyter architecture diagram](architecture.png)
 
 Source: [Jupyter documentation](https://jupyter.readthedocs.io/en/latest/architecture/how_jupyter_ipython_work.html)
-
-# Cells
-
-## Math in Markdown cells
-
-* Notebooks use Mathjax to render LaTeX symbols as math
-* Inline:
-```
-$y = mx + b$
-```
-* Block:
-```
-$$
-y = \frac{a}{b+c}
-$$
-```
 
 # Commands
 
@@ -45,7 +36,6 @@ $$
 | ------- | ----------- |
 | `conda install jupyter notebook` | Install with conda |
 | `pip install jupyter notebook` | Install with pip |
-| `conda install nb_conda` | Install Notebook Conda |
 
 ## Running
 
@@ -87,9 +77,23 @@ $$
 | `SHIFT+TAB` | Show documentation |
 | `SHIFT+TAB` (twice) | Show more documentation |
 
-# Code Cells
+# Cells
 
-## Magic Keywords
+## Math in Markdown cells
+
+* Notebooks use Mathjax to render LaTeX symbols as math
+* Inline:
+    ```
+    $y = mx + b$
+    ```
+* Block:
+    ```
+    $$
+    y = \frac{a}{b+c}
+    $$
+    ```
+
+## Magic Keywords in Code Cells
 
 * **Magic keywords**: special commands you can run in cells that let you control the notebook or perform system calls (e.g., changing directories)
 * Specifically for Python kernel
@@ -120,6 +124,7 @@ $$
 * [List of built-in magic keywords](https://ipython.readthedocs.io/en/stable/interactive/magics.html)
 
 # Examples
+
 * [Python 3.6 example.ipynb](Python 3.6 example.ipynb)
 
 # Resources
