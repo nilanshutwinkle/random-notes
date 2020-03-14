@@ -33,7 +33,7 @@ Source: [Jupyter documentation](https://jupyter.readthedocs.io/en/latest/archite
 | ------- | ----------- |
 | `jupyter notebook` | Run Jupyter. Available at http://localhost:8888 |
 
-# Common Tricks
+## Common Tricks
 
 ```python
 %matplotlib inline # show images in notebook instead of separate window
