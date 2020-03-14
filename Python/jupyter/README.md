@@ -39,6 +39,9 @@ Source: [Jupyter documentation](https://jupyter.readthedocs.io/en/latest/archite
 %matplotlib inline # show images in notebook instead of separate window
 ```
 
+# Examples
+* [Python 3.6 example.ipynb](Python 3.6 example.ipynb)
+
 # Resources
 * [nbviewer](https://nbviewer.jupyter.org/): for rendering web-accessible notebooks
 * [Working with Jupyter Notebook files on GitHub](https://help.github.com/en/github/managing-files-in-a-repository/working-with-jupyter-notebook-files-on-github)
