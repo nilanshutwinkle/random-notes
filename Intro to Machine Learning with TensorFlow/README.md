@@ -13,7 +13,7 @@
 | Creating Customer Segments with Arvato | June 8, 2020 |
 
 ## Courses
-1. [Introduction to Machine Learning](1-intro.md)
+1. [Introduction to Machine Learning](1-intro/)
 2. Supervised Learning
 3. Deep Learning
 4. Unsupervised Learning
