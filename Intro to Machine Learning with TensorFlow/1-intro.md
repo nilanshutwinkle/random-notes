@@ -18,4 +18,4 @@
   - Toggle the share status of your profile to Public.
 
 # Setting Up Your Computer
-* See conda, pip notes in [Python notes section](../Python/)
+* See conda, Jupyter, pip notes in [Python notes section](../Python/)
