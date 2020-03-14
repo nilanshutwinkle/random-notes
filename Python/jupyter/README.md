@@ -6,11 +6,36 @@
 * JSON file with a .ipynb file extension
 * **Jupyter** comes from the combination of **Ju**lia, **Py**thon, and **R**; Jupyter is language agnostic
 
+## Checkpoints
+* Created when manually saved
+* May choose to add to `.gitignore`: `.ipynb_checkpoints`
+
+## Notebook Conda
+
+* Adds "Conda" tab for managing Conda environments and libraries
+* Enables create notebooks using any of Conda environments
+
 # Architecture
 
 ![Jupyter architecture diagram](architecture.png)
 
 Source: [Jupyter documentation](https://jupyter.readthedocs.io/en/latest/architecture/how_jupyter_ipython_work.html)
+
+# Cells
+
+## Math in Markdown cells
+
+* Notebooks use Mathjax to render LaTeX symbols as math
+* Inline:
+```
+$y = mx + b$
+```
+* Block:
+```
+$$
+y = \frac{a}{b+c}
+$$
+```
 
 # Commands
 
@@ -22,22 +47,77 @@ Source: [Jupyter documentation](https://jupyter.readthedocs.io/en/latest/archite
 | `pip install jupyter notebook` | Install with pip |
 | `conda install nb_conda` | Install Notebook Conda |
 
-### Notebook Conda
-
-* Adds "Conda" tab for managing Conda environments and libraries
-* Enables create notebooks using any of Conda environments
-
 ## Running
 
 | Command | Description |
 | ------- | ----------- |
 | `jupyter notebook` | Run Jupyter. Available at http://localhost:8888 |
 
-## Common Tricks
+# Keyboard Shortcuts
 
-```python
-%matplotlib inline # show images in notebook instead of separate window
-```
+## Switching between modes
+
+| OS X Shortcut | Description |
+| ------------- | ----------- |
+| `SHIFT-ENTER` | Run current cell and move to next cell in command mode |
+| `CONTROL-ENTER` | Run current cell and stay on current cell im command mode |
+| `ENTER` | Enter edit mode |
+| `ESC` | Enter command mode |
+
+## Command Mode
+
+| OS X Shortcut | Description |
+| ------------- | ----------- |
+| `UP`, `DOWN` | Navigate cells |
+| `SHIFT+UP`, `SHIFT+DOWN` | Select cell(s) |
+| `H` | List of keyboard shortcuts |
+| `COMMAND-SHIFT-F` | Open command pallet |
+| `A` | Create cell above selected cell |
+| `B` | Create cell below selected cell |
+| `Y` | Change selected cell to code cell |
+| `M` | Change selected cell to Markdown cell |
+| `L` | Turn on line numbers in selected code cell |
+| `D` (twice) | Delete selected cell |
+
+## Edit Mode
+
+| OS X Shortcut | Description |
+| ------------- | ----------- |
+| `TAB` | Code completion |
+| `SHIFT+TAB` | Show documentation |
+| `SHIFT+TAB` (twice) | Show more documentation |
+
+# Code Cells
+
+## Magic Keywords
+
+* **Magic keywords**: special commands you can run in cells that let you control the notebook or perform system calls (e.g., changing directories)
+* Specifically for Python kernel
+* `%` are for **line magics**, and `%%` are for **cell magics**
+
+### Debugging
+
+| Command | Description |
+| ------- | ----------- |
+| `%pdb` | Turn on interactive debugger |
+
+### matplotlib
+
+| Command | Description |
+| ------- | ----------- |
+| `%matplotlib inline` | Show images in notebook instead of separate window |
+| `%config InlineBackend.figure_format = 'retina'` | Render matplotlib with higher resolution |
+
+### Timing
+
+| Command | Description |
+| ------- | ----------- |
+| `%timeit fib(100)` | Time the line |
+| `%%timeit` | Time the cell |
+
+### Resources
+
+* [List of built-in magic keywords](https://ipython.readthedocs.io/en/stable/interactive/magics.html)
 
 # Examples
 * [Python 3.6 example.ipynb](Python 3.6 example.ipynb)
