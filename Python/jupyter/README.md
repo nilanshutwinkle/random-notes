@@ -27,6 +27,12 @@ Source: [Jupyter documentation](https://jupyter.readthedocs.io/en/latest/archite
 | ------- | ----------- |
 | `jupyter notebook` | Run Jupyter. Available at http://localhost:8888 |
 
+### Converting Notebooks
+
+| Command | Description |
+| ------- | ----------- |
+| `jupyter nbconvert --to html somenotebook.ipynb` | Convert to HTML |
+
 # Keyboard Shortcuts
 
 ## Switching between modes
