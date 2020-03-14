@@ -4,6 +4,12 @@
 * Grew out of IPython project, which is an interactive shell with features like code completion and syntax highlighting
 * Automatically rendered in GitHub; however, interactive features won't work, in which case you can use nbviewer
 
+# Architecture
+
+![Jupyter architecture diagram](architecture.png, "Jupyter architecture diagram")
+
+Source: [Jupyter documentation](https://jupyter.readthedocs.io/en/latest/architecture/how_jupyter_ipython_work.html)
+
 # Commands
 ```python
 %matplotlib inline # show images in notebook instead of separate window
