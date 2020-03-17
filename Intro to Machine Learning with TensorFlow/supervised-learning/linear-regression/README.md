@@ -12,19 +12,19 @@
 
 ## 2.5: Moving a Line
 
-* `y = w1 x + w2`
-    - `w1` is the slope
-    - `w2` is the y intercept
+* `y = w₁ x + w₂`
+    - `w₁` is the slope
+    - `w₂` is the y intercept
 
 ## 2.6: Absolute Trick
 
-* Point `(p, q)` and line `y = w1 x + w2`
+* Point `(p, q)` and line `y = w₁ x + w₂`
 
-* Too big of a step: add `1` to `w2` and `p` to `w1`: `y = (w1 + p) x + (w2 + 1)`
+* Too big of a step: add `1` to `w₂` and `p` to `w₁`: `y = (w₁ + p) x + (w₂ + 1)`
 
-* Here's the **absolute trick** with **learning rate**, `α`: add `α` to `w2` and `pα` to `w1`:
+* Here's the **absolute trick** with **learning rate**, `α`: add `α` to `w₂` and `pα` to `w₁`:
     ```
-    y = (w1 + pα) x + (w2 + α)
+    y = (w₁ + pα) x + (w₂ + α)
     ```
 * **Important**: if the point is *below* the line, then we must subtract `p`
 
@@ -34,21 +34,21 @@
 
 * Point `(p, q)`, and point on the line `(p, q')`, with distance `q - q'`
 
-* Must find `q'`: `q' = w1 * p + w2`
+* Must find `q'`: `q' = w₁ * p + w₂`
 
 * New formula is:
     ```
-    y = (w1 + p α (q - q')) x + (w2 + α (q - q'))
+    y = (w₁ + p α (q - q')) x + (w₂ + α (q - q'))
     ```
 
 * Takes care of the problem of when the point is above vs below the line
 
 * So to solve using the square trick:
-    1. Given `y = w1 x + w2`, point `(p, q)` and learning rate `α`
-    2. Find `q' = w1 * p + w2`
+    1. Given `y = w₁ x + w₂`, point `(p, q)` and learning rate `α`
+    2. Find `q' = w₁ * p + w₂`
     3. New line:
         ```
-        y = (w1 + p α (q - q')) x + (w2 + α (q - q'))
+        y = (w₁ + p α (q - q')) x + (w₂ + α (q - q'))
         ```
 
 * Example: given `y = 2x + 3`, point `(5, 15)`, and `α = 0.01`
@@ -67,3 +67,59 @@
 ## 2.8: Quiz - Absolute and Square Trick
 
 ## 2.9: Gradient Descent
+
+* Intuition:
+    1. Draw a line
+    2. Calculate error
+    3. Move line
+    4. Calculate error
+    5. Go back to step 3
+
+* **Error function**: weights in x axis, error in y axis. (In reality, higher dimensions.)
+    - Take derivative to find the **gradient** of the error function
+    - `wᵢ -> wᵢ - α ∂/∂wᵢ Error`
+
+* **Goal**: to reach minimum error, or at least a close enough value
+
+## 2.10: Mean Absolute Error
+
+* Two most common functions for linear regression:
+    * Mean Absolute Error
+    * Mean Squared Error
+
+* **Mean Absolute Error**: point `(x,y)` and corresponding point on line (the prediction), `(x,ŷ)`.
+    - Distance is `y - ŷ`
+    - `Error = (1/m) Σ(i=1..m) |y - ŷ|`
+
+## 2.11: Mean Squared Error
+
+* **Mean Squared Error**: `Error = (1/2m) Σ(i=1..m) (y - ŷ)²`
+
+* Note we can multiply this by any constant, and won't have any impact on minimization; so `1/2` doesn't have impact
+
+## 2.12: Quiz
+
+## 2.13: Minimizing Error Functions
+
+* Showed that the absolute trick = gradient descent with mean absolute error
+
+* Showed that the square trick = gradient descent with mean squared error
+
+## 2.14: Mean vs Total Squared (Absolute) Error
+
+* **Total Squared Error**: `Error = (1/2) Σ(i=1..m) (y - ŷ)²`
+    * Just the mean squared error, but without the `1/m` multiplier
+
+* Total squared error and mean squared error are basically the same; just result in different learning rates
+
+## 2.15: Batch vs Stochastic Gradient Descent
+
+* Two ways of doing gradient descent:
+    * **stochastic gradient descent**: applying the squared (or absolute) trick at every point in our data one by one, and repeating this process many times.
+    * **batch gradient descent**: applying the squared (or absolute) trick at every point in our data all at the same time, and repeating this process many times.
+
+* In practice, neither of these are used. Instead, split data into many small batches, called **mini-batch gradient descent**.
+
+## 2.16: Mini-Batch Gradient Descent
+
+* `numpy.matmul(x1, x2)`: matrix multiplication
