@@ -105,6 +105,10 @@
 
 * Showed that the square trick = gradient descent with mean squared error
 
+* Recall: `wᵢ -> wᵢ - α ∂/∂wᵢ Error`
+    - `∂/∂w₁ Error = -(y - ŷ)x`
+    - `∂/∂w₂ Error = -(y - ŷ)`
+
 ## 2.14: Mean vs Total Squared (Absolute) Error
 
 * **Total Squared Error**: `Error = (1/2) Σ(i=1..m) (y - ŷ)²`
@@ -123,3 +127,14 @@
 ## 2.16: Mini-Batch Gradient Descent
 
 * `numpy.matmul(x1, x2)`: matrix multiplication
+
+* Steps:
+    1. Calculate `ŷ`: `ŷ = w x + wb`
+    1. Calculate `w`: `w -> w - α ∂/∂wᵢ Error`, or `w -> w + α (y - ŷ)x`
+    1. Calculate `b`: `b -> b - α ∂/∂wᵢ Error`, or `b -> b + α (y - ŷ)`
+
+## 2.17: Absolute Error vs Square Error
+
+* Mean absolute error has a problem: line can move up an down vertically between points and still give same error, meaning there are multiple answers.
+
+* However, mean squared error will yield a single answer. It's a quadratic function, and quadratic functions have a minimum in the point in the middle.
