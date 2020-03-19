@@ -1,3 +1,4 @@
 .DS_Store
 flashcards-private
 .ipynb_checkpoints
+*.swp
