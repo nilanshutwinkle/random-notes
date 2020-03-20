@@ -143,7 +143,7 @@
 
 General pattern:
 
-```
+```python
 from sklearn.linear_model import LinearRegression
 
 model = LinearRegression()
@@ -154,7 +154,7 @@ model.predict([ [127], [248] ]) # [[ 438.94308857, 127.14839521]]
 
 E.g., linear regression predicting life expectancy based on BMI:
 
-```
+```python
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
