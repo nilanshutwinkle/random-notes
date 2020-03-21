@@ -2,7 +2,7 @@
 
 ## Assertions
 
-* Single unrecoverable errors
+* Signal unrecoverable errors
 * E.g., the following shape errors would be unrecoverable:
     ```python
     assert y.shape == (20,)
@@ -22,7 +22,7 @@ a = np.fromfunction(lambda x, y: 10*x+y, (5,4), dtype=int)
 #            [40, 41, 42, 43]])
 ```
 
-## List comprehension
+## List comprehensions
 
 ```python
 x = [i for i in range(5)]
