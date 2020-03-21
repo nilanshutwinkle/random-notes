@@ -141,33 +141,14 @@
 
 ## 2.18: Linear Regression in scikit-learn
 
-General pattern:
+* General pattern:
+    ```python
+    from sklearn.linear_model import LinearRegression
 
-```python
-from sklearn.linear_model import LinearRegression
+    model = LinearRegression()
+    model.fit(x_values, y_values)
 
-model = LinearRegression()
-model.fit(x_values, y_values)
+    model.predict([ [127], [248] ]) # [[ 438.94308857, 127.14839521]]
+    ```
 
-model.predict([ [127], [248] ]) # [[ 438.94308857, 127.14839521]]
-```
-
-E.g., linear regression predicting life expectancy based on BMI:
-
-```python
-import pandas as pd
-from sklearn.linear_model import LinearRegression
-
-# Assign the dataframe to this variable.
-bmi_life_data = pd.read_csv('bmi_and_life_expectancy.csv')
-
-X = bmi_life_data[['BMI']]
-Y = bmi_life_data[['Life expectancy']]
-
-# Make and fit the linear regression model
-bmi_life_model = LinearRegression()
-bmi_life_model.fit(X, Y)
-
-# Make a prediction using the model
-laos_life_exp = bmi_life_model.predict([ [21.07931] ]) # ~60.32
-```
+* E.g., [notebook with linear regression predicting life expectancy based on BMI](bmi-and-life-expectancy.ipynb)
