@@ -152,3 +152,161 @@
     ```
 
 * E.g., [notebook with linear regression predicting life expectancy based on BMI](bmi-and-life-expectancy.ipynb)
+
+## 2.19: Higher Dimensions
+
+* If in two dimensions (say, housing price for size and school quality), we end up fitting a plane
+
+* What about n-dimensional space, with n-1 variables? We have a n-1 dimensional hyperplane in n dimensions, with formula:
+    ```
+    ŷ = w₁x₁ + w₂x₂ + ... + wᵣ₋₁xᵣ₋₁ + xᵣ
+      or
+    y = m₁x₁ + m₂x₂ + ... + mᵣ₋₁xᵣ₋₁ + b
+    ```
+
+## 2.20: Multiple Linear Regression
+
+* **predictor**: (aka, **independent variable**) variable looking at to make predictions about other variables  (e.g., BMI)
+
+```python
+from sklearn.linear_model import LinearRegression
+from sklearn.datasets import load_boston
+
+# Load the data from the boston house-prices dataset
+boston_data = load_boston()
+x = boston_data['data']
+y = boston_data['target']
+
+# Make and fit the linear regression model
+model = LinearRegression()
+model.fit(x, y)
+
+# Make a prediction using the model
+sample_house = [[2.29690000e-01, 0.00000000e+00, 1.05900000e+01, 0.00000000e+00, 4.89000000e-01,
+                6.32600000e+00, 5.25000000e+01, 4.35490000e+00, 4.00000000e+00, 2.77000000e+02,
+                1.86000000e+01, 3.94870000e+02, 1.09700000e+01]]
+
+prediction = model.predict(sample_house)
+```
+
+## 2.21: Closed Form Solution
+
+* There's a closed form solution involving systems of equations, n equations for n unknowns
+
+* Solving this requires inverting a matrix, which is computationally expensive. Hence, we use gradiant descent, which gives an approximate solution
+
+## 2.22: (Optional) Closed Form Solution Math
+
+## 2.23: Linear Regression Warnings
+
+* Linear Regression Works Best When the Data is Linear
+* Linear Regression is Sensitive to Outliers
+
+## 2.24: Polynomial Regression
+
+* E.g.,
+    ```
+    ŷ = w₁x³ + w₂x² + w₃x + w₄
+    ```
+
+## 2.25: Quiz: Polynomial Regression
+
+* `PolynomialFeatures` returns a vector of coefficients p that minimizes the squared error.
+
+```python
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+
+# Assign the data to predictor and outcome variables
+train_data = pd.read_csv('data.csv')
+X = train_data[['Var_X']].values
+y = train_data['Var_Y'].values
+
+# Create polynomial features
+poly_feat = PolynomialFeatures(3)
+X_poly = poly_feat.fit_transform(X)
+
+# Make and fit the polynomial regression model
+poly_model = LinearRegression()
+poly_model.fit(X_poly, y)
+```
+
+## 2.26: Regularization
+
+* The goal is to factor in the complexity of the model into the error, in order to avoid **overfitting** the training data
+
+* **L1 Regularization**: add the absolute value of the coefficients to the error
+
+* **L2 Regularization**: add the squares of the coefficients
+
+* λ parameter: if value is high, will "punish complexity"
+
+| L1 Regularization | L2 Regularization |
+| ----------------- | ----------------- |
+| Computationally inefficient (unless data sparse) | Computationally efficient |
+| Good for sparse outputs | Good for non-sparse outputs |
+| Feature selection | No feature selection |
+
+* Regarding "feature selection", L1 regularization is making irrelevant columns (mostly noise) zeros
+
+## 2.27: Quiz - Regularization
+
+```python
+import numpy as np
+from sklearn.linear_model import Lasso
+
+# Assign the data to predictor and outcome variables
+train_data = np.loadtxt('data.csv', delimiter = ',')
+X = train_data[:, 0:6]
+y = train_data[:, 6]
+
+lasso_reg = Lasso()
+lasso_reg.fit(X, y)
+
+reg_coef = lasso_reg.coef_
+print(reg_coef)
+```
+
+## 2.28: Feature Scaling
+
+* **Feature scaling**: converting data into common range of values.
+
+* **Standardizing**: for each value, subtract mean and divide by standard deviation. E.g.,
+    ```python
+    df["height_standard"] = (df["height"] - df["height"].mean()) / df["height"].std()
+    ```
+
+* **Normalizing**: data scaled between 0 and 1. E.g.,
+    ```python
+    df["height_normal"] = (df["height"] - df["height"].min()) /     \
+                          (df["height"].max() - df['height'].min())
+    ```
+
+* Feature scaling important because:
+    - Using **distance-based metrics** (e.g., SVM or k-nearest neighbors), as not scaling will lead to different results.
+    - When using regularization, if features aren't scaled, then applying regularization will unfairly punish values with small range.
+    - Can speed up convergence of machine learning algorithms
+
+```python
+import numpy as np
+from sklearn.linear_model import Lasso
+from sklearn.preprocessing import StandardScaler
+
+# Assign the data to predictor and outcome variables
+train_data = np.loadtxt('data.csv', delimiter = ',')
+X = train_data[:, 0:6]
+y = train_data[:, 6]
+
+scaler = StandardScaler()
+scaler.fit(X)
+X_scaled = scaler.transform(X)
+
+lasso_reg = Lasso()
+lasso_reg.fit(X_scaled, y)
+
+reg_coef = lasso_reg.coef_
+print(reg_coef)
+```
+
+## 2.29: Outro
