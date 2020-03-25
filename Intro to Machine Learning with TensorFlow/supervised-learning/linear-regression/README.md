@@ -128,7 +128,7 @@
 
 * `numpy.matmul(x1, x2)`: matrix multiplication
 
-* Steps:
+* :star: Steps: 
     1. Calculate `ŷ`: `ŷ = w x + wb`
     1. Calculate `w`: `w -> w - α ∂/∂wᵢ Error`, or `w -> w + α (y - ŷ)x`
     1. Calculate `b`: `b -> b - α ∂/∂wᵢ Error`, or `b -> b + α (y - ŷ)`
