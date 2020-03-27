@@ -20,7 +20,7 @@ import glob
 files = glob.glob("data/*.csv")
 ```
 
-### Files
+### Paths
 
 ```python
 from os import path
