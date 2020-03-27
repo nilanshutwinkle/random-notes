@@ -129,3 +129,52 @@ No unique solution, but can use weights of `2`, `2`, and bias of `-3`:
 ![XOR perceptron](images/xor-perceptron-1.png)
 
 ## 8. Perceptron trick
+
+* Say we have linear equation `3x₁ + 4x₂ - 10 = 0` with:
+    ```
+    Positive region: 3x₁ + 4x₂ -10 ≥ 0
+    Negative region: 3x₁ + 4x₂ -10 < 0
+    ```
+    With misclassified point `(4,5)`, which should be `FALSE`. Given the point is _above_ the line, we could subtract the misclassified point from the coefficients of the line:
+    ```
+        3   4   -10
+    -   4   5   1 (bias unit)
+        -----------
+        -1  -1  -11
+    ```
+    However, this is a very drastic change. Instead, we'll apply the **learning rate**:
+    ```
+    learning rate: 0.1
+    point * learning rate: 4   5   1   ->  .4  .5  .1
+
+        3   4   -10
+    -   0.4 0.5 0.1
+        -----------
+        2.6 3.5 -10.1
+    ```
+    Out new equation is `2.6x₁ + 3.5x₂ - 10.1 = 0`.
+
+* If there's a misclassified point (should be positive) _below_ the line, you should add instead of subtract. E.g., line `3x₁ + 4x₂ - 10 = 0` with point `(1,1)`:
+    ```
+        3   4   -10
+    +   0.1 0.1 0.1
+        -----------
+        3.1 4.1 -9.9
+    ```
+    New line: `3.1x₁ + 4.1x₂ - 9.9 = 0`
+
+## 9. Perceptron Algorithm
+
+1. Start with random weights, `w₁`, `w₂`, ..., `wᵣ`, `b`
+2. For every misclassified point in `(x₁, x₂, ..., xᵣ)`:
+    ```
+    if prediction == 0 (but should be 1):
+        for i = 1 ... n
+            wᵢ ← wᵢ + α xᵢ
+        b ← b + α
+
+    if prediction == 1 (but should be 0):
+        for i = 1 ... n
+            wᵢ ← wᵢ - α xᵢ
+        b ← b - α
+    ```
