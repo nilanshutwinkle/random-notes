@@ -10,6 +10,41 @@
     assert np.isscalar(b)
     ```
 
+## Files
+
+### Globbing
+
+```python
+import glob
+
+files = glob.glob("data/*.csv")
+```
+
+### Files
+
+```python
+from os import path
+
+if path.exists(file):
+    process(file)
+```
+
+### Reading file
+
+```python
+with open(file, 'r') as reader:
+    next(reader) # Skip line
+    for line in reader: # Read remaining lines
+        print(line)
+```
+
+### Writing file
+
+```python
+with open(file, 'w') as writer:
+    writer.write(str) # Doesn't automatically add newline
+```
+
 ## Lambdas
 
 ```python
@@ -35,47 +70,24 @@ z = [x.int() for x in "testing 123" if x.isdigit()]
 # [1, 2, 3]
 ```
 
-## Example
+## Regular expressions
 
-### Reading, writing, regular expressions
-
-```Python
-import glob
-from os import path
+```python
 import re
+
+pattern = r"(\d{2}-\d{2}-\d{4}).csv"
+dates = [re.findall(pattern, f)[0] for f in files if re.search(pattern, f)]
+```
+
+## Type hints
+
+```python
 from typing import List
 
-Dir = "csse_covid_19_daily_reports"
-DailyData = "daily_observations.csv"
-
-def load_dates() -> List[str]:
-    pattern = r"(\d{2}-\d{2}-\d{4}).csv"
-    src = "{}/*.csv".format(Dir)
-    dates = [re.findall(pattern, f)[0] for f in glob.glob(src) if re.search(pattern, f)]
-    dates.sort()
-    return dates
-
-def source_path(date: str) -> str:
-    return "{}/{}.csv".format(Dir, date)
-
-def aggregate_daily_data():
-    with open(DailyData, 'w') as writer:
-        writer.write("Date,Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered\n")
-        for date in load_dates():
-            file = source_path(date)
-            has_newline = True
-            with open(file) as reader:
-                next(reader) # Skip header
-                for line in reader:
-                    line = "{},{}".format(date, line) # Prepend to line
-                    writer.write(line)
-                    has_newline = line.endswith("\n")
-            if not has_newline:
-                writer.write("\n")
-
-if not path.exists(DailyData):
-    aggregate_daily_data()
-    print("Created file: {}".format(DailyData))
-else:
-    print("File already exists: {}".format(DailyData))
+def load_data(file_name: str) -> List[str]:
+    pass
 ```
+
+## Examples
+
+* [collate_covid19_daily_observation_summaries.py](collate_covid19_daily_observation_summaries.py): regex, globbing, file I/O, type hints, list comprehensions.
