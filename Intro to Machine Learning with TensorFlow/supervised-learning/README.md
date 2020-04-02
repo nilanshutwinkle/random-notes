@@ -5,7 +5,7 @@
 1. [Machine Learning Bird's Eye View](birds-eye-view/)
 1. [Linear Regression](linear-regression/)
 1. [Perceptron Algorithm](perceptron/)
-1. Decision Trees
+1. [Decision Trees](decision-trees/)
 1. Naive Bayes
 1. Support Vector Machines
 1. Ensemble Methods
