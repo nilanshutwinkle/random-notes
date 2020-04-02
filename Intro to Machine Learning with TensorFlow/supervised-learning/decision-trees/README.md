@@ -49,7 +49,22 @@
     ```
 * The general formula for picking `m` red balls and `n` blue balls from a box with replacement:
     ```
-    Entropy = - m / (m - n) log₂(m / (m + n)) - n / (m + n) log₂(n / (m + n))
+    Entropy = - m / (m + n) log₂(m / (m + n)) - n / (m + n) log₂(n / (m + n))
     ```
 
 ## 11. Quiz - Do you know your entropy?
+
+* Trick:
+    ```
+    logₐ(x) = ln(x) / ln(a)
+    ```
+
+* What's the entropy of a bucket containing 4 red balls and 10 blue balls?
+    ```
+    m = 4   n = 10
+    Entropy = - m / (m + n) log₂(m / (m + n)) - n / (m + n) log₂(n / (m + n))
+            = - 4 / (4 + 10) log₂(4 / (4/4 + 10)) - 10 / (4+10) log₂(4/ (4+10))
+            = - 2/7 log₂(2/7) - 5/7 log₂(5/7)
+            = -2/7 * ln(2/7) / ln(2) - 5/7 * ln(5/7) / ln(2)
+            = 0.863
+    ```
