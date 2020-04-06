@@ -6,7 +6,7 @@
 1. [Linear Regression](linear-regression/)
 1. [Perceptron Algorithm](perceptron/)
 1. [Decision Trees](decision-trees/)
-1. Naive Bayes
+1. [Naive Bayes](naive-bayes/)
 1. Support Vector Machines
 1. Ensemble Methods
 1. Model Evaluation Metrics
