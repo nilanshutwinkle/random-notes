@@ -106,6 +106,12 @@ pattern = r"(\d{2}-\d{2}-\d{4}).csv"
 dates = [re.findall(pattern, f)[0] for f in files if re.search(pattern, f)]
 ```
 
+## Ternary Operator
+
+```python
+min = a if a < b else b 
+```
+
 ## Type hints
 
 ```python
