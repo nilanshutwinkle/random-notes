@@ -32,8 +32,6 @@
 
 ## 6. Perceptrons
 
-* **Perception**:
-
 * Say we have our college admissions example:
     ```
     Score = 2 * Test + 1 * Grades - 18

@@ -141,6 +141,7 @@ The **Naive Bayes Algorithm**. Given want to find `P(spam|'easy','money',...,'ch
     P(spam|'easy','money',...,'cheap') ∝ P('easy'|spam) P('money'|spam) ... P('cheap'|spam) P(spam)
     ```
 1. Calculate the probabilities for both `P(spam|'easy','money',...,'cheap')` and `P(ham|'easy','money',...,'cheap')`
+
 1. The above probabilities will not add to 1; normalize probabilities to add to 1.
 
 ## 13. Quiz: Bayes Rule
@@ -211,7 +212,7 @@ A: Given we want to find `P(standard|roll 3)` and `P(non-standard|roll 3)`:
     #3	0	1	0	2	0	0	0	0	0	1	0	1
     ```
 
-* The **multinomial Naive Bayes** algorithm is suitable for classification with discrete features (such as word counts for text classification), whereas the **Gaussian Naive Bayes** is better suited for continuous data as it assumes that the input data has a Gaussian (normal) distribution.
+* The **Multinomial Naive Bayes** algorithm is suitable for classification with discrete features (such as word counts for text classification), whereas the **Gaussian Naive Bayes** is better suited for continuous data as it assumes that the input data has a Gaussian (normal) distribution.
 
 * Model performance evaluation metrics:
     - **Accuracy** is the ratio of the number of correct predictions to the total number of predictions.
