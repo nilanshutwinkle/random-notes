@@ -169,3 +169,90 @@ The distance between the two margins is the norm of the new vector:
 ![W is orthogonal to the margins](images/margin-error-6.jpg)
 
 Given there are two margins, the total distance is `2/|w|`.
+
+## 9. Error function
+
+```
+Error = Classification Error + Margin Error
+```
+
+## 10. The C parameter
+
+* `C` is a constant such that:
+    ```
+    Error = C * Classification Error + Margin Error
+    ```
+* Larger `C`, the more focus on correct classifications; smaller `C`, the more focus on large margin
+
+
+## 11. Polynomial Kernel 1
+
+* **Kernel trick**: can lift the points to a higher dimension in order to make them linearly separable,  then project that back to original dimensionality.
+
+## 12. Polynomial Kernel 2
+
+## 13. Polynomial Kernel 3
+
+* The kernel is the set of functions that we can use.
+    - The **linear kernel** allows us to use linear functions of the form `k(x,y) = xᵀy + c` (which includes {`x`, `y`})
+    - The **polynomial kernel** support polynomial functions of the form `k(x,y) = (∝xᵀy + c)ᵈ` (a 2nd degree polynomial includes {`x`, `y`, `x²`, `y²`, `xy`})
+
+* The degree of a polynomial kernel is a hyperparameter
+
+## 14. RBF Kernel 1
+
+## 15. RBF Kernel 2
+
+## 16. RBF Kernel 3
+
+## 17. SVMs in sklearn
+
+Basic usage:
+
+```python
+from sklearn.svm import SVC
+
+model = SVC()
+model.fit(x_values, y_values)
+model.predict([ [0.2, 0.8], [0.5, 0.4] ]) # [[ 0., 1.]]
+```
+
+Hyperparameters:
+* `C`: The C parameter (for emphasizing classification vs margin error)
+* `kernel`: Most popular are 'linear', 'poly', 'rbf'
+* `degree`: If the kernel is polynomial, this is the maximum degree of the monomials in the kernel
+* `gamma`: If the kernel is rbf, this is the gamma parameter. (Larger tend to overfit, smaller tend to underfit.)
+
+Example:
+
+```python
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
+import pandas as pd
+import numpy as np
+
+data = np.asarray(pd.read_csv('data.csv', header=None))
+X = data[:,0:2]
+y = data[:,2]
+
+model = SVC(kernel='rbf', gamma=30.0)
+model.fit(X, y)
+y_pred = model.predict(X)
+
+acc = accuracy_score(y, y_pred)
+```
+
+## 18. Recap & Additional Resources
+
+* Three ways SVMs are implemented:
+    1. Maximum Margin Classifier
+    2. Classification with Inseparable Classes
+    3. Kernel Methods
+
+* **Maximum Margin Classifier**: When data is linearly separable, this class of SVMs attempts to maximize the distance from the linear boundary to closest points
+
+* **Classification with Inseparable Classes**: Class of SVM similar to maximum margin classifiers, but leverages `C` parameter to permit some classification error
+
+* **Kernels**: class of SVMs that permit us to separate data when the boundaries are non-linear
+
+* The **radial basis function** (**rbf**) is the most popular kernel, which uses a density-based approach (closeness of points to each other) to classify otherwise difficult to classify data. Uses gamma hyperparameter to control fitting behavior.
