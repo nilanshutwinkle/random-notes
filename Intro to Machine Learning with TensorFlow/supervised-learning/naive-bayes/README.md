@@ -144,6 +144,9 @@ The **Naive Bayes Algorithm**. Given want to find `P(spam|'easy','money',...,'ch
 
 1. The above probabilities will not add to 1; normalize probabilities to add to 1.
 
+* In summary, Naive Bayes is used to find `P(A|S₀,S₁,...) ∝ P(S₀|A) P(S₁|A) ...` and `P(B|S₀,S₁,...) ∝ P(S₀|B) P(S₁|B) ...`, then make `P(A|S₀,S₁,...)` and `P(B|S₀,S₁,...)` sum to 1.
+
+
 ## 13. Quiz: Bayes Rule
 
 Q: Suppose you have a bag with three standard 6-sided dice with face values [1,2,3,4,5,6] and two non-standard 6-sided dice with face values [2,3,3,4,4,5]. Someone draws a die from the bag, rolls it, and announces it was a 3. What is the probability that the die that was rolled was a standard die?
