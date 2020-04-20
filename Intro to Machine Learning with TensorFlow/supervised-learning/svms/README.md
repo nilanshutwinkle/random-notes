@@ -187,7 +187,7 @@ Error = Classification Error + Margin Error
 
 ## 11. Polynomial Kernel 1
 
-* **Kernel trick**: can lift the points to a higher dimension in order to make them linearly separable,  then project that back to original dimensionality.
+* **Kernel trick**: can lift the points to a higher dimension in order to make them linearly separable, then project that back to original dimensionality.
 
 ## 12. Polynomial Kernel 2
 
