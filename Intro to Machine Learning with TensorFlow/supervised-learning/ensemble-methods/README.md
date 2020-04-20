@@ -3,8 +3,8 @@
 ## 1. Intro
 
 * Most common ensemble methods:
-    - **Bagging**: Bootstrap aggregating. Averaging or voting across models.
-    - **Boosting**: Using each model for its strength
+    - **Bagging** (bootstrap aggregating): build bunch of weak models using subset of data, then averaging or voting across models.
+    - **Boosting**: when using a bunch of models, set weight for each model based on their strengths
 
 * Individual models are called **weak learners**, and resulting ensemble method the **strong learner**
 
@@ -35,14 +35,14 @@
 
 ## 4. Bagging
 
-* **Bagging** algorithm:
-    1. Build a weak module using subset of the data points
+* Bagging algorithm:
+    1. Build a weak model using subset of the data points
     2. Repeat step 1 _n_ times
     3. For each observation, run in all weak learners, and vote on solution
 
 ## 5. AdaBoost
 
-* **Adaboost** is a boosting algorithm that iteratively creates weak models, putting increasing weight on misclassifications
+* **Adaboost**: boosting algorithm that iteratively creates weak models, putting increasing weight on misclassifications
 
 ## 6. Weighting the Data
 
@@ -67,6 +67,10 @@
 * Shortcut:
     ```
     weight = ln(# correct / # incorrect)
+    ```
+* Recall:
+    ```
+    ln(x) = log(x)/log(e)
     ```
 
 **Quiz**:
@@ -131,3 +135,40 @@ E.g.,
 from sklearn.tree import DecisionTreeClassifier
 model = AdaBoostClassifier(base_estimator = DecisionTreeClassifier(max_depth=2), n_estimators = 4)
 ```
+
+## 12. More Spam Classifying
+
+General process for using ML model:
+1. Import the model.
+2. Instantiate the model with the hyperparameters of interest.
+3. **Fit** the model to the training data.
+4. **Validate** (**predict**) on the test data.
+5. **Score** the model by comparing the predictions to the actual values.
+
+Bagging with scikit-learn:
+
+```python
+from sklearn.ensemble import BaggingClassifier
+
+model = BaggingClassifier(n_estimators = 200)
+model.fit(training_data, y_train)
+predictions = model.predict(testing_data)
+```
+
+Random Forests with scikit-learn:
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+model = RandomForestClassifier(n_estimators = 200)
+model.fit(training_data, y_train)
+predictions = model.predict(testing_data)
+```
+
+## 13. Recap & Additional Resources
+
+
+## More info
+* [scikit-learn Ensemble methods](https://scikit-learn.org/stable/modules/ensemble.html)
+* [A Short Introduction to Boosting](https://cseweb.ucsd.edu/~yfreund/papers/IntroToBoosting.pdf): the original paper (1999, 14pp)
+* [Explaining AdaBoost](http://rob.schapire.net/papers/explaining-adaboost.pdf): useful tutorial (16pp)
