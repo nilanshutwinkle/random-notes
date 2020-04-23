@@ -26,7 +26,7 @@
 
 * Decision trees overfit
 
-* **Random forests** algorithm:
+* **Random forest** algorithm:
     1. Pick a subset of features, and build a decision tree
     2. Repeat step 1 _n_ times
     3. For each observation, run in all decision trees, and vote on solution
