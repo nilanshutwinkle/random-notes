@@ -9,7 +9,7 @@
 1. [Naive Bayes](naive-bayes/)
 1. [Support Vector Machines](svms/)
 1. [Ensemble Methods](ensemble-methods/)
-1. Model Evaluation Metrics
+1. [Model Evaluation Metrics](model-evaluation-metrics/s)
 1. Training and Tuning
 
 ## Projects
