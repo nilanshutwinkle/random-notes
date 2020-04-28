@@ -105,7 +105,7 @@ accuracy_score(y_true, y_pred)
 
 ## 15. ROC Curve
 
-* **false positive rates**: FP / (TN + FP).
+* **false positive rate**: FP / (TN + FP).
 
 * **Receiver Operator Characteristic (ROC) curve**: Graph all points using the true positive rate and false negative rates as (x,y) coordinates, respectively. Closer the area under curve is to one, better the model is.
 
