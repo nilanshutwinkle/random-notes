@@ -27,3 +27,9 @@ features_log_minmax_transform[numerical] = scaler.fit_transform(features_log_tra
 * **naive predictor**: Purpose is to establish baseline performance of a model without intelligence.
 
 * E.g., given unbalanced classes of data, this model could simply predict the more common class 100% of the time (e.g., does not have rare disease) and achieve high accuracy
+
+## Feature importance
+
+* Some models (e.g., Adaboost, Random Forest) support `model.feature_importances_` for extracting weighted features, based on their importance
+
+* Can use this to reduce the feature space, to improve the training time. (In my case, when pick five best performing features, lost 2% accuracy and 0.045 of F-score.)
