@@ -93,8 +93,7 @@ for training_indices, test_indices in kf:
 ## 9 - Grid Search in sklearn
 
 ```python
-from sklearn.metrics import make_scorer
-from sklearn.metrics import f1_score
+from sklearn.metrics import f1_score, make_scorer
 from sklearn.model_selection import GridSearchCV
 
 parameters = {'kernel':['poly', 'rbf'],'C':[0.1, 1, 10]}
