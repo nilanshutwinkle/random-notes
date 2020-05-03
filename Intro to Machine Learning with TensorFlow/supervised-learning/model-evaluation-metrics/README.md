@@ -93,7 +93,7 @@ accuracy_score(y_true, y_pred)
 
 * **recall**: TP / (TP + FN). Out of all the positive data, how many were predicted to be positive? Punishes false negatives. (aka the "true positive rate", or "sensitivity".)
 
-## 13. F1 Score
+## 13. F₁ Score
 
 * **harmonic mean**: 2xy / (x + y). Always less than arithmetic mean.
 
