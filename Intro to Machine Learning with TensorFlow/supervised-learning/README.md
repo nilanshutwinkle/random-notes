@@ -14,5 +14,5 @@
 
 ## Projects
 
-1. Finding Donors Project
+1. [Finding Donors Project](finding-donors-project/)
 1. Optimize Your GitHub Profile
