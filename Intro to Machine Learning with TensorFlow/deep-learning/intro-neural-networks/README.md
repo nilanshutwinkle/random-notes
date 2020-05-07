@@ -59,6 +59,17 @@ We want to choose everything where 4x₁ + 5x₂ - 9 = 0, given σ(x=0) = 1/(1+e
 
 # 16 - Softmax
 
+* **Softmax function**: P(classᵢ) = e^Zᵢ / ∑ e^Zⱼ for all scores in Z. Functions as a multiclass sigmoid.
+
+```python
+import numpy as np
+from math import exp
+
+def softmax(Z):
+    calc = lambda a: exp(a) / sum([exp(b) for b in Z])
+    return [calc(Z[idx]) for idx in range(len(Z))]
+```
+
 # 17 - One-Hot Encoding
 
 # 18 - Maximum Likelihood
