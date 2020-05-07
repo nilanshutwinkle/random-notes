@@ -56,3 +56,47 @@ See: [Perceptron notes](../supervised-learning/perceptron)
 
 We want to choose everything where 4x₁ + 5x₂ - 9 = 0, given σ(x=0) = 1/(1+e⁰) = 1/2.
 ```
+
+# 16 - Softmax
+
+# 17 - One-Hot Encoding
+
+# 18 - Maximum Likelihood
+
+# 19 - Maximizing Probabilities
+
+# 20 - Cross-Entropy 1
+
+# 21 - Cross-Entropy 2
+
+# 22 - Multi-Class Cross-Entropy
+
+# 23 - Logistic Regression
+
+# 24 - Gradient Descent
+
+# 25 - Logistic Regression Algorithm
+
+# 26 - Pre-Lab: Gradient Descent
+
+# 27 - Notebook: Gradient Descent
+
+# 28 - Perceptron vs Gradient Descent
+
+# 29 - Continuous Perceptrons
+
+# 30 - Non-linear Data
+
+# 31 - Non-linear Models
+
+# 32 - Neural Network Architecture
+
+# 33 - Feedforward
+
+# 34 - Backpropogation
+
+# 35 - Pre-lab: Analyzing Student Data
+
+# 36 - Notebook: Analyzing Student Data
+
+# 37 - Outro
