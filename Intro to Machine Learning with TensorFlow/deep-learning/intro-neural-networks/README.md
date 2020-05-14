@@ -12,7 +12,7 @@
 ## Lessons 3 - 7, 9 - 11
 See: [Perceptron notes](../supervised-learning/perceptron)
 
-# 8 - Why neural networks?
+## 8 - Why neural networks?
 
 ## 12 - Non-linear Regions
 
@@ -74,13 +74,67 @@ def softmax(Z):
 
 # 18 - Maximum Likelihood
 
+* **maximum likelihood**: select the model that gives existing labels the highest probability
+
+* Calculate `P(All)` by multiplying the probabilities that that the predicted labels are true and multiplying them all together
+
+![Sample maximum likelihood](images/max-likelihood-1.png)
+
+To get these probabilities, use `y = σ(Wx + b)`. Note that if the probability is misclassified, the probability is 1 - P(correct).
+
+* Our new goal: use maximum likelihood to maximize `P(All)`
+
 # 19 - Maximizing Probabilities
+
+* However, products of lots of probabilities are bad, because 1) they will result in very small probability, and 2) changing one number could have big impact on overall probability
+
+* We need a function that turns products into sums. Hint: recall that `log(ab) = log(a) + log(b)`
 
 # 20 - Cross-Entropy 1
 
+* So instead of 0.6 * 0.2 * 0.1 * 0.7 = 0.0084, we use:
+    ```
+    -ln(0.6) + -ln(0.2) + -ln(0.1) + -ln(0.7)
+    = 0.51 + 1.61 + 2.3 + 0.36 = 4.8 (high, so not great)
+    ```
+
+* **cross-entropy**: -∑∑ yᵢⱼ ln(pᵢⱼ). how likely are the events, based on specified probabilities? low values are better than high values.
+
+![Sample cross-entropy](images/cross-entropy-1.png)
+
+* New goal: instead of maximizing probability, minimize cross-entropy
+
 # 21 - Cross-Entropy 2
 
+* For two classes, the formula is:
+    ```
+    Cross-Entropy = -∑[yᵢln(pᵢ) + (1-yᵢ)ln(1-pᵢ)].
+    ```
+    Where `yᵢ` is `{0,1}` classification. (e.g., receive a gift or not.)
+
+* In Python:
+    ```python
+    import numpy as np
+    import math
+
+    # For two classes
+    def cross_entropy(Y, P):
+        assert len(Y) == len(P)
+        entropy = 0
+        for i in range(0, len(P)):
+            entropy -= Y[i] * math.log(P[i]) + (1 - Y[i]) * math.log(1 - P[i])
+        return entropy
+    ```
+
 # 22 - Multi-Class Cross-Entropy
+
+* For multiple classes, the formula is:
+    ```
+    Cross-Entropy = -∑∑ yᵢⱼ ln(pᵢⱼ)
+    ```
+  Where `yᵢⱼ` is `{0,1}` classification. (e.g., is it a walrus?)
+
+![Sample multi-class cross-entropy](images/cross-entropy-2.png)
 
 # 23 - Logistic Regression
 
