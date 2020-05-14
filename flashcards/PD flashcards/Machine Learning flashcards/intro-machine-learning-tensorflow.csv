@@ -61,7 +61,7 @@
 "false positive rate","FP / (TN + FP)"
 "Receiver Operator Characteristic (ROC) curve","Graph all points using the true positive rate and false negative rates as (x,y) coordinates, respectively. Closer the area under curve is to one, better the model is."
 "R2 score","1 - mean_squared_error(regression_model) / mean_squared_error(simplest_regression_model). A good model should yield value closer to 1."
-logarithmic transformation","Significantly reduces range of data to prevent negative impact on performance of models."
+"logarithmic transformation","Significantly reduces range of data to prevent negative impact on performance of models."
 "categorical variables","non-numeric features"
 "naive predictor","Purpose is to establish baseline performance of a model without intelligence."
 "two steps in perceptron","1) linear function (ΣWᵢXᵢ + b, where X are inputs and W are input weights), 2) step function (WX + b > 0?)"
