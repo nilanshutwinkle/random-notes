@@ -67,3 +67,6 @@
 "two steps in perceptron","1) linear function (ΣWᵢXᵢ + b, where X are inputs and W are input weights), 2) step function (WX + b > 0?)"
 "perceptron algorithm","1) assign random weights (W) and intercept (b) to line, and classify every point; 2) for every misclassified point, adjust weights and intercept, applying learning rate; 3) repeat step 2"
 "sigmoid function","σ(x) = 1/(1+e⁻ˣ)"
+"softmax function","P(classᵢ) = e^Zᵢ / ∑ e^Zⱼ for all scores in Z. Functions as a multi-class sigmoid function."
+"maximum likelihood","select the model that gives existing labels the highest probability"
+"cross-entropy","-∑∑ yᵢⱼ ln(pᵢⱼ). how likely are the events, based on specified probabilities? (low values better than high values.)"
