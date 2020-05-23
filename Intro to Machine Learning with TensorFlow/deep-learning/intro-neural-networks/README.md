@@ -232,17 +232,17 @@ def update_weights(x, y, weights, bias, learnrate):
     return (weights, bias)
 ```
 
-The data points:
+* The data points:
 
-![](images/gradient-descent-2.png)
+    ![](images/gradient-descent-2.png)
 
-100 epochs, with each classifier line graphed:
+* 100 epochs, with each classifier line graphed:
 
-![](images/gradient-descent-3.png)
+    ![](images/gradient-descent-3.png)
 
-Error function across 100 epochs:
+* Error function across 100 epochs:
 
-![](images/gradient-descent-4.png)
+    ![](images/gradient-descent-4.png)
 
 # 28 - Perceptron vs Gradient Descent
 
@@ -255,9 +255,9 @@ Error function across 100 epochs:
 
 # 31 - Non-linear Models
 
-Intuition: the non-linear model produces a classifier made up of points equally likely to be blue or red:
+* Intuition: the non-linear model produces a classifier made up of points equally likely to be blue or red:
 
-![](images/non-linear-1.png)
+    ![](images/non-linear-1.png)
 
 # 32 - Neural Network Architecture
 
@@ -266,81 +266,108 @@ Intuition: the non-linear model produces a classifier made up of points equally 
 * Can combine linear perceptrons to get more complex (non-linear) perceptrons
     - Basically, get probability for each point for all perceptrons, add them together, and take sigmoid to get the new probability:
 
-![](images/combining-models-1.png)
+    ![](images/combining-models-1.png)
 
-Note you can even add weights to these perceptrons, as well as add a bias:
+* Note you can even add weights to these perceptrons, as well as add a bias:
 
-![](images/combining-models-2.png)
+    ![](images/combining-models-2.png)
 
-:star: Complex neural networks are created out of linear combinations of existing neural networks.
+* :star: Complex neural networks are created out of linear combinations of existing neural networks.
+    - I.e., non-linear models can be created using linear combinations of linear models.
 
-I.e., non-linear models can be created using linear combinations of linear models.
+* Here's the above example as a (non-linear) neural network:
 
-Here's the above example as a (non-linear) neural network:
+    ![](images/combining-models-3.png)
 
-![](images/combining-models-3.png)
+* The above can be represented more simply as:
 
-This can be represented more simply as:
+    ![](images/combining-models-4.png)
 
-![](images/combining-models-4.png)
+* Alternatively, the above represent the bias as a separate node:
 
-Alternatively, can represent the bias as a separate node:
+    ![](images/combining-models-5.png)
 
-![](images/combining-models-5.png)
+* E.g., let's define the combination of two new perceptrons as w₁*0.4 + w₂*0.6 + b. Given w₁ = 3, w₂ = 5, b = -2.2, what's the probability of this point?
 
-E.g., let's define the combination of two new perceptrons as w₁*0.4 + w₂*0.6 + b. Given w₁ = 3, w₂ = 5, b = -2.2, what's the probability of this point?
+    ```
+    ŷ = 3 * .4 + 5 * 0.6 - 2.2
+      = 2
 
-```
-ŷ = 3 * .4 + 5 * 0.6 - 2.2
-  = 2
-p(y) = 1/(1+e^-ŷ)
-     = 1/(1+e^-2)
-     = 0.880797078
-```
+    p(y) = 1/(1+e^-ŷ)
+         = 1/(1+e^-2)
+         = 0.880797078
+    ```
 
-Neural networks have three layers: **input layer**, **hidden layer**, **output layer**.
+* **Three layers of a neural network**: input layer, hidden layer, output layer:
 
-![](images/layers-1.png)
+    ![](images/layers-1.png)
 
-Note if you add more inputs, the dimensionality increases. In general, if you have n input nodes, your output will be n dimensions:
+* Note if you add more inputs, the dimensionality increases. In general, if you have n input nodes, your output will be n dimensions:
 
-![](images/layers-2.png)
+    ![](images/layers-2.png)
 
-If you have multiple output nodes, you have a **multi-class neural network**:
+* If you have multiple output nodes, you have a **multi-class neural network**:
 
-![](images/layers-3.png)
+    ![](images/layers-3.png)
 
-**deep neural network**: neural network with more than one hidden layer
+* **deep neural network**: neural network with more than one hidden layer:
 
-![](images/deep-neural-network-1.png)
+    ![](images/deep-neural-network-1.png)
 
-More layers give the model more degrees of freedom to capture complex patterns in the data:
+* More layers give the model more degrees of freedom to capture complex patterns in the data:
 
-![](images/deep-neural-network-2.png)
+    ![](images/deep-neural-network-2.png)
 
 # 33 - Feedforward
 
 * **feedforward**: process neural networks use to turn the inputs into output(s)
 
-* **feedforward formula**: ŷ = σ ⚬ W⁽²⁾ ⚬ σ ⚬ W⁽¹⁾x
+* **feedforward formula**: ŷ = σ W⁽²⁾ ⚬ σ W⁽¹⁾x
 
-Single hidden layer:
+* Feedforward with a single hidden layer:
 
-![](images/feedforward-1.png)
+    ![](images/feedforward-1.png)
 
-Multilayer:
+* Feedforward with a multilayer neural network:
 
-![](images/feedforward-2.png)
+    ![](images/feedforward-2.png)
 
-Error:
+* error function for (binary classifier) neural network:
 
-```
-E(W) = -1/m ∑ yᵢ ln(ŷ) + (1-yᵢ) ln(1-ŷ)
-```
+    ```
+    E(W) = -1/m ∑ yᵢ ln(ŷ) + (1-yᵢ) ln(1-ŷ)
+    ```
 
 # 34 - Backpropogation
 
+* The backpropogation process looks like this:
+    1. Doing a feedforward operation.
+    1. Comparing the output of the model with the desired output.
+    1. Calculating the error.
+    1. Running the feedforward operation backwards (backpropagation) to spread the error to each of the weights.
+    1. Use this to update the weights, and get a better model.
+    1. Continue this until we have a model that is good.
+
+* **gradient of the error function**: ▽E = (∂E/∂w₁, ..., ∂E/∂wᵢ, ∂E/∂b)
+
+    ![](images/backpropagation-1.png)
+
+* Since we're using function composition, the chain rule allows us to multiply partial derivates together:
+    - **chain rule**: if B = g ⚬ f(x) and A = f(x), ∂B/∂x = ∂B/∂A * ∂A/∂x
+
+    ![](images/backpropagation-2.png)
+
+* To execute a neural network:
+    1. Perform feedback:
+        ![](images/backpropagation-3.png)
+    2. Determine how to backpropagate, using chain rule:
+        ![](images/backpropagation-4.png)
+    3. The partial derivative of each node (in this example, `h`) is:
+        ![](images/backpropagation-5.png)
+
 # 35 - Pre-lab: Analyzing Student Data
+
+* Going to analyze student admissions at UCLA
 
 # 36 - Notebook: Analyzing Student Data
 
