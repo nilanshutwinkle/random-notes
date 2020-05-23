@@ -5,9 +5,9 @@
 ## 2 - Introduction
 
 * Deep learning use cases
-1. AlphaGo and other game playing
-1. Expert systems, sometimes outperforming exports (e.g., doctors)
-1. Self-driving cars
+  1. AlphaGo and other game playing
+  1. Expert systems, sometimes outperforming exports (e.g., doctors)
+  1. Self-driving cars
 
 ## Lessons 3 - 7, 9 - 11
 See: [Perceptron notes](../supervised-learning/perceptron)
@@ -59,7 +59,7 @@ We want to choose everything where 4x₁ + 5x₂ - 9 = 0, given σ(x=0) = 1/(1+e
 
 # 16 - Softmax
 
-* **Softmax function**: P(classᵢ) = e^Zᵢ / ∑ e^Zⱼ for all scores in Z. Functions as a multiclass sigmoid.
+* **Softmax function**: P(classᵢ) = e^Zᵢ / ∑ e^Zⱼ for all scores in Z. Functions as a multi-class sigmoid.
 
 ```python
 import numpy as np
@@ -138,15 +138,116 @@ To get these probabilities, use `y = σ(Wx + b)`. Note that if the probability i
 
 # 23 - Logistic Regression
 
+* The logistic regression is the building block for deep learning
+
+* Note:
+  ```
+  ŷ = P(yᵢ) = σ(Wxᵢ + b)
+  ```
+
+* **binary logistic regression error function**:
+  ```
+  error = -1/m ∑ (1-yᵢ) ln(1-ŷ) + yᵢ ln(ŷ)
+        = -1/m ∑ (1-yᵢ) ln(1-σ(Wxᵢ + b)) + yᵢ ln(σ(Wxᵢ + b))
+  ```
+
+* **multi-class logistic regression error function**:
+  ```
+  error = -1/m ∑∑ yᵢⱼ ln(ŷ)
+        = -1/m ∑∑ yᵢⱼ ln(σ(Wxᵢ + b))
+  ```
+
+* Our goal is to minimize the error.
+
 # 24 - Gradient Descent
+
+* Gradient descent can be thought of a graph, where the error is one axis, and other axes are the weights
+    - We'll take steps in directions that reduce our error, as determined by partial derivates, `∂E/∂w₁`, `∂E/∂w₂`, ...etc, `∂E/∂b`
+    - The size of these steps will be determined by the learning rate, `α`
+
+![](images/gradient-descent-1.png)
+
+* Interestingly, the **gradient of the error function** is:
+  ```
+  ∇E = -(y - ŷ)x₁, ..., -(y-ŷ)xᵢ, -(y-ŷ)
+     = -(y - ŷ)(x₁, ..., xᵢ, 1)
+  ```
+
+* **gradient descent step**:
+  ```
+  wᵢ′ <- wᵢ - α[-(y-ŷ)xᵢ]
+      <- wᵢ + α(y-ŷ)xᵢ
+
+  b′ <- b + α(y-ŷ)
+  ```
 
 # 25 - Logistic Regression Algorithm
 
+* **gradient descent algorithm**:
+  1. assign random weights w₁, ..., wᵢ, b
+  2. for every point (x₁, ..., xᵢ):
+       for i=1...n
+           wᵢ′ <- wᵢ + α(y-ŷ)xᵢ
+           b′ <- b + α(y-ŷ)
+  3. repeat step 2 until error small, or fixed number of times
+
+* The gradient descent algorithm is basically the perceptron algorithm!
+  - The only difference is that gradient descent supports continuous values from 0 to 1, whereas perceptron algorithm supports discret values 0 or 1
+
 # 26 - Pre-Lab: Gradient Descent
+
+* Going to implement gradient descent. Note:
+    - `sigmoid`: The sigmoid activation function.
+    - `output_formula`: The formula for the prediction.
+    - `error_formula`: The formula for the error at a point.
+    - `update_weights`: The function that updates the parameters with one gradient descent step.
 
 # 27 - Notebook: Gradient Descent
 
+* **epoch**: iteration of gradient descent
+
+```python
+# Activation (sigmoid) function
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+assert sigmoid(0) == .5
+assert sigmoid(-100) > 0 and sigmoid(-100) < .5
+assert sigmoid(1) > .5 and sigmoid(1) < 1
+
+# Output (prediction) formula
+def output_formula(features, weights, bias):
+    return sigmoid(np.dot(features, weights) + bias)
+
+# Error (log-loss) formula
+def error_formula(y, output):
+    return - y*np.log(output) - (1 - y) * np.log(1-output)
+
+# Gradient descent step
+def update_weights(x, y, weights, bias, learnrate):
+    assert len(x) == len(weights)
+    output = output_formula(x, weights, bias)
+    weights = weights + learnrate * (y - output) * x
+    bias = bias + learnrate * (y - output)
+    return (weights, bias)
+```
+
+The data points:
+
+![](images/gradient-descent-2.png)
+
+100 epochs, with each classifier line graphed:
+
+![](images/gradient-descent-3.png)
+
+Error function across 100 epochs:
+
+![](images/gradient-descent-4.png)
+
 # 28 - Perceptron vs Gradient Descent
+
+* Note that perceptrons points only update line if they are misclassified; however, with gradient descent, points always update line. Why?
+    - They are telling the line to go farther away!
 
 # 29 - Continuous Perceptrons
 
@@ -154,9 +255,88 @@ To get these probabilities, use `y = σ(Wx + b)`. Note that if the probability i
 
 # 31 - Non-linear Models
 
+Intuition: the non-linear model produces a classifier made up of points equally likely to be blue or red:
+
+![](images/non-linear-1.png)
+
 # 32 - Neural Network Architecture
 
+* **multi-layer perceptrons**: another name for "neural networks"
+
+* Can combine linear perceptrons to get more complex (non-linear) perceptrons
+    - Basically, get probability for each point for all perceptrons, add them together, and take sigmoid to get the new probability:
+
+![](images/combining-models-1.png)
+
+Note you can even add weights to these perceptrons, as well as add a bias:
+
+![](images/combining-models-2.png)
+
+:star: Complex neural networks are created out of linear combinations of existing neural networks.
+
+I.e., non-linear models can be created using linear combinations of linear models.
+
+Here's the above example as a (non-linear) neural network:
+
+![](images/combining-models-3.png)
+
+This can be represented more simply as:
+
+![](images/combining-models-4.png)
+
+Alternatively, can represent the bias as a separate node:
+
+![](images/combining-models-5.png)
+
+E.g., let's define the combination of two new perceptrons as w₁*0.4 + w₂*0.6 + b. Given w₁ = 3, w₂ = 5, b = -2.2, what's the probability of this point?
+
+```
+ŷ = 3 * .4 + 5 * 0.6 - 2.2
+  = 2
+p(y) = 1/(1+e^-ŷ)
+     = 1/(1+e^-2)
+     = 0.880797078
+```
+
+Neural networks have three layers: **input layer**, **hidden layer**, **output layer**.
+
+![](images/layers-1.png)
+
+Note if you add more inputs, the dimensionality increases. In general, if you have n input nodes, your output will be n dimensions:
+
+![](images/layers-2.png)
+
+If you have multiple output nodes, you have a **multi-class neural network**:
+
+![](images/layers-3.png)
+
+**deep neural network**: neural network with more than one hidden layer
+
+![](images/deep-neural-network-1.png)
+
+More layers give the model more degrees of freedom to capture complex patterns in the data:
+
+![](images/deep-neural-network-2.png)
+
 # 33 - Feedforward
+
+* **feedforward**: process neural networks use to turn the inputs into output(s)
+
+* **feedforward formula**: ŷ = σ ⚬ W⁽²⁾ ⚬ σ ⚬ W⁽¹⁾x
+
+Single hidden layer:
+
+![](images/feedforward-1.png)
+
+Multilayer:
+
+![](images/feedforward-2.png)
+
+Error:
+
+```
+E(W) = -1/m ∑ yᵢ ln(ŷ) + (1-yᵢ) ln(1-ŷ)
+```
 
 # 34 - Backpropogation
 
