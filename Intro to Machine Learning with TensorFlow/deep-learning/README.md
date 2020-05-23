@@ -2,7 +2,7 @@
 
 ## Contents
 
-1. Introduction to Neural Networks
+1. [Introduction to Neural Networks](intro-neural-networks/)
 1. Implementing Gradient Descent
 1. Training Neural Networks
 1. Deep Learning with TensorFlow
