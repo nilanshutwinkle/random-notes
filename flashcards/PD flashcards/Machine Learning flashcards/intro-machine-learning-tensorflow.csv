@@ -79,4 +79,4 @@
 "deep neural network","neural network with more than one hidden layer"
 "feedforward","process neural networks use to turn the inputs into output(s)"
 "feedforward formula when 1 hidden layer","ŷ = σ W⁽²⁾ ⚬ σ W⁽¹⁾x"
-"chain rule","if B = g ⚬ f(x) and A = f(x), ∂B/∂x = ∂B/∂A * ∂A/∂x"
+"chain rule","∂/∂x p ⚬ q(x) = ∂p/∂q * ∂q/∂x"
