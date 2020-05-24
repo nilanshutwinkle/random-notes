@@ -353,7 +353,7 @@ def update_weights(x, y, weights, bias, learnrate):
     ![](images/backpropagation-1.png)
 
 * Since we're using function composition, the chain rule allows us to multiply partial derivates together:
-    - **chain rule**: if B = g ⚬ f(x) and A = f(x), ∂B/∂x = ∂B/∂A * ∂A/∂x
+    - **chain rule**: ∂/∂x p ⚬ q(x) = ∂p/∂q * ∂q/∂x
 
     ![](images/backpropagation-2.png)
 
