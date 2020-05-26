@@ -42,7 +42,7 @@
 
 ## 4 - K-Fold Cross Validation
 
-* **K-fold cross validation**: break data into `k` buckets (potentially randomizing), and train model `k` times, using one bucket for testing set and remaining buckets as training set; then average results for final model.
+* **K-fold cross validation**: break data into `k` buckets (potentially randomizing), and train model `k` times, using one bucket for testing set and remaining buckets as training set; then average the scores across all the trained models
 
 ```python
 from sklearn.model_select import KFold
@@ -77,14 +77,14 @@ for training_indices, test_indices in kf:
 
 * **Hyperparameters**:
 
-* Examples of hyperpaarmeters:
+* Examples of hyperparameters:
     - Logistic regression: the degree of polynomial (1, 2, 3...); not the parameters themselves, which are just "parameters"
     - Decision tree: the depth
     - SVM: the kernel, `C`
 
 * When exploring numeric hyperparameters (e.g., `C` for SVM), consider incrementing by orders of magnitude to reduce search space
 
-* **Grid Search**:
+* **Grid Search**: hyperparameter turning by exhaustively training and testing a model using every hyperparameter combination
 
 * Here's an example of a grid search across two parameters for an SVM model:
 
