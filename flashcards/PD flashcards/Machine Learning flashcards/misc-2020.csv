@@ -1,0 +1,4 @@
+"Andrej Karpathy","Taught famous Stanford class on neural networks; director of AI at Testla"
+"leaky abstraction","When an abstraction fails to hide some of the underlying implementation details"
+"Conway's Law","any organization that designs a system will produce a design whose structure is a copy of the organization's communication structure."
+"ReLU","max(0,x). Good default choice of activation fn for neural networks because overcomes vanishing gradient problem."
