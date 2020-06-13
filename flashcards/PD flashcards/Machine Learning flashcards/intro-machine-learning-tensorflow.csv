@@ -28,7 +28,7 @@
 "norm of a vector","different ways to calculate the the length (or magnitudes) of vectors"
 "L1 norm of a vector","Sum of the absolute values of the vector: l₁(v) = ||v||₁ = |a₁| + |a₂| + |a₃|"
 "L2 norm of a vector","Square root of the squared vector values: l₂(v) = ||v||₂ = sqrt(a₁² + a₂² + a₃²)"
-"tensor","In linear algebra, an array with more than two dimensions"
+"tensor","In linear algebra, an n-dimensional array. This is a generalization of vectors and matrices."
 "kernel trick","lift data points to a higher dimension in order to make them linearly separable, then project that back to original dimensionality"
 "linear kernel","Kernel that supports linear functions of the form `k(x,y) = xᵀy + c` (which includes {`x`, `y`})"
 "polynomial kernel","Kernel that supports polynomial functions of the form `k(x,y) = (∝xᵀy + c)ᵈ` (a 2nd degree polynomial includes {`x`, `y`, `x²`, `y²`, `xy`})"
