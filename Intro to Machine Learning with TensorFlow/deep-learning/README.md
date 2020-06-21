@@ -8,6 +8,6 @@
 1. [Deep Learning with TensorFlow](tensorflow/)
 
 ## Projects
-1. Image Classifier Problem
+1. [Image Classifier Problem](image-classifier-project/)
 1. Industry Research
 1. Take 30 Min to Improve your LinkedIn
