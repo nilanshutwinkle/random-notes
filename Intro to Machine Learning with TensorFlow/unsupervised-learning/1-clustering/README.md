@@ -19,9 +19,22 @@
 
 ## 7. Changing K
 
+* In practice, changing K is a combination of art and science
+
 ## 8. Elbow Method
 
+* **elbow method**: plotting the number of clusters K (x-axis) against the avg distance to cluster center (y-axis), and looking for the point where the decrease in distance becomes small
+    ![](images/elbow-method-1.png)
+
 ## 9. K-Means in Scikit Learn
+
+```python
+import sklearn.cluster.KMeans
+
+kmeans_4 = KMeans(4)
+model_4 = kmeans_4.fit(data) # alternatively, combine fit and predict w/ fit_predict
+labels_4 = model_4.predict(data)
+```
 
 ## 10. Your Turn
 
