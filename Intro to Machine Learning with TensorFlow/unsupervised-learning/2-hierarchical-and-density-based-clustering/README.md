@@ -24,7 +24,7 @@
 
 ![](images/single-link-vs-k-means.png)
 
-* **dendrograms**: tree diagram, espeically one showing taxonomic relationships
+* **dendrograms**: tree diagram, especially one showing taxonomic relationships
 
 * Even when single-link hierarchical clusters don't work, its dendrograms yield useful insights:
   ![](images/sample-dendrograms.png)

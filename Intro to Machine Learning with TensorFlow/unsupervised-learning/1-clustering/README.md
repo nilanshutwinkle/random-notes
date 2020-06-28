@@ -43,7 +43,7 @@ labels_4 = model_4.predict(data)
   h.simulate_data?
   ```
 
-* Making a **scree graph** (with 10 lines of code):
+* Making a **scree plot** (with 10 lines of code):
   ```python
   def score_k(n):
     k = KMeans(n)
