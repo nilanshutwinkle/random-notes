@@ -13,7 +13,7 @@
 
 ## 5. K-Means
 
-* group data points into k different groups
+* **k-means clustering**: clustering approach that groups data points into specified number different groups, utilizing randomly placed centroids
 
 ## 6. Identifying Clusters
 
@@ -38,9 +38,35 @@ labels_4 = model_4.predict(data)
 
 ## 10. Your Turn
 
+* To view docstring in notebook:
+  ```python
+  h.simulate_data?
+  ```
+
+* Making a **scree graph** (with 10 lines of code):
+  ```python
+  def score_k(n):
+    k = KMeans(n)
+    m = k.fit(data)
+    return -m.score(data)
+
+  centers = range(1,11)
+  scores = list(map(score_k, centers))
+
+  plt.plot(centers, scores, linestyle='--', marker='o', color='b');
+  plt.xlabel('K');
+  plt.ylabel('SSE');
+  plt.title('SSE vs. K');
+  ```
+
 ## 11. Solution
 
-## 12. How Does K-Means Work?
+## 12. Video: How Does K-Means Work?
+
+1. Place k centroids randomly
+1. Repeat:
+  1. Assign points to centroids by how close
+  1. Move centroid to center of group
 
 ## 13. How Does K-Means Work?
 
@@ -48,16 +74,46 @@ labels_4 = model_4.predict(data)
 
 ## 15. Is That the Optimal Solution?
 
+* The random initial starting points can impact performance; run many models to avoid local maxima
+
 ## 16. Feature Scaling
 
-## 17. Feature Scaling Solution
+* Because uses distance, essential to use feature scaling; features with larger distances will otherwise dominate
 
-## 18. Feature Scaling Example
+## 17. Feature Scaling Example
+
+## 18. Feature Scaling Solution
 
 ## 19. Feature Scaling
+
+* **sklearn.preprocessing.MinMaxScaler**: scaling data as percentage of maximum value.
+  ```python
+  import pandas as pd
+  from sklearn.preprocessing import MinMaxScaler
+
+  ndarray2 = MinMaxScaler().fit_transform(df1)
+  df2 = pd.DataFrame(ndarray2)
+  df2.columns = ['height', 'weight'] # re-add column names
+  ```
+
+* **sklearn.preprocessing.StandardScaler**: scaling data so it has mean 0 and variance 1.
+  ```python
+  import pandas as pd
+  from sklearn.preprocessing import StandardScaler
+
+  ndarray2 = StandardScaler().fit_transform(df1)
+  df2 = pd.DataFrame(ndarray2)
+  df2.columns = ['height', 'weight'] # re-add column names
+  ```
 
 ## 20. Solution
 
 ## 21. Outro
 
 ## 22. Recap
+
+* Remember these common pitfalls:
+  1. Random placement of centroids may lead to non-optimal solutions.
+    * Solution: run algorithm multiple times and select centroids with smallest average distance.
+  1. Different data scales result in different groupings.
+    * Solution: scale your features using Standardizing (mean 0, standard deviation of 1)
