@@ -29,11 +29,30 @@
 
 ## 7. Video: Dimensionality Reduction
 
+* **principal components**: type of latent feature using linear combinations (projection onto lower dimensional space) of original features in order to retain most information in original data
+
+* Dimensionality reduction looks a lot like regression, though they have very different aims:
+    ![](images/dimensionality-reduction-vs-regression-1.png)
+
 ## 8. Video: PCA Properties
+
+* 1. Each component captures the largest amount of variance in the data:
+    ![](images/pca-properties-1.png)
+
+* 2. Components must be orthogonal to each other
+    ![](images/pca-properties-2.png)
 
 ## 9. Quiz: How Does PCA Work?
 
 ## 10. Screencast: PCA
+
+```python
+def do_pca(n_components, data):
+    X = StandardScaler().fit_transform(data)
+    pca = PCA(n_components)
+    X_pca = pca.fit_transform(X)
+    return pca, X_pca
+```
 
 ## 11. Notebook: PCA - Your Turn
 
