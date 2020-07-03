@@ -60,7 +60,13 @@ def do_pca(n_components, data):
 
 ## 13. Screencast: Interpret PCA Results
 
+* `some_obj.<tab>` to see methods in object
+
 ## 14. Notebook: Interpretation
+
+* **eigenvalue**: mathematical term for the amount of variance explained by each component in PCA.
+
+* **eigenvectors**: mathematical term for the components (vector of weights) in PCA.
 
 ## 15. Screencast: Interpretation Solution
 
@@ -71,6 +77,25 @@ def do_pca(n_components, data):
 ## 18. Video: Recap
 
 ## 19. Notebook: Mini-Project
+
+* To find number of components with minimum variance:
+    ```python
+    def do_pca(n_components, data):
+        X = StandardScaler().fit_transform(data)
+        pca = PCA(n_components)
+        return pca, pca.fit_transform(X)
+
+    def find_n_components_providing_variance(data, min_variance):
+        max_n = len(data)
+        for n in range(1, max_n):
+            pca, _ = do_pca(n, data)
+            variance = sum(pca.explained_variance_ratio_)
+            if variance >= min_variance:
+                return n, variance
+        raise Exception(f"Couldn't find enough components with {min_variance} variance")
+
+    n, variance = find_n_components_providing_variance(df, .85)
+    ```
 
 ## 20. Mini-Project Solution
 
