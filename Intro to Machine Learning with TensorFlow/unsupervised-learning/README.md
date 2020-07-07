@@ -10,4 +10,4 @@
 
 ## Projects
 
-* [Identify Customer Segments](6-project/Identify_Customer_Segments.html)
+* [Identify Customer Segments](6-project/Identify_Customer_Segments.ipynb)
