@@ -10,4 +10,4 @@
 
 ## Projects
 
-* Identify Customer Segments
+* [Identify Customer Segments](6-project/Identify_Customer_Segments.html)
