@@ -18,7 +18,7 @@
 "kubectl logs my-pod -f","Kubectl command to stream the logs for pod my-pod"
 "kubectl exec -it my-pod -- bash","Kubectl command to run bash in pod my-pod"
 "kubectl cp my-pod:/app/foo.txt ./foo.txt","Kubectl command to copy /app/foo.txt from pod my-pod to ./foo.txt"
-"kubectl port-forward my-pod 8080:80","Kubectl command to map the port 8080 inside the pod to external-facing port 80"
+"kubectl port-forward my-pod 8080:80","Kubectl command to map the port 8080 inside my-pod to external-facing port 80"
 "trust policies (IAM)","Describe which principals or AWS services are allow to assume an IAM role."
 "permission policies (IAM)","When attached to an IAM role, this grants access to specific actions on specific resources or services."
 "roles (IAM)","An IAM entity assumed by trusted entities (person or application) that grants access to services or resources (as defined by associated policies)."
