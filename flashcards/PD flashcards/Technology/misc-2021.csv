@@ -1,0 +1,9 @@
+Amazon Prime Air,Amazon's drone service delivering up to 5lbs in 30min.
+ATDD,Acceptance Test Driven Design (acronym)
+WireMock,"Open Source service virtualization tool that can run within application or as standalone process. Provides HTTP stubbing, matchable on URL, header and body content patterns."
+WSJF,Weighted Shortest Job First (acronym)
+JPA,Java Persistance API (acronym). Specification of persisting data to/from object to db.
+Spring Boot,Opinionated framework for creating stand-along Spring applications. Generates starter project.
+Spring Data,"Purpose of this Spring project is to unify & ease access for Java applications to different persistance stores. Provides templating, object/data store mapping."
+Agilecraft,"The old name of the project that was renamed to ""JIRA Align""."
+exponential decay,"Mathematically, when quantity is subject to decrease at rate proportional to current value, based on some rate. Can be used to model tech team productivity as accumulates support, ultimately declining to zero."
