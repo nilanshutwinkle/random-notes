@@ -7,3 +7,17 @@ Spring Boot,Opinionated framework for creating stand-along Spring applications. 
 Spring Data,"Purpose of this Spring project is to unify & ease access for Java applications to different persistance stores. Provides templating, object/data store mapping."
 Agilecraft,"The old name of the project that was renamed to ""JIRA Align""."
 exponential decay,"Mathematically, when quantity is subject to decrease at rate proportional to current value, based on some rate. Can be used to model tech team productivity as accumulates support, ultimately declining to zero."
+WebSocket,"full-duplex communications protocol standardized by W3C designed to be compatible with HTTP, enabling communication between web browser and web server."
+MSK,Managed Streaming for Kafka (acronym). Amazon's managed Kafka service.
+Gradle,Multilanguage build tool using Groovy-based DSL to define DAGs of task dependencies. Adopted by Google for Android.
+Maven: build lifecycle,"Made up of phases, this is the Maven process for building & distributing particular artifact."
+Maven: phase,"Step in Maven lifecycle, made up of goals."
+"default, clean, site",Maven's three default build-in lifecycles.
+Maven: verify,Phase of Maven's default lifecycle used to enforce predefined checkstyle rules.
+Maven: plugins,Artifacts that provide 1+ goals to Maven.
+Maven: architype,Template used to produce working Maven project.
+Surefire plugin,"Plugin used by Maven during test phase to find and run tests, generating reports in target/ directory."
+POM,Project Object Model (acronym). Used for specifying Maven project.
+AsciiDoc,"Format used for writing different types of docs (books, web pages, man pages, etc), often with .adoc file extension."
+AsciiDoctor,Open Source toolchain for converting AsciiDoc to various formats.
+AsciiDoctorJ,JVM bindings for AsciiDoctor.
