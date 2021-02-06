@@ -21,3 +21,5 @@ POM,Project Object Model (acronym). Used for specifying Maven project.
 AsciiDoc,"Format used for writing different types of docs (books, web pages, man pages, etc), often with .adoc file extension."
 AsciiDoctor,Open Source toolchain for converting AsciiDoc to various formats.
 AsciiDoctorJ,JVM bindings for AsciiDoctor.
+JMeter,Apache Java-based load testing tool (with focus on web applications)
+Fargate,AWS managed service that automatically provisions ECS or EKS resources.
