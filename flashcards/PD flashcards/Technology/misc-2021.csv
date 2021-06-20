@@ -24,3 +24,14 @@ AsciiDoctorJ,JVM bindings for AsciiDoctor.
 JMeter,Apache Java-based load testing tool (with focus on web applications)
 Fargate,AWS managed service that automatically provisions ECS or EKS resources.
 Big Sur,Name for MacOS 11.4 release
+goal of ZooKeeper,providing a service that mitigates the problem of coordinating processes in distributed applications
+ZooKeeper: wait-free data objects,All requests to read data from servers is read locally from memory and returned immediately
+linearizable writes,Guaranteed order of all write operations across nodes or threads.
+Zab,Leader-based atomic broadcast protocol used by ZooKeeper for all writes.
+ZooKeeper: znode,An in-memory data node in the ZooKeeper server.
+ZooKeeper: slow read,"In ZooKeeper, pattern where client requests sync followed by read to ensure all outstanding writes are completed before reading data."
+herd effect,"when many clients are waiting to acquire a resource (e.g., a lock), even when only one client can acquire the resource. wasteful."
+ZooKeeper: leader,ZooKeeper server to which all write requests are forwarded. This server atomically broadcasts writes to all servers in cluster.
+ZooKeeper: follower,"ZooKeeper server that can locally handle all read requests from memory, but forwards write requests to leader. Each client connects to only one of these for all requests."
+ZooKeeper: fuzzy snapshots,"Because ZooKeeper does not lock state to take snapshots, the snapshots may be in inconsistent state. However, because data is idempotent and servers replay events since start of snapshot, not a problem."
+ZooKeeper: coordination kernel,"Instead of implementing coordination primatives, ZooKeeper provides functionality to allow services to compose their own primatives."
