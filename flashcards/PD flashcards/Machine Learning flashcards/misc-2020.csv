@@ -1,8 +1,0 @@
-"Andrej Karpathy","Taught famous Stanford class on neural networks; director of AI at Testla"
-"ReLU","max(0,x). Good default choice of activation fn for neural networks because overcomes vanishing gradient problem."
-"Kubeflow","Google-led k8s platform to streamline ML Systems, including various operators, pipelines, hyperparameter tuning, etc."
-"Chainer","Open Source deep learning framework written in pure Python on top of NumPy and CuPy in 2015. Currently in maintenance only."
-"MXNet","Apache Deep Learning framework"
-"PyTorch","Python-based open source lib developed by Facebook AI Research lab."
-"XGBoost","Multi-language gradient boosting framework."
-"Seldon Core","Open source platform for rapidly deploying ML models on k8s by converting them into REST/GRPC microservices."
