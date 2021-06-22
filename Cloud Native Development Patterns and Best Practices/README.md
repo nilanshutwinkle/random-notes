@@ -58,9 +58,43 @@
 
 ## Chapter 4: Boundary Patterns
 
+* Can use CDNs for all traffic (PUT, POST, GET, DELETE) to protect against DDOS attacks (106)
+* Caching within the API Gateway should be considered an anti-pattern. API Gateway should have single responsibility: providing perimeter around systems (107)
+* Some quasi-dynamic data (e.g., putting to blob storage) can bypass API directly, and route through CDN instead. Benefits: CDN invalidation, reduced load on API Gateway (107)
+* **AWS CloudFront**: AWS managed CDN service
+* Common to run API gateway behind custom CDN, to get full power (e.g., caching)
+* API gateway usually either pointing to 1) lambda, or 2) load balancer pointing to ECS or another container service (108)
+* Synchronous API are great place to employ **Database-First Event Sourcing** (109)
+* Keep complexity low in synchronous boundary components (110)
+* Materialized views are primary facilitator of global scalability (114)
+* Retrieving data from a database always has final word on performance and scalability (114)
+* **Offline-First Database**: pattern where persist events client-side in local storage and publish to cloud whenever connected, which is stored as materialized view
+* **AWS Cognito**: AWS managed SSO, including SDK with offline sync capabilities (123-4)
+* Backend for Frontend helps ensure a fullstack team can own its frontend and corresponding backend (129)
+* Micro-frontend approaches enable integrate multiple independent components with separate BFFs into single experience
+* Achieving balance of BFF components is iterative process (130)
+* **Micro Frontend**: architectural style where independently deliverable front end applications are composed into greater whole
+* ThoughtWoprks **Technology Radar**
+* **Postel's Law**: aka, The Robustness Principle. Be conservative in what you send, liberal in what you accept. (132)
+* Want to avoid shared components, and instead turn database inside-out (132)
+* **SendGrid**: Popular API-driven managed email service
+* **Event-First Event Sourcing**: variant of Event Sourcing where event is first published to event stream and subsequently stored to database (140)
+* **HighlandJS**: popular streaming JS library
+
 ## Chapter 5: Control Patterns
 
+* **Event Collaboration**: pattern where independent components consume relevant events & publish events in uncoordinated manner. Suffers from event type coupling. (148)
+* **Event Orchestration**: pattern where leverage mediator component to orchestrate collaboration between components without event type coupling (152)
+* **event-type coupling**: happens when changing events requires updating consumers (152, 153)
+* **command messages**: events specifically intended to trigger a specific process, e.g., Event Orchestration (156)
+* **Saga**: pattern where use compensating transactions to undo changes in multi-step process. (162)
+* **BASE model**: alternative to ACID for distributed transactions. Basically available, soft state, eventually consistent. (163)
+* The industry has abandoned two-phase commit transactions because they don't scale (164)
+
 ## Chapter 6: Deployment
+
+* Should deploy on 1st day writing code, to get plumbing of deployment pipeline up and running
+* Preferable to use user permissions for feature toggling, instead of flags in code (since they pollute codebase), enabling functions like demos, A/B testing, beta access, and user preferences (196)
 
 ## Chapter 7: Testing
 
