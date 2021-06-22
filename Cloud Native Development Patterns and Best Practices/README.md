@@ -44,6 +44,18 @@
 
 ## Chapter 3: Foundation Patterns
 
+* Cloud native databases free us from concerns of databased connection pools, but introduce capacity throttling (62)
+* Disposable architecture frees us from worrying about vendor lock-in, enabling us to leverage cost-effective vendor-specific solutions (62)
+* Synchronous inter-component communication creates tight coupling (66)
+* **two-phase commit** (**2PC**): distributed transaction protocol made up of a vote phase followed by commit phase.
+* **change data capture** (**CDC**): database design pattern where trigger some action whenever data changes
+* **Command Sourcing** records inputs to commands, whereas **Event Sourcing** records the outputs
+* Data lake is the system of record for all row events, and is used to replay events to repair components, populate new components, and support data science activities (81)
+* **Stream Circuit breaker**: send event with unrecoverable error as fault event (along with metadata, such as impacted stream) so event can be monitored and retried (87)
+* **Circuit breaker**: pattern where wrap remote call, and monitor failures, and once critical threshold reacher return errors without invoking call.
+* Michael Nygard's **Release It**
+* Backpressure is natural product of functional reactive designs (91)
+
 ## Chapter 4: Boundary Patterns
 
 ## Chapter 5: Control Patterns
