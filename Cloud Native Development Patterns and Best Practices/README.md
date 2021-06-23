@@ -98,6 +98,26 @@
 
 ## Chapter 7: Testing
 
+* Writing code is a developer's job, and writing tests is writing code. (211)
+* If engineers define their test cases, they will likely just confirm the code they wrote. (211)
+* Test system will be larger than the system being tested. (211)
+* **Sinon**: JavaScript test double library. (213)
+* Cloud-native systems share little code across components (if any), so less reliance on frameworks (e.g., dependency injection) (214)
+* **component testing**: a level up from unit testing, verifies that a component produces desired behavior while still isolating from neighboring components. (216)
+* Because of high cost of integration and end-to-end tests, traditionally batch up changes to deploy -- the opposite desired outcome for mature software delivery (both in terms of delays and risks given volume of changes) (217)
+* **VCR libraries**: integration testing libraries that provide a recording mode to fetch and cache remote responses, and playback mode for testing via cache (220-1)
+* **contract testing**: asserting that response or event matches expected payload, often using consumer-specified tests and assertions. (221-3)
+* Can combine contract testing & integration tests with VCR libraries to overcome VCR's main weakness: producer changes (223)
+* **transitive testing**: coordinating series of integration & contract tests together across teams to create an e2e test out of isolated tests (224)
+* **Pact**: Popular consumer-first contract testing tool for HTTP and message-based integrations.
+* Automated testing doesn't ensure quality, and internal manual, exploratory testing before turning on a feature is a good idea. (226)
+* **Supertest library**: JavaScript library providing HTTP assertions via a fluent API, leveraging Superagent library.
+* **Replay library**: JavaScript library for recording & replaying HTTP responses
+* **Mocha**: Very popular JavaScript BDD testing framework, with strong async testing support.
+* Rolling your own contract testing using `supertest`, `replay`, `serverless-offline`, and `baton-request-replay` (228-9)
+* **baton-request-relay**: JavaScript library that reads Replay VCR recordings for use with contract testing.
+* **serverless-offline**: Serverless plugin to emulate AWS Lambdas & API gateway locally
+
 ## Chapter 8: Monitoring
 
 ## Chapter 9: Security
