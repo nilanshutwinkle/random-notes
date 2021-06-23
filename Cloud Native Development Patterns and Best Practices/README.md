@@ -120,6 +120,21 @@
 
 ## Chapter 8: Monitoring
 
+* Instead of trying to minimize mnean time between failures, aim to improve mean time to recovery (236)
+* Monitor on key performance indicators - symptoms, not causes. (237-8)
+    - E.g., Netflix monitors using **Starts Per Second** (**SPS**), the rate at which customers press the play button. (Use a double exponential smoothing algorithm to produce clear signal that can be monitored for anomalies.)
+* All other non-KPI data used to identify root cause, but not to alert. (238)
+* **TestOps**: Discipline of managing the operational aspects of testing within the SDL; including planning, management, control, and insights
+* Identifying key performance indicators of systems is objective of TestOps practice (238)
+* For companies without large international user bases, combine synthetic transaction monitoring with real-user monitoring to ensure predictable traffic (239)
+* **Real-user monitoring** (**RUM**): End user applications sample performance data in real-time & periodically submit this info for tracking purposes. (239)
+* **Synthetic transaction monitoring** (**STM**): generate a regular, consistent, and deterministic flow of traffic in production, generating signals that we monitor in our KPI, allowing us to continuously & predictably monitorhealth of system (240-1)
+* **telemetry**: transmitting observations & measurements to the monitoring system for processing (246)
+* **StatsD**: Popular open source telemetry agent developed by Etsy (246)
+* Alert fatigue is classic problem with monitoring. (248)
+* :star: Don't page on both symptoms & causes; paging on causes may be premature. Page on symptom decouples from implementation, which can change over time. (249)
+* Teams should create dashboards for each component in advance, including work metrics, resource metrics, all events, filters for tags (e.g., environment, region)
+
 ## Chapter 9: Security
 
 ## Chapter 10: Value Focused Migration
