@@ -137,4 +137,15 @@
 
 ## Chapter 9: Security
 
+* **WAF**: Web application firewall (acronym)
+* Federated identity management should provide login, and return JWT to front-end, which will store using Local Storage. The JWT is passed to API Gateway for all calls, and validated only there. (272-3)
+
 ## Chapter 10: Value Focused Migration
+
+* Migrations for monoliths were all-or-nothing, very painful, and difficult to plan and execute. (278-9)
+* Lift & shift is a poor migration strategy, as you forfeit all the value-add cloud services, and pay more.
+* Additionally, your monolith is probably stateful (e.g., sticky sessions) that are the antithesis of disposable infra, and scaling will be a problem, so you'll need to over-provision (which is cost ineffective) (280)
+* Avoid synchronous anti-corruption layer between legacy system & cloud native systems, b/c 1) couples performance, scalability, & availability to legacy system, and 2) high data transfer costs. (281)
+* Leverage an External Service Gateway as asynchronous anti-corruption layer between legacy system and cloud native system (282)
+* **Strangler Pattern**: pattern leveraging External Service Gateway to route traffic to legacy system & slowly replace it with cloud native systems. Relies on event interception & asset capture.
+* Leave legacy teams in place to support legacy systems, basically because it serves Conway's Law (288)
