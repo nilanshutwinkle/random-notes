@@ -162,3 +162,8 @@ ZooKeeper: coordination kernel,"Instead of implementing coordination primatives,
 "Kafka: ownership registry","Ephemeral znode in Zookeeper for storing Kafka data on a given consumer group, mapping consumers to partitions"
 "Kafka: offset registry","Persistent znode in Zookeeper for storing Kafka data on the offset for the last consumed message in the partition for each subscribed partition."
 "CRC","Cyclic redundancy check. (acronym) Error detection code used to detect accidental changes to data."
+"parameterized tests","Separate test implementation from data, mitigating test code duplication."
+"cyclomatic complexity","Calculating complexity of code by counting the decision points within a block of code. Any score about 10 is considered complex."
+"Gherkin","Given-When-Then language used for BDD frameworks."
+"Karate library","BDD-style OSS tool to test APIs."
+"database migrations","Tool-supported (e.g., Flyway) process of applying sequence of database changes consistently across all software environments."
