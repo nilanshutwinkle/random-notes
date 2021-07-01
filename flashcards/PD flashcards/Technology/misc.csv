@@ -167,3 +167,6 @@ ZooKeeper: coordination kernel,"Instead of implementing coordination primatives,
 "Gherkin","Given-When-Then language used for BDD frameworks."
 "Karate library","BDD-style OSS tool to test APIs."
 "database migrations","Tool-supported (e.g., Flyway) process of applying sequence of database changes consistently across all software environments."
+"userscripts","Program (usually written in JavaScript) for augmenting web pages to augment browsers."
+"Tampermonkey","Multi-browser plugin for running userscripts."
+"Amazon EventBridge","Amazon's declarative, serverless event bus."
