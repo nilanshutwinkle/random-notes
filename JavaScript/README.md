@@ -18,7 +18,6 @@ Topics to add:
 * Datetime string formatting, parsing strings
 * regex
 * reading, writing files
-* WebWorkers
 * testing
 * CommonJS modules
 * ES6 modules
