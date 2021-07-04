@@ -211,3 +211,34 @@ async function foo() {
 }
 
 foo(); // async function returns Promise
+
+// - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
+// REST & SPREAD OPERATOR (ES6)
+// - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
+function multiply(x, ...y) {            // <--- rest operators
+    return y.reduce((a, b) => a*b, x);
+}
+
+let tests = [ [[2], 2], [[2,3], 6], [[2,2,2,2,2],32] ];
+tests.forEach(([test, expected]) => {
+    let result = multiply(...test);     // <--- spread operator
+    //console.log(`${expected} != ${result}`);
+    console.assert(expected === result, `${expected} != ${result}`);
+});
+
+// - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
+// WEB WORKER
+// - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
+const { Worker } = require('worker_threads');
+
+var worker = new Worker('./pig-latin-chatbot.js');
+worker.on('message', msg => {
+  console.log(`Chatbot: ${msg}`);
+  if ('goodbye' === msg) {
+      worker.terminate();
+  }
+});
+worker.on('exit', (code) => console.log('(the chatbot left.)'))
+worker.postMessage('Hi there!');
+worker.postMessage('What are you up to?');
+worker.postMessage('quit');
