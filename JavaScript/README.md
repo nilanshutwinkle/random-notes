@@ -24,3 +24,5 @@ Topics to add:
 * Promise.resolve
 * Generators
 * Express
+* Object.entries, Object.values
+* Shared memory
