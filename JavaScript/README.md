@@ -10,3 +10,18 @@ $ nvm use v14.17.2  # or later
 $ npm install
 $ node index.js
 ```
+
+## Todos
+
+Topics to add:
+
+* Datetime string formatting, parsing strings
+* regex
+* reading, writing files
+* WebWorkers
+* testing
+* CommonJS modules
+* ES6 modules
+* Promise.resolve
+* Generators
+* Express
