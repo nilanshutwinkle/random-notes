@@ -227,18 +227,19 @@ tests.forEach(([test, expected]) => {
 });
 
 // - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
-// WEB WORKER
+// worker_threads (Node 10.5+)
 // - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
 const { Worker } = require('worker_threads');
 
 var worker = new Worker('./pig-latin-chatbot.js');
-worker.on('message', msg => {
-  console.log(`Chatbot: ${msg}`);
-  if ('goodbye' === msg) {
-      worker.terminate();
-  }
-});
-worker.on('exit', (code) => console.log('(the chatbot left.)'))
-worker.postMessage('Hi there!');
-worker.postMessage('What are you up to?');
-worker.postMessage('quit');
+
+function sendChat(msg) {
+    console.log(`You: ${msg}`);
+    worker.postMessage(msg);
+}
+
+worker.on('message', msg => console.log(`Chatbot: ${msg}`));
+worker.on('exit', (code) => console.log('(the chatbot left.)'));
+sendChat('Hi there!');
+sendChat('What are you up to?');
+sendChat('quit');

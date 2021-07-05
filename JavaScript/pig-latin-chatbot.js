@@ -1,9 +1,13 @@
+/*
+ * Hi there! If you tell me anything, I'll repeat it in Pig Latin.
+ *   If you want to stop, type: quit
+ */
 const { parentPort } = require('worker_threads');
 
 parentPort.on('message', function(msg) {
-    console.log(`You: ${msg}`);
     if (msg == 'quit') {
         parentPort.postMessage('goodbye');
+        process.exit();
     } else {
         const message = translate(msg);
         parentPort.postMessage(message);
