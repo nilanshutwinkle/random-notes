@@ -1,8 +1,13 @@
 # Korean Grammar in Use - Intermediate
 
+| Icon | Meaning |
+| ---- | ------- |
+| 🕑   | Unverified |
+| ✅   | Verified |
+
 ## 1 장: Expressing Conjecture and Supposition
 
-### 01 - UNVERIFIED
+### 01 🕑
 
 > 웨이밍 씨의 방이 깨끗해서 마크 씨의 방보다 더 커 보여요.
 
@@ -24,7 +29,7 @@ This book looks very hard.
 
 It looks like EunHye is in a good mood.
 
-### 02 - UNVERIFIED
+### 02 🕑
 
 > 집에 신문이 샇이는 걸 보니까 며칠 여행을 간 모양이에요.
 
@@ -38,7 +43,7 @@ Based on the fact that the sky is very cloudy, apparently it's going to snow.
 
 Based on the fact that there are many people in the theater, apparently the movie is good/interesting.
 
-### 03 - UNVERIFIED
+### 03 🕑
 
 > 배가 고플 텐데 이것 좀 드레요.
 
