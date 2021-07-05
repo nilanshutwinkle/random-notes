@@ -17,7 +17,7 @@ Topics to add:
 
 * Datetime string formatting, parsing strings
 * regex
-* reading, writing files
+* reading, writing files using `fs`
 * testing
 * CommonJS modules
 * ES6 modules
@@ -26,3 +26,4 @@ Topics to add:
 * Express
 * Object.entries, Object.values
 * Shared memory
+* `crypto`
