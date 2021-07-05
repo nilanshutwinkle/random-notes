@@ -1,19 +1,21 @@
 # Korean Grammar in Use - Intermediate
 
+These are the practice problems at the end of each section. Be sure to check whether my answers have been verified yet.
+
 | Icon | Meaning |
 | ---- | ------- |
 | 🕑   | Unverified |
-| ✅   | Verified |
+| ✅   | Verified by fluent speakers |
 
 ## 1 장: Expressing Conjecture and Supposition
 
-### 01 🕑
+### 01 ✅
 
 > 웨이밍 씨의 방이 깨끗해서 마크 씨의 방보다 더 커 보여요.
 
 Wae Ming's room is clean, so it looks bigger than Mark's room.
 
-> 까만색 운피스를 입으니까 더 날신해 보여요.
+> 까만색 원피스를 입으니까 더 날씬해 보여요.
 
 When you wear a black dress, you look thinner.
 
@@ -29,27 +31,27 @@ This book looks very hard.
 
 It looks like EunHye is in a good mood.
 
-### 02 🕑
+### 02 ✅
 
-> 집에 신문이 샇이는 걸 보니까 며칠 여행을 간 모양이에요.
+> 집에 신문이 쌓이는 걸 보니까 며칠 여행을 간 모양이에요.
 
 Based on the fact that the newspapers are piled outside (her) house, apparently (she) is traveling for a few days.
 
-> 하늘에 구름이 많이 끼는 걸 보니까 눈이 오겠는 모양이에요.
+> 하늘에 구름이 많이 낀 걸 보니까 눈이 올 모양이에요.
 
 Based on the fact that the sky is very cloudy, apparently it's going to snow.
 
-> 극장에 사람이 많네는 걸 보니까 영화가 재미있는 모양이에요.
+> 극장에 사람이 많은 걸 보니까 영화가 재미있는 모양이에요.
 
 Based on the fact that there are many people in the theater, apparently the movie is good/interesting.
 
-### 03 🕑
+### 03 ✅
 
-> 배가 고플 텐데 이것 좀 드레요.
+> 배가 고플 텐데 이것 좀 드세요.
 
 You must be hungry, so eat this.
 
-> 손님이 믾이 올 텐데 음식을 얼마나 준비해야 하지요?
+> 손님이 많이 올 텐데 음식을 얼마나 준비해야 하지요?
 
 A lot of visitors should come, so how much food do we need to prepare?
 
