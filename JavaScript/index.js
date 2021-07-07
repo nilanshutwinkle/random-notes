@@ -197,6 +197,13 @@ console.assert(x == 1, `Unexpected value: ${x}`);
 // - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
 // PROMISES (ES6)
 // - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
+
+(async () => {
+    const found = await Promise.resolve(6);
+    console.assert(6 === found, `Unexpected value: ${found}`);
+})();
+
+// Our implementation of Promise.resolve
 function asyncDouble(x, time = 100) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -329,4 +336,5 @@ const data = 'foo bar baz';
     const found2 = await fsp.readFile(filename, 'utf8');
     console.assert(data + data === found2, `Unexpected value: ${found2}`);
     await fsp.unlink(filename);
+    console.log('fin');
 })();

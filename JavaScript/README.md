@@ -19,7 +19,6 @@ Topics to add:
 * testing
 * CommonJS modules
 * ES6 modules
-* Promise.resolve
 * Generators
 * Express
 * Object.entries, Object.values
