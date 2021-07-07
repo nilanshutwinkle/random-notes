@@ -16,7 +16,6 @@ $ node index.js
 Topics to add:
 
 * regex
-* reading, writing files using `fs`
 * testing
 * CommonJS modules
 * ES6 modules
