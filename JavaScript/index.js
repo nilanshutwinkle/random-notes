@@ -32,10 +32,33 @@ console.assert(arr.every(a => a > 0), 'Expected true.');
 // console.log(x);
 
 // - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
-// DATES (ES5)
+// DATES
 // - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
 
-console.log(Date.now());
+console.log(Date.now()); // (ES5)
+
+const myDate = new Date(2020, 6, 6, 5, 25);
+
+{
+    const expect = '7/6/2020, 5:25:00 AM';
+    const found = myDate.toLocaleString()
+    console.assert(expect === found, `Unexpected value: ${found}`);
+}
+
+{
+    const expect = '2020-07-06T09:25:00.000Z';
+    const found = myDate.toISOString()
+    console.assert(expect === found, `Unexpected value: ${found}`);
+}
+
+{
+    console.assert(2020 === myDate.getFullYear(), `Unexpected value: ${myDate.getFullYear()}`);
+    console.assert(6 === myDate.getMonth(), `Unexpected value: ${myDate.getMonth()}`);
+    console.assert(6 === myDate.getDate(), `Unexpected value: ${myDate.getDate()}`);
+    console.assert(5 === myDate.getHours(), `Unexpected value: ${myDate.getHours()}`);
+    console.assert(25 === myDate.getMinutes(), `Unexpected value: ${myDate.getMinutes()}`);
+}
+
 
 // - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
 // GETTERS, SETTERS (ES5)

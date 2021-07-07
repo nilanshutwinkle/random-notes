@@ -15,7 +15,6 @@ $ node index.js
 
 Topics to add:
 
-* Datetime string formatting, parsing strings
 * regex
 * reading, writing files using `fs`
 * testing
