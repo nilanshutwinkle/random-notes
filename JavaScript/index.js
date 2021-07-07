@@ -32,12 +32,18 @@ console.assert(arr.every(a => a > 0), 'Expected true.');
 // console.log(x);
 
 // - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
-// DATES
+// Date
 // - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
 
 console.log(Date.now()); // (ES5)
 
 const myDate = new Date(2020, 6, 6, 5, 25);
+
+console.assert(2020 === myDate.getFullYear(), `Unexpected value: ${myDate.getFullYear()}`);
+console.assert(6 === myDate.getMonth(), `Unexpected value: ${myDate.getMonth()}`);
+console.assert(6 === myDate.getDate(), `Unexpected value: ${myDate.getDate()}`);
+console.assert(5 === myDate.getHours(), `Unexpected value: ${myDate.getHours()}`);
+console.assert(25 === myDate.getMinutes(), `Unexpected value: ${myDate.getMinutes()}`);
 
 {
     const expect = '7/6/2020, 5:25:00 AM';
@@ -51,14 +57,48 @@ const myDate = new Date(2020, 6, 6, 5, 25);
     console.assert(expect === found, `Unexpected value: ${found}`);
 }
 
+// - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
+// Luxon (Moment.js rewrite)
+// - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
+
+const { DateTime } = require("luxon");
+
+// equivalent to DateTime.local()
+console.log(DateTime.now().toLocaleString(DateTime.DATETIME_MED));
+
+const myDT = DateTime.local(2020, 6, 15, 8, 30); // June 15 2020 8:30 AM
+
+console.assert(2020 === myDT.year, `Unexpected.value: ${myDT.year}`);
+console.assert(6 === myDT.month, `Unexpected.value: ${myDT.month}`);
+console.assert(15 === myDT.day, `Unexpected.value: ${myDT.day}`);
+console.assert(8 === myDT.hour, `Unexpected.value: ${myDT.hour}`);
+console.assert(30 === myDT.minute, `Unexpected.value: ${myDT.minute}`);
+
 {
-    console.assert(2020 === myDate.getFullYear(), `Unexpected value: ${myDate.getFullYear()}`);
-    console.assert(6 === myDate.getMonth(), `Unexpected value: ${myDate.getMonth()}`);
-    console.assert(6 === myDate.getDate(), `Unexpected value: ${myDate.getDate()}`);
-    console.assert(5 === myDate.getHours(), `Unexpected value: ${myDate.getHours()}`);
-    console.assert(25 === myDate.getMinutes(), `Unexpected value: ${myDate.getMinutes()}`);
+    const expect = '2020-06-15T08:30:00.000-04:00'; // ISO 8601
+    console.assert(expect === myDT.toString(), `Unexpected value: ${myDT.toString()}`);
 }
 
+{
+    const expect = '7/7/2020';
+    const found = DateTime.fromISO("2020-07-07").toLocaleString();
+    console.assert(expect === found, `Unexpected value: ${found}`);
+}
+
+{
+    const expect = 'Jul 7, 2020, 5:35 AM';
+    const found = DateTime.fromISO("2020-07-07T05:35:00")
+        .toLocaleString(DateTime.DATETIME_MED);
+    console.assert(expect === found, `Unexpected value: ${found}`);
+}
+
+// supports math: dt.plus, dt.minus, dt.startOf, dt.endOf
+// immutable, but supports "updating". e.g., dt.set({ hour: 3 })
+
+// Durations. E.g., Duration.fromObject({ hours: 2, minutes: 7 })
+// Durations also support math, getters, toISO.
+
+// Also supports intervals.
 
 // - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
 // GETTERS, SETTERS (ES5)
