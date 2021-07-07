@@ -230,7 +230,7 @@ asyncDouble(1) // 2
     .then(x => asyncDouble(x)) // 4
     .then(x => asyncFailed(x)) // error
     .then(x => console.assert(8 === x, `Unexpected value: ${x}`)) // shouldn't reach
-    .catch(e => console.error(`Expected error: ${e.message}`));
+    .catch(e => console.assert('internet connection lost' === e.message, `Unknown value: ${e.message}`));
 
 // Wait for all to complete
 Promise.all([ asyncDouble(1), asyncDouble(1), asyncDouble(2) ])
@@ -258,7 +258,7 @@ Promise.race([ asyncDouble(1), asyncDouble(2), asyncDouble(4, 0) ])
 Promise.race([ asyncDouble(1), asyncDouble(2), asyncFailed(4, 0) ])
     .then(
         x => console.assert(false, `Should not reach here: ${x}`),
-        e => console.error(`Expected error: ${e.message}`)
+        e => console.assert('internet connection lost' === e.message, `Unknown value: ${e.message}`)
     );
 
 // - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
@@ -308,3 +308,25 @@ worker.on('exit', (code) => console.log('(the chatbot left.)'));
 sendChat('Hi there!');
 sendChat('What are you up to?');
 sendChat('quit');
+
+// - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
+// WRITING, READING FILES
+// - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -\
+
+const fsp = require('fs').promises;
+
+const filename = 'temp.txt';
+const data = 'foo bar baz';
+
+// Note: should explicitly call close in production app, though underlying
+//       FileHandle obs will implicitly call close on garbage collection
+//       (and issue a warning).
+(async () => {
+    await fsp.writeFile(filename, data);
+    const found1 = await fsp.readFile(filename, 'utf8');
+    console.assert(data === found1, `Unexpected value: ${found1}`);
+    await fsp.appendFile(filename, data);
+    const found2 = await fsp.readFile(filename, 'utf8');
+    console.assert(data + data === found2, `Unexpected value: ${found2}`);
+    await fsp.unlink(filename);
+})();
