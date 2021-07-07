@@ -61,6 +61,8 @@ console.assert(25 === myDate.getMinutes(), `Unexpected value: ${myDate.getMinute
 // Luxon (Moment.js rewrite)
 // - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -  - - - -
 
+// More info: https://moment.github.io/luxon/
+
 const { DateTime } = require("luxon");
 
 // equivalent to DateTime.local()
