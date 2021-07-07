@@ -24,4 +24,3 @@ Topics to add:
 * Express
 * Object.entries, Object.values
 * Shared memory
-* `crypto`
