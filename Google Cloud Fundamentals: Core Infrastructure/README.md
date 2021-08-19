@@ -1,6 +1,6 @@
 # Google Cloud Fundamentals: Core Infrastructure
 
-## Week 1 - Introducing Google Cloud Platform
+## Introducing Google Cloud Platform
 * 4 kinds of services: Compute, Storage, Big Data, Machine Learning
 * This course will focus on compute, storage, and networking
 * **Zone** (e.g., europe-west2-a)
@@ -11,7 +11,7 @@
 * **Cloud Bigtable** (Apache HBase API), **Cloud Dataproc** (Hadoop as managed service)
 * **Budgets & Alerts** (fixed limits, or metric like % of prev month's spending), **Billing export**, **Reports** (visual monitoring), **Quotas** (rate quotas, allocation quotas)
 
-## Week 1 - Getting Started with Google Cloud Platform
+## Getting Started with Google Cloud Platform
 
 ### The Google Cloud Platform resource hierarchy
 
@@ -23,7 +23,7 @@
 
 ### Demonstration, lab activity, and quiz
 
-## Week 1 - Virtual Machines in the Cloud
+## Virtual Machines in the Cloud
 
 ### Virtual Private Cloud (VPC) Network
 
@@ -33,7 +33,7 @@
 
 ### Demonstration, lab activity, and quiz
 
-## Week 1 - Storage in the Cloud
+## Storage in the Cloud
 
 ### Cloud Storage
 
@@ -47,13 +47,13 @@
 
 ### Demonstration, lab activity, and quiz
 
-## Week 1 - Containers in the Cloud
+## Containers in the Cloud
 
 ### Containers, Kubernetes, and Kubernetes Engine
 
 ### Lab: Demonstration, activity, and quiz
 
-## Week 1 - Applications in the Cloud
+## Applications in the Cloud
 
 ### Module introduction; introduction to App Engine
 
@@ -65,7 +65,7 @@
 
 ### Demonstration, lab activity, and quiz
 
-## Week 1 - Developing, Deploying and Monitoring in the Cloud
+## Developing, Deploying and Monitoring in the Cloud
 
 ### Development in the Cloud
 
@@ -75,7 +75,7 @@
 
 ### Demonstration, lab activity, and quiz
 
-## Week 1 - Big Data and Machine Learning in the Cloud
+## Big Data and Machine Learning in the Cloud
 
 ### Module introduction
 
@@ -85,10 +85,8 @@
 
 ### Demonstration, lab activity, and quiz
 
-## Week 1 - Summary and Review
+## Summary and Review
 
 ### Course review
 
 ### Next Steps
-
-## Week 2
