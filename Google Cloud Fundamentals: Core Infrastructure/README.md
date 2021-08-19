@@ -3,13 +3,19 @@
 ## Introducing Google Cloud Platform
 * 4 kinds of services: Compute, Storage, Big Data, Machine Learning
 * This course will focus on compute, storage, and networking
-* **Zone** (e.g., europe-west2-a)
-* **Region**: collections of zones with fast interconnections (e.g., europe-west2)
-* **Multi-Region**
+* GCP locations are split into:
+    - **Zone** (e.g., europe-west2-a)
+    - **Region**: collections of zones with fast interconnections (e.g., europe-west2)
+    - **Multi-Region**
 * As of today (2021/08/18), total of 27 regions and 82 zones
-* View [cloud.google.com](https://cloud.google.com/) for more details
-* **Cloud Bigtable** (Apache HBase API), **Cloud Dataproc** (Hadoop as managed service)
-* **Budgets & Alerts** (fixed limits, or metric like % of prev month's spending), **Billing export**, **Reports** (visual monitoring), **Quotas** (rate quotas, allocation quotas)
+    - View [cloud.google.com](https://cloud.google.com/) for more details
+* GCP uses open interfaces to avoid vendor lock-in
+    - e.g., **Cloud Bigtable** (Apache HBase API), **Cloud Dataproc** (Hadoop as managed service)
+* Four ways to manage GCP spend:
+    - **Budgets & Alerts** (fixed limits, or metric like % of prev month's spending)
+    - **Billing export**
+    - **Reports** (visual monitoring)
+    - **Quotas** (rate quotas, allocation quotas)
 
 ## Getting Started with Google Cloud Platform
 
