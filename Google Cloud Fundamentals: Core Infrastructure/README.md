@@ -13,6 +13,16 @@
 
 ## Getting Started with Google Cloud Platform
 
+### Module Introduction
+
+* **Projects**: main way to group to related resources, usually around related business
+* Interfacing with GCP:
+    - Console
+    - SDK and CLI
+    - API
+    - Mobile App
+* Responsibility of user decreases from On-premises to IaaS to PaaS to Managed Services.
+
 ### The Google Cloud Platform resource hierarchy
 
 ### Identity and Access Management (IAM)
