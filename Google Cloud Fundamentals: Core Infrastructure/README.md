@@ -73,13 +73,73 @@
 
 ## Virtual Machines in the Cloud
 
+### Module Introduction
+
+* **Compute Engine**: GCP IaaS that allows you to run virtual machines on Google's global infrastructure
+
 ### Virtual Private Cloud (VPC) Network
+
+* Can either:
+    - Create your own private VPC
+    - Use default VPC
+* Google Cloud VPCs are global; subnets are regional
 
 ### Compute Engine
 
+* Can create instances of Compute Engine using Google Cloud Console or the **gcloud** command-line tool
+* Pick predefined types (which combine memory and CPU requirements), or make custom VM
+* GPUs available
+* Two types of permanent disk: standard or SSD
+* Use can use local SSD for high performance, ephemeral storage (ensure you use permanent disk for data you need to retain)
+* Define a startup script, and other metadata
+* Disk snapshots supported
+* **Preemptible VMs**: like AWS EC2 spot instances, save money by allowing Google to terminate your instance if resources needed elsewhere
+* Can scale up or out
+* **Autoscaling**: automatically adding or removing Google Compute Engine resources based on load
+
 ### Important VPC capabilities
 
+* **Routing Tables**: forwarding traffic from one Compute Engine instance to another within the same VPC network
+* VPCs contain **firewalls** for restricting access to Compute Engine instances, both for incoming and outgoing traffic
+    - Can define tags for resources that apply firewall rules; e.g., "web_server" tag to enable traffic over HTTPs port
+* **Shared VPCs**: enable you to share VPC across multiple projects
+* **VPC Peering**: enable you to interconnect networks across VPCs and projects
+* **Cloud Load Balancing**: a global service that connects user to application using the closest point-of-presence
+    - Key technology when scaling out
+    - No pre-warming required
+* Different load balancing options:
+    - Global HTTPS
+    - Global SSL Proxy
+    - Global TCP Proxy
+    - Regional: load balancing any traffic over any ports
+    - Regional Internal: load balancing of traffic within a VPC
+* **Cloud DNS**: GCP's managed DNS service, supporting CLI, Console, or API
+* **Cloud CDN**: Google's globally distributed edge caches
+* Google supports many interconnect options, including VPN (over internet), direct peering (private connection w/o), carrier peering, dedicated interconnect (private connections w/ SLA)
+
 ### Demonstration, lab activity, and quiz
+
+```
+# display a list of all the zones in specific region
+gcloud compute zones list | grep us-central1
+
+# set default zone
+gcloud config set compute/zone us-central1-b
+
+# create compute instance
+gcloud compute instances create "my-vm-2" \
+--machine-type "n1-standard-1" \
+--image-project "debian-cloud" \
+--image-family "debian-10" \
+--subnet "default"
+
+# connect to another VM in another region
+ssh my-vm-1.us-central1-a
+
+# setup a webserver w/ static page
+sudo apt-get install nginx-light -y
+sudo vim /var/www/html/index.nginx-debian.html
+```
 
 ## Storage in the Cloud
 
