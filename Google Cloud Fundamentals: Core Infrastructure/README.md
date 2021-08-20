@@ -23,21 +23,53 @@
 
 * **Projects**: main way to group to related resources, usually around related business
 * Interfacing with GCP:
-    - Console
-    - SDK and CLI
-    - API
-    - Mobile App
+    - **Cloud Platform Console**
+    - Cloud SDK and **Cloud Shell** (command-line launched in web browser from Console)
+    - REST-based API: for custom applications
+    - **Cloud Console Mobile App** (can build dashboards)
 * Responsibility of user decreases from On-premises to IaaS to PaaS to Managed Services.
 
 ### The Google Cloud Platform resource hierarchy
 
+* Resources are in Objects, and Projects are (optionally) organized into **Folders**, which are in Folders, in **Organization** nodes
+* Projects are managed and billed separately
+* Projects have IDs (globally unique, assigned by you), names, number (globally unique, assigned by GCP)
+* Children resources transitively inherit IAM policies from parents
+* Special roles for Organization nodes:
+    - Organization Admin
+    - Project Creator
+
 ### Identity and Access Management (IAM)
+
+* IAM policy says "Who" "can do what" "on which resource":
+    - Who: Google account, service account, Google group, Cloud Identity or G Suite domain
+* Three types of role in IAM
+    - **Primitive**: often too broad, especially when sensitive data involved. impact all resources in a project. Includes predefined roles:
+        - **Owner**
+        - **Editor**
+        - **Viewer**
+        - **Billing Administrator**
+    - **Predefined**: offer more fine-grained controls on particular GCP service
+    - **Custom**: enable you to define precise set of permissions.
+        - Can only be used at Project or Organizational levels; not Folders.
+* **Service Accounts**: provide identities used to control server-to-server interactions
+* Policies are a union of those applied on resource itself and those inherited from higher levels in the hierarchy
 
 ### Interacting with Google Cloud Platform
 
+* Many APIs are disabled by default
+* **APIs Explorer**: APIs available, with supported versions, and built-in documentation
+* Two kinds of libraries:
+    - Cloud Client Libraries: recommended, community-owned, idiomatic
+    - Google API Client Libraries: generated, open source
+
 ### Cloud Marketplace (formerly Cloud Launcher)
 
+* **Cloud Marketplace** is a solution marketplace; some offered by Google, some by third-party vendors
+
 ### Demonstration, lab activity, and quiz
+
+* **QWIKLABS**
 
 ## Virtual Machines in the Cloud
 
