@@ -223,10 +223,6 @@ $ gsutil cp gs://cloud-training/gcpfci/my-excellent-blog.png my-excellent-blog.p
 $ gsutil cp my-excellent-blog.png gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.png
 ```
 
-qwiklabs-gcp-04-fe005f94794c:us-central1:blog-db
-
-blogdbuser:blogdbuser
-
 ## Containers in the Cloud
 
 ### Containers, Kubernetes, and Kubernetes Engine
