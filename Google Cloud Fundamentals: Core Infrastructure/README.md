@@ -143,17 +143,89 @@ sudo vim /var/www/html/index.nginx-debian.html
 
 ## Storage in the Cloud
 
+### Module Introduction
+* Core storage options: Cloud Storage, Cloud SQL, Cloud Spanner, Cloud Data Store, and Google Big Table
+
 ### Cloud Storage
+* **Cloud Storage**: Google's managed object store.
+    - It's not a file system
+    - Consists of buckets, where you store immutable objects; any changes are versioned
+    - Always encrypted on disks and in transit via HTTPS
+    - Uses IAM, but you can use **Access Control Lists** (**ACLs**) for finer-grained controls
+    - ACLs contain scope (who can perform actions) and the permission (which action can be performed)
+    - Lifecycle Management Policies; e.g., keep only 3 most recent versions of any object
+* Storage classes:
+    - Multi-regional: high performance, geo-redundant, price primarily storage-related
+    - Regional: high performance, price primarily storage-related
+    - Nearline: backup/archival, access less than once a month, price combo of storage- and retrieval- related
+    - Coldline: backup/archival, access less than once a year, price primarily retrieval-related
+* Importing data:
+    - Online transfer (e.g., `gsutil`; drag & drop in GCP Console)
+    - Storage Transfer Service (scheduled batch transfer from another cloud provider, another GCP region, or an HTTP endpoint)
+    - Transfer Appliance (offline transfer via a leasable, rackable storage server)
+* Interoperates with other GCP services:
+    - BigQuery, Cloud SQL: import and export tables
+    - App Engine: object storage, logs, Datastore backups
+    - Compute Engine: startup scripts, images, object storage
 
 ### Cloud Bigtable
 
+* **Cloud Bigtable**: Google's managed NoSQL, wide-column database for terabyte applications
+    - High throughput for read and write, low latency
+    - analytical and operational workloads
+    - up to 99.999% availability
+    - Same open source API as HBase, providing portability
+    - Scales horizontally without downtime
+    - Single row transactions
+    - Actually used by Google for search, Maps, Google Analytics, and Gmail
+
 ### Cloud SQL and Cloud Spanner
+
+* **Cloud SQL**: Managed RDBMS, including MySQL and PostgresQL
+    - read, failover, and external replicas
+    - on demand or scheduled backups
+    - encrypted on demand
+* **Cloud Spanner**: horizontally scallable managed RDMS with petabytes capacity
+    - still provides transactional consistency
 
 ### Cloud Datastore
 
+* **Cloud Datastore**: horizontally scalable NoSQL database
+    - main use case: store structured data from App Engine apps
+    - offers transactions across multiple rows
+    - SQL-like interface
+
+```
+// Sample query. Source: https://cloud.google.com/datastore
+var companies = query.filter('name =', 'Google').filter('size <', 400);
+```
+
 ### Comparing Storage Options
 
+![Comparing storage options](images/comparing-storage-options.png)
+
+* **Cloud BigQuery**: managed relational OLAP database
+
 ### Demonstration, lab activity, and quiz
+
+Startup script:
+```
+apt-get update
+apt-get install apache2 php php-mysql -y
+service apache2 restart
+```
+
+```
+$ export LOCATION=US
+$ gsutil mb -l $LOCATION gs://$DEVSHELL_PROJECT_ID
+Creating gs://qwiklabs-gcp-04-fe005f94794c/
+$ gsutil cp gs://cloud-training/gcpfci/my-excellent-blog.png my-excellent-blog.png
+$ gsutil cp my-excellent-blog.png gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.png
+```
+
+qwiklabs-gcp-04-fe005f94794c:us-central1:blog-db
+
+blogdbuser:blogdbuser
 
 ## Containers in the Cloud
 
