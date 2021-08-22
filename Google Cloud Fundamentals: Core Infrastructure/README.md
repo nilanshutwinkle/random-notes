@@ -10,7 +10,7 @@
 * As of today (2021/08/18), total of 27 regions and 82 zones
     - View [cloud.google.com](https://cloud.google.com/) for more details
 * GCP uses open interfaces to avoid vendor lock-in
-    - e.g., **Cloud Bigtable** (Apache HBase API), **Cloud Dataproc** (Hadoop as managed service)
+    - e.g., Cloud Bigtable (Apache HBase API), Cloud Dataproc (Hadoop as managed service)
 * Four ways to manage GCP spend:
     - **Budgets & Alerts** (fixed limits, or metric like % of prev month's spending)
     - **Billing export**
@@ -115,7 +115,7 @@
     - Regional Internal: load balancing of traffic within a VPC
 * **Cloud DNS**: GCP's managed DNS service, supporting CLI, Console, or API
 * **Cloud CDN**: Google's globally distributed edge caches
-* Google supports many interconnect options, including VPN (over internet), direct peering (private connection w/o), carrier peering, dedicated interconnect (private connections w/ SLA)
+* Google supports many interconnect options, including VPN (over internet), direct peering (private connection w/o SLA), carrier peering, dedicated interconnect (private connections w/ SLA)
 
 ### Demonstration, lab activity, and quiz
 
@@ -185,7 +185,7 @@ sudo vim /var/www/html/index.nginx-debian.html
     - read, failover, and external replicas
     - on demand or scheduled backups
     - encrypted on demand
-* **Cloud Spanner**: horizontally scallable managed RDMS with petabytes capacity
+* **Cloud Spanner**: horizontally scalable managed RDMS with petabytes capacity
     - still provides transactional consistency
 
 ### Cloud Datastore
@@ -227,42 +227,262 @@ $ gsutil cp my-excellent-blog.png gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.pn
 
 ### Containers, Kubernetes, and Kubernetes Engine
 
+```
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+  return "Hello, World!\n"
+
+@app.route("/version")
+def hello():
+  return "Helloworld 1.0\n"
+
+if __name__ == "__main__":
+  app.run(host = "0.0.0.0")
+```
+
+```
+FROM ubuntu:18.10
+RUN apt-get update -y && \
+    apt-get install -y python3-pip python3-dev
+COPY requirements.txt /app/requirements.txt
+WORKDIR /app
+RUN pip3 install -r requirements.txt
+COPY . /app
+ENTRYPOINT ["python3", "app.py"]
+```
+
+```
+$> docker build -t py-server .
+$> docker run -d py-server
+```
+
+* **Google Kubernetes Engine** (**GKE**): Google's managed Kubernetes service
+
+```
+$> gcloud container clusters create k1
+```
+
+* **Pod**: smallest deployable unit (1+ containers) in Kubernetes
+* **Deployment**: group of replicas of a given Pod in Kubernetes
+* **Service**: Kubernetes abstraction for running a group of pods as a network service with a stable endpoint
+* imperative vs declarative commands
+* **RollingUpdate**: type of strategy for Kubernetes Deployment that performs a rolling deployment, including `maxSurge`, `maxUnavailable`
+
+```
+$> # imperative
+$> kubectl run nginx --image=nginx:1.15.7
+$> kubectl expose deployments nginx --port=80 --type=LoadBalancer
+$> kubectl scale nginx --replicas=3
+$> kubectl autoscale nginx --min=10 --max=15 --cpu=80
+$>
+$> # declarative
+$> kubectl apply -f nginx-deployment.yaml
+$>
+$> # misc
+$> kubectl get pods
+$> kubectl get replicasets
+$> kubectl get services
+$> kubectl get pods -l "app=nginx" -o yaml   # outputs declarative config
+```
+
+* **Anthos**: Google's solution for hybrid and multi-cloud systems
+    - Kubernetes and GKE create the foundation
+    - **GKE On-Prem**: As part of Anthos, this is Google's on-prem turn-key production-grade Kubernetes
+    - Both on-prem and GCP have access to GCP Marketplace
+    - **Cloud Interconnect**: How on-prem and GCP applications communicate in Anthos
+    - **Stackdriver**: provides managed logging, metrics gathering, monitoring, dashboarding, and alerting solution for on-prem and GCP applications
+    - **Policy Repository**: Anthos' single source of truth, which is implemented as a Git repository either on prem or in GCP
+
 ### Lab: Demonstration, activity, and quiz
+
+```
+# create cluster
+export MY_ZONE=us-central1-a
+gcloud container clusters create webfrontend --zone $MY_ZONE --num-nodes 2
+kubectl version   # kubectl automatically authenticated in above command
+
+# start app
+kubectl create deploy nginx --image=nginx:1.17.10
+kubectl get pods
+kubectl expose deployment nginx --port 80 --type LoadBalancer
+kubectl get services
+
+# scale app
+kubectl scale deployment nginx --replicas 3
+kubectl get pods
+kubectl get services
+```
 
 ## Applications in the Cloud
 
 ### Module introduction; introduction to App Engine
 
+* **App Engine**: PaaS for building scalable applications
+    - Scales to resources; only pay for what you use, making it ideal for highly variable workloads
+
 ### App Engine Standard Environment
+
+* **App Engine Standard Environment**: simpler for of two App Engine environments
+    - Free daily usage; some applications may be able to run free
+* Runtimes include
+* **App Engine SDK** Java, Python, PHP, Go; if want another language, use flexible environment
+    - develop & test locally, then deploy using SDK
+    - Services include (not limited to):
+        - a NoSQL data store to make data persistent
+        - caching of that data using Memcache
+        - searching
+        - logging
+        - ability to launch actions not triggered by direct user requests, like task queues and a task scheduler
+* Sandbox constraints:
+    - No writing to local files
+    - All requests time out at 60s
+    - Limits on third-party software
 
 ### App Engine Flexible Environment
 
+* **App Engine Flexible Environment**: allows you to specify Docker container, and App Engine will run application in Compute Engine
+
+![App Engine Environments comparison](images/app-engine-environments-comparison.png)
+
+![Kubernetes vs App Engine](images/kubernetes-vs-app-engine.png)
+
 ### Cloud Endpoints and Apigee Edge
 
+* **Cloud Endpoints**: distributed API management for creating and managing API via Console, including generating client libraries and OAuth support
+
+* **Apigee Edge**: platform for making API available to partners with analytics, monetization, and developer portal
+
 ### Demonstration, lab activity, and quiz
+
+
+```
+gcloud auth list  # list active project
+gcloud config list project  # list project id
+
+# initialize App Engine app
+gcloud app create --project=$DEVSHELL_PROJECT_ID
+git clone https://github.com/GoogleCloudPlatform/python-docs-samples
+cd python-docs-samples/appengine/standard_python3/hello_world
+
+# run app locally
+sudo apt-get update
+sudo apt-get install virtualenv
+virtualenv -p python3 venv
+source venv/bin/activate
+pip install  -r requirements.txt
+python main.py
+
+# deploy to App Engine
+cd ~/python-docs-samples/appengine/standard_python3/hello_world
+gcloud app deploy
+gcloud app browse  # launch app in http://YOUR_PROJECT_ID.appspot.com
+```
 
 ## Developing, Deploying and Monitoring in the Cloud
 
 ### Development in the Cloud
 
+* **Cloud Source Repositories**: fully featured git repositories hosting on GCP, enable IAM-managed access
+
+* **Cloud Functions**: create single-purpose functions that respond to events without a server or runtime
+    - Write in JavaScript/Node.JS
+    - Billed in 100ms intervals
+    - trigger on events in Cloud Storage, Cloud Pub/Sub, or in HTTP call
+
 ### Deployment: Infrastructure as code
+
+* Setting up manually is an imperative approach
+* **Deployment Manager**: declarative, repeatable deployments of GCP resources
+    - Create yaml or Python template
 
 ### Monitoring: Proactive instrumentation
 
+* **Stackdriver**: GCP's tool for monitoring, logging, and diagnostics
+    - Monitoring: uptime/health checks, alerts
+    - Logging: log search, filter, and export; log-based alerts and dashboards
+    - Error Reporting: notifications, dashboards
+    - Tracer: latency reporting and sampling
+    - Debugger: view application state at given code location, without having to add tracers
+
 ### Demonstration, lab activity, and quiz
+
+```
+export MY_ZONE=us-central1-a
+
+# deploying using Deployment Manager
+gsutil cp gs://cloud-training/gcpfcoreinfra/mydeploy.yaml mydeploy.yaml
+sed -i -e "s/PROJECT_ID/$DEVSHELL_PROJECT_ID/" mydeploy.yaml
+sed -i -e "s/ZONE/$MY_ZONE/" mydeploy.yaml
+cat mydeploy.yaml
+gcloud deployment-manager deployments create my-first-depl --config mydeploy.yaml
+
+# update using Deployment Manager
+... # edit mydeploy.yaml
+gcloud deployment-manager deployments update my-first-depl --config mydeploy.yaml
+
+# creating CPU load
+dd if=/dev/urandom | gzip -9 >> /dev/null &
+```
 
 ## Big Data and Machine Learning in the Cloud
 
 ### Module introduction
 
+* One day, every company will be a data company; data will be a competitive advantage
+
 ### Google Cloud Big Data Platform
+
+* **Cloud Dataproc**: GCP managed Hadoop, based on map-reduce model
+    - Clusters generally provisioned in 90s or less
+    - 1s wall-clock billing, minimum of 1hrs
+    - Can also use preemptable compute instances (around 80% cheaper at time of recording)
+* **Cloud Dataflow**: managed data pipelines using Compute Engine instances, for purposes like ETL, analytics, and orchestration
+    - **Dataflow pipelines** flow data from a source (e.g., BigQuery) through transforms to a sink (e.g., Cloud Storage)
+    - Integrates with services like Cloud Storage, Cloud Pub/Sub, BigQuery and Bigtable
+* **BigQuery**: GCP's fully managed petabyte-scale data warehouse using SQL
+    - read and write data in BigQuery via Cloud Dataflow, Hadoop, and Spark
+    - free monthly quotas
+    - 99.9% SLA
+    - Person running query pays for query, not the warehouse owner
+* **Cloud Pub/Sub**: scalable, reliable topic-based messaging
+    - guaranteed at least once delivery
+    - support push and pull
+* **Cloud Datalab**: managed interactive Python environment via Jupyter notebooks
+    - integrated with BigQuery, Compute Engine, Cloud Storage
+    - Visualize with Google Charts or matplotlib
 
 ### Google Cloud Machine Learning Platform
 
+* **Cloud Machine Learning Platform**: managed machine learning platform including pretrained and models and support for custom models
+    - Supports CPU, GPU, TPU
+* **Cloud Vision API**: analyze images with RESTful API, classifying into thousands of categories, sentiment analysis, text extraction, etc.
+* **Cloud Natural Language API**: derive insights from unstructured text using Google machine learning
+    - Supports multiple languages
+    - Support sentiment analysis, extracting info about items mentioned in documents, and reveals structure and meaning of text
+* **Cloud Translation API**: translates arbitrary strings between thousands of language pairs
+    - Automatically detect language
+* **Cloud Video Intelligence API**: GCP service that annotates contents of videos, detects scene changes, and flags inappropriate context
+
 ### Demonstration, lab activity, and quiz
+
+```
+$ bq query "select string_field_10 as request, count(*) as requestcount from logdata.accesslog group by request order by requestcount desc"
+```
 
 ## Summary and Review
 
 ### Course review
 
+![Comparison of various GCP compute options](images/gcp-compute-options.png)
+
+![Comparison of different load balancing options](images/load-balancers-options.png)
+
+![Comparison of Cloud Storage class options](images/cloud-storage-options.png)
+
 ### Next Steps
+
+1. If you're an architect, continue with the Coursera specialization "Architecting with Google Cloud Platform"
+1. If you're an app developer, continue with the Coursera specialization "Developing applications with Google Cloud Platform"
