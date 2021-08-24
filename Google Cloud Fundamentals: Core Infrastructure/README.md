@@ -21,7 +21,7 @@
 
 ### Module Introduction
 
-* **Projects**: main way to group to related resources, usually around related business
+* **Projects**: main way to group to related resources, usually around related business applications
 * Interfacing with GCP:
     - **Cloud Platform Console**
     - Cloud SDK and **Cloud Shell** (command-line launched in web browser from Console)
@@ -69,7 +69,7 @@
 
 ### Demonstration, lab activity, and quiz
 
-* **QWIKLABS**
+* **Qwiklabs**
 
 ## Virtual Machines in the Cloud
 
