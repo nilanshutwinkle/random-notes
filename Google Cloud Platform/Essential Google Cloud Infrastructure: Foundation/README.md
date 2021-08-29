@@ -263,6 +263,172 @@ gsutil cp gs://[my_bucket]/*.svg .
 
 ## Week 2
 
+### Overview
+
+#### Module Overview
+
+### Creating virtual machines
+
+#### Compute Engine
+
+* A **vCPU** is equal to 1 hardware hyper-thread
+* Theoretical max of 32 Gbps throughput for an instance with 16 vCPU, or 100 Gbps throughput for T4 or V100 GPUs
+* Storage:
+    - Standard
+    - SSD
+    - local SSD
+* External SSD up to 64TB
+* Performance of disks scales linearly with size
+
+#### Demo: Create a VM
+
+#### VM access and lifecycle
+
+![](images/vm-lifecycle-1.png)
+
+![](images/vm-lifecycle-2.png)
+
+* **live migration**: during maintenance event, VM is migrated to different hardware without interruption
+    - alternative is termination; live migration is default
+
+#### Lab Intro: Creating virtual machines
+
+#### Lab: Creating virtual machines
+
+```
+free                    # view free memory
+sudo dmidecode -t 17    # view installed RAM
+nproc                   # view number of processors
+lscpu                   # view details of CPUs
+```
+
+#### Lab Review: Creating virtual machines
+
+### Working with virtual machines
+
+#### Compute options
+
+* You can create a **custom machine type** (specify memory and number of CPUs), or select a **predefined machine type**:
+    - **standard**: for tasks that balance of CPU and memory needs
+    - **high memory**: for tasks that require more memory relative to CPUs
+    - **high-CPU**: for tasks that require more CPU relative to memory
+    - **memory-optimized**: for tasks that require far more memory relative to CPUs
+    - **compute-optimized**: for tasks that require far more CPU relative to memory
+    - **shared-core**: 1 vCPU that is shared with other applications
+        - `f1-micro`: 0.2 vCPUs
+        - `g1-small`: 0.5 vCPUs
+
+#### Compute pricing
+
+* Charged minimum of 1 minute, then charged in 1s increments
+* Each vCPU and GB of memory billed separately
+* Discounts:
+    - sustained use: up to 30% net discount for instances running entire month
+    - committed use
+    - preemptible VM instances
+* **Recommendation Engine**: notifies you of underutilized instances
+
+#### Special compute configurations
+
+* Preemptible VMs have no charge for 10min, 30s notification, live up to 24hrs, save up to 80%
+* **Sole-tenant nodes**: single host serving single tenant's VMs
+* **Shielded VMs**: verified integrity of VMs, including secure boot, virtual trusted platform module, integrity monitoring
+
+#### Images
+
+* What's in an image?
+    - boot loader
+    - operating system
+    - file system structure
+    - software
+    - customizations
+* Images
+    - public
+        - premium image: charged for use, generally by minute after minimum time
+    - custom
+
+#### Disk options
+
+* Book disk can survive instance deletion if uncheck "Delete boot disk when instance is deleted" option
+* **Persistent disk**: network storage appearing as a block sized
+    - can be dynamically resized
+    - can be attached read-only to multiple VMs
+    - zonal or regional
+* **Local disks**: attached directly to VMs, so ephemeral, but high IOPS
+    - Can attach up to 8
+    - Survive restart but not deletion of VMs
+
+#### Common Compute Engine actions
+
+* Metadata servers store info about VMs, and used during boot, run, maintenance, shutdown
+* Can automatically move instance within region (using `gcloud compute instances move`), but between regions is manual process
+* Snapshots
+    - Incremental
+    - Can be used to load data on new disks
+* You can grow disks in size, but you can't shrink them
+
+#### Lab Intro: Working with Virtual Machines
+
+#### Lab: Working with Virtual Machines
+
+In this lab, you set up a game application—a Minecraft server.
+
+The Minecraft server software will run on a Compute Engine instance.
+
+You use an e2-medium machine type that includes a 10-GB boot disk, 2 virtual CPU (vCPU), and 4 GB of RAM. This machine type runs Debian Linux by default.
+
+To make sure there is plenty of room for the Minecraft server's world data, you also attach a high-performance 50-GB persistent solid-state drive (SSD) to the instance. This dedicated Minecraft server can support up to 50 players.
+
+* Note that externals disks are attached to the instance, but they are not automatically mounted or formatted.
+
+```
+# Formatting and mounting disk
+sudo mkdir -p /home/minecraft
+sudo mkfs.ext4 -F -E lazy_itable_init=0,\
+lazy_journal_init=0,discard \
+/dev/disk/by-id/google-minecraft-disk
+sudo mount -o discard,defaults /dev/disk/by-id/google-minecraft-disk /home/minecraft
+
+# Installing JRE and Minecraft server
+sudo apt-get update
+sudo apt-get install -y default-jre-headless
+cd /home/minecraft
+sudo apt-get install wget
+sudo wget https://launcher.mojang.com/v1/objects/d0d0fe2b1dc6ab4c65554cb734270872b72dadd6/server.jar
+
+# Accept license
+sudo vim eula.txt   # edit "false" to "true"
+
+# Create virtual terminal screen
+sudo apt-get install -y screen
+
+# Run server
+#sudo java -Xmx1024M -Xms1024M -jar server.jar nogui
+sudo screen -S mcs java -Xmx1024M -Xms1024M -jar server.jar nogui
+
+# Detach and reattach screen from SSH terminal
+# press press Ctrl+A, Ctrl+D to detach
+sudo screen -r mcs   # to reattach
+```
+
+#### Lab Review: Working with Virtual Machines
+
+### Review
+
+#### Module Quiz
+
+#### Module Review
+
+#### Course Review
+
+#### Next Course: Essential Cloud Infrastructure: Core Services
+
+* "Essential Cloud Infrastructure: Core Services" covers:
+    1. Cloud IAM
+    2. Data Storage Services
+    3. Resource Management
+    4. Resource Monitoring
+
 ## Misc (non-course but related information)
 
 ### [RFC-1918: Address Allocation for Private Internets](https://datatracker.ietf.org/doc/html/rfc1918) - Feb 1996
