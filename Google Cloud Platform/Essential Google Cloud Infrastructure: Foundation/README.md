@@ -33,10 +33,10 @@
     - Command-line access to the instance via a browser
     - 5 GB of persistent disk storage ($HOME dir)
     - Pre-installed Cloud SDK and other tools
-    - **gcloud**: for working with Compute Engine and many Google Cloud services
-    - **gsutil**: for working with Cloud Storage
-    - **kubectl**: for working with Google Kubernetes Engine and Kubernetes
-    - **bq**: for working with BigQuery
+    - **gcloud**: command-line tool for working with Compute Engine and many Google Cloud services
+    - **gsutil**: command-line tool for working with Cloud Storage
+    - **kubectl**: command-line tool for working with Google Kubernetes Engine and Kubernetes
+    - **bq**: command-line tool for working with BigQuery
     - Language support for Java, Go, Python, Node.js, PHP, and Ruby
     - Web preview functionality
     - Built-in authorization for access to resources and instances
@@ -491,7 +491,7 @@ sudo screen -r mcs   # to reattach
 * Most IP addresses divided into three classes:
     - **Class A networks**: use a default subnet mask of 255.0.0.0 and have 0-127 as their first octet
     - **Class B networks**: use a default subnet mask of 255.255.0.0 and have 128-191 as their first octet.
-    - **Class C networks**: use a default subnet mask of 255.255.255.0 and have 192-223 as their first octet.s
+    - **Class C networks**: use a default subnet mask of 255.255.255.0 and have 192-223 as their first octet.
 
 #### Subnetting
 
