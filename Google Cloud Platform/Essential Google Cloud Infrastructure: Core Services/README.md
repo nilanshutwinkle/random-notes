@@ -117,4 +117,124 @@
 
 #### Module Review
 
+### Overview
+
+#### Module Overview
+
+![](images/storage-and-database-services-overview.png)
+
+![](images/storage-decision-tree.png)
+
+### Cloud Storage and Filestore
+
+#### Cloud Storage
+
+* Cloud Storage is Google's object storage service
+* Scalable to exabytes
+
+![](images/cloud-storage.storage-classes.png)
+
+![](images/cloud-storage.access-options.png)
+
+* **Access Control Lists** (**ACLs**): list of up to 100 scope (users) and permissions
+    - examples: collaborator@gmail.com, `allUsers`, `allAuthenticatedUsers`
+* **Signed URLs**: "Valley ticket" limited-time access via cryptographically signed URL to buckets and objects
+    - `gsutil signurl -d 10m path/to/privatekey.p12 gs://bucket/object`
+
+#### Cloud Storage Features
+
+* **CSEK**: Cloud-supplied encryption keys (acronym)
+* Object lifecycle management
+* Object versioning
+* Directory synchronization: synchronize a VM directory with a bucket
+* Object change notification:
+    - notify application when an object is updated or added to a bucket via web hook
+    - however, recommend Pub/Sub notifications for Cloud Storage
+* Data import
+* Strong consistency
+
+#### Choosing a storage class
+
+![](images/choosing-storage-type.png)
+
+#### Filestore
+
+* **Filestore**: fully managed file storage service using network attached storage for Compute Engine or GKE instances
+    - Scales to 100s of TBs
+
+#### Lab Intro: Cloud Storage
+
+#### Lab: Cloud Storage
+
+* Note GCP supports boto config file (`~/.boto`), which is also used by boto (Amazon SDK for Python)
+
+Sample lifecycle policy:
+```
+{
+  "rule":
+  [
+    {
+      "action": {"type": "Delete"},
+      "condition": {"age": 31}
+    }
+  ]
+}
+```
+
+```
+export BUCKET_NAME_1=[buck-name]
+gsutil cp setup.html gs://$BUCKET_NAME_1/
+
+# - - - - - - - - - - - - - - - - - - - - - - - -
+# ACL
+# - - - - - - - - - - - - - - - - - - - - - - - -
+gsutil acl get gs://$BUCKET_NAME_1/setup.html               # echos ACL to stdout
+gsutil acl set private gs://$BUCKET_NAME_1/setup.html       # make file private
+gsutil acl ch -u AllUsers:R gs://$BUCKET_NAME_1/setup.html  # but then add public read
+
+# - - - - - - - - - - - - - - - - - - - - - - - -
+# Customer-supplied encryption keys (CSEK)
+# - - - - - - - - - - - - - - - - - - - - - - - -
+
+#   To generate a key:
+#   https://cloud.google.com/storage/docs/encryption/using-customer-supplied-keys#storage-generate-encryption-key-python
+
+# only do this if there's not ~/.boto file already
+gsutil config -n        # generate ~/.boto
+vim .boto               # uncomment "encryption_key=", and add the key
+gsutil cp setup2.html gs://$BUCKET_NAME_1/      # note that it's customer encrypted
+
+# after rotating a key, can rewrite for files:
+gsutil rewrite -k gs://$BUCKET_NAME_1/setup2.html
+
+# - - - - - - - - - - - - - - - - - - - - - - - -
+# Lifecycle management
+# - - - - - - - - - - - - - - - - - - - - - - - -
+
+gsutil lifecycle get gs://$BUCKET_NAME_1    # view lifecycle mgmt policy
+gsutil lifecycle set life.json gs://$BUCKET_NAME_1
+
+# - - - - - - - - - - - - - - - - - - - - - - - -
+# Versioning
+# - - - - - - - - - - - - - - - - - - - - - - - -
+gsutil versioning get gs://$BUCKET_NAME_1
+gsutil versioning set on gs://$BUCKET_NAME_1
+gsutil cp -v setup.html gs://$BUCKET_NAME_1
+gsutil ls -a gs://$BUCKET_NAME_1/setup.html     # list all versions
+
+
+# - - - - - - - - - - - - - - - - - - - - - - - -
+# Synchronizing directory
+# - - - - - - - - - - - - - - - - - - - - - - - -
+gsutil rsync -r ./firstlevel gs://$BUCKET_NAME_1/firstlevel
+gsutil ls -r gs://$BUCKET_NAME_1/firstlevel
+
+# - - - - - - - - - - - - - - - - - - - - - - - -
+# Authorize the VM for cross-account
+# - - - - - - - - - - - - - - - - - - - - - - - -
+gcloud auth activate-service-account --key-file credentials.json  # adding credentials to a VM
+```
+
+#### Lab Review: Cloud Storage
+
 ## Week 2
