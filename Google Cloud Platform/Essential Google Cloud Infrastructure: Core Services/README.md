@@ -237,4 +237,72 @@ gcloud auth activate-service-account --key-file credentials.json  # adding crede
 
 #### Lab Review: Cloud Storage
 
+### Cloud SQL
+
+#### Cloud SQL
+
+* **Cloud SQL**: fully managed MySQL, PostgreSQL, or Microsoft SQL Server service
+* Clients:
+    - `gcloud sql`
+    - App Engine, Google Workspace scripts
+    - Applications (e.g., SQL Workbench, Toad) & tools
+* Scale up, or scale out with read replicas
+* Support high availability
+    - Standby receives synchronous replication from primary as part of transaction, fail over
+
+![](images/connecting-to-a-cloud-sql-instance.png)
+
+![](images/choosing-cloud-sql.png)
+
+#### Lab: Implementing Cloud SQL
+
+In this lab, you configure a Cloud SQL server and learn how to connect an application to it via a proxy over an external connection. You also configure a connection over a Private IP link that offers performance and security benefits. The app we chose to demonstrate in this lab is Wordpress, but the information and best practices are applicable to any application that needs SQL Server.
+
+By the end of this lab, you will have 2 working instances of the Wordpress frontend connected over 2 different connection types to their SQL instance backend, as shown in this diagram:
+
+![](images/wordpress-project.png)
+
+### Other database services
+
+#### Cloud Spanner
+
+* SQL
+* Scales to petabytes
+* Provides transactions, strong consistency, and high availability
+* 99.99% regional uptime, 99.999% multi-regional uptime
+
+![](images/spanner-vs-other-dbs.png)
+
+#### Cloud Firestore
+
+* **Cloud Firestore**: as the next generation of Cloud Datastore, this is a fully managed NoSQL document database
+    - ACID transactions
+    - Multi-region replication
+    - Strong consistency
+* Native mode (new features, like client libraries and real-time updates) vs Datastore mode (backwards-compatible)
+
+#### Cloud Bigtable
+
+* Petabyte-scale
+* High read/write throughput at low (sub-10ms) latency
+* Powers core internal Google services, e.g., Maps, Gmail, Search
+* Works for operational and analytical applications
+* Supports HBase API
+* Sparse tables; if no value, no space taken up
+* Smallest cluster is 3 nodes, which can handle 33k operations/second
+
+![](images/cloud-bigtable-architecture.png)
+
+#### Cloud Memorystore
+
+* **Cloud Memorystore**: Google's fully managed Redis service
+    - instances up to 300GB
+    - sub-millisecond latency
+
+### Review
+
+#### Quiz: Storage and Database Services
+
+#### Module Review
+
 ## Week 2
