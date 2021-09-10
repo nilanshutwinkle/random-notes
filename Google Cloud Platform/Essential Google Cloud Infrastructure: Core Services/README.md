@@ -306,3 +306,163 @@ By the end of this lab, you will have 2 working instances of the Wordpress front
 #### Module Review
 
 ## Week 2
+
+### Overview
+
+#### Module Overview
+
+### Resource Management
+
+#### Cloud Resource Manager
+
+* Hierarchically manage resources across organization, folders, projects, and resources
+    - Recall: child policies cannot restrict access granted at the parent level
+* Resources are global, regional, or zonal
+
+#### Quotas
+
+* All resources in GCP are subject to project quotas or limits
+* Quotas generally in one of three forms:
+    1. Max resources per project
+    2. API rate limit
+    3. Max resources per region
+* To increase, visit the Quotas page in GCP Console, or create a support ticket
+
+#### Labels and Names
+
+* **Labels**: key/value pairs you can attach to Google Cloud resources, with a limit of 64
+* Labels can be used for cost accounting, environment, scripting, etc
+* **Tags**: user-defined strings attached to instances, primarily for applying firewall rules
+
+#### Billing
+
+* Can set budgets and actions
+    - Can be specific amount or match specified amounts
+    - Can use email notifications or send pub/sub notifications
+* **Data Studio**: Google managed service to generate interactive reports and dashboards
+    - Can be used to visualize spending in a billing dashboard
+
+#### Demo: Billing Administration
+
+* View budgeting dashboard
+* Setup alerts
+* View transactions
+* Export budget data to BigQuery or file (e.g., CSV, json)
+
+#### Lab Intro: Examining Billing Data with BigQuery
+
+#### Lab: Examining Billing Data with BigQuery
+
+In this lab, you learn how to perform the following tasks:
+
+* Sign in to BigQuery from the Cloud Console
+* Create a dataset
+* Create a table
+* Import data from a billing CSV file stored in a bucket
+* Run complex queries on a larger dataset
+
+#### Lab Review: Examining Billing Data with BigQuery
+
+### Review
+
+#### Quiz: Resource Management
+
+#### Module Review
+
+### Overview
+
+#### Module Overview
+
+#### Google Cloud's Operations Suite
+
+* **Google Cloud's Operations Suite**: provides integrated monitoring, logging, and diagnostics
+    - previously known as Stackdriver
+
+### Monitoring
+
+#### Monitoring
+
+* Monitoring is at the base of **Site Reliability Engineering** (**SRE**)
+
+![](images/sre.png)
+
+* **Workspace** is the root entity that holds monitoring and configuration information
+* A **hosting project** must be specified when creating workspace
+    - Name of the hosting project becomes the name of the workspace
+    - But can combine multiple GCP projects and AWS accounts in one workspace, as a "single pane of glass"
+* Enables you to setup custom dashboards with charts, e.g., CPU utilization, network traffic
+* **Alerting policies** notify you when you of certain conditions; e.g., egress from network exceeds certain amount over certain timeframe
+* Alert on symptoms, not causes
+* Cloud Monitoring can monitor certain things without installing agent
+    - But installing agent is very simple, just two commands
+* Specifying custom metrics; e.g., number of concurrent app users
+
+#### Lab Intro: Resource Monitoring
+
+#### Lab: Resource Monitoring
+
+In this lab, you learn how to perform the following tasks:
+
+* Explore Cloud Monitoring
+* Add charts to dashboards
+* Create alerts with multiple conditions
+* Create resource groups
+* Create uptime checks
+
+#### Lab Review: Resource Monitoring
+
+### Logging, Error Reporting, Tracing, and Debugging
+
+#### Logging
+
+* API to writing logs with 30d retention
+* Log search/view/filter
+* Log-based metrics
+* Monitoring alerts can be set up on logs
+* Exported to Cloud Storage, BigQuery, or Pub/Sub
+* Useful to analyze data in BigQuery and visualize using Data Studio
+* Best practice to install logging agent on Compute Engine and EC2 instances (two simple commands)
+
+#### Error Reporting
+
+* Counts and aggregates errors
+
+#### Tracing
+
+* Collects latency information from App Engine, Google HTTP(S) load balancers, and applications instrumented with the Cloud Trace SDKs
+* Displays data in near-real time
+
+#### Debugging
+
+* Inspect running state of application without stopping it or slowing it down significantly
+    - Adds less than 10ms latency to request when captured
+* Supports handful of languages, including Java, Python, Go, Node.js, Ruby, PHP, etc
+
+#### Lab Intro: Error Reporting and Debugging
+
+#### Lab: Error Reporting and Debugging
+
+In this lab, you learn how to perform the following tasks:
+
+* Launch a simple Google App Engine application
+* Introduce an error into the application
+* Explore Cloud Error Reporting
+* Use Cloud Debugger to identify the error in the code
+* Fix the bug and monitor in Cloud Operations
+
+```
+gcloud app deploy app.yaml      # Deploy to App Engine
+gcloud app browse               # View App Engine app in browser
+```
+
+#### Lab Review: Error Reporting and Debugging
+
+### Review
+
+#### Quiz: Resource Monitoring
+
+#### Module Review
+
+#### Course Review
+
+#### Next Course: Elastic Cloud Infrastructure: Scaling and Automation
