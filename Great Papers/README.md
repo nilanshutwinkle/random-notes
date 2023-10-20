@@ -4,6 +4,34 @@
 
 [Attention Is All You Need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) by Vaswani et al (11pp)
 
+Key concepts:
+
+* Transformers are able to outperform other sequence transduction models while requiring fraction of computation
+* Transformers generalize well to other tasks, even without task-specific tuning; in this case, a model trained for translation performed very well for constituency parsing
+* Transformers achieve these with a unique architecture: unlike other dominant sequence transduction models, which combine attention with recurrence or convolution, the transformer exclusively uses attention. This removes the sequential bottleneck of recurrence (where hidden states depend on prior hidden states) and high computational computational complexity of convolutions
+* Additionally, unlike other models, transformers are able to relate distant tokens as easily as neighboring tokens
+
+Useful vocabulary:
+* **backpropagation through time** (**BPTT**)
+* **RELU**: activation function `g(x) = max(0, x)`, which is computationally easy and less susceptible to vanishing gradient problem
+* **bidirectional neural networks**: neural networks where nodes subsequently use their own outputs as inputs
+* **Self-attention**: using the dot-product of word embeddings with all other embeddings for words in sentence to generate a new embedding with more context
+* **attention**: `attention(q,k,v) = ∑_i similarity(q, k_i) * v_i`
+    - query (q):  the embedding of word we want context for
+    - key (k): the set of all word embeddings that could be related (e.g., in same sentence)
+    - value (v): the output embeddings
+    - think of attention as an information retrieval process, like a database; except it returns weighted combination of values instead of a single value
+* **SoftMax**: scales numbers into probabilities that add up to 1. `a_i = exp(S_i) / ∑_j exp(S_j)`
+* **Multi-head attention**: including multiple attention mechanisms to enable each to specialize on specific functions and semantics, and hence provide better overall performance
+* **transduce**: convert from one form to another. (E.g., `Audio signial` -> `Transducer` -> `Electricity signal`)
+* **transductive inference**: predicting specific exaples of an unknown function (as opposed to **inductive learning**, which derives the actual function)
+* **positional encodings**: encodings of same size of semantic encodings that provide essential positional context
+* **Label smoothing**: regularization technique that adds noise to labels, to account for fact that datasets contain mistakes
+* **NVIDIA P100 GPUs**: high-end GPUs intended for datacenters designed specifically for deep learning training, optimized for more intence computations
+* **Adam optimizer**: Easy-to-tune, space- & compute- efficient, scalable extension to stochastic gradient descent
+* **BiLingual Evaluation Understudy** (**BLEU**): score between 0 and 1 that measures similarity of machine learning text to set of high quality reference translations
+* **constituency parsing**: NLP task where sentence is segregated into constituents, or groups of words, based on grammatical roles (e.g., noun phrases, verb phrases)
+
 [Meet Michelangelo: Uber’s Machine Learning Platform](https://www.uber.com/blog/michelangelo-machine-learning-platform/) by Hermann
 
 [Spanner, TrueTime and the CAP Theorem](https://research.google/pubs/pub45855/) by Brewer (7pp)
