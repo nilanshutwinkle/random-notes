@@ -12,25 +12,29 @@ Key concepts:
 * Additionally, unlike other models, transformers are able to relate distant tokens as easily as neighboring tokens
 
 Useful vocabulary:
-* **backpropagation through time** (**BPTT**)
-* **RELU**: activation function `g(x) = max(0, x)`, which is computationally easy and less susceptible to vanishing gradient problem
-* **bidirectional neural networks**: neural networks where nodes subsequently use their own outputs as inputs
-* **Self-attention**: using the dot-product of word embeddings with all other embeddings for words in sentence to generate a new embedding with more context
-* **attention**: `attention(q,k,v) = ∑_i similarity(q, k_i) * v_i`
+
+| Vocab | Meaning |
+| --- | --- |
+| **backpropagation through time** (**BPTT**) | |
+| **RELU** | neural network activation function `g(x) = max(0, x)`, which is computationally easy and less susceptible to vanishing gradient problem |
+| **bidirectional neural networks** | neural networks where nodes subsequently use their own outputs as inputs |
+| **self-attention** | using the dot-product of word embeddings with all other embeddings for words in sentence to generate a new embedding with more context |
+| **SoftMax** | scales numbers into probabilities that add up to 1. `a_i = exp(S_i) / ∑_j exp(S_j)` |
+| **attention** | **attention**: `attention(q,k,v) = ∑_i similarity(q, k_i) * v_i`
     - query (q):  the embedding of word we want context for
     - key (k): the set of all word embeddings that could be related (e.g., in same sentence)
     - value (v): the output embeddings
-    - think of attention as an information retrieval process, like a database; except it returns weighted combination of values instead of a single value
-* **SoftMax**: scales numbers into probabilities that add up to 1. `a_i = exp(S_i) / ∑_j exp(S_j)`
-* **Multi-head attention**: including multiple attention mechanisms to enable each to specialize on specific functions and semantics, and hence provide better overall performance
-* **transduce**: convert from one form to another. (E.g., `Audio signial` -> `Transducer` -> `Electricity signal`)
-* **transductive inference**: predicting specific exaples of an unknown function (as opposed to **inductive learning**, which derives the actual function)
-* **positional encodings**: encodings of same size of semantic encodings that provide essential positional context
-* **Label smoothing**: regularization technique that adds noise to labels, to account for fact that datasets contain mistakes
-* **NVIDIA P100 GPUs**: high-end GPUs intended for datacenters designed specifically for deep learning training, optimized for more intence computations
-* **Adam optimizer**: Easy-to-tune, space- & compute- efficient, scalable extension to stochastic gradient descent
-* **BiLingual Evaluation Understudy** (**BLEU**): score between 0 and 1 that measures similarity of machine learning text to set of high quality reference translations
-* **constituency parsing**: NLP task where sentence is segregated into constituents, or groups of words, based on grammatical roles (e.g., noun phrases, verb phrases)
+    - think of attention as an information retrieval process, like a database; except it returns weighted combination of values instead of a single value | 
+| **multi-head attention** | including multiple attention mechanisms to enable each to specialize on specific functions and semantics, and hence provide better overall performance |
+| **transduce** | convert from one form to another. (E.g., `Audio signial` -> `Transducer` -> `Electricity signal`) |
+| **transductive inference** | predicting specific exaples of an unknown function (as opposed to **inductive learning**, which derives the actual function) |
+| **positional encodings** | encodings of same size of semantic encodings that provide essential positional context |
+| **label smoothing** | regularization technique that adds noise to labels, to account for fact that datasets contain mistakes |
+| **NVIDIA P100 GPUs** | high-end GPUs intended for datacenters designed specifically for deep learning training, optimized for more intence computations |
+| **Adam optimizer** | Easy-to-tune, space- & compute- efficient, scalable extension to stochastic gradient descent |
+| **BiLingual Evaluation Understudy** (**BLEU**) | score between 0 and 1 that measures similarity of machine learning text to set of high quality reference translations |
+| **constituency parsing** | NLP task where sentence is segregated into constituents, or groups of words, based on grammatical roles (e.g., noun phrases, verb phrases) |
+
 
 [Meet Michelangelo: Uber’s Machine Learning Platform](https://www.uber.com/blog/michelangelo-machine-learning-platform/) by Hermann
 
