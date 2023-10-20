@@ -32,6 +32,8 @@
 
 ## 2014
 
+[Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980) by Kingma, Ba (15pp)
+
 [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://www.jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf) by Srivastava et al (30pp)
 
 [Questioning the Lambda Architecture](https://www.oreilly.com/radar/questioning-the-lambda-architecture/) by Kreps
