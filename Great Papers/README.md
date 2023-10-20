@@ -20,11 +20,7 @@ Useful vocabulary:
 | **bidirectional neural networks** | neural networks where nodes subsequently use their own outputs as inputs |
 | **self-attention** | using the dot-product of word embeddings with all other embeddings for words in sentence to generate a new embedding with more context |
 | **SoftMax** | scales numbers into probabilities that add up to 1. `a_i = exp(S_i) / ∑_j exp(S_j)` |
-| **attention** | **attention**: `attention(q,k,v) = ∑_i similarity(q, k_i) * v_i`
-    - query (q):  the embedding of word we want context for
-    - key (k): the set of all word embeddings that could be related (e.g., in same sentence)
-    - value (v): the output embeddings
-    - think of attention as an information retrieval process, like a database; except it returns weighted combination of values instead of a single value | 
+| **attention** | see below | 
 | **multi-head attention** | including multiple attention mechanisms to enable each to specialize on specific functions and semantics, and hence provide better overall performance |
 | **transduce** | convert from one form to another. (E.g., `Audio signial` -> `Transducer` -> `Electricity signal`) |
 | **transductive inference** | predicting specific exaples of an unknown function (as opposed to **inductive learning**, which derives the actual function) |
@@ -35,6 +31,11 @@ Useful vocabulary:
 | **BiLingual Evaluation Understudy** (**BLEU**) | score between 0 and 1 that measures similarity of machine learning text to set of high quality reference translations |
 | **constituency parsing** | NLP task where sentence is segregated into constituents, or groups of words, based on grammatical roles (e.g., noun phrases, verb phrases) |
 
+* **attention**:  `attention(q,k,v) = ∑_i similarity(q, k_i) * v_i`
+    - query (q):  the embedding of word we want context for
+    - key (k): the set of all word embeddings that could be related (e.g., in same sentence)
+    - value (v): the output embeddings
+    - think of attention as an information retrieval process, like a database; except it returns weighted combination of values instead of a single value
 
 [Meet Michelangelo: Uber’s Machine Learning Platform](https://www.uber.com/blog/michelangelo-machine-learning-platform/) by Hermann
 
