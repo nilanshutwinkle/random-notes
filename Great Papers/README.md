@@ -2,7 +2,7 @@
 
 ## 2017
 
-[Attention Is All You Need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) by Vaswani et al (11pp)
+### [Attention Is All You Need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) by Vaswani et al (11pp)
 
 Key concepts:
 
@@ -37,9 +37,9 @@ Useful vocabulary:
     - value (v): the output embeddings
     - think of attention as an information retrieval process, like a database; except it returns weighted combination of values instead of a single value
 
-[Meet Michelangelo: Uber’s Machine Learning Platform](https://www.uber.com/blog/michelangelo-machine-learning-platform/) by Hermann
+### [Meet Michelangelo: Uber’s Machine Learning Platform](https://www.uber.com/blog/michelangelo-machine-learning-platform/) by Hermann
 
-[Spanner, TrueTime and the CAP Theorem](https://research.google/pubs/pub45855/) by Brewer (7pp)
+### [Spanner, TrueTime and the CAP Theorem](https://research.google/pubs/pub45855/) by Brewer (7pp)
 
 ## 2016
 
