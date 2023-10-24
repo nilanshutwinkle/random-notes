@@ -71,6 +71,10 @@ Useful vocabulary:
 
 ### [Questioning the Lambda Architecture](https://www.oreilly.com/radar/questioning-the-lambda-architecture/) by Kreps
 
+## Efficient Estimation of Word Representations in Vector Space
+
+### [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781) by Mikolov et al (12pp)
+
 ## 2012
 
 ### [CAP Twelve Years Later: How the "Rules" Have Changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/) by Eric Brewer
