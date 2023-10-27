@@ -1,5 +1,11 @@
 # Great Papers
 
+## 2018
+
+### [Deep Contextualized Word Representations](https://aclanthology.org/N18-1202.pdf) by Peters et al (11pp)
+
+* Shows that deep contextualized word embeddings can out perform static word embeddings in NLP tasks
+
 ## 2017
 
 ### [Attention Is All You Need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) by Vaswani et al (11pp)
@@ -67,13 +73,29 @@ Useful vocabulary:
 
 ### [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980) by Kingma, Ba (15pp)
 
+### [Don’t count, predict! A systematic comparison of context-counting vs. context-predicting semantic vectors] by Baroni et al (10pp)
+
+* Influential paper that showed that prediction-based word models outperformed count-based word models by a large margin on various language tasks.
+
 ### [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://www.jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf) by Srivastava et al (30pp)
+
+### [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/pubs/glove.pdf) by Pennington et al (12pp)
+
+* Standord embedding technique emerged as alternative to Google's word2vec
 
 ### [Questioning the Lambda Architecture](https://www.oreilly.com/radar/questioning-the-lambda-architecture/) by Kreps
 
 ## Efficient Estimation of Word Representations in Vector Space
 
 ### [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781) by Mikolov et al (12pp)
+
+* Influential word2vec paper
+
+## 2013
+
+### [Distributed Representations of Words and Phrases and their Compositionality](https://proceedings.neurips.cc/paper_files/paper/2013/file/9aa42b31882ec039965f3c4923ce901b-Paper.pdf) by Mikolov et al (9pp)
+
+* Influential word2vec paper
 
 ## 2012
 
