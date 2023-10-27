@@ -73,7 +73,7 @@ Useful vocabulary:
 
 ### [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980) by Kingma, Ba (15pp)
 
-### [Don’t count, predict! A systematic comparison of context-counting vs. context-predicting semantic vectors] by Baroni et al (10pp)
+### [Don’t count, predict! A systematic comparison of context-counting vs. context-predicting semantic vectors](https://aclanthology.org/P14-1023.pdf) by Baroni et al (10pp)
 
 * Influential paper that showed that prediction-based word models outperformed count-based word models by a large margin on various language tasks.
 
