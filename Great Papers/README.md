@@ -85,13 +85,11 @@ Useful vocabulary:
 
 ### [Questioning the Lambda Architecture](https://www.oreilly.com/radar/questioning-the-lambda-architecture/) by Kreps
 
-## Efficient Estimation of Word Representations in Vector Space
+## 2013
 
 ### [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781) by Mikolov et al (12pp)
 
 * Influential word2vec paper
-
-## 2013
 
 ### [Distributed Representations of Words and Phrases and their Compositionality](https://proceedings.neurips.cc/paper_files/paper/2013/file/9aa42b31882ec039965f3c4923ce901b-Paper.pdf) by Mikolov et al (9pp)
 
