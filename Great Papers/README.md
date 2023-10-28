@@ -91,6 +91,30 @@ Useful vocabulary:
 
 * Influential word2vec paper
 
+Key concepts:
+
+* Two new techniques that demonstrate ability to generate highly accurate (state-of-the-art) word vectors using simple model architecture, which due to lower computational complexity enables use of much larger data set
+* Simple techniques are often good enough with lots of data, but when "lots of data" isn't possible, need enhanced techniques
+* Goal of this paper is to scale to millions of vocab with billions words in dataset
+* Word embeddings enable vector algebra; e.g., "king" - "man" + "woman" ~= "queen"
+* Common for model developers to increase size without increasing vector dimension, but need to increase both to avoid diminishing returns
+* Two novel architectures: (1) **Continuous Bag of Words** (**CBOW**), which predicts target word given context words in sentence; (2) **Skip-gram**, which preicts context words given input word. Both use a single hidden layer neural network followed by a softmax layer, and the model outputs don't matter - its the weights on the hidden layer that are the word embeddings!
+* Skip-gram has all-around better performance, but CBOW is faster to train & may be better at some tasks
+
+Useful vocabulary:
+
+| Vocab | Meaning |
+| --- | --- |
+| **word representation** | translation of raw text into vector format |
+| **label encoding** | assigning sequential values to categorical data so models can interpret. Easy, but can result in unintended bias for data with higher numbers. (One-hot encoding addresses issue but results in sparse vectors & explosion of number of features) |
+| **static embedding** vs **contextualized word representations** | word2vec is an example of fomer; latter handle out-of-vocabulary words, rare words, and polysemy better |
+| **polysemy** | ability of word to take on different meanings in different contexts |
+| **argmax** | find argument that gives maximum vlaue of target function |
+| **count-based work models** vs **prediction-based word models** | |
+| **hierarchical softmax** (**H-Softmax**) | Replaces flat softmax layer with a binary-tree like approximation that speeds up word prediction tasks 50x or more |
+| **Huffman binary tree** | Enables lossless data compression by building a tree with shortest length paths for more frequently use words, and assigning variable length codes to input characters |
+
+
 ### [Distributed Representations of Words and Phrases and their Compositionality](https://proceedings.neurips.cc/paper_files/paper/2013/file/9aa42b31882ec039965f3c4923ce901b-Paper.pdf) by Mikolov et al (9pp)
 
 * Influential word2vec paper
